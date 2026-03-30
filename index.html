@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayHunter — Mobile Games</title>
+  <meta name="description" content="Home of Ghost Tac Toe and other mobile games by PlayHunter.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👻</text></svg>">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: #0f0f23;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .ghost {
+      font-size: 96px;
+      margin-bottom: 24px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: clamp(16px, 3vw, 22px);
+      color: #94a3b8;
+      max-width: 500px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .game-card {
+      background: linear-gradient(145deg, #1a1a3a, #15152d);
+      border: 1px solid #2a2a4a;
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 420px;
+      width: 100%;
+      text-align: left;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-4px);
+      border-color: #8b5cf6;
+    }
+
+    .game-card h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .game-card .subtitle {
+      color: #94a3b8;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: rgba(139, 92, 246, 0.15);
+      color: #8b5cf6;
+    }
+
+    .badge.cyan {
+      background: rgba(6, 182, 212, 0.15);
+      color: #06b6d4;
+    }
+
+    .badge.amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #8b5cf6;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+    }
+
+    .store-btn:hover {
+      background: #7c3aed;
+    }
+
+    .store-btn.coming-soon {
+      background: #334155;
+      cursor: default;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #64748b;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <div class="brand">PlayHunter</div>
+    <div class="ghost">👻</div>
+    <h1>Ghost Tac Toe</h1>
+    <p class="tagline">Tic Tac Toe with a twist — your oldest mark vanishes. Outsmart the ghost!</p>
+
+    <div class="game-card">
+      <h2>👻 Ghost Tac Toe</h2>
+      <p class="subtitle">Each player can only have 3 marks on the board. Place your 4th and your oldest one disappears. No more draws — just reversals, strategy, and ghosts.</p>
+      <div class="badges">
+        <span class="badge">Ghost Mode</span>
+        <span class="badge cyan">vs AI</span>
+        <span class="badge cyan">2 Player</span>
+        <span class="badge amber">Chaos Mode</span>
+      </div>
+      <a href="#" class="store-btn coming-soon">Coming Soon on Google Play</a>
+    </div>
+  </main>
+
+  <footer>
+    <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="https://github.com/jamesbob85/ghost-tac-toe">GitHub</a> &nbsp;&middot;&nbsp;
+    &copy; 2026 PlayHunter
+  </footer>
+</body>
+</html>
