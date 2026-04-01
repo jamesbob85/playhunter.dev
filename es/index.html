@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PlayHunter — Mobile Games</title>
-  <meta name="description" content="Home of Ghost Tac Toe and other mobile games by PlayHunter.">
+  <title>PlayHunter — Juegos Moviles</title>
+  <meta name="description" content="Hogar de Ghost Tac Toe y otros juegos moviles de PlayHunter.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👻</text></svg>">
   <link rel="alternate" hreflang="x-default" href="/">
   <link rel="alternate" hreflang="en" href="/">
@@ -270,7 +270,11 @@
       background: var(--surface-elevated);
     }
 
-    /* ─── Section Label ──────────────────────────────────────────── */
+    /* ─── Screenshots Section ────────────────────────────────────── */
+    .screenshots-section {
+      margin-top: 64px;
+    }
+
     .section-label {
       font-size: 13px;
       font-weight: 700;
@@ -281,291 +285,64 @@
       margin-bottom: 24px;
     }
 
-    /* ─── Animated Demo Section ──────────────────────────────────── */
-    .demo-section {
-      margin-top: 64px;
-    }
-
-    .demo-container {
+    .screenshots {
       display: flex;
-      align-items: center;
-      gap: 40px;
+      gap: 20px;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .demo-board {
-      display: grid;
-      grid-template-columns: repeat(3, 72px);
-      grid-template-rows: repeat(3, 72px);
-      gap: 6px;
-      background: var(--surface);
-      border-radius: var(--radius-lg);
-      padding: 10px;
-      border: 1px solid var(--border);
-      box-shadow: 0 0 40px rgba(167, 139, 250, 0.08);
-      flex-shrink: 0;
-    }
-
-    .demo-cell {
-      background: var(--surface-elevated);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      font-weight: 800;
-      color: transparent;
+    .screenshot-frame {
       position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 2px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      max-width: 240px;
+      flex: 1;
+      min-width: 180px;
     }
 
-    /* The animation plays through a full ghost-mode game sequence.
-       Total cycle: 12s
-       Marks appear one by one, then on the 4th mark of each player the oldest fades.
-
-       Timeline (each move ~1.2s):
-       0.0s  - X plays center (4,4)        → X at center
-       1.2s  - O plays top-right (0,2)     → O at top-right
-       2.4s  - X plays top-left (0,0)      → X at top-left
-       3.6s  - O plays bottom-left (2,0)   → O at bottom-left
-       4.8s  - X plays bottom-right (2,2)  → X at bottom-right (X has 3)
-       6.0s  - O plays center-left (1,0)   → O at center-left (O has 3)
-       7.2s  - X plays top-center (0,1)    → X 4th mark! Center X vanishes 👻
-       8.4s  - O plays center (1,1)        → O 4th mark! Top-right O vanishes 👻
-       9.6s  - pause / hold final state
-       10.8s - all fade, reset
-       12.0s - loop
-    */
-
-    /* Cell mark animations — each cell gets its own keyframes */
-    /* X marks: violet */
-    .demo-cell.x-mark { color: var(--violet); }
-    .demo-cell.o-mark { color: var(--mint); }
-
-    /* Center (1,1) — X places at 0s, vanishes at 7.2s, O places at 8.4s */
-    .cell-center {
-      animation: cellCenter 12s ease-in-out infinite;
-    }
-    @keyframes cellCenter {
-      0%, 2% { color: transparent; transform: scale(1); }
-      3%, 4% { color: var(--violet); transform: scale(1.15); }
-      5% { transform: scale(1); }
-      5%, 58% { color: var(--violet); }
-      /* ghost vanish */
-      59% { color: var(--violet); transform: scale(1.1); filter: blur(0); }
-      63% { color: transparent; transform: scale(0.5); filter: blur(4px); }
-      64%, 68% { color: transparent; }
-      /* O places here */
-      69%, 70% { color: var(--mint); transform: scale(1.15); filter: blur(0); }
-      72% { transform: scale(1); }
-      72%, 88% { color: var(--mint); }
-      92%, 100% { color: transparent; transform: scale(1); filter: blur(0); }
+    .screenshot-frame:first-child {
+      border-color: var(--violet-dim);
     }
 
-    /* Top-right (0,2) — O places at 1.2s, vanishes at 8.4s */
-    .cell-top-right {
-      animation: cellTopRight 12s ease-in-out infinite;
-    }
-    @keyframes cellTopRight {
-      0%, 11% { color: transparent; transform: scale(1); }
-      13%, 14% { color: var(--mint); transform: scale(1.15); }
-      15% { transform: scale(1); }
-      15%, 68% { color: var(--mint); }
-      /* ghost vanish */
-      69% { color: var(--mint); transform: scale(1.1); filter: blur(0); }
-      73% { color: transparent; transform: scale(0.5); filter: blur(4px); }
-      74%, 100% { color: transparent; transform: scale(1); filter: blur(0); }
+    .screenshot-frame:last-child {
+      border-color: var(--mint-dim);
     }
 
-    /* Top-left (0,0) — X places at 2.4s */
-    .cell-top-left {
-      animation: cellTopLeft 12s ease-in-out infinite;
-    }
-    @keyframes cellTopLeft {
-      0%, 21% { color: transparent; transform: scale(1); }
-      23%, 24% { color: var(--violet); transform: scale(1.15); }
-      25% { transform: scale(1); }
-      25%, 88% { color: var(--violet); }
-      92%, 100% { color: transparent; }
+    .screenshot-frame:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
     }
 
-    /* Bottom-left (2,0) — O places at 3.6s */
-    .cell-bottom-left {
-      animation: cellBottomLeft 12s ease-in-out infinite;
-    }
-    @keyframes cellBottomLeft {
-      0%, 31% { color: transparent; transform: scale(1); }
-      33%, 34% { color: var(--mint); transform: scale(1.15); }
-      35% { transform: scale(1); }
-      35%, 88% { color: var(--mint); }
-      92%, 100% { color: transparent; }
+    .screenshot-frame:first-child:hover {
+      border-color: var(--violet);
+      box-shadow: 0 12px 40px rgba(167, 139, 250, 0.2);
     }
 
-    /* Bottom-right (2,2) — X places at 4.8s */
-    .cell-bottom-right {
-      animation: cellBottomRight 12s ease-in-out infinite;
-    }
-    @keyframes cellBottomRight {
-      0%, 41% { color: transparent; transform: scale(1); }
-      43%, 44% { color: var(--violet); transform: scale(1.15); }
-      45% { transform: scale(1); }
-      45%, 88% { color: var(--violet); }
-      92%, 100% { color: transparent; }
+    .screenshot-frame:last-child:hover {
+      border-color: var(--mint);
+      box-shadow: 0 12px 40px rgba(78, 205, 196, 0.2);
     }
 
-    /* Center-left (1,0) — O places at 6.0s */
-    .cell-center-left {
-      animation: cellCenterLeft 12s ease-in-out infinite;
-    }
-    @keyframes cellCenterLeft {
-      0%, 51% { color: transparent; transform: scale(1); }
-      53%, 54% { color: var(--mint); transform: scale(1.15); }
-      55% { transform: scale(1); }
-      55%, 88% { color: var(--mint); }
-      92%, 100% { color: transparent; }
+    .screenshot-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    /* Top-center (0,1) — X places at 7.2s (triggers ghost of center X) */
-    .cell-top-center {
-      animation: cellTopCenter 12s ease-in-out infinite;
-    }
-    @keyframes cellTopCenter {
-      0%, 61% { color: transparent; transform: scale(1); }
-      63%, 64% { color: var(--violet); transform: scale(1.15); }
-      65% { transform: scale(1); }
-      65%, 88% { color: var(--violet); }
-      92%, 100% { color: transparent; }
-    }
-
-    /* Ghost indicator — shows 👻 when a mark vanishes */
-    .ghost-indicator {
+    .screenshot-caption {
       position: absolute;
-      font-size: 20px;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .cell-center .ghost-indicator {
-      animation: ghostPop1 12s ease-in-out infinite;
-    }
-    @keyframes ghostPop1 {
-      0%, 59% { opacity: 0; transform: translateY(0); }
-      61% { opacity: 1; transform: translateY(-4px); }
-      66% { opacity: 0; transform: translateY(-16px); }
-      67%, 100% { opacity: 0; }
-    }
-
-    .cell-top-right .ghost-indicator {
-      animation: ghostPop2 12s ease-in-out infinite;
-    }
-    @keyframes ghostPop2 {
-      0%, 69% { opacity: 0; transform: translateY(0); }
-      71% { opacity: 1; transform: translateY(-4px); }
-      76% { opacity: 0; transform: translateY(-16px); }
-      77%, 100% { opacity: 0; }
-    }
-
-    /* Narration text beside the board */
-    .demo-narration {
-      width: 260px;
-      flex-shrink: 0;
-    }
-
-    .demo-narration .narration-step {
-      opacity: 0;
-      position: absolute;
-      transition: opacity 0.3s;
-    }
-
-    .narration-title {
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-
-    .narration-desc {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-
-    .narration-highlight {
-      color: var(--violet);
-      font-weight: 700;
-    }
-
-    .narration-highlight.mint {
-      color: var(--mint);
-    }
-
-    /* Narration steps cycle through using animation */
-    .demo-narration {
-      position: relative;
-      min-height: 130px;
-    }
-
-    .narration-step {
-      position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
-    }
-
-    .narration-step:nth-child(1) { animation: narrate1 12s ease-in-out infinite; }
-    .narration-step:nth-child(2) { animation: narrate2 12s ease-in-out infinite; }
-    .narration-step:nth-child(3) { animation: narrate3 12s ease-in-out infinite; }
-
-    @keyframes narrate1 {
-      0%, 2% { opacity: 0; }
-      5%, 45% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-    @keyframes narrate2 {
-      0%, 50% { opacity: 0; }
-      55%, 75% { opacity: 1; }
-      80%, 100% { opacity: 0; }
-    }
-    @keyframes narrate3 {
-      0%, 78% { opacity: 0; }
-      82%, 90% { opacity: 1; }
-      95%, 100% { opacity: 0; }
-    }
-
-    /* Move counter dots */
-    .demo-dots {
-      display: flex;
-      gap: 6px;
-      justify-content: center;
-      margin-top: 16px;
-    }
-
-    .demo-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: var(--radius-full);
-      background: var(--border);
-    }
-
-    .demo-dot:nth-child(odd) { animation: dotX 12s ease-in-out infinite; }
-    .demo-dot:nth-child(even) { animation: dotO 12s ease-in-out infinite; }
-
-    .demo-dot:nth-child(1) { animation-delay: 0s; }
-    .demo-dot:nth-child(2) { animation-delay: 1.2s; }
-    .demo-dot:nth-child(3) { animation-delay: 2.4s; }
-    .demo-dot:nth-child(4) { animation-delay: 3.6s; }
-    .demo-dot:nth-child(5) { animation-delay: 4.8s; }
-    .demo-dot:nth-child(6) { animation-delay: 6.0s; }
-    .demo-dot:nth-child(7) { animation-delay: 7.2s; }
-    .demo-dot:nth-child(8) { animation-delay: 8.4s; }
-
-    @keyframes dotX {
-      0%, 2% { background: var(--border); }
-      5%, 88% { background: var(--violet); }
-      92%, 100% { background: var(--border); }
-    }
-    @keyframes dotO {
-      0%, 2% { background: var(--border); }
-      5%, 88% { background: var(--mint); }
-      92%, 100% { background: var(--border); }
+      padding: 24px 16px 12px;
+      background: linear-gradient(transparent, rgba(17, 15, 26, 0.9));
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-align: center;
     }
 
     /* ─── Features Section ───────────────────────────────────────── */
@@ -614,6 +391,62 @@
     .feature-card:nth-child(2):hover { box-shadow: 0 0 20px rgba(78, 205, 196, 0.1); }
     .feature-card:nth-child(3):hover { box-shadow: 0 0 20px rgba(255, 217, 61, 0.1); }
     .feature-card:nth-child(4):hover { box-shadow: 0 0 20px rgba(255, 107, 107, 0.1); }
+
+    /* ─── How It Works ───────────────────────────────────────────── */
+    .how-section {
+      margin-top: 64px;
+    }
+
+    .how-steps {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .how-step {
+      flex: 1;
+      min-width: 140px;
+      max-width: 200px;
+      text-align: center;
+      padding: 24px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      position: relative;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-full);
+      background: var(--violet-dim);
+      color: var(--violet-light);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .step-emoji {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .step-text strong {
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 4px;
+    }
 
     /* ─── CTA Section ────────────────────────────────────────────── */
     .cta-section {
@@ -710,26 +543,21 @@
 
     .hero { animation: fadeUp 0.6s ease-out; }
     .game-card { animation: fadeUp 0.6s ease-out 0.15s both; }
-    .demo-section { animation: fadeUp 0.6s ease-out 0.3s both; }
+    .screenshots-section { animation: fadeUp 0.6s ease-out 0.3s both; }
     .features-section { animation: fadeUp 0.6s ease-out 0.4s both; }
-    .cta-section { animation: fadeUp 0.6s ease-out 0.5s both; }
+    .how-section { animation: fadeUp 0.6s ease-out 0.5s both; }
+    .cta-section { animation: fadeUp 0.6s ease-out 0.6s both; }
 
     /* ─── Responsive ─────────────────────────────────────────────── */
-    @media (max-width: 600px) {
+    @media (max-width: 520px) {
       .hero { padding: 48px 24px 32px; }
       .ghost { font-size: 72px; }
       .game-card { padding: 24px; }
-      .demo-container {
-        flex-direction: column;
-        gap: 24px;
-      }
-      .demo-narration {
-        text-align: center;
-        min-height: 80px;
-        width: 100%;
-        max-width: 300px;
-      }
       .features-grid { grid-template-columns: 1fr; }
+      .how-steps { flex-direction: column; align-items: center; }
+      .how-step { max-width: 100%; }
+      .screenshots { gap: 12px; }
+      .screenshot-frame { min-width: 140px; }
     }
   </style>
 </head>
@@ -741,91 +569,81 @@
       <div class="brand">PlayHunter</div>
       <div class="ghost">👻</div>
       <h1>Ghost Tac Toe</h1>
-      <p class="tagline">Tic Tac Toe with a twist — your oldest mark vanishes. Outsmart the ghost!</p>
+      <p class="tagline">Tres en raya con un giro: tu marca mas antigua desaparece. ¡Supera al fantasma!</p>
 
       <div class="game-card content">
         <h2>👻 Ghost Tac Toe</h2>
-        <p class="subtitle">Each player can only have 3 marks on the board. Place your 4th and your oldest one disappears. No more draws — just reversals, strategy, and ghosts.</p>
+        <p class="subtitle">Cada jugador solo puede tener 3 marcas en el tablero. Coloca la 4.ª y la mas antigua desaparece. Sin empates, solo reversiones, estrategia y fantasmas.</p>
         <div class="badges">
-          <span class="badge">Ghost Mode</span>
-          <span class="badge mint">vs AI</span>
-          <span class="badge mint">2 Player</span>
-          <span class="badge marigold">Chaos Mode</span>
+          <span class="badge">Modo Fantasma</span>
+          <span class="badge mint">vs IA</span>
+          <span class="badge mint">2 Jugadores</span>
+          <span class="badge marigold">Modo Caos</span>
         </div>
-        <a href="#" class="store-btn coming-soon">Coming Soon on Google Play</a>
+        <a href="#" class="store-btn coming-soon">Proximamente en Google Play</a>
       </div>
     </main>
 
-    <!-- Animated Gameplay Demo -->
-    <section class="demo-section content">
-      <div class="section-label">See How It Works</div>
-      <div class="demo-container">
-        <div>
-          <div class="demo-board">
-            <!-- Row 0 -->
-            <div class="demo-cell x-mark cell-top-left">X</div>
-            <div class="demo-cell x-mark cell-top-center">X</div>
-            <div class="demo-cell o-mark cell-top-right">O<span class="ghost-indicator">👻</span></div>
-            <!-- Row 1 -->
-            <div class="demo-cell o-mark cell-center-left">O</div>
-            <div class="demo-cell cell-center">X<span class="ghost-indicator">👻</span></div>
-            <div class="demo-cell"></div>
-            <!-- Row 2 -->
-            <div class="demo-cell o-mark cell-bottom-left">O</div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell x-mark cell-bottom-right">X</div>
-          </div>
-          <div class="demo-dots">
-            <div class="demo-dot"></div>
-            <div class="demo-dot"></div>
-            <div class="demo-dot"></div>
-            <div class="demo-dot"></div>
-            <div class="demo-dot"></div>
-            <div class="demo-dot"></div>
-            <div class="demo-dot"></div>
-            <div class="demo-dot"></div>
-          </div>
+    <!-- Screenshots -->
+    <section class="screenshots-section content">
+      <div class="section-label">Un vistazo</div>
+      <div class="screenshots">
+        <div class="screenshot-frame">
+          <img src="../screenshots/home.png" alt="Pantalla de inicio de Ghost Tac Toe mostrando modos de juego y ajustes" loading="lazy">
+          <div class="screenshot-caption">Pantalla de inicio</div>
         </div>
-        <div class="demo-narration">
-          <div class="narration-step">
-            <div class="narration-title">Place your marks</div>
-            <p class="narration-desc">Take turns placing <span class="narration-highlight">X</span> and <span class="narration-highlight mint">O</span> — each player can have up to 3 on the board.</p>
-          </div>
-          <div class="narration-step">
-            <div class="narration-title">👻 Oldest mark vanishes</div>
-            <p class="narration-desc">Place your 4th mark and your <span class="narration-highlight">oldest one fades away</span> like a ghost. The board is always shifting.</p>
-          </div>
-          <div class="narration-step">
-            <div class="narration-title">No draws. Ever.</div>
-            <p class="narration-desc">With marks disappearing, <span class="narration-highlight mint">someone always wins</span>. Think ahead or get haunted.</p>
-          </div>
+        <div class="screenshot-frame">
+          <img src="../screenshots/gameplay.png" alt="Jugabilidad de Ghost Tac Toe con marcas X y O en el tablero" loading="lazy">
+          <div class="screenshot-caption">Jugabilidad</div>
         </div>
       </div>
     </section>
 
     <!-- Features -->
     <section class="features-section content">
-      <div class="section-label">What Makes It Different</div>
+      <div class="section-label">Que lo hace diferente</div>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">👻</div>
-          <div class="feature-title">Ghost Mode</div>
-          <div class="feature-desc">Only 3 marks each. Your oldest vanishes when you place a 4th. No more draws.</div>
+          <div class="feature-title">Modo Fantasma</div>
+          <div class="feature-desc">Solo 3 marcas cada uno. La mas antigua desaparece al colocar la 4.ª. Sin empates.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
-          <div class="feature-title">Chaos Mode</div>
-          <div class="feature-desc">A random cell glows each turn. Hit it for bonus points and wild reversals.</div>
+          <div class="feature-title">Modo Caos</div>
+          <div class="feature-desc">Una celda aleatoria brilla en cada turno. Acertala para puntos extra y giros inesperados.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🤖</div>
-          <div class="feature-title">Smart AI</div>
-          <div class="feature-desc">Three difficulty levels that actually play differently, not just randomly.</div>
+          <div class="feature-title">IA inteligente</div>
+          <div class="feature-desc">Tres niveles de dificultad que juegan de forma diferente, no al azar.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌍</div>
-          <div class="feature-title">15 Languages</div>
-          <div class="feature-desc">Play in English, Spanish, Japanese, Hindi, Arabic, and many more.</div>
+          <div class="feature-title">15 idiomas</div>
+          <div class="feature-desc">Juega en espanol, ingles, japones, hindi, arabe y muchos mas.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section content">
+      <div class="section-label">Como funciona el Modo Fantasma</div>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-number">1</div>
+          <div class="step-emoji">✏️</div>
+          <p class="step-text"><strong>Coloca marcas</strong>Turnos como en el tres en raya normal</p>
+        </div>
+        <div class="how-step">
+          <div class="step-number">2</div>
+          <div class="step-emoji">👻</div>
+          <p class="step-text"><strong>Las marcas se desvanecen</strong>Despues de 3 marcas, la mas antigua desaparece</p>
+        </div>
+        <div class="how-step">
+          <div class="step-number">3</div>
+          <div class="step-emoji">🧠</div>
+          <p class="step-text"><strong>Piensa con anticipacion</strong>Planifica alrededor de las marcas que desaparecen para ganar</p>
         </div>
       </div>
     </section>
@@ -833,18 +651,18 @@
     <!-- Bottom CTA -->
     <section class="cta-section content">
       <div class="cta-ghost">👻</div>
-      <div class="cta-title">Ready to outsmart the ghost?</div>
-      <p class="cta-desc">Ghost Tac Toe is coming soon to Google Play. Stay tuned!</p>
-      <a href="#" class="store-btn coming-soon">Coming Soon on Google Play</a>
+      <div class="cta-title">¿Listo para superar al fantasma?</div>
+      <p class="cta-desc">Ghost Tac Toe llegara pronto a Google Play. ¡Estate atento!</p>
+      <a href="#" class="store-btn coming-soon">Proximamente en Google Play</a>
     </section>
 
     <footer>
-      <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="/es/privacy/">Politica de Privacidad</a> &nbsp;&middot;&nbsp;
       <a href="https://github.com/jamesbob85/ghost-tac-toe">GitHub</a> &nbsp;&middot;&nbsp;
       &copy; 2026 PlayHunter
       <div class="lang-switcher">
-        <span class="current">EN</span>
-        <a href="/es/">ES</a>
+        <a href="/">EN</a>
+        <span class="current">ES</span>
         <a href="/pt/">PT</a>
         <a href="/fr/">FR</a>
         <a href="/de/">DE</a>

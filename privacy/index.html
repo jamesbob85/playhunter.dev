@@ -6,12 +6,28 @@
   <title>Privacy Policy — Ghost Tac Toe</title>
   <meta name="description" content="Privacy policy for Ghost Tac Toe by PlayHunter.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👻</text></svg>">
+  <link rel="alternate" hreflang="x-default" href="/privacy/">
+  <link rel="alternate" hreflang="en" href="/privacy/">
+  <link rel="alternate" hreflang="es" href="/es/privacy/">
+  <link rel="alternate" hreflang="pt" href="/pt/privacy/">
+  <link rel="alternate" hreflang="fr" href="/fr/privacy/">
+  <link rel="alternate" hreflang="de" href="/de/privacy/">
+  <link rel="alternate" hreflang="hi" href="/hi/privacy/">
+  <link rel="alternate" hreflang="ja" href="/ja/privacy/">
+  <link rel="alternate" hreflang="ko" href="/ko/privacy/">
+  <link rel="alternate" hreflang="zh" href="/zh/privacy/">
+  <link rel="alternate" hreflang="ru" href="/ru/privacy/">
+  <link rel="alternate" hreflang="ar" href="/ar/privacy/">
+  <link rel="alternate" hreflang="tr" href="/tr/privacy/">
+  <link rel="alternate" hreflang="it" href="/it/privacy/">
+  <link rel="alternate" hreflang="id" href="/id/privacy/">
+  <link rel="alternate" hreflang="th" href="/th/privacy/">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      background: #0f0f23;
+      background: #110f1a;
       color: #e2e8f0;
       min-height: 100vh;
       line-height: 1.7;
@@ -23,32 +39,32 @@
       padding: 48px 24px;
     }
 
-    a { color: #8b5cf6; text-decoration: none; }
+    a { color: #a78bfa; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .back {
       display: inline-block;
       margin-bottom: 32px;
-      color: #64748b;
+      color: #5e5278;
       font-size: 14px;
     }
 
     h1 {
       font-size: 32px;
       font-weight: 900;
-      color: #f1f5f9;
+      color: #f4f0ff;
       margin-bottom: 4px;
     }
 
     .app-name {
       font-size: 16px;
-      color: #8b5cf6;
+      color: #a78bfa;
       font-weight: 600;
       margin-bottom: 4px;
     }
 
     .date {
-      color: #64748b;
+      color: #5e5278;
       font-size: 14px;
       margin-bottom: 40px;
     }
@@ -56,13 +72,21 @@
     h2 {
       font-size: 20px;
       font-weight: 700;
-      color: #f1f5f9;
+      color: #f4f0ff;
       margin-top: 36px;
       margin-bottom: 12px;
     }
 
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #f4f0ff;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
     p {
-      color: #cbd5e1;
+      color: #9b8fb8;
       margin-bottom: 16px;
     }
 
@@ -72,19 +96,73 @@
     }
 
     li {
-      color: #cbd5e1;
+      color: #9b8fb8;
       margin-bottom: 8px;
     }
 
-    strong { color: #f1f5f9; }
+    strong { color: #f4f0ff; }
+
+    .highlight {
+      background: rgba(167, 139, 250, 0.1);
+      border-left: 3px solid #a78bfa;
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 16px;
+    }
+
+    .highlight p {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    th {
+      text-align: left;
+      color: #f4f0ff;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-bottom: 2px solid #352f48;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 10px 12px;
+      color: #9b8fb8;
+      border-bottom: 1px solid #1c1929;
+    }
 
     footer {
       margin-top: 60px;
       padding-top: 24px;
-      border-top: 1px solid #1e293b;
+      border-top: 1px solid #352f48;
       text-align: center;
-      color: #475569;
+      color: #5e5278;
       font-size: 14px;
+    }
+
+    .lang-switcher {
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .lang-switcher a {
+      color: #5e5278;
+      margin: 0 4px;
+    }
+
+    .lang-switcher a:hover {
+      color: #a78bfa;
+    }
+
+    .lang-switcher .current {
+      color: #a78bfa;
     }
   </style>
 </head>
@@ -94,41 +172,184 @@
 
     <div class="app-name">Ghost Tac Toe</div>
     <h1>Privacy Policy</h1>
-    <p class="date">Effective date: March 29, 2026</p>
+    <p class="date">Effective date: March 31, 2026</p>
 
-    <p><strong>Ghost Tac Toe</strong> is a free mobile game developed by PlayHunter for Android. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use the app.</p>
+    <p><strong>Ghost Tac Toe</strong> is a free mobile game developed by PlayHunter for Android. This page explains what data we collect, how we use it, and your rights.</p>
 
-    <h2>Data Collection</h2>
-    <p>Ghost Tac Toe does <strong>not</strong> collect, store, transmit, or share any personal data. Specifically:</p>
+    <div class="highlight">
+      <p><strong>In short:</strong> Ghost Tac Toe collects no data in offline mode. If you choose to play online ranked matches, we collect only what is necessary to run multiplayer — your player name, match results, and rating. We do not use ads, analytics, or tracking.</p>
+    </div>
+
+    <h2>1. Offline Play (No Data Collection)</h2>
+    <p>When playing offline (vs AI or local 2-player), Ghost Tac Toe does <strong>not</strong> collect, store, transmit, or share any personal data. The game works entirely on your device with no network calls.</p>
+
+    <h2>2. Online Ranked Play</h2>
+    <p>If you choose to use the optional online ranked mode, the following data is collected and processed to enable multiplayer functionality:</p>
+
+    <h3>Data We Collect</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Purpose</th>
+          <th>Stored Where</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Play Games player ID</td>
+          <td>Identify you in matches</td>
+          <td>Server (Supabase)</td>
+        </tr>
+        <tr>
+          <td>Display name</td>
+          <td>Show your name to opponents</td>
+          <td>Server (Supabase)</td>
+        </tr>
+        <tr>
+          <td>Match history</td>
+          <td>Record game outcomes and moves</td>
+          <td>Server (Supabase)</td>
+        </tr>
+        <tr>
+          <td>Rating &amp; rank</td>
+          <td>Matchmaking and leaderboards</td>
+          <td>Server (Supabase)</td>
+        </tr>
+        <tr>
+          <td>Win/loss/draw stats</td>
+          <td>Display on your profile</td>
+          <td>Server (Supabase)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>This data is transmitted securely via HTTPS to our database hosted on <strong>Supabase</strong> (supabase.com). We do not sell, share, or use this data for any purpose other than running the game.</p>
+
+    <h3>Real-Time Communication</h3>
+    <p>During online matches, the app maintains a real-time connection (WebSocket) to synchronize moves between players. This connection is active only during gameplay and transmits only game state data (board positions, turns, and match status).</p>
+
+    <h2>3. Google Play Games Services</h2>
+    <p>Ghost Tac Toe uses <strong>Google Play Games Services</strong> for:</p>
     <ul>
-      <li>No personal information is collected (name, email, phone, location, etc.)</li>
-      <li>No analytics or tracking tools are used</li>
-      <li>No advertising SDKs or ad networks are integrated</li>
-      <li>No data is sent to any server — the app works entirely offline</li>
-      <li>No account creation or sign-in is required</li>
+      <li><strong>Sign-in:</strong> Authenticate your identity for online play using your existing Google account. We do not create a separate account.</li>
+      <li><strong>Achievements:</strong> Track and display in-game achievements. Achievement data is managed by Google.</li>
+    </ul>
+    <p>Google Play Games Services is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. We receive only your player ID and display name from Google — we do not access your email, contacts, or other Google account data.</p>
+
+    <h2>4. Local Storage</h2>
+    <p>The app stores the following data locally on your device:</p>
+    <ul>
+      <li>Game statistics for offline modes (wins, losses, draws)</li>
+      <li>User preferences (sound, haptics, language)</li>
+      <li>Achievement progress</li>
+      <li>Cached player profile for faster loading</li>
+    </ul>
+    <p>This data never leaves your device and can be deleted by clearing the app's data or uninstalling the app.</p>
+
+    <h2>5. Analytics</h2>
+    <p>Ghost Tac Toe uses <strong>Firebase Analytics</strong> (provided by Google) to understand how players use the app and improve the experience. This is enabled for all users.</p>
+
+    <h3>What Analytics Collects</h3>
+    <ul>
+      <li>App usage events (games started, games completed, modes played, settings changed)</li>
+      <li>Session data (how often and how long you use the app)</li>
+      <li>Device information (device model, OS version, screen size)</li>
+      <li>App performance data (launch time, errors)</li>
     </ul>
 
-    <h2>Local Storage</h2>
-    <p>The app stores game statistics (wins, losses, draws) and user preferences (sound and haptics settings) locally on your device using standard device storage. This data:</p>
+    <p>Analytics data is <strong>anonymous and aggregated</strong> — it is not linked to your identity. We use this data only to understand gameplay patterns and improve the app. Firebase Analytics is governed by <a href="https://firebase.google.com/support/privacy">Firebase's Privacy Policy</a>.</p>
+
+    <h2>6. What We Do NOT Collect</h2>
     <ul>
-      <li>Never leaves your device</li>
-      <li>Is not accessible to us or any third party</li>
-      <li>Can be deleted by clearing the app's data or uninstalling the app</li>
+      <li>No advertising IDs or ad tracking</li>
+      <li>No location data</li>
+      <li>No contacts, photos, or device files</li>
+      <li>No email addresses</li>
+      <li>No financial or payment information (the app has no in-app purchases)</li>
     </ul>
 
-    <h2>Children's Privacy</h2>
-    <p>Ghost Tac Toe does not knowingly collect any personal data from anyone, including children under 13. The app contains no user-generated content, no chat features, no social features, and no in-app purchases.</p>
+    <h2>7. Children's Privacy</h2>
+    <p>Ghost Tac Toe does not knowingly collect personal data from children under 13. The app contains no user-generated content, no chat features, no social features, and no in-app purchases. Online play requires a Google Play Games account, which is subject to Google's age requirements.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>The app does not use any third-party services that may collect information. No ads, analytics, crash reporting, or social media SDKs are included.</p>
+    <h2>8. Data Retention &amp; Deletion</h2>
+    <p>Online player data (profile, match history, ratings) is retained as long as you use the service. To request deletion of your server-side data, contact us at the address below. Local data can be deleted at any time by clearing the app's data or uninstalling.</p>
 
-    <h2>Changes to This Policy</h2>
+    <h2>9. Third-Party Services</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Purpose</th>
+          <th>Privacy Policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Play Games Services</td>
+          <td>Authentication, achievements</td>
+          <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Supabase</td>
+          <td>Database, real-time multiplayer</td>
+          <td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Firebase Analytics</td>
+          <td>Anonymous usage analytics</td>
+          <td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>No other third-party services are used. No ads or tracking SDKs are included in the app.</p>
+
+    <h2>10. Permissions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Internet</td>
+          <td>Online multiplayer and Google Play Games sign-in</td>
+        </tr>
+        <tr>
+          <td>Vibrate</td>
+          <td>Haptic feedback (can be disabled in settings)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>11. Changes to This Policy</h2>
     <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
 
-    <h2>Contact</h2>
-    <p>If you have any questions about this privacy policy, please contact us at <a href="https://playhunter.dev">playhunter.dev</a> or through the Google Play Store listing.</p>
+    <h2>12. Contact</h2>
+    <p>If you have questions about this privacy policy or want to request deletion of your data, contact us at <a href="https://playhunter.dev">playhunter.dev</a> or through the Google Play Store listing.</p>
 
-    <footer>&copy; 2026 PlayHunter</footer>
+    <footer>
+      &copy; 2026 PlayHunter
+      <div class="lang-switcher">
+        <span class="current">EN</span>
+        <a href="/es/privacy/">ES</a>
+        <a href="/pt/privacy/">PT</a>
+        <a href="/fr/privacy/">FR</a>
+        <a href="/de/privacy/">DE</a>
+        <a href="/hi/privacy/">HI</a>
+        <a href="/ja/privacy/">JA</a>
+        <a href="/ko/privacy/">KO</a>
+        <a href="/zh/privacy/">ZH</a>
+        <a href="/ru/privacy/">RU</a>
+        <a href="/ar/privacy/">AR</a>
+        <a href="/tr/privacy/">TR</a>
+        <a href="/it/privacy/">IT</a>
+        <a href="/id/privacy/">ID</a>
+        <a href="/th/privacy/">TH</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
