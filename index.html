@@ -1,15 +1,208 @@
+<!-- PENDING JULES REVIEW -->
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Top 1000 — Steam, sized & spec'd · playhunter.dev</title>
-    <meta name="description" content="Visual exploration of the 1000 most-owned games on Steam. Filter by your PC's specs and see what you can play." />
-    <link rel="preconnect" href="https://shared.akamai.steamstatic.com" />
-    <script type="module" crossorigin src="./assets/index-CKryOAUC.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/style-claNeRXh.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlayHunter — Game Industry Intelligence</title>
+  <meta name="description" content="Game industry intelligence for the people who make them." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0f14;
+      --surface:   #141720;
+      --border:    #1f2330;
+      --accent:    #6c8cff;
+      --accent-hi: #8fa8ff;
+      --text:      #e2e6f0;
+      --muted:     #6b7280;
+      --font:      "Inter", system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hi); text-decoration: underline; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; font-size: 0.875rem; color: var(--muted); }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* ── HERO ── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 5rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .hero-sub {
+      font-size: 1.125rem;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+    }
+    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); background: transparent; }
+
+    /* ── CARDS ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+    .card-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .card h2 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .card p  { font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .card a.card-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .card a.card-link:hover { color: var(--accent-hi); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Play<span>Hunter</span></div>
+    <div class="nav-links">
+      <a href="#reports-coming-soon">Reports</a>
+      <a href="#signal-coming-soon">Signal</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Game Industry Intelligence</p>
+    <h1>Game industry intelligence for the people who make them.</h1>
+    <p class="hero-sub">
+      Data, signals, and reports that help independent developers and studios
+      understand the market before they ship.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#signal-coming-soon">Get Signal ↗</a>
+      <a class="btn btn-outline" href="dashboard.html">Explore Dashboard</a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PRODUCT CARDS -->
+  <section class="cards">
+    <div class="card">
+      <p class="card-tag">Reports</p>
+      <h2>Market Intelligence Reports</h2>
+      <p>Deep-dives on genre trends, pricing dynamics, and platform shifts — written for makers, not investors.</p>
+      <a class="card-link" href="#reports-coming-soon">Coming soon →</a>
+    </div>
+    <div class="card">
+      <p class="card-tag">Newsletter</p>
+      <h2>Signal</h2>
+      <p>A weekly digest of what moved in the indie game market — surfaced from the noise so you can stay focused on your work.</p>
+      <a class="card-link" href="#signal-coming-soon">Join the waitlist →</a>
+    </div>
+    <div class="card">
+      <p class="card-tag">Dashboard</p>
+      <h2>Steam Top 1000</h2>
+      <p>Visual exploration of the 1,000 most-owned games on Steam. Filter by your PC specs and see what you can play or benchmark against.</p>
+      <a class="card-link" href="dashboard.html">Open dashboard →</a>
+    </div>
+  </section>
+
+  <!-- SECTION 3: FOOTER -->
+  <footer>
+    <span>© 2026 PlayHunter</span>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="#reports-coming-soon">Reports</a>
+      <a href="#signal-coming-soon">Signal</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </footer>
+
+</body>
 </html>
