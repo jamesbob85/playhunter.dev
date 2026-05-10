@@ -1,5 +1,6 @@
-<!-- Jules review: APPROVED after copy edits applied -->
 <!doctype html>
+<!-- REDESIGN PREVIEW — for Jules review before pushing to playhunterhq/playhunter.dev -->
+<!-- Built by Otto 2026-05-09. Do NOT push without Jules approval. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -12,9 +13,11 @@
     :root {
       --bg:        #0d0f14;
       --surface:   #141720;
+      --surface-hi:#1a1f2e;
       --border:    #1f2330;
       --accent:    #6c8cff;
       --accent-hi: #8fa8ff;
+      --gold:      #e8b84b;
       --text:      #e2e6f0;
       --muted:     #6b7280;
       --font:      "Inter", system-ui, -apple-system, sans-serif;
@@ -38,6 +41,10 @@
       justify-content: space-between;
       padding: 1.25rem 2rem;
       border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
     }
     .logo {
       font-size: 1rem;
@@ -47,91 +54,168 @@
       color: var(--text);
     }
     .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; font-size: 0.875rem; color: var(--muted); }
+    .nav-links { display: flex; gap: 2rem; font-size: 0.875rem; }
     .nav-links a { color: var(--muted); }
     .nav-links a:hover { color: var(--text); text-decoration: none; }
 
-    /* ── HERO ── */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 5rem;
-      max-width: 720px;
+    /* ── SECTION 1: THESIS ── */
+    .thesis {
+      max-width: 780px;
       margin: 0 auto;
+      padding: 5.5rem 2rem 4.5rem;
     }
-    .hero-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+    .thesis-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1.25rem;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--text);
       margin-bottom: 1.5rem;
     }
-    .hero-sub {
-      font-size: 1.125rem;
+    .thesis h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 1.75rem;
+    }
+    /* Accent the key phrase */
+    .thesis h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .thesis-body {
+      font-size: 1.1rem;
       color: var(--muted);
-      line-height: 1.6;
-      max-width: 520px;
+      line-height: 1.7;
+      max-width: 620px;
       margin-bottom: 2.5rem;
     }
-    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-    .btn {
+    .thesis-body strong { color: var(--text); font-weight: 600; }
+    .thesis-cta {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.65rem 1.4rem;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: var(--accent);
+      color: #fff;
       border-radius: 6px;
       font-size: 0.9rem;
       font-weight: 600;
-      cursor: pointer;
       transition: opacity 0.15s;
     }
-    .btn:hover { opacity: 0.85; text-decoration: none; }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-outline { border: 1px solid var(--border); color: var(--text); background: transparent; }
+    .thesis-cta:hover { opacity: 0.85; text-decoration: none; color: #fff; }
 
-    /* ── CARDS ── */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
+    /* ── SECTION 2: PRODUCTS ── */
+    .products {
+      border-top: 1px solid var(--border);
+      padding: 4rem 2rem;
+    }
+    .products-inner {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 2rem 5rem;
     }
-    .card {
+    .products-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+    /* Two-column layout for products */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 640px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+    .product-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.75rem;
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-    .card-tag {
+    .product-card:hover {
+      border-color: #2d3550;
+    }
+    .product-type {
       font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
     }
-    .card h2 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .card p  { font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.25rem; }
-    .card a.card-link {
-      font-size: 0.85rem;
+    .product-type.reports { color: var(--gold); }
+    .product-type.signal  { color: var(--accent); }
+    .product-card h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .product-card .product-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .product-card .product-detail {
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      line-height: 1.6;
+    }
+    .product-card .product-detail strong { color: var(--text); }
+    .product-card .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.875rem;
       font-weight: 600;
-      color: var(--accent);
+      margin-top: 0.25rem;
     }
-    .card a.card-link:hover { color: var(--accent-hi); }
+    .product-link.reports-link { color: var(--gold); }
+    .product-link.signal-link  { color: var(--accent); }
+    .product-link:hover { text-decoration: underline; }
+
+    /* ── SECTION 3: ABOUT ── */
+    .about {
+      border-top: 1px solid var(--border);
+      padding: 4rem 2rem;
+    }
+    .about-inner {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+    .about-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .about h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+    }
+    .about p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 0.9rem;
+    }
+    .about p strong { color: var(--text); }
 
     /* ── FOOTER ── */
     footer {
@@ -152,54 +236,91 @@
   <nav>
     <div class="logo">Play<span>Hunter</span></div>
     <div class="nav-links">
-      <a href="#reports-coming-soon">Reports</a>
-      <a href="#signal-coming-soon">Signal</a>
-      <a href="dashboard.html">Dashboard</a>
+      <a href="#reports">Reports</a>
+      <a href="#signal">Signal</a>
     </div>
   </nav>
 
-  <!-- SECTION 1: HERO -->
-  <section class="hero">
-    <p class="hero-eyebrow">Game Industry Intelligence</p>
-    <h1>Game industry intelligence for the people who make them.</h1>
-    <p class="hero-sub">
-      Genre trends, platform shifts, and pricing data — so you know where the market is going before you've committed to a direction.
+  <!-- SECTION 1: THESIS — lead with the position, not the product -->
+  <section class="thesis">
+    <p class="thesis-eyebrow">Game Industry Intelligence</p>
+    <h1>Most studios find out<br><em>what the market wanted</em><br>after they've already shipped.</h1>
+    <p class="thesis-body">
+      PlayHunter covers genre trends, platform shifts, and pricing data — the kind of analysis that belongs
+      <strong>before the greenlight decision</strong>, not after the post-mortem.
+      We publish two things: named-market Reports and a weekly Signal newsletter.
     </p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#signal-coming-soon">Get Signal ↗</a>
-      <a class="btn btn-outline" href="dashboard.html">Explore Dashboard</a>
+    <a class="thesis-cta" href="#signal">Get Signal ↗</a>
+  </section>
+
+  <!-- SECTION 2: PRODUCTS — Reports and Signal as distinct things -->
+  <section class="products" id="reports">
+    <div class="products-inner">
+      <p class="products-label">What we publish</p>
+      <div class="product-grid">
+
+        <div class="product-card" id="reports-card">
+          <p class="product-type reports">Reports</p>
+          <h2>Market Intelligence Reports</h2>
+          <p class="product-desc">
+            Deep-dives on genre trends, pricing dynamics, and platform shifts — the analysis studios need
+            before greenlight, not after the round closes.
+          </p>
+          <p class="product-detail">
+            <strong>Format:</strong> PDF, 20–40 pages. Named studios, named numbers, a clear thesis.<br>
+            <strong>Cadence:</strong> Irregular — published when the market earns one.<br>
+            <strong>Price:</strong> $25–$75 per report. No subscription required.
+          </p>
+          <a class="product-link reports-link" href="https://playhunter.gumroad.com" target="_blank" rel="noopener">
+            Browse reports ↗
+          </a>
+        </div>
+
+        <div class="product-card" id="signal">
+          <p class="product-type signal">Signal</p>
+          <h2>Signal — Weekly Newsletter</h2>
+          <p class="product-desc">
+            A weekly digest of what moved in the indie game market — platform policy changes, deal activity,
+            and the genre trends worth tracking before they're obvious.
+          </p>
+          <p class="product-detail">
+            <strong>Format:</strong> Email. Direct and short — usually under 600 words.<br>
+            <strong>Cadence:</strong> Weekly. Quiet weeks get a quiet note, not filler.<br>
+            <strong>Price:</strong> Free issues include the lead signal and one-paragraph recaps. Paid subscribers ($5/mo or $50/yr) get the full analysis, data, and weekly synthesis.
+          </p>
+          <a class="product-link signal-link" href="https://playhunter.beehiiv.com/subscribe" target="_blank" rel="noopener">
+            Get Signal ↗
+          </a>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 2: PRODUCT CARDS -->
-  <section class="cards">
-    <div class="card">
-      <p class="card-tag">Reports</p>
-      <h2>Market Intelligence Reports</h2>
-      <p>Deep-dives on genre trends, pricing dynamics, and platform shifts — the analysis studios need before greenlight, not after the round closes.</p>
-      <a class="card-link" href="#reports-coming-soon">Coming soon →</a>
-    </div>
-    <div class="card">
-      <p class="card-tag">Newsletter</p>
-      <h2>Signal</h2>
-      <p>A weekly digest of what moved in the indie game market — platform policy changes, deal activity, and the genre trends worth tracking before they're obvious.</p>
-      <a class="card-link" href="#signal-coming-soon">Join the waitlist →</a>
-    </div>
-    <div class="card">
-      <p class="card-tag">Dashboard</p>
-      <h2>Steam Top 1000</h2>
-      <p>Visual exploration of the 1,000 most-owned games on Steam. Filter by your PC specs and see what you can play or benchmark against.</p>
-      <a class="card-link" href="dashboard.html">Open dashboard →</a>
+  <!-- SECTION 3: ABOUT — brief, not a mission statement -->
+  <section class="about">
+    <div class="about-inner">
+      <p class="about-label">About</p>
+      <h2>Game industry intelligence for the people who make them.</h2>
+      <p>
+        PlayHunter is an independent publication. We cover the business of indie games —
+        <strong>where the market is going</strong>, who's getting the timing right, and what the data says
+        about the decisions studios are making.
+      </p>
+      <p>
+        We don't cover console wars, review scores, or consumer drama. We cover the decisions that happen
+        inside studios, the market context those decisions depend on, and what it costs to get the timing wrong.
+      </p>
     </div>
   </section>
 
-  <!-- SECTION 3: FOOTER -->
+  <!-- FOOTER -->
   <footer>
     <span>© 2026 PlayHunter</span>
     <div style="display:flex;gap:1.5rem;">
-      <a href="#reports-coming-soon">Reports</a>
-      <a href="#signal-coming-soon">Signal</a>
-      <a href="dashboard.html">Dashboard</a>
+      <a href="#reports">Reports</a>
+      <a href="#signal">Signal</a>
+      <a href="mailto:briefs@playhunter.dev">Contact</a>
     </div>
   </footer>
 
