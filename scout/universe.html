@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Universe · Scout · playhunter.dev</title>
+    <meta name="description" content="The full universe of tracked candidates. Sort by score, delta, scale, stage. Filter by stage, scale, confidence, meta cluster." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" class="brief">
+      <header class="masthead">
+        <div class="masthead-l">
+          <a class="brand" href="./index.html">SCOUT</a>
+          <div class="tagline">the desk for breakout games</div>
+        </div>
+        <div class="masthead-r">
+          <a class="back" href="./index.html">← Brief</a>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <h1 class="page-title">Universe</h1>
+        <p class="page-deck">Every tracked candidate. Click a row to drill into the thesis. Click a column header to sort.</p>
+      </section>
+
+      <section class="uni-controls">
+        <div class="filter-group">
+          <span class="filter-label">Stage</span>
+          <button class="filter-chip active" data-filter="stage" data-value="">All</button>
+          <button class="filter-chip" data-filter="stage" data-value="Announced">Announced</button>
+          <button class="filter-chip" data-filter="stage" data-value="Early Access">EA</button>
+          <button class="filter-chip" data-filter="stage" data-value="Launched">Launched</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Scale</span>
+          <button class="filter-chip active" data-filter="scale" data-value="">All</button>
+          <button class="filter-chip" data-filter="scale" data-value="Phenom">Phenom</button>
+          <button class="filter-chip" data-filter="scale" data-value="Hit">Hit</button>
+          <button class="filter-chip" data-filter="scale" data-value="Cult">Cult</button>
+          <button class="filter-chip" data-filter="scale" data-value="Watch">Watch</button>
+          <button class="filter-chip" data-filter="scale" data-value="Settled">Settled</button>
+        </div>
+        <span class="uni-count" id="uni-count">—</span>
+      </section>
+
+      <table class="uni-table" id="uni-table">
+        <thead>
+          <tr>
+            <th data-sort="score" class="active-sort">Score</th>
+            <th data-sort="delta">Δ</th>
+            <th data-sort="name">Game</th>
+            <th data-sort="scale">Scale</th>
+            <th data-sort="stage">Stage</th>
+            <th data-sort="confidence">Conf.</th>
+            <th>Studio</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <footer class="footnav">
+        <a class="footlink" href="./index.html">Brief</a>
+        <a class="footlink" href="./watchlist.html">Watchlist</a>
+        <a class="footlink active" href="./universe.html">Universe</a>
+        <a class="footlink" href="./meta.html">Meta</a>
+        <a class="footlink" href="./methodology.html">Methodology</a>
+      </footer>
+    </main>
+    <script src="./universe.js"></script>
+  </body>
+</html>

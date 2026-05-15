@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Methodology · Scout · playhunter.dev</title>
+    <meta name="description" content="How Scout's Breakout Score works. Signal families, data sources, voice, and honest limitations." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" class="brief">
+      <header class="masthead">
+        <div class="masthead-l">
+          <a class="brand" href="./index.html">SCOUT</a>
+          <div class="tagline">the desk for breakout games</div>
+        </div>
+        <div class="masthead-r">
+          <a class="back" href="./index.html">← Brief</a>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <h1 class="page-title">Methodology</h1>
+        <p class="page-deck">How the Breakout Score is computed, where every number comes from, and what is still being approximated.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>What Scout is</h2>
+        <p>Scout is a daily-refreshed scouting desk for PC games. It ranks <em>breakout candidates</em> &mdash; games that may find a step-change in commercial outcome &mdash; with explicit confidence and projected scale. It is the forward-looking sister to the playhunter.dev top-1000 dashboard.</p>
+        <p>It is built for buy-side investors, publishers, and senior developers who need to read a thesis on a title in under sixty seconds and act on it.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>The Breakout Score</h2>
+        <p>A 0&ndash;100 composite, computed per game. The score blends five signal families weighted by lifecycle stage. Early-stage games lean on intent signals; launched games lean on attention and performance.</p>
+
+        <pre class="formula">
+score = stage_modifier × Σ ( signal_family × stage_weight )
+
+stages          attention  intent  performance  community  press
+─────────────────────────────────────────────────────────────────
+Announced            18%     55%        10%        10%       7%
+EA                   30%     22%        28%        13%       7%
+Launched             30%     10%        40%        12%       8%
+        </pre>
+
+        <p>The <strong>score delta</strong> is the change in score this period. It blends three real-data sources where available: live Twitch <em>burn rate</em> (viewers ÷ followers, log-scaled), revenue 7-day percentage from history, and IGDB hypes for pre-launch products. When all three are flat, a deterministic synthesised delta is used so that Movers always has variance &mdash; that fallback retires automatically as snapshot history accumulates.</p>
+
+        <p>A <strong>maturity dampener</strong> applies to launched products with more than $150M lifetime revenue and over a year since release. Their score deltas are multiplied by 0.3 because further breakout is structurally unlikely. They are labelled <span class="scale-pill" data-scale="Watch">Settled</span> and excluded from the Movers list by default.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>Confidence</h2>
+        <p>Counts how many signal families are firing above a 0.55 threshold. <span class="conf-pill" data-conf="High">High</span> = three or more. <span class="conf-pill" data-conf="Medium">Medium</span> = two. <span class="conf-pill" data-conf="Low">Low</span> = one or zero. The detail page surfaces the 5-family firing dots so you can see exactly which axes are confirming.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>Scale band</h2>
+        <p>Bucketed projection of peak concurrent users, derived from current score and stage cohort. Phenom (100&ndash;400K), Hit (35&ndash;80K), Cult (8&ndash;25K), Watch (1&ndash;6K), Settled (mature long-tail).</p>
+        <p>This is a band, not a point estimate. A defensible regression onto past breakouts' arc data is on the roadmap as the comparables library matures.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>Data sources</h2>
+        <table class="m-table">
+          <thead>
+            <tr><th>Source</th><th>What we use</th><th>Refresh</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Steam appdetails</td><td>Name, stage, price, studio, header image, genres, categories</td><td>24h cache</td><td class="ok">Live</td></tr>
+            <tr><td>SteamSpy</td><td>CCU snapshot, player counts, tag votes</td><td>6h cache</td><td class="ok">Live</td></tr>
+            <tr><td>Gamalytic</td><td>Followers, wishlists, lifetime revenue, owners, audienceOverlap graph, country split, 90-day history</td><td>12h cache</td><td class="ok">Live</td></tr>
+            <tr><td>Twitch Helix</td><td>Live viewers, stream counts, streamer-tier breakdown, IGDB game id</td><td>1h cache (live signal)</td><td class="ok">Live</td></tr>
+            <tr><td>IGDB</td><td>Hypes, follows, popularity primitives (Steam 24h peak, IGDB visits, YouTube popularity), themes, game modes, player perspectives, similar games</td><td>24h cache</td><td class="ok">Live</td></tr>
+            <tr><td>Reddit subreddit growth</td><td>Subreddit member deltas</td><td>—</td><td class="synth">Synthesised &mdash; wiring planned</td></tr>
+            <tr><td>Press coverage</td><td>RSS-aggregated mentions across tracked outlets</td><td>—</td><td class="synth">Synthesised &mdash; wiring planned</td></tr>
+            <tr><td>Roblox + itch.io</td><td>Upstream taste signals</td><td>—</td><td class="synth">Roadmap</td></tr>
+          </tbody>
+        </table>
+        <p class="m-note">Each game card shows live (<span class="real-pip">●</span>) and synthesised (<span class="synth-pip">○</span>) pips next to its signals so you can see which is which.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>Snapshot history</h2>
+        <p>Every daily build persists a snapshot of per-game metrics to <code>scout/data/snapshots/YYYY-MM-DD.json</code>. After seven days of snapshots, the scoring engine starts using real week-over-week deltas for followers, wishlists, Twitch attention, IGDB hypes, and revenue. After thirty days, monthly deltas. Snapshots older than sixty days are auto-trimmed.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>Scout's voice</h2>
+        <p>Theses are written by Scout &mdash; a 20-year games-industry analyst persona, business-first, numerate, dry, slightly contrarian. The system prompt is the source of truth for voice, with a banned-vocab lint pass that rejects hype words on every regeneration.</p>
+        <p>Hard rules every thesis must follow:</p>
+        <ul class="m-list">
+          <li>Lead with the business read, not fan-speak.</li>
+          <li>Cite one precise comparable with the magnitude gap stated by number.</li>
+          <li>Include a falsifiable "what would change my mind" condition.</li>
+          <li>Reference one cohort median by number.</li>
+          <li>Vary bullet cadence &mdash; never three same-shape sentences in a row.</li>
+        </ul>
+      </section>
+
+      <section class="m-section">
+        <h2>Quality discipline</h2>
+        <p>Every shipped artefact passes a three-lens critique against fixed criteria before publish:</p>
+        <ul class="m-list">
+          <li><strong>Content</strong> &mdash; info density, defensibility of claims, calibration of numbers.</li>
+          <li><strong>UX</strong> &mdash; skim cost, hierarchy, action paths.</li>
+          <li><strong>Tone</strong> &mdash; persona fidelity, lint pass, memorability.</li>
+        </ul>
+        <p>No artefact ships with a lens below 85/100. Three iterations cap; if still failing, the artefact is structurally wrong and gets re-spec'd from scratch.</p>
+      </section>
+
+      <section class="m-section">
+        <h2>Honest limitations</h2>
+        <ul class="m-list">
+          <li>The universe is currently 20 hand-seeded games for the demo. Production target is 300&ndash;800 active candidates.</li>
+          <li>Week-over-week deltas synthesise where snapshot history isn't yet seven days old. The Real-numbers card on each detail page shows the absolute base, which is real.</li>
+          <li>Comparables are referenced narratively but the projected-peak-CCU regression onto labelled past breakouts is on the roadmap.</li>
+          <li>Reddit, Discord, YouTube, TikTok, press, Roblox, and itch.io signals are not yet wired. Their absence is flagged on every signal table.</li>
+        </ul>
+      </section>
+
+      <footer class="footnav">
+        <a class="footlink" href="./index.html">Brief</a>
+        <a class="footlink" href="./watchlist.html">Watchlist</a>
+        <a class="footlink" href="./universe.html">Universe</a>
+        <a class="footlink" href="./meta.html">Meta</a>
+        <a class="footlink active" href="./methodology.html">Methodology</a>
+      </footer>
+    </main>
+  </body>
+</html>
