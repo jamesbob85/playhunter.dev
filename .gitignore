@@ -1,8 +1,5 @@
 # Pipeline-generated raw data — regenerable, not deployed
-/scout/data/raw_steam.json
-/scout/data/raw_gamalytic.json
-/scout/data/raw_twitch.json
-/scout/data/raw_igdb.json
+/scout/data/raw_*.json
 /scout/data/scored.json
 
 # Per-source caches — regenerable
