@@ -28,6 +28,8 @@ from persona import SCOUT_SYSTEM_PROMPT  # noqa: E402
 
 SCORED = ROOT / "data" / "scored.json"
 THESES = ROOT / "data" / "theses.json"
+RAW_ROBLOX = ROOT / "data" / "raw_roblox.json"
+RAW_ITCH = ROOT / "data" / "raw_itch.json"
 OUT = ROOT / "data" / "scout-data.json"
 
 THE_READ_PROMPT = """Write "The Read" — Scout's top-of-page editorial for today.
@@ -41,6 +43,81 @@ You'll be given today's top movers and which meta clusters are heating up.
 
 Follow Scout's hard rules: no banned vocab, business-first framing, one
 pull-quotable line. Output plain text only — no quotes, no attribution."""
+
+
+def build_upstream():
+    """Compose the Upstream section from Roblox + itch.io fetches."""
+    out = {
+        "roblox": [],
+        "itch": [],
+        "note": "Treat upstream signals with a grain of salt. Listed as taste vectors, not direct breakout candidates.",
+    }
+
+    if RAW_ROBLOX.exists():
+        roblox = json.loads(RAW_ROBLOX.read_text())
+        trending = (roblox.get("sorts") or {}).get("top-trending", {}).get("games") or []
+        seen = set()
+        for g in trending:
+            if g.get("is_sponsored") or g.get("name") in seen:
+                continue
+            seen.add(g.get("name"))
+            ratio = g.get("approval_ratio") or 0
+            pc = g.get("player_count") or 0
+            out["roblox"].append({
+                "name": g.get("name"),
+                "source": "Roblox",
+                "signal_label": f"{pc:,} concurrent · {round(ratio * 100)}% approval",
+                "player_count": pc,
+                "approval_ratio": ratio,
+                "min_age": g.get("min_age"),
+                "url": g.get("url"),
+                "why": (
+                    "Mass concurrent attention on a kid-skewing taste vector."
+                    if pc >= 30000
+                    else "Trending pattern in the Roblox cohort — watch for genre spillover."
+                ),
+            })
+            if len(out["roblox"]) >= 6:
+                break
+
+    if RAW_ITCH.exists():
+        itch = json.loads(RAW_ITCH.read_text())
+        sorts = itch.get("sorts") or {}
+        seen = set()
+        for sort_id in ("featured", "top-rated", "newest"):
+            for g in (sorts.get(sort_id) or {}).get("games") or []:
+                title = (g.get("title") or "").strip()
+                if not title or title in seen:
+                    continue
+                seen.add(title)
+                rating = g.get("rating")
+                count = g.get("rating_count")
+                signal = []
+                if rating and count:
+                    signal.append(f"★{rating:.2f} ({count:,})")
+                signal.append(sort_id)
+                out["itch"].append({
+                    "name": title,
+                    "source": "itch.io",
+                    "author": g.get("author") or "",
+                    "signal_label": " · ".join(signal),
+                    "rating": rating,
+                    "rating_count": count,
+                    "sort": sort_id,
+                    "url": g.get("url"),
+                    "desc": (g.get("desc") or "")[:160],
+                    "why": (
+                        "Strong indie traction pre-Steam. Itch breakouts have historically crossed to Steam within 6-18 months."
+                        if rating and count and count >= 1000
+                        else "New indie release — small signal but worth tracking."
+                    ),
+                })
+                if len(out["itch"]) >= 8:
+                    break
+            if len(out["itch"]) >= 8:
+                break
+
+    return out
 
 
 def cluster_velocities_with_titles(games):
@@ -230,6 +307,7 @@ def main():
                 "twitch_viewers": g["real_signals"].get("twitch_viewers"),
                 "twitch_streams": g["real_signals"].get("twitch_streams"),
                 "igdb_hypes": g["real_signals"].get("igdb_hypes"),
+                "reddit_subscribers": g["real_signals"].get("reddit_subscribers"),
             } for g in games
         },
     }
@@ -244,9 +322,12 @@ def main():
         except Exception:
             pass
 
+    upstream = build_upstream()
+
     output = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "cadence": "daily",
+        "upstream": upstream,
         "the_read": the_read["daily"],  # backward compat
         "the_read_by_cadence": the_read,
         "the_read_author": "Scout",

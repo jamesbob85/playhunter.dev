@@ -23,6 +23,9 @@
   renderPicks('#pick-conviction .pick-list', data.high_conviction);
   renderPicks('#pick-wild .pick-list', data.wild_bets);
 
+  // Upstream
+  renderUpstream();
+
   // Meta heating/cooling with titles
   renderClusters('#meta-heating', data.meta.heating, 'up');
   renderClusters('#meta-cooling', data.meta.cooling, 'down');
@@ -108,6 +111,34 @@ function renderPicks(selector, picks) {
       </a>
     `;
   }).join('');
+}
+
+function renderUpstream() {
+  const u = (window._scoutData.upstream) || {};
+  const robloxRoot = document.getElementById('upstream-roblox');
+  const itchRoot = document.getElementById('upstream-itch');
+  if (!robloxRoot || !itchRoot) return;
+
+  const roblox = (u.roblox || []).slice(0, 4);
+  const itch = (u.itch || []).slice(0, 4);
+
+  robloxRoot.innerHTML = roblox.map(e => `
+    <li class="up-item">
+      <a class="up-link" href="${e.url || '#'}" target="_blank" rel="noopener">
+        <span class="up-name">${escapeHtml(e.name || '')}</span>
+        <span class="up-signal">${escapeHtml(e.signal_label || '')}</span>
+      </a>
+    </li>
+  `).join('');
+
+  itchRoot.innerHTML = itch.map(e => `
+    <li class="up-item">
+      <a class="up-link" href="${e.url || '#'}" target="_blank" rel="noopener">
+        <span class="up-name">${escapeHtml(e.name || '')} <span class="up-byline">by ${escapeHtml(e.author || '')}</span></span>
+        <span class="up-signal">${escapeHtml(e.signal_label || '')}</span>
+      </a>
+    </li>
+  `).join('');
 }
 
 function renderClusters(selector, clusters, dir) {

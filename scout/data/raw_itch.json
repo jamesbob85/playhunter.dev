@@ -1,0 +1,924 @@
+{
+  "_source": "itch.io",
+  "fetched_at": "2026-05-15T20:41:04Z",
+  "sorts": {
+    "featured": {
+      "label": "Featured",
+      "url": "https://itch.io/browse/featured",
+      "games": [
+        {
+          "game_id": 106599,
+          "title": "Doki Doki Literature Club!",
+          "url": "https://teamsalvato.itch.io/ddlc",
+          "desc": "Will you write the way into her heart?",
+          "author": "Team Salvato",
+          "author_url": "https://teamsalvato.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 1711583,
+          "title": "Late Night Mop",
+          "url": "https://lixiangames.itch.io/late-night-mop",
+          "desc": "A haunted house cleaning simulator.",
+          "author": "LixianGames",
+          "author_url": "https://lixiangames.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 140169,
+          "title": "Mindustry",
+          "url": "https://anuke.itch.io/mindustry",
+          "desc": "The automation tower defense game",
+          "author": "Anuke",
+          "author_url": "https://anuke.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 47367,
+          "title": "Sort the Court!",
+          "url": "https://graebor.itch.io/sort-the-court",
+          "desc": "Give your decree in simple yes or no answers, and help the kingdom grow!",
+          "author": "Graeme Borland",
+          "author_url": "https://graebor.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4002987,
+          "title": "Crownbreakers",
+          "url": "https://sharkbombs.itch.io/crownbreakers",
+          "desc": "Tyrants keep the city in a chokehold. They grow fat by grinding everyone else's soul into profit. \u270aENOUGH!",
+          "author": "Sharkbomb Studios",
+          "author_url": "https://sharkbombs.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 3245484,
+          "title": "Dragonsweeper",
+          "url": "https://danielben.itch.io/dragonsweeper",
+          "desc": "A roguelike minesweeper adventure",
+          "author": "Daniel Benmergui",
+          "author_url": "https://danielben.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4340743,
+          "title": "Moss Moss",
+          "url": "https://noelcody.itch.io/moss-moss",
+          "desc": "Moss the world and find secrets (PICO-8).",
+          "author": "Noel Cody",
+          "author_url": "https://noelcody.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 476005,
+          "title": "ULTRAKILL Prelude",
+          "url": "https://hakita.itch.io/ultrakill-prelude",
+          "desc": "A fast-paced ultraviolent old school FPS with Character Action influences.",
+          "author": "Hakita",
+          "author_url": "https://hakita.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 239841,
+          "title": "Baldi's Basics in Education and Learning",
+          "url": "https://basically-games.itch.io/baldis-basics",
+          "desc": "Learn with Baldi in his fully 3D interactive schoolhouse! ...Just don't get any questions wrong.",
+          "author": "Basically Games",
+          "author_url": "https://basically-games.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 3148668,
+          "title": "Pretend it's not There",
+          "url": "https://dreadloom-studios.itch.io/pretend-its-not-there",
+          "desc": "Pretend that you can't see the monster, that may be the only way to survive.",
+          "author": "Dreadloom",
+          "author_url": "https://dreadloom-studios.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 471955,
+          "title": "irori",
+          "url": "https://pomepomelo.itch.io/irori",
+          "desc": "A travelling kitchen, a humble respite for travellers.",
+          "author": "pomepomelo",
+          "author_url": "https://pomepomelo.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 310515,
+          "title": "Night of the Nun... aka Nun Massacre",
+          "url": "https://puppetcombo.itch.io/nun-massacre",
+          "desc": "Say your PRAYERS!...  a VHS era, low poly slasher (ps1 style survival horror)",
+          "author": "Puppet Combo",
+          "author_url": "https://puppetcombo.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 2838440,
+          "title": "Burn the Midnight Oil",
+          "url": "https://teamfoxglove.itch.io/burn-the-midnight-oil",
+          "desc": "A supernatural neon-noir romance game about monsters, love, and other horrors.",
+          "author": "Foxglove Games",
+          "author_url": "https://teamfoxglove.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 792778,
+          "title": "Friday Night Funkin'",
+          "url": "https://ninja-muffin24.itch.io/funkin",
+          "desc": "The coolest rhythm game",
+          "author": "ninjamuffin99",
+          "author_url": "https://ninja-muffin24.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4418834,
+          "title": "A Date with Death 2: REMNANTS",
+          "url": "https://twoandahalfstudios.itch.io/a-date-with-death-2-remnants",
+          "desc": "Train, chat, and flirt your way through the Underworld in this romantic story-driven chatsim.",
+          "author": "Two and a Half Studios",
+          "author_url": "https://twoandahalfstudios.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4378040,
+          "title": "Conservation of Bass",
+          "url": "https://emlise.itch.io/conservation-of-bass",
+          "desc": "Bass cannot break the law of conservation of mass",
+          "author": "Emlise( formerly faxdoc )",
+          "author_url": "https://emlise.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 10812,
+          "title": "A Dance of Fire and Ice",
+          "url": "https://fizzd.itch.io/a-dance-of-fire-and-ice",
+          "desc": "Keep your focus as you guide two orbiting planets along a winding path without breaking their perfect equilibrium.",
+          "author": "fizzd",
+          "author_url": "https://fizzd.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 1731661,
+          "title": "an average day at the cat cafe",
+          "url": "https://zephyo.itch.io/an-average-day-at-the-cat-cafe",
+          "desc": "Serve quirky customers as the days pass by~ How long can you keep the cafe open?",
+          "author": "angela he",
+          "author_url": "https://zephyo.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 1116521,
+          "title": "Slide in the woods",
+          "url": "https://jonnys-games.itch.io/slide-in-the-woods",
+          "desc": "Ride it, see where it takes you.",
+          "author": "Jonny's Games",
+          "author_url": "https://jonnys-games.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4420109,
+          "title": "Horse Magnifier",
+          "url": "https://wer8888.itch.io/horse-magnifier",
+          "desc": "game where you magnify horses",
+          "author": "wer8888",
+          "author_url": "https://wer8888.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 928508,
+          "title": "Die in the Dungeon CLASSIC",
+          "url": "https://alarts.itch.io/die-in-the-dungeon",
+          "desc": "A turn-based, deck-building roguelite focused on dice combinations!",
+          "author": "Alarts",
+          "author_url": "https://alarts.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 216996,
+          "title": "Celeste",
+          "url": "https://maddymakesgamesinc.itch.io/celeste",
+          "desc": "Brave hundreds of hand-crafted challenges as you help Madeline survive her journey to the top of Celeste Mountain!",
+          "author": "Maddy Makes Games",
+          "author_url": "https://maddymakesgamesinc.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 610111,
+          "title": "The House In The Woods",
+          "url": "https://minigoliath.itch.io/the-house-in-the-woods",
+          "desc": "You are lost in a seemingly endless forest.  Heavily inspired by the Blair Witch Project.",
+          "author": "MINIGOLIATH",
+          "author_url": "https://minigoliath.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 76380,
+          "title": "Sally Face",
+          "url": "https://portablemoose.itch.io/sallyface",
+          "desc": "A Dark Mystery is Unfolding...",
+          "author": "Portable Moose",
+          "author_url": "https://portablemoose.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 531784,
+          "title": "Adventures With Anxiety!",
+          "url": "https://ncase.itch.io/anxiety",
+          "desc": "An interactive story about anxiety. You play *as* the anxiety",
+          "author": "Nicky Case!",
+          "author_url": "https://ncase.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 1035957,
+          "title": "Helltaker",
+          "url": "https://vanripper.itch.io/helltaker",
+          "desc": "Sharply dressed demon girls.",
+          "author": "vanripper",
+          "author_url": "https://vanripper.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 143899,
+          "title": "Butterfly Soup",
+          "url": "https://brianna-lei.itch.io/butterfly-soup",
+          "desc": "Gay girls playing baseball and falling in love",
+          "author": "Brianna Lei",
+          "author_url": "https://brianna-lei.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4414592,
+          "title": "Pegote",
+          "url": "https://jvolonte.itch.io/pegote",
+          "desc": "A card game where stickers twist the value of every card",
+          "author": "jvolonte",
+          "author_url": "https://jvolonte.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 366363,
+          "title": "Baba Is You",
+          "url": "https://hempuli.itch.io/baba",
+          "desc": "A puzzle game where you change the rules. Also award-winning!",
+          "author": "Hempuli",
+          "author_url": "https://hempuli.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4345179,
+          "title": "Deviled Dice",
+          "url": "https://juicybeast.itch.io/deviled-dice",
+          "desc": "Beat the devil at his own board game by cheating harder than he does.",
+          "author": "Juicy Beast",
+          "author_url": "https://juicybeast.itch.io",
+          "rating": null,
+          "rating_count": null
+        }
+      ]
+    },
+    "top-rated": {
+      "label": "Top rated",
+      "url": "https://itch.io/games/top-rated",
+      "games": [
+        {
+          "game_id": 434554,
+          "title": "\u200bOur Life: Beginnings & Always",
+          "url": "https://gbpatch.itch.io/our-life",
+          "desc": "Grow from childhood to adulthood with the lonely boy next door in this near-fully customizable visual novel.",
+          "author": "GBPatch",
+          "author_url": "https://gbpatch.itch.io",
+          "rating": 4.94,
+          "rating_count": 7278
+        },
+        {
+          "game_id": 3631685,
+          "title": "The Freak Circus",
+          "url": "https://garula.itch.io/the-freak-circus",
+          "desc": "18+ Yandere",
+          "author": "Garula",
+          "author_url": "https://garula.itch.io",
+          "rating": 4.92,
+          "rating_count": 7935
+        },
+        {
+          "game_id": 531784,
+          "title": "Adventures With Anxiety!",
+          "url": "https://ncase.itch.io/anxiety",
+          "desc": "An interactive story about anxiety. You play *as* the anxiety",
+          "author": "Nicky Case!",
+          "author_url": "https://ncase.itch.io",
+          "rating": 4.89,
+          "rating_count": 7145
+        },
+        {
+          "game_id": 1576684,
+          "title": "HoloCure",
+          "url": "https://kay-yu.itch.io/holocure",
+          "desc": "A 'survivors' like, free unofficial Hololive fan game!",
+          "author": "Kay Yu",
+          "author_url": "https://kay-yu.itch.io",
+          "rating": 4.94,
+          "rating_count": 5172
+        },
+        {
+          "game_id": 1103651,
+          "title": "Blooming Panic",
+          "url": "https://robobarbie.itch.io/blooming-panic",
+          "desc": "Welcome to our server!",
+          "author": "robobarbie",
+          "author_url": "https://robobarbie.itch.io",
+          "rating": 4.89,
+          "rating_count": 5955
+        },
+        {
+          "game_id": 2077106,
+          "title": "A Date with Death",
+          "url": "https://twoandahalfstudios.itch.io/a-date-with-death",
+          "desc": "Enter a week long bet against the Grim Reaper to keep your soul... and maybe fall in love along the way?",
+          "author": "Two and a Half Studios",
+          "author_url": "https://twoandahalfstudios.itch.io",
+          "rating": 4.91,
+          "rating_count": 5211
+        },
+        {
+          "game_id": 1635465,
+          "title": "\"Voices Of The Void\" Alpha",
+          "url": "https://mrdrnose.itch.io/votv",
+          "desc": "Gather unknown signals from deep, silent space",
+          "author": "mrdrnose",
+          "author_url": "https://mrdrnose.itch.io",
+          "rating": 4.9,
+          "rating_count": 5339
+        },
+        {
+          "game_id": 3924128,
+          "title": "Don't eat the cashier!",
+          "url": "https://miloff.itch.io/dont-eat-the-cashier",
+          "desc": "All customers are monsters. Oh no. Oh yeah?",
+          "author": "Miloff",
+          "author_url": "https://miloff.itch.io",
+          "rating": 4.94,
+          "rating_count": 3633
+        },
+        {
+          "game_id": 1495405,
+          "title": "14 Days With You [DEMO]",
+          "url": "https://cutiesai.itch.io/14dayswithyou",
+          "desc": "He's always going to be with you...",
+          "author": "cutiesai",
+          "author_url": "https://cutiesai.itch.io",
+          "rating": 4.88,
+          "rating_count": 5053
+        },
+        {
+          "game_id": 1019762,
+          "title": "Our Life: Now & Forever",
+          "url": "https://gbpatch.itch.io/our-life-nf",
+          "desc": "A paper airplane, two new neighbors, four autumns, and a one of a kind life.",
+          "author": "GBPatch",
+          "author_url": "https://gbpatch.itch.io",
+          "rating": 4.94,
+          "rating_count": 3317
+        },
+        {
+          "game_id": 424895,
+          "title": "A Short Hike",
+          "url": "https://adamgryu.itch.io/a-short-hike",
+          "desc": "a little exploration game about hiking up a mountain",
+          "author": "adamgryu",
+          "author_url": "https://adamgryu.itch.io",
+          "rating": 4.89,
+          "rating_count": 4320
+        },
+        {
+          "game_id": 2979281,
+          "title": "Killer Chat! Original Edition",
+          "url": "https://rosesrot.itch.io/killer-chat",
+          "desc": "You're a writer that's been (mistakenly) invited to a serial killer server. Uh oh.",
+          "author": "rosesrot",
+          "author_url": "https://rosesrot.itch.io",
+          "rating": 4.86,
+          "rating_count": 4913
+        },
+        {
+          "game_id": 143899,
+          "title": "Butterfly Soup",
+          "url": "https://brianna-lei.itch.io/butterfly-soup",
+          "desc": "Gay girls playing baseball and falling in love",
+          "author": "Brianna Lei",
+          "author_url": "https://brianna-lei.itch.io",
+          "rating": 4.89,
+          "rating_count": 4226
+        },
+        {
+          "game_id": 792778,
+          "title": "Friday Night Funkin'",
+          "url": "https://ninja-muffin24.itch.io/funkin",
+          "desc": "The coolest rhythm game",
+          "author": "ninjamuffin99",
+          "author_url": "https://ninja-muffin24.itch.io",
+          "rating": 4.72,
+          "rating_count": 12144
+        },
+        {
+          "game_id": 3441741,
+          "title": "Serenitrove",
+          "url": "https://alfredncy.itch.io/serenitrove",
+          "desc": "Dig, upgrade, expand... then dig deeper!",
+          "author": "Scoot",
+          "author_url": "https://alfredncy.itch.io",
+          "rating": 4.94,
+          "rating_count": 3016
+        },
+        {
+          "game_id": 92115,
+          "title": "We Become What We Behold",
+          "url": "https://ncase.itch.io/wbwwb",
+          "desc": "a game about news cycles, vicious cycles, infinite cycles",
+          "author": "Nicky Case!",
+          "author_url": "https://ncase.itch.io",
+          "rating": 4.77,
+          "rating_count": 8356
+        },
+        {
+          "game_id": 106599,
+          "title": "Doki Doki Literature Club!",
+          "url": "https://teamsalvato.itch.io/ddlc",
+          "desc": "Will you write the way into her heart?",
+          "author": "Team Salvato",
+          "author_url": "https://teamsalvato.itch.io",
+          "rating": 4.81,
+          "rating_count": 6067
+        },
+        {
+          "game_id": 362459,
+          "title": "goodbye, doggy",
+          "url": "https://picogram.itch.io/goodbye-doggy",
+          "desc": "Help your family cope with your death as a ghostly dog!",
+          "author": "Picogram",
+          "author_url": "https://picogram.itch.io",
+          "rating": 4.84,
+          "rating_count": 5027
+        },
+        {
+          "game_id": 1926074,
+          "title": "Mushroom Oasis",
+          "url": "https://deerspherestudios.itch.io/mushroom-oasis",
+          "desc": "beware of toxic fungi. a slow burn yandere vn (in development)",
+          "author": "DeersphereStudios",
+          "author_url": "https://deerspherestudios.itch.io",
+          "rating": 4.91,
+          "rating_count": 3211
+        },
+        {
+          "game_id": 646263,
+          "title": "Six Cats Under",
+          "url": "https://teambeanloop.itch.io/six-cats-under",
+          "desc": "You died. Your unfinished business? The fate of your many cats!",
+          "author": "Team Bean Loop",
+          "author_url": "https://teambeanloop.itch.io",
+          "rating": 4.77,
+          "rating_count": 7130
+        },
+        {
+          "game_id": 1969893,
+          "title": "TOUCHSTARVED: A Dark Romance Visual Novel",
+          "url": "https://redspringstudio.itch.io/touchstarved",
+          "desc": "Find a cure for your curse by entrusting your fate to 5 monstrous love interests",
+          "author": "Red Spring Studio",
+          "author_url": "https://redspringstudio.itch.io",
+          "rating": 4.89,
+          "rating_count": 3244
+        },
+        {
+          "game_id": 47367,
+          "title": "Sort the Court!",
+          "url": "https://graebor.itch.io/sort-the-court",
+          "desc": "Give your decree in simple yes or no answers, and help the kingdom grow!",
+          "author": "Graeme Borland",
+          "author_url": "https://graebor.itch.io",
+          "rating": 4.7,
+          "rating_count": 10580
+        },
+        {
+          "game_id": 565400,
+          "title": "Project Kat",
+          "url": "https://leef6010.itch.io/projectkat",
+          "desc": "A small, unconventional horror rpg.",
+          "author": "Leef 6010",
+          "author_url": "https://leef6010.itch.io",
+          "rating": 4.83,
+          "rating_count": 4561
+        },
+        {
+          "game_id": 469917,
+          "title": "Andromeda Six",
+          "url": "https://wanderlust-games.itch.io/andromeda-six",
+          "desc": "A sci-fi themed Visual Novel game.",
+          "author": "Wanderlust Games",
+          "author_url": "https://wanderlust-games.itch.io",
+          "rating": 4.85,
+          "rating_count": 3834
+        },
+        {
+          "game_id": 2421088,
+          "title": "last seen online",
+          "url": "https://qwook.itch.io/last-seen-online",
+          "desc": "Look through a stranger's computer. A horror puzzle game.",
+          "author": "qwook",
+          "author_url": "https://qwook.itch.io",
+          "rating": 4.85,
+          "rating_count": 3794
+        },
+        {
+          "game_id": 1193828,
+          "title": "DELTARUNE",
+          "url": "https://tobyfox.itch.io/deltarune",
+          "desc": "UNDERTALE's parallel story",
+          "author": "tobyfox",
+          "author_url": "https://tobyfox.itch.io",
+          "rating": 4.94,
+          "rating_count": 2274
+        },
+        {
+          "game_id": 2274960,
+          "title": "Online Obsession",
+          "url": "https://sourmiiiilk.itch.io/online-obsession",
+          "desc": "What could go wrong when you finally meet your online friend?",
+          "author": "sourmilk",
+          "author_url": "https://sourmiiiilk.itch.io",
+          "rating": 4.86,
+          "rating_count": 3188
+        },
+        {
+          "game_id": 216996,
+          "title": "Celeste",
+          "url": "https://maddymakesgamesinc.itch.io/celeste",
+          "desc": "Brave hundreds of hand-crafted challenges as you help Madeline survive her journey to the top of Celeste Mountain!",
+          "author": "Maddy Makes Games",
+          "author_url": "https://maddymakesgamesinc.itch.io",
+          "rating": 4.89,
+          "rating_count": 2646
+        },
+        {
+          "game_id": 3005038,
+          "title": "Prescription:LOVE",
+          "url": "https://livingslime.itch.io/prescriptionlove",
+          "desc": "You may see the doctor now... Forever \u2661",
+          "author": "Livingslime",
+          "author_url": "https://livingslime.itch.io",
+          "rating": 4.87,
+          "rating_count": 2974
+        },
+        {
+          "game_id": 740621,
+          "title": "A Tale of Crowns",
+          "url": "https://qeresi.itch.io/a-tale-of-crowns",
+          "desc": "A Middle Eastern fantasy/romance story.",
+          "author": "qeres\u00ee",
+          "author_url": "https://qeresi.itch.io",
+          "rating": 4.86,
+          "rating_count": 2828
+        }
+      ]
+    },
+    "newest": {
+      "label": "Newest",
+      "url": "https://itch.io/games/newest",
+      "games": [
+        {
+          "game_id": 4579648,
+          "title": "MonoWalker",
+          "url": "https://maho-ore.itch.io/monowalker",
+          "desc": "",
+          "author": "maho_ore",
+          "author_url": "https://maho-ore.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579650,
+          "title": "UNDERSUNG | Village Demo",
+          "url": "https://gamesbykoko.itch.io/u",
+          "desc": "Unsung, yet so much potential. Can you showcase your potential and save your brother?",
+          "author": "GamesByKOKO",
+          "author_url": "https://gamesbykoko.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579256,
+          "title": "Fire Tg",
+          "url": "https://oakley78356.itch.io/fire-tg",
+          "desc": "best gtag fan game ever",
+          "author": "oakley78356",
+          "author_url": "https://oakley78356.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579571,
+          "title": "Humans VS AI.IO",
+          "url": "https://lewiscoffey.itch.io/humansvsaiio",
+          "desc": "Fight ChatGPT, Claude and Gemini bots in this free browser tower defence game",
+          "author": "lewiscoffey",
+          "author_url": "https://lewiscoffey.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4464703,
+          "title": "Synthellia Awakening Protocol",
+          "url": "https://lce-hunter.itch.io/synthellia-awakening-protocol",
+          "desc": "A narrative 2D platformer set in a strange world of repetition and hidden meaning.",
+          "author": "lce_hunter",
+          "author_url": "https://lce-hunter.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4577865,
+          "title": "Echoes of the Cosmos",
+          "url": "https://wandereronestudios.itch.io/echoes-of-the-cosmos",
+          "desc": "Explore a living galaxy powered by AI \u2014 uncover mysteries, survive wars, and forge your own legend.",
+          "author": "WandererOneStudios",
+          "author_url": "https://wandereronestudios.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579606,
+          "title": "Pac-Man Evolution",
+          "url": "https://msrpp.itch.io/pac-man-evolution",
+          "desc": "Modern recreation of the classic arcade game.",
+          "author": "MegaStorm Systems",
+          "author_url": "https://msrpp.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579612,
+          "title": "Space war",
+          "url": "https://thegreatestpapyrus.itch.io/spacewar",
+          "desc": "A little space shooter game",
+          "author": "TheGreatestPapyrus",
+          "author_url": "https://thegreatestpapyrus.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4344591,
+          "title": "Call of Calamity",
+          "url": "https://creepy-cat246.itch.io/call-of-calamity",
+          "desc": "",
+          "author": "CreepyCat_246",
+          "author_url": "https://creepy-cat246.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579581,
+          "title": "Pico-8's Hardest Game v0.0.1",
+          "url": "https://neptune-skies.itch.io/pico-8s-hardest-game",
+          "desc": "Demake of \"World's Hardest Game\", from the flash era",
+          "author": "Neptune",
+          "author_url": "https://neptune-skies.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579561,
+          "title": "\u9006\u8f6c\u7684\u5c0f\u79d8\u5b9d\uff01",
+          "url": "https://fengfeiyu.itch.io/treasureofthephoenix",
+          "desc": "phoenix wright",
+          "author": "fengfeiyu",
+          "author_url": "https://fengfeiyu.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579579,
+          "title": "CUBES platformer",
+          "url": "https://scrungomcbungus.itch.io/cubes-platformer",
+          "desc": "exam for school",
+          "author": "ScrungoMcBungus",
+          "author_url": "https://scrungomcbungus.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 1149524,
+          "title": "Eddie's Adventure",
+          "url": "https://thegreatestpapyrus.itch.io/eddies-adventure",
+          "desc": "A very short platformer.",
+          "author": "TheGreatestPapyrus",
+          "author_url": "https://thegreatestpapyrus.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579435,
+          "title": "Grandpa's Big Day (Beta)",
+          "url": "https://tcm-enternainment.itch.io/grandpas-big-day-beta",
+          "desc": "Prepare a surprise party for your grandfather!",
+          "author": "TCM Enternainment",
+          "author_url": "https://tcm-enternainment.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579220,
+          "title": "Wrong Patient",
+          "url": "https://jroca.itch.io/wrong-patient",
+          "desc": "",
+          "author": "JRoca",
+          "author_url": "https://jroca.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4565907,
+          "title": "Villain Layer Safety Inspector",
+          "url": "https://soarfin.itch.io/villain-layer-safety-inspector",
+          "desc": "As a member of UAPO its your duty to protect underlings from the crimes of safety violations!",
+          "author": "Soarfin",
+          "author_url": "https://soarfin.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579489,
+          "title": "TitanBomberC32",
+          "url": "https://msrpp.itch.io/titanbomberc32",
+          "desc": "Bomberman classic game up to 4 players local or in remote",
+          "author": "MegaStorm Systems",
+          "author_url": "https://msrpp.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579530,
+          "title": "Crow with a Knife",
+          "url": "https://deadend404.itch.io/crow-with-a-knife",
+          "desc": "Don't get pecked",
+          "author": "Deadend404",
+          "author_url": "https://deadend404.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579492,
+          "title": "Cidle Online",
+          "url": "https://gament.itch.io/cidle",
+          "desc": "",
+          "author": "Gament",
+          "author_url": "https://gament.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 2417799,
+          "title": "Master Key Pocket",
+          "url": "https://mintferret.itch.io/masterkeypd",
+          "desc": "What secrets will it unlock?",
+          "author": "MintFerret",
+          "author_url": "https://mintferret.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579466,
+          "title": "Swiss Miss",
+          "url": "https://dislodgedbread.itch.io/swiss-miss",
+          "desc": "",
+          "author": "DislodgedBread",
+          "author_url": "https://dislodgedbread.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4570353,
+          "title": "Day IX : Yuki-onna",
+          "url": "https://razuth.itch.io/day-ix-yuki-onna",
+          "desc": "Short survival based on the Yuki-onna myth.",
+          "author": "Razuth",
+          "author_url": "https://razuth.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579480,
+          "title": "Blood Bolt",
+          "url": "https://thebxxss.itch.io/blood-bolt",
+          "desc": "",
+          "author": "Thebxxss",
+          "author_url": "https://thebxxss.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4573116,
+          "title": "The Citadel",
+          "url": "https://somethingofagamedev.itch.io/thecitadel",
+          "desc": "Conquer buildings, earn gold, upgrade your citadel, and push your kingdom further each run.\u200b\u200b",
+          "author": "somethingofagamedev",
+          "author_url": "https://somethingofagamedev.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4484384,
+          "title": "\u306b\u3093\u3058\u3093\u304a\u3046\u3053\u304f\uff01",
+          "url": "https://donutshunter.itch.io/ninjin-oukoku",
+          "desc": "\u3046\u3055\u304e\u3068\u306b\u3093\u3058\u3093\u306e\u30d1\u30ba\u30eb\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30de\u30fc\uff01\uff01",
+          "author": "shoma",
+          "author_url": "https://donutshunter.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4551591,
+          "title": "Car Talk",
+          "url": "https://werocreative.itch.io/car-talk",
+          "desc": "",
+          "author": "Wero",
+          "author_url": "https://werocreative.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579446,
+          "title": "Modernswap",
+          "url": "https://hickmane.itch.io/modernswap",
+          "desc": "",
+          "author": "hickmane",
+          "author_url": "https://hickmane.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579429,
+          "title": "The Stitcher",
+          "url": "https://kastres-studio.itch.io/the-stitcher",
+          "desc": "A snake-based minigame where you stitch buttons onto a piece of fabric.",
+          "author": "Kastre",
+          "author_url": "https://kastres-studio.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579319,
+          "title": "Ratinner | Nicaverse",
+          "url": "https://nicaverse.itch.io/ratinner",
+          "desc": "En este Juego enfrentas a una barricada policial lanzando ratas con tinner. Caos, f\u00edsica.",
+          "author": "Nicaverse Developer.",
+          "author_url": "https://nicaverse.itch.io",
+          "rating": null,
+          "rating_count": null
+        },
+        {
+          "game_id": 4579396,
+          "title": "2048 in C++",
+          "url": "https://btaic.itch.io/2048-in-c",
+          "desc": "2048",
+          "author": "Btaic",
+          "author_url": "https://btaic.itch.io",
+          "rating": null,
+          "rating_count": null
+        }
+      ]
+    }
+  }
+}

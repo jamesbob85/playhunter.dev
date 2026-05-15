@@ -49,6 +49,15 @@ jobs:
       - name: Fetch IGDB
         run: python pipeline/fetch_igdb.py
 
+      - name: Fetch Reddit
+        run: python pipeline/fetch_reddit.py
+
+      - name: Fetch Roblox (upstream taste vector)
+        run: python pipeline/fetch_roblox.py
+
+      - name: Fetch itch.io (upstream indie signal)
+        run: python pipeline/fetch_itch.py
+
       - name: Score
         run: python pipeline/score.py
 

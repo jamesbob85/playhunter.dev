@@ -22,6 +22,7 @@ RAW_STEAM = ROOT / "data" / "raw_steam.json"
 RAW_GAM = ROOT / "data" / "raw_gamalytic.json"
 RAW_TWITCH = ROOT / "data" / "raw_twitch.json"
 RAW_IGDB = ROOT / "data" / "raw_igdb.json"
+RAW_REDDIT = ROOT / "data" / "raw_reddit.json"
 OUT = ROOT / "data" / "scored.json"
 
 STAGE_LABELS = {
@@ -147,7 +148,7 @@ def safe_int(v, default=0):
 
 
 def score_one(appid_key: str, steam_rec: dict, gam: dict, twitch: dict, igdb: dict,
-              snap_7d=None, snap_30d=None) -> dict:
+              reddit_game=None, snap_7d=None, snap_30d=None) -> dict:
     appid = int(appid_key)
     details = steam_rec.get("appdetails") or {}
     spy = steam_rec.get("steamspy") or {}
@@ -205,8 +206,19 @@ def score_one(appid_key: str, steam_rec: dict, gam: dict, twitch: dict, igdb: di
     # ---- Synthesized fallbacks (replaced as snapshot history accumulates) ----
     # If we have a real follower delta from snapshot, use it; otherwise synth.
     follower_delta_pct = real_followers_pct_7d if real_followers_pct_7d is not None else deterministic_jitter(appid, "fol_v3", -8, 38)
-    reddit_now = int(deterministic_jitter(appid, "reddit_now_v3", 1.4, 28) * 1000)
-    reddit_prev = max(800, int(reddit_now / max(1.1, deterministic_jitter(appid, "reddit_ratio_v3", 1.05, 6))))
+
+    # Reddit: real subscriber count when subreddit is mapped, else synth fallback.
+    reddit_subs_real = (reddit_game or {}).get("subscribers") if reddit_game else None
+    if reddit_subs_real:
+        reddit_now = int(reddit_subs_real)
+        reddit_pct_7d_real = snapshot_delta(snap_7d, appid, "reddit_subscribers", reddit_subs_real)
+        if reddit_pct_7d_real is not None and reddit_pct_7d_real > -99:
+            reddit_prev = int(reddit_now / (1 + reddit_pct_7d_real / 100.0))
+        else:
+            reddit_prev = int(reddit_now * (1 - deterministic_jitter(appid, "reddit_synth_pct", 0.001, 0.04)))
+    else:
+        reddit_now = int(deterministic_jitter(appid, "reddit_now_v3", 1.4, 28) * 1000)
+        reddit_prev = max(800, int(reddit_now / max(1.1, deterministic_jitter(appid, "reddit_ratio_v3", 1.05, 6))))
     press_now = int(deterministic_jitter(appid, "press_now_v3", 1, 9))
     press_prev = max(0, press_now - int(deterministic_jitter(appid, "press_delta_v3", 0, 4)))
 
@@ -253,7 +265,12 @@ def score_one(appid_key: str, steam_rec: dict, gam: dict, twitch: dict, igdb: di
         + (igdb_aggrating / 100.0 if igdb_aggrating else 0) * 0.15
     )
     # Community (still synth — Reddit/Discord wiring is Phase 2)
-    sig_community = clip01(min(1.0, (reddit_now - reddit_prev) / max(1, reddit_prev) / 6))
+    if reddit_subs_real and reddit_prev:
+        growth = (reddit_now - reddit_prev) / max(1, reddit_prev)
+        scale_pts = norm_log(reddit_now, 1_000_000)
+        sig_community = clip01(growth * 5.0 * 0.5 + scale_pts * 0.5)
+    else:
+        sig_community = clip01(min(1.0, (reddit_now - reddit_prev) / max(1, reddit_prev) / 6))
     # Press (synth)
     sig_press = clip01((press_now - press_prev) / 5)
 
@@ -434,6 +451,8 @@ def score_one(appid_key: str, steam_rec: dict, gam: dict, twitch: dict, igdb: di
             "igdb_hypes": igdb_hypes,
             "revenue_pct_7d": revenue_pct_7d,
             "players_pct_7d": players_pct_7d,
+            "reddit_subscribers": reddit_subs_real,
+            "reddit_subreddit": (reddit_game or {}).get("subreddit") if reddit_game else None,
         },
         "signals": build_signal_list(
             sig_attention, sig_intent, sig_performance, sig_community, sig_press,
@@ -470,8 +489,10 @@ def build_signal_list(att, intent, perf, comm, press,
     if rev_pct is not None:
         out.append({"name": "Revenue 7d delta", "value_label": f"{rev_pct:+.1f}%",
                     "magnitude": min(1.0, max(0, rev_pct) / 50.0), "family": "performance", "real": True})
-    out.append({"name": "Reddit members", "value_label": f"{rdt_prev//1000}K → {rdt_now//1000}K",
-                "magnitude": comm, "family": "community", "real": False})
+    rdt_label = (f"{rdt_now/1_000_000:.1f}M" if rdt_now >= 1_000_000
+                 else f"{rdt_now//1000}K" if rdt_now >= 1000 else f"{rdt_now}")
+    out.append({"name": "Reddit subscribers", "value_label": rdt_label,
+                "magnitude": comm, "family": "community", "real": True})
     out.append({"name": "Press coverage", "value_label": f"{pr_prev} → {pr_now}",
                 "magnitude": press, "family": "press", "real": False})
     return out
@@ -508,10 +529,12 @@ def main() -> None:
     gam_blob = json.loads(RAW_GAM.read_text()) if RAW_GAM.exists() else {"games": {}}
     tw_blob = json.loads(RAW_TWITCH.read_text()) if RAW_TWITCH.exists() else {"games": {}}
     igdb_blob = json.loads(RAW_IGDB.read_text()) if RAW_IGDB.exists() else {"games": {}}
+    reddit_blob = json.loads(RAW_REDDIT.read_text()) if RAW_REDDIT.exists() else {"games": {}}
 
     gam_games = gam_blob.get("games", {})
     tw_games_by_name = tw_blob.get("games", {})
     igdb_games = igdb_blob.get("games", {})
+    reddit_games = reddit_blob.get("games", {})
 
     snap_7d = load_snapshot(7)
     snap_30d = load_snapshot(30)
@@ -526,7 +549,8 @@ def main() -> None:
         tw_name = steam_rec["seed"].get("twitch_name", "")
         twitch = tw_games_by_name.get(tw_name) or {}
         igdb = igdb_games.get(appid_key) or {}
-        scored.append(score_one(appid_key, steam_rec, gam, twitch, igdb, snap_7d, snap_30d))
+        reddit_g = reddit_games.get(appid_key) or {}
+        scored.append(score_one(appid_key, steam_rec, gam, twitch, igdb, reddit_g, snap_7d, snap_30d))
 
     scored.sort(key=lambda g: g["score"], reverse=True)
     OUT.write_text(json.dumps(scored, indent=2))

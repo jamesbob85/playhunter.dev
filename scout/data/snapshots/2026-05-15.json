@@ -1,9 +1,9 @@
 {
-  "captured_at": "2026-05-15T19:20:26Z",
+  "captured_at": "2026-05-15T20:45:59Z",
   "games": {
     "1086940": {
       "name": "Baldur's Gate 3",
-      "score": 68,
+      "score": 70,
       "stage": "Launched",
       "followers": 999786,
       "wishlists": 4427500,
@@ -13,25 +13,12 @@
       "review_ratio": 0.97,
       "twitch_viewers": 1789,
       "twitch_streams": 100,
-      "igdb_hypes": 39
-    },
-    "3241660": {
-      "name": "R.E.P.O.",
-      "score": 60,
-      "stage": "EA",
-      "followers": 310671,
-      "wishlists": 1469600,
-      "owners": 21542710,
-      "revenue": 143775785,
-      "reviews_total": 386823,
-      "review_ratio": 0.96,
-      "twitch_viewers": 2491,
-      "twitch_streams": 99,
-      "igdb_hypes": 0
+      "igdb_hypes": 39,
+      "reddit_subscribers": 3332767
     },
     "2358720": {
       "name": "Black Myth: Wukong",
-      "score": 58,
+      "score": 63,
       "stage": "Launched",
       "followers": 1447321,
       "wishlists": 4810300,
@@ -41,7 +28,23 @@
       "review_ratio": 0.97,
       "twitch_viewers": 206,
       "twitch_streams": 71,
-      "igdb_hypes": 180
+      "igdb_hypes": 180,
+      "reddit_subscribers": 615759
+    },
+    "1030300": {
+      "name": "Hollow Knight: Silksong",
+      "score": 57,
+      "stage": "Launched",
+      "followers": 595770,
+      "wishlists": 3291200,
+      "owners": 5589293,
+      "revenue": 82608338,
+      "reviews_total": 405944,
+      "review_ratio": 0.89,
+      "twitch_viewers": 1712,
+      "twitch_streams": 99,
+      "igdb_hypes": 220,
+      "reddit_subscribers": 1161051
     },
     "2767030": {
       "name": "Marvel Rivals",
@@ -55,7 +58,23 @@
       "review_ratio": 0.77,
       "twitch_viewers": 43117,
       "twitch_streams": 95,
-      "igdb_hypes": 252
+      "igdb_hypes": 252,
+      "reddit_subscribers": null
+    },
+    "3241660": {
+      "name": "R.E.P.O.",
+      "score": 55,
+      "stage": "EA",
+      "followers": 310671,
+      "wishlists": 1469600,
+      "owners": 21542710,
+      "revenue": 143775785,
+      "reviews_total": 386823,
+      "review_ratio": 0.96,
+      "twitch_viewers": 2491,
+      "twitch_streams": 99,
+      "igdb_hypes": 0,
+      "reddit_subscribers": 39449
     },
     "2622380": {
       "name": "ELDEN RING NIGHTREIGN",
@@ -69,21 +88,23 @@
       "review_ratio": 0.82,
       "twitch_viewers": 1086,
       "twitch_streams": 100,
-      "igdb_hypes": 65
+      "igdb_hypes": 65,
+      "reddit_subscribers": 4847594
     },
-    "1623730": {
-      "name": "Palworld",
+    "553850": {
+      "name": "HELLDIVERS\u2122 2",
       "score": 54,
-      "stage": "EA",
-      "followers": 621250,
-      "wishlists": 2589400,
-      "owners": 19587908,
-      "revenue": 393861353,
-      "reviews_total": 420714,
-      "review_ratio": 0.94,
-      "twitch_viewers": 418,
-      "twitch_streams": 75,
-      "igdb_hypes": 1
+      "stage": "Launched",
+      "followers": 514630,
+      "wishlists": 2267100,
+      "owners": 15782912,
+      "revenue": 431058690,
+      "reviews_total": 1140895,
+      "review_ratio": 0.75,
+      "twitch_viewers": 659,
+      "twitch_streams": 100,
+      "igdb_hypes": 0,
+      "reddit_subscribers": 2206051
     },
     "2680010": {
       "name": "The First Berserker: Khazan",
@@ -97,25 +118,12 @@
       "review_ratio": 0.85,
       "twitch_viewers": 108,
       "twitch_streams": 17,
-      "igdb_hypes": 57
-    },
-    "1030300": {
-      "name": "Hollow Knight: Silksong",
-      "score": 52,
-      "stage": "Launched",
-      "followers": 595770,
-      "wishlists": 3291200,
-      "owners": 5589293,
-      "revenue": 82608338,
-      "reviews_total": 405944,
-      "review_ratio": 0.89,
-      "twitch_viewers": 1712,
-      "twitch_streams": 99,
-      "igdb_hypes": 220
+      "igdb_hypes": 57,
+      "reddit_subscribers": null
     },
     "1145350": {
       "name": "Hades II",
-      "score": 50,
+      "score": 52,
       "stage": "Launched",
       "followers": 288171,
       "wishlists": 3396800,
@@ -125,21 +133,53 @@
       "review_ratio": 0.96,
       "twitch_viewers": 202,
       "twitch_streams": 56,
-      "igdb_hypes": 25
+      "igdb_hypes": 25,
+      "reddit_subscribers": 883647
     },
-    "1363080": {
-      "name": "Manor Lords",
+    "1623730": {
+      "name": "Palworld",
+      "score": 52,
+      "stage": "EA",
+      "followers": 621250,
+      "wishlists": 2589400,
+      "owners": 19587908,
+      "revenue": 393861353,
+      "reviews_total": 420714,
+      "review_ratio": 0.94,
+      "twitch_viewers": 418,
+      "twitch_streams": 75,
+      "igdb_hypes": 1,
+      "reddit_subscribers": 763310
+    },
+    "1966720": {
+      "name": "Lethal Company",
       "score": 50,
       "stage": "EA",
-      "followers": 557569,
-      "wishlists": 3005200,
-      "owners": 3764037,
-      "revenue": 89283151,
-      "reviews_total": 86988,
-      "review_ratio": 0.84,
-      "twitch_viewers": 19,
-      "twitch_streams": 7,
-      "igdb_hypes": 36
+      "followers": 324169,
+      "wishlists": 1592800,
+      "owners": 18783352,
+      "revenue": 137567008,
+      "reviews_total": 507266,
+      "review_ratio": 0.97,
+      "twitch_viewers": 264,
+      "twitch_streams": 64,
+      "igdb_hypes": 0,
+      "reddit_subscribers": 144711
+    },
+    "3164500": {
+      "name": "Schedule I",
+      "score": 49,
+      "stage": "EA",
+      "followers": 266191,
+      "wishlists": 1733600,
+      "owners": 8937240,
+      "revenue": 146273923,
+      "reviews_total": 297908,
+      "review_ratio": 0.98,
+      "twitch_viewers": 331,
+      "twitch_streams": 62,
+      "igdb_hypes": 7,
+      "reddit_subscribers": 117356
     },
     "1817070": {
       "name": "Marvel\u2019s Spider-Man Remastered",
@@ -153,7 +193,8 @@
       "review_ratio": 0.96,
       "twitch_viewers": 59,
       "twitch_streams": 24,
-      "igdb_hypes": 1
+      "igdb_hypes": 1,
+      "reddit_subscribers": null
     },
     "1240440": {
       "name": "Halo Infinite",
@@ -167,35 +208,23 @@
       "review_ratio": 0.69,
       "twitch_viewers": 3112,
       "twitch_streams": 61,
-      "igdb_hypes": 151
+      "igdb_hypes": 151,
+      "reddit_subscribers": null
     },
-    "553850": {
-      "name": "HELLDIVERS\u2122 2",
-      "score": 48,
-      "stage": "Launched",
-      "followers": 514630,
-      "wishlists": 2267100,
-      "owners": 15782912,
-      "revenue": 431058690,
-      "reviews_total": 1140895,
-      "review_ratio": 0.75,
-      "twitch_viewers": 659,
-      "twitch_streams": 100,
-      "igdb_hypes": 0
-    },
-    "3164500": {
-      "name": "Schedule I",
+    "1363080": {
+      "name": "Manor Lords",
       "score": 47,
       "stage": "EA",
-      "followers": 266191,
-      "wishlists": 1733600,
-      "owners": 8937240,
-      "revenue": 146273923,
-      "reviews_total": 297908,
-      "review_ratio": 0.98,
-      "twitch_viewers": 331,
-      "twitch_streams": 62,
-      "igdb_hypes": 7
+      "followers": 557569,
+      "wishlists": 3005200,
+      "owners": 3764037,
+      "revenue": 89283151,
+      "reviews_total": 86988,
+      "review_ratio": 0.84,
+      "twitch_viewers": 19,
+      "twitch_streams": 7,
+      "igdb_hypes": 36,
+      "reddit_subscribers": 167720
     },
     "2050650": {
       "name": "Resident Evil 4",
@@ -209,21 +238,23 @@
       "review_ratio": 0.97,
       "twitch_viewers": 1490,
       "twitch_streams": 84,
-      "igdb_hypes": 0
+      "igdb_hypes": 0,
+      "reddit_subscribers": null
     },
-    "1966720": {
-      "name": "Lethal Company",
-      "score": 44,
-      "stage": "EA",
-      "followers": 324169,
-      "wishlists": 1592800,
-      "owners": 18783352,
-      "revenue": 137567008,
-      "reviews_total": 507266,
-      "review_ratio": 0.97,
-      "twitch_viewers": 264,
-      "twitch_streams": 64,
-      "igdb_hypes": 0
+    "1601580": {
+      "name": "Frostpunk 2",
+      "score": 43,
+      "stage": "Launched",
+      "followers": 179687,
+      "wishlists": 2104300,
+      "owners": 1004564,
+      "revenue": 27180376,
+      "reviews_total": 25838,
+      "review_ratio": 0.75,
+      "twitch_viewers": 3,
+      "twitch_streams": 1,
+      "igdb_hypes": 27,
+      "reddit_subscribers": 89892
     },
     "1458140": {
       "name": "Pacific Drive",
@@ -237,25 +268,12 @@
       "review_ratio": 0.83,
       "twitch_viewers": 31,
       "twitch_streams": 6,
-      "igdb_hypes": 11
-    },
-    "1601580": {
-      "name": "Frostpunk 2",
-      "score": 38,
-      "stage": "Launched",
-      "followers": 179687,
-      "wishlists": 2104300,
-      "owners": 1004564,
-      "revenue": 27180376,
-      "reviews_total": 25838,
-      "review_ratio": 0.75,
-      "twitch_viewers": 3,
-      "twitch_streams": 1,
-      "igdb_hypes": 27
+      "igdb_hypes": 11,
+      "reddit_subscribers": null
     },
     "2198150": {
       "name": "Tiny Glade",
-      "score": 36,
+      "score": 39,
       "stage": "Launched",
       "followers": 186499,
       "wishlists": 1753400,
@@ -265,7 +283,8 @@
       "review_ratio": 0.97,
       "twitch_viewers": 0,
       "twitch_streams": 0,
-      "igdb_hypes": 23
+      "igdb_hypes": 23,
+      "reddit_subscribers": 6501
     },
     "2767790": {
       "name": "Rockin' Racket",
@@ -279,7 +298,8 @@
       "review_ratio": 1.0,
       "twitch_viewers": 1875,
       "twitch_streams": 99,
-      "igdb_hypes": 16
+      "igdb_hypes": 16,
+      "reddit_subscribers": null
     }
   }
 }
