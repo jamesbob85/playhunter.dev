@@ -25,6 +25,10 @@ RAW_IGDB = ROOT / "data" / "raw_igdb.json"
 RAW_REDDIT = ROOT / "data" / "raw_reddit.json"
 OUT = ROOT / "data" / "scored.json"
 
+import sys as _sys
+_sys.path.insert(0, str(ROOT / "pipeline"))
+from _comparables import load_comparables, nearest_comparables  # noqa: E402
+
 STAGE_LABELS = {
     "Announced": "Announced",
     "EA": "Early Access",
@@ -551,6 +555,11 @@ def main() -> None:
         igdb = igdb_games.get(appid_key) or {}
         reddit_g = reddit_games.get(appid_key) or {}
         scored.append(score_one(appid_key, steam_rec, gam, twitch, igdb, reddit_g, snap_7d, snap_30d))
+
+    # Attach nearest comparables once so they're available to generate_theses + build
+    comp_lib = load_comparables()
+    for g in scored:
+        g["nearest_comparables"] = nearest_comparables(g, comp_lib)
 
     scored.sort(key=lambda g: g["score"], reverse=True)
     OUT.write_text(json.dumps(scored, indent=2))

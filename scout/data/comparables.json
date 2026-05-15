@@ -1,0 +1,526 @@
+{
+  "_note": "Hand-curated library of past PC breakouts and notable misses. Each entry is a labelled lifecycle arc Scout can use as a nearest-neighbour reference when reading live games. Curation > coverage — each entry is here because it teaches a transferable lesson.",
+  "curated": "2026-05-15",
+  "comparables": [
+    {
+      "id": "lethal-company",
+      "name": "Lethal Company",
+      "year": 2023,
+      "peak_ccu": 250000,
+      "lifetime_revenue_usd": 137000000,
+      "stage_arc": "EA-launch → viral",
+      "primary_cluster": "Friendslop",
+      "secondary_clusters": ["Asymmetric horror"],
+      "team_size": 1,
+      "publisher": null,
+      "outcome": "phenom",
+      "narrative": "Zeekerss launched into EA with zero marketing budget. A mid-tier streamer (Smii7y) caught the loop in November 2023; within ten days the cascade had crossed every co-op horror channel. Peak CCU 250K. The post-peak settle held above 20K for three quarters — durability that meme-led products typically don't have because the underlying loop is hard to copy.",
+      "key_lesson": "Solo developer + zero marketing + sub-$10 SKU + an inherently streamable loop is the highest-EV indie configuration of the last five years. Competitors have failed to clone the loop three times.",
+      "signal_signature": [
+        "Zero pre-launch wishlist anomaly",
+        "Streamer cascade crossed mid-tier in days, not weeks",
+        "Twitch hours peaked at 1.8M then settled at 200K+ durably"
+      ],
+      "tags": ["solo-dev", "friendslop", "co-op-horror", "no-marketing", "sub-$10"]
+    },
+    {
+      "id": "schedule-i",
+      "name": "Schedule I",
+      "year": 2025,
+      "peak_ccu": 38000,
+      "lifetime_revenue_usd": 146000000,
+      "stage_arc": "EA-launch → TikTok cascade",
+      "primary_cluster": "Friendslop",
+      "secondary_clusters": ["Sim-revival"],
+      "team_size": 1,
+      "publisher": null,
+      "outcome": "phenom",
+      "narrative": "TVGS launched the EA in 2025 and a TikTok loop converted hashtag attention into Steam purchases at unprecedented efficiency. 204K reviews at 98% positive is the highest sentiment read in any breakout product on file. The economic model converted long before the streamer model would have — TikTok is a faster, less curatable engine.",
+      "key_lesson": "TikTok-driven curves decay faster than streamer-driven ones but capture broader non-gaming audiences in week one. Solo dev with rich mechanical depth beats meme-only competitors in retention.",
+      "signal_signature": [
+        "Twitch followers were lagging indicator, not leading",
+        "TikTok hashtag volume was the leading indicator",
+        "Sentiment durability proves loop-quality"
+      ],
+      "tags": ["solo-dev", "TikTok-led", "friendslop", "sim-rich", "EA-launch"]
+    },
+    {
+      "id": "manor-lords",
+      "name": "Manor Lords",
+      "year": 2024,
+      "peak_ccu": 174000,
+      "lifetime_revenue_usd": 89000000,
+      "stage_arc": "Multi-year wishlist anomaly → EA-launch phenom",
+      "primary_cluster": "Sim-revival",
+      "secondary_clusters": ["Single-player narrative"],
+      "team_size": 1,
+      "publisher": "Hooded Horse",
+      "outcome": "phenom",
+      "narrative": "Slavic Magic (one person) accumulated a wishlist anomaly across three years of slow-drip marketing. The wishlist count was already top-5 upcoming on Steam six months before launch — that's the rare durable demand overhang. EA launch hit 174K peak CCU, settled durably mid-five-figures.",
+      "key_lesson": "Wishlist anomalies that compound over multi-year horizons are almost impossible to fake. Hooded Horse's publisher-light model gives the dev majority of marginal revenue while providing platform-relations leverage.",
+      "signal_signature": [
+        "Three-year wishlist accumulation, not pre-launch spike",
+        "Industry coverage was light until last 30 days",
+        "Post-launch sentiment held positive despite slow content cadence"
+      ],
+      "tags": ["solo-dev", "sim-revival", "publisher-light", "wishlist-anomaly", "long-runway"]
+    },
+    {
+      "id": "palworld",
+      "name": "Palworld",
+      "year": 2024,
+      "peak_ccu": 2100000,
+      "lifetime_revenue_usd": 394000000,
+      "stage_arc": "EA-launch → meme phenom → settled",
+      "primary_cluster": "Friendslop",
+      "secondary_clusters": ["Survival crafting"],
+      "team_size": 50,
+      "publisher": null,
+      "outcome": "phenom",
+      "narrative": "Pocketpair launched into EA with explicit Pokemon-with-guns positioning. The meme broke Twitch in week one — 2.1M peak CCU, the second-largest concurrent on Steam ever. Post-peak settle revealed mechanical depth concerns — CCU fell to ~15K within four months. Currently in the long-tail phase, with Nintendo lawsuit as binding tail risk.",
+      "key_lesson": "Meme-driven launches can capture phenom-scale CCU but cohort retention is decoupled from peak. The follow-up product is the real EV question, not the current SKU.",
+      "signal_signature": [
+        "Pre-launch coverage spike from controversy, not anticipation",
+        "Week-one CCU outpaced all forecasts by ~10×",
+        "Cohort settle pattern reveals retention vs depth"
+      ],
+      "tags": ["meme-led", "friendslop", "controversy-marketed", "EA-launch", "settled"]
+    },
+    {
+      "id": "vampire-survivors",
+      "name": "Vampire Survivors",
+      "year": 2022,
+      "peak_ccu": 78000,
+      "lifetime_revenue_usd": 70000000,
+      "stage_arc": "Itch → Steam EA → genre-defining",
+      "primary_cluster": "Roguelike-revival",
+      "team_size": 1,
+      "publisher": "poncle",
+      "outcome": "phenom",
+      "narrative": "Luca Galante released on itch in 2021 for free, ported to Steam EA in late 2021 at $2.99. By mid-2022 the curve had broken — review velocity exceeded any indie precedent. The product defined a sub-genre (autobattler-survivors) that now has 40+ direct competitors on Steam.",
+      "key_lesson": "Itch.io is a legitimate Phase-0 incubator — proven loop on itch crosses to Steam with retention intact. Sub-$5 SKU with mechanical depth has structurally lower friction than any other indie pricing tier.",
+      "signal_signature": [
+        "Itch reviews and downloads were the leading indicator 6+ months pre-Steam",
+        "Steam EA pricing at $2.99 maximised volume",
+        "Defined a sub-genre — extractable as cluster heat"
+      ],
+      "tags": ["itch-to-steam", "roguelike-revival", "sub-$5", "solo-dev", "genre-defining"]
+    },
+    {
+      "id": "phasmophobia",
+      "name": "Phasmophobia",
+      "year": 2020,
+      "peak_ccu": 113000,
+      "lifetime_revenue_usd": 92000000,
+      "stage_arc": "EA stealth → streamer cascade → durable cult",
+      "primary_cluster": "Asymmetric horror",
+      "secondary_clusters": ["Friendslop"],
+      "team_size": 1,
+      "publisher": null,
+      "outcome": "phenom",
+      "narrative": "Kinetic Games (one person) released EA in September 2020. A streamer cascade through Halloween 2020 took the peak from 4K to 113K CCU in six weeks. Five years post-launch, base remains above 5K — exceptional durability for asymmetric horror.",
+      "key_lesson": "Co-op horror EA with VR support captures both gameplay-niche and broadcasting-niche markets simultaneously. October-November release window is structurally optimal for the cluster.",
+      "signal_signature": [
+        "Halloween-window release timing was operationally critical",
+        "VR support multiplied streamer-friendly content angles",
+        "Cohort durability is the long-tail value driver"
+      ],
+      "tags": ["solo-dev", "asymmetric-horror", "halloween-timed", "EA-launch", "VR-amplified"]
+    },
+    {
+      "id": "valheim",
+      "name": "Valheim",
+      "year": 2021,
+      "peak_ccu": 502000,
+      "lifetime_revenue_usd": 230000000,
+      "stage_arc": "EA-launch → phenom → durable",
+      "primary_cluster": "Survival crafting",
+      "secondary_clusters": ["Friendslop"],
+      "team_size": 5,
+      "publisher": "Coffee Stain",
+      "outcome": "phenom",
+      "narrative": "Iron Gate Studios released into EA in February 2021. Caught the COVID-era cohort plus the survival-craft revival window. 500K peak CCU. Content cadence has been slow — three major updates in five years — which capped the long-tail recapture.",
+      "key_lesson": "Five-person team with proven publisher relationships (Coffee Stain) can convert EA momentum but content cadence is the binding constraint on long-tail durability. Slow content kills the second wave.",
+      "signal_signature": [
+        "COVID-era cohort tailwind was material",
+        "Five-person dev pace insufficient for long-tail expansion",
+        "Coffee Stain publishing handle was decisive"
+      ],
+      "tags": ["small-team", "survival-crafting", "COVID-tailwind", "publisher-led", "slow-content"]
+    },
+    {
+      "id": "stardew-valley",
+      "name": "Stardew Valley",
+      "year": 2016,
+      "peak_ccu": 95000,
+      "lifetime_revenue_usd": 230000000,
+      "stage_arc": "Multi-year solo dev → launch → durable classic",
+      "primary_cluster": "Cozy",
+      "secondary_clusters": ["Sim-revival"],
+      "team_size": 1,
+      "publisher": "Chucklefish",
+      "outcome": "durable-classic",
+      "narrative": "ConcernedApe (Eric Barone) spent four years solo on Stardew. Launched 2016, hit 95K peak. The exceptional feature is durability — base above 10K nine years post-launch, multiple updates still landing. Reference shape for solo-dev sustained cohort.",
+      "key_lesson": "Four-year solo dev cycle is viable when the loop and aesthetic are unique. Post-launch content cadence by the same solo dev maintains cohort indefinitely.",
+      "signal_signature": [
+        "Long pre-launch dev time built reservoir of community curiosity",
+        "Loop simplicity attracted non-gaming audiences",
+        "Solo-dev post-launch content was the durability driver"
+      ],
+      "tags": ["solo-dev", "cozy", "durable-classic", "long-runway", "sustained-content"]
+    },
+    {
+      "id": "among-us",
+      "name": "Among Us",
+      "year": 2020,
+      "peak_ccu": 447000,
+      "lifetime_revenue_usd": 38000000,
+      "stage_arc": "Launch 2018 → flat 2 years → viral cascade 2020",
+      "primary_cluster": "Friendslop",
+      "secondary_clusters": ["Asymmetric horror"],
+      "team_size": 3,
+      "publisher": null,
+      "outcome": "phenom",
+      "narrative": "Innersloth shipped Among Us in 2018 to roughly nothing. For two years the CCU bobbed under 100. In July 2020 a Korean streamer caught the loop; within six weeks the cascade had crossed every region. Peak hit 447K. Cohort settle was sharp post-peak because product depth couldn't sustain it.",
+      "key_lesson": "Post-launch viral capture is possible years after release if loop matches a shifted cultural moment. COVID-era social need + simple co-op accelerated the cascade. Streamer-led viral is regional in origin but global in spread.",
+      "signal_signature": [
+        "Two-year flat period before the cascade",
+        "Regional streamer (Korea) caught it first",
+        "Six-week global spread"
+      ],
+      "tags": ["delayed-cascade", "friendslop", "regional-origin", "COVID-tailwind", "sharp-cooldown"]
+    },
+    {
+      "id": "hades-1",
+      "name": "Hades",
+      "year": 2020,
+      "peak_ccu": 49000,
+      "lifetime_revenue_usd": 95000000,
+      "stage_arc": "EA two years → 1.0 launch → critical phenom",
+      "primary_cluster": "Single-player narrative",
+      "secondary_clusters": ["Roguelike-revival"],
+      "team_size": 25,
+      "publisher": null,
+      "outcome": "critical-phenom",
+      "narrative": "Supergiant ran EA from late 2018 through September 2020. Used the EA period for narrative iteration as much as mechanics. 1.0 launch hit 49K peak CCU. Awards-track marketing post-launch drove durability. Reference shape for narrative-led roguelike.",
+      "key_lesson": "EA → 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+      "signal_signature": [
+        "EA-to-1.0 multiplier was ~3× CCU",
+        "Awards coverage drove month-2-onwards retention",
+        "Cohort skewed older / more story-led"
+      ],
+      "tags": ["medium-team", "EA-pacing", "narrative-led", "awards-driven", "single-player"]
+    },
+    {
+      "id": "baldurs-gate-3",
+      "name": "Baldur's Gate 3",
+      "year": 2023,
+      "peak_ccu": 875000,
+      "lifetime_revenue_usd": 760000000,
+      "stage_arc": "Multi-year EA → 1.0 phenom → durable classic",
+      "primary_cluster": "CRPG-revival",
+      "secondary_clusters": ["Single-player narrative"],
+      "team_size": 470,
+      "publisher": null,
+      "outcome": "phenom",
+      "narrative": "Larian ran a three-year EA. 1.0 launched August 2023 with no Steam discount — exceptional pricing discipline. 875K peak CCU. Awards sweep (5 GotY) drove a year-long durability. Larian rejected acquisition twice through 2024-2026 — independence is the highest-EV news for the CRPG cluster.",
+      "key_lesson": "Multi-year EA at AAA scale is viable only with substantial pre-existing IP (Wizards licence + Larian's DOS pedigree). Independence stance is the cluster-defining business read.",
+      "signal_signature": [
+        "Three-year EA built IP weight without spoiling content",
+        "Full-price launch held — exceptional pricing discipline",
+        "Awards sweep extended top-of-charts presence by 9+ months"
+      ],
+      "tags": ["large-team", "AAA-indie", "CRPG-revival", "EA-pacing", "independence-stance"]
+    },
+    {
+      "id": "elden-ring",
+      "name": "Elden Ring",
+      "year": 2022,
+      "peak_ccu": 953000,
+      "lifetime_revenue_usd": 1100000000,
+      "stage_arc": "Announce → 18-month build → launch phenom",
+      "primary_cluster": "Soulslike",
+      "secondary_clusters": ["Single-player narrative"],
+      "team_size": 350,
+      "publisher": "Bandai Namco",
+      "outcome": "phenom",
+      "narrative": "FromSoftware + GRRM combination created exceptional pre-launch interest accumulation. Bandai Namco minimal-beat marketing — three trailers in 18 months. Launch hit 953K peak. Defined the open-world soulslike sub-cluster, now extracting in Nightreign.",
+      "key_lesson": "Minimal pre-launch marketing density is FromSoft's signature playbook — works because brand premium does the work. Cross-cohort capture (open-world fans + soulslike fans) was the multiplier.",
+      "signal_signature": [
+        "Three-trailer marketing budget at AAA scale",
+        "Cross-genre cohort math was the unlock",
+        "Brand premium pre-existed launch"
+      ],
+      "tags": ["AAA", "soulslike", "minimal-marketing", "brand-led", "cross-cohort"]
+    },
+    {
+      "id": "hogwarts-legacy",
+      "name": "Hogwarts Legacy",
+      "year": 2023,
+      "peak_ccu": 879000,
+      "lifetime_revenue_usd": 1300000000,
+      "stage_arc": "Announce → IP-driven phenom → flat tail",
+      "primary_cluster": "Single-player narrative",
+      "secondary_clusters": [],
+      "team_size": 200,
+      "publisher": "Warner Bros",
+      "outcome": "phenom",
+      "narrative": "Avalanche Software built a tier-1 single-player open world powered entirely by IP weight. 879K peak CCU. Cohort-retention was structurally weak — content depth couldn't sustain the IP-driven peak. Post-month-3 settled at IP-base rather than product-base levels.",
+      "key_lesson": "IP-led launches capture phenom-scale peaks but cohort retention is decoupled. Sequel cadence becomes binding for the franchise. Controversy can be marketing — engagement velocity exceeded boycott velocity.",
+      "signal_signature": [
+        "Pre-launch wishlist was the highest in WB history",
+        "Controversy-driven coverage enhanced reach rather than suppressed it",
+        "Cohort settle revealed depth concerns"
+      ],
+      "tags": ["IP-led", "AAA", "publisher-controlled", "controversy-enhanced", "weak-retention"]
+    },
+    {
+      "id": "helldivers-2",
+      "name": "Helldivers 2",
+      "year": 2024,
+      "peak_ccu": 458000,
+      "lifetime_revenue_usd": 431000000,
+      "stage_arc": "Quiet launch → cascade → PSN crisis → recovery",
+      "primary_cluster": "Friendslop",
+      "secondary_clusters": ["Hero-shooter"],
+      "team_size": 100,
+      "publisher": "Sony Interactive",
+      "outcome": "phenom",
+      "narrative": "Arrowhead launched February 2024 with modest pre-launch attention. Cascaded to 458K peak in three weeks. PSN linkage crisis in May 2024 caused a 40% CCU collapse that mostly recovered. Live-service shape now, with platform-relations as the binding constraint.",
+      "key_lesson": "Sony's PSN policy is a structural tail risk on any platform-linked PC title. Co-op live-service with strong narrative pacing (Major Orders) can sustain 100K+ CCU base for 18+ months.",
+      "signal_signature": [
+        "Quiet pre-launch — phenom emerged from cascade",
+        "Platform-policy tail risk was material",
+        "Engagement engineering (Major Orders) became operational lever"
+      ],
+      "tags": ["medium-team", "co-op-live-service", "publisher-led", "platform-risk", "narrative-pacing"]
+    },
+    {
+      "id": "black-myth-wukong",
+      "name": "Black Myth: Wukong",
+      "year": 2024,
+      "peak_ccu": 2415000,
+      "lifetime_revenue_usd": 581000000,
+      "stage_arc": "Multi-year hype build → launch phenom → settled",
+      "primary_cluster": "Soulslike",
+      "secondary_clusters": ["Single-player narrative"],
+      "team_size": 140,
+      "publisher": null,
+      "outcome": "phenom",
+      "narrative": "Game Science built a five-year hype cycle around a 2020 reveal trailer. Chinese-market-first marketing, late Western coverage. Peak CCU 2.4M, second-largest concurrent on Steam. Cohort cooled fast — 8 months post-launch sits at 15K CCU floor. Single-product studio risk is now binding.",
+      "key_lesson": "Regional-first marketing (Chinese cohort first, Western late) is a viable AAA-indie model. Studio risk shifts from product to follow-up — second project is the EV question.",
+      "signal_signature": [
+        "Five-year reveal-to-launch hype runway",
+        "Regional cohort sequencing exploited price-discrimination opportunities",
+        "Post-peak settle was sharp — typical of single-player narrative"
+      ],
+      "tags": ["AAA-indie", "regional-first", "soulslike", "single-product-risk", "hype-cycle"]
+    },
+    {
+      "id": "no-mans-sky",
+      "name": "No Man's Sky",
+      "year": 2016,
+      "peak_ccu": 212000,
+      "lifetime_revenue_usd": 350000000,
+      "stage_arc": "Hype launch → crash → 8-year recovery arc",
+      "primary_cluster": "Survival crafting",
+      "secondary_clusters": ["Single-player narrative"],
+      "team_size": 15,
+      "publisher": null,
+      "outcome": "recovered",
+      "narrative": "Hello Games launched 2016 to 212K peak CCU then fell to ~1K within six weeks — the canonical 'hype crash' case. Subsequent eight years of free updates rebuilt the cohort. By 2024 the product was net positive sentiment for the first time. Reference shape for recovery arcs.",
+      "key_lesson": "Sustained free-content cadence over multi-year horizon can repair a damaged cohort. Most studios don't have the runway for this — Hello Games did because they had no publisher overhead.",
+      "signal_signature": [
+        "Hype-crash week-one CCU collapse",
+        "Multi-year recovery via free content",
+        "Sentiment inversion confirmed completion of arc"
+      ],
+      "tags": ["recovered", "free-content-strategy", "small-team", "no-publisher", "long-arc"]
+    },
+    {
+      "id": "cyberpunk-2077",
+      "name": "Cyberpunk 2077",
+      "year": 2020,
+      "peak_ccu": 1054000,
+      "lifetime_revenue_usd": 945000000,
+      "stage_arc": "Hype launch → console crash → 3-year repair → expansion success",
+      "primary_cluster": "Single-player narrative",
+      "secondary_clusters": [],
+      "team_size": 500,
+      "publisher": null,
+      "outcome": "recovered",
+      "narrative": "CDPR launched December 2020 to 1.05M peak CCU then suffered the worst AAA reputation collapse in a decade (console refunds + delisting). Three years of patches plus the Phantom Liberty expansion (2023) rebuilt the cohort. Netflix Edgerunners drove a 100K CCU resurgence mid-cycle.",
+      "key_lesson": "Cross-platform launches at AAA scale magnify QA failure visibility. Multi-platform-coordinated relaunch via expansion + media (Edgerunners) is a viable repair path but requires multi-year capital.",
+      "signal_signature": [
+        "PC peak held while console crashed — split-cohort dynamics",
+        "Netflix tie-in drove mid-cycle resurgence",
+        "Expansion launch successfully repaired sentiment"
+      ],
+      "tags": ["recovered", "AAA", "QA-crisis", "cross-platform-risk", "expansion-led-repair"]
+    },
+    {
+      "id": "skyrim",
+      "name": "The Elder Scrolls V: Skyrim",
+      "year": 2011,
+      "peak_ccu": 287000,
+      "lifetime_revenue_usd": 4500000000,
+      "stage_arc": "Launch phenom → 15-year durable classic",
+      "primary_cluster": "Single-player narrative",
+      "secondary_clusters": ["CRPG-revival"],
+      "team_size": 100,
+      "publisher": null,
+      "outcome": "durable-classic",
+      "narrative": "Bethesda's launch and reference shape for fifteen-year durability. The product has been republished six times (Special Edition, VR, Anniversary, etc.) and sustains a base above 30K CCU on Steam alone. Mod ecosystem is the structural moat.",
+      "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+      "signal_signature": [
+        "Mod ecosystem drives most cohort-recurring activity",
+        "Republishing is high-margin operational lever",
+        "Sentiment durability is the reference benchmark"
+      ],
+      "tags": ["durable-classic", "AAA-modding", "republish-economics", "mod-ecosystem", "single-player"]
+    },
+    {
+      "id": "witcher-3",
+      "name": "The Witcher 3",
+      "year": 2015,
+      "peak_ccu": 110000,
+      "lifetime_revenue_usd": 1100000000,
+      "stage_arc": "Launch hit → Netflix bump (2019) → durable",
+      "primary_cluster": "Single-player narrative",
+      "secondary_clusters": ["CRPG-revival"],
+      "team_size": 240,
+      "publisher": null,
+      "outcome": "durable-classic",
+      "narrative": "CDPR's 2015 launch was a strong CRPG hit. Netflix series launch in December 2019 drove a 5× CCU resurgence — the canonical 'media-tie-in renews back-catalogue' case. The 2022 next-gen update extended the curve again.",
+      "key_lesson": "Media tie-ins drive measurable cohort renewal on back-catalogue. Catalogue ownership compounds when IP carries cross-media weight.",
+      "signal_signature": [
+        "Netflix release → 5× CCU spike, sustained ~12 months",
+        "Next-gen update added second tail extension",
+        "Cross-media IP is repeatable lever"
+      ],
+      "tags": ["AAA", "media-tie-in", "back-catalogue-revival", "CRPG-revival", "IP-leveraged"]
+    },
+    {
+      "id": "anthem",
+      "name": "Anthem",
+      "year": 2019,
+      "peak_ccu": null,
+      "lifetime_revenue_usd": null,
+      "stage_arc": "Mega-hype launch → swift abandonment",
+      "primary_cluster": "Hero-shooter",
+      "team_size": 250,
+      "publisher": "Electronic Arts",
+      "outcome": "flop",
+      "narrative": "BioWare/EA's loot-shooter pivot launched February 2019 to high pre-launch hype, sold ~3M copies first month, then CCU collapsed inside a quarter. EA cancelled the planned overhaul ('Anthem Next') in 2021. Reference flop for misaligned studio-genre fits.",
+      "key_lesson": "Studio-genre fit dominates pre-launch wishlist signals. BioWare in a loot-shooter framework was structurally fragile regardless of marketing spend. Misalignment compounds — content roadmap couldn't repair the loop.",
+      "signal_signature": [
+        "Pre-launch wishlist was misleadingly strong",
+        "Cohort retention crashed in week 3",
+        "Publisher-cancellation closed the recovery option"
+      ],
+      "tags": ["flop", "studio-genre-misfit", "hero-shooter", "publisher-cancelled", "loot-shooter"]
+    },
+    {
+      "id": "marvels-avengers",
+      "name": "Marvel's Avengers",
+      "year": 2020,
+      "peak_ccu": null,
+      "lifetime_revenue_usd": null,
+      "stage_arc": "IP-led launch → live-service flop",
+      "primary_cluster": "Hero-shooter",
+      "team_size": 200,
+      "publisher": "Square Enix",
+      "outcome": "flop",
+      "narrative": "Crystal Dynamics + Square Enix attempted a Marvel-IP live-service shooter. Launched 2020, never recovered the launch peak. Servers shut down 2023. IP weight was insufficient against weak loop fundamentals.",
+      "key_lesson": "IP licence + live-service framework requires loop fundamentals that license can't paper over. Marvel weight on the shelf is no substitute for retention design.",
+      "signal_signature": [
+        "Pre-launch hype was IP-driven, not loop-driven",
+        "Week-2 cohort collapse",
+        "Content roadmap couldn't compensate for loop weakness"
+      ],
+      "tags": ["flop", "IP-misuse", "hero-shooter", "live-service-fail", "server-shutdown"]
+    },
+    {
+      "id": "the-day-before",
+      "name": "The Day Before",
+      "year": 2023,
+      "peak_ccu": null,
+      "lifetime_revenue_usd": null,
+      "stage_arc": "Pre-launch scam pattern → 4-day flop → studio shutdown",
+      "primary_cluster": "Survival crafting",
+      "team_size": 30,
+      "publisher": null,
+      "outcome": "flop",
+      "narrative": "Fntastic spent 3+ years building wishlist momentum on a product whose technical demo footage was misleading. Launched December 2023 to 38K peak CCU, sentiment was instantly catastrophic. Studio dissolved within four days. Canonical 'wishlist gaming' case.",
+      "key_lesson": "Wishlist anomalies that aren't backed by sustained gameplay evidence are diagnostic — multi-year pre-launch with no playable demos is a tell.",
+      "signal_signature": [
+        "Wishlist grew without playable demos",
+        "Coverage was promotional-trailer-driven only",
+        "Sentiment inverted within 24 hours of launch"
+      ],
+      "tags": ["flop", "scam-pattern", "wishlist-gaming", "no-demos", "studio-shutdown"]
+    },
+    {
+      "id": "concord",
+      "name": "Concord",
+      "year": 2024,
+      "peak_ccu": null,
+      "lifetime_revenue_usd": null,
+      "stage_arc": "AAA launch → 2-week shutdown",
+      "primary_cluster": "Hero-shooter",
+      "team_size": 150,
+      "publisher": "Sony Interactive",
+      "outcome": "flop",
+      "narrative": "Firewalk Studios' Sony-published hero-shooter launched August 2024 with peak CCU under 700. Shut down within two weeks. Reference flop for entering a cooled cluster with no differentiation.",
+      "key_lesson": "Cluster cooling timing is decisive. Hero-shooter cluster compressed to 2.5 durable products by 2024; a new entrant with no differentiation faced impossible recruitment math regardless of budget.",
+      "signal_signature": [
+        "Cluster was already in compression phase",
+        "Pre-launch attention was flat",
+        "First-week CCU never reached commercial viability"
+      ],
+      "tags": ["flop", "cluster-timing-error", "hero-shooter", "publisher-cancelled", "AAA-fail"]
+    },
+    {
+      "id": "pacific-drive",
+      "name": "Pacific Drive",
+      "year": 2024,
+      "peak_ccu": 23000,
+      "lifetime_revenue_usd": 19000000,
+      "stage_arc": "Launch hit → long-tail with creator-led second peak",
+      "primary_cluster": "Single-player narrative",
+      "secondary_clusters": ["Survival crafting"],
+      "team_size": 20,
+      "publisher": "Kepler Interactive",
+      "outcome": "hit",
+      "narrative": "Ironwood Studios launched February 2024 to 23K peak CCU. Reception was warm but not breakout. A creator-led second peak in early 2026 drove a 179% Twitch surge — the canonical fifteen-month long-tail second wave.",
+      "key_lesson": "Creator-led second waves on launched products are predictable but bounded — typically capture 30-50% of launch peak for 6-10 weeks. Publisher-controlled marketing pacing limits follow-through density.",
+      "signal_signature": [
+        "Creator-led second wave at month 15+",
+        "180% Twitch hours WoW on stable follower base",
+        "Six-to-ten-week sales window from second wave"
+      ],
+      "tags": ["small-team", "single-player-narrative", "publisher-led", "second-wave", "creator-driven"]
+    },
+    {
+      "id": "frostpunk-2",
+      "name": "Frostpunk 2",
+      "year": 2024,
+      "peak_ccu": 27000,
+      "lifetime_revenue_usd": 27000000,
+      "stage_arc": "Predictable launch → settled long-tail",
+      "primary_cluster": "Sim-revival",
+      "secondary_clusters": ["Single-player narrative"],
+      "team_size": 50,
+      "publisher": null,
+      "outcome": "hit",
+      "narrative": "11 Bit Studios shipped on schedule with disciplined marketing. 27K peak CCU. Tail has been smooth and predictable — the textbook 'publisher-led launch curve, no anomalies in either direction' case.",
+      "key_lesson": "Disciplined publisher launch curves don't surprise — but they don't disappoint either. The thesis attention should be on the studio's next bet (The Alters) not this SKU.",
+      "signal_signature": [
+        "Predictable launch curve",
+        "Tail decay matches Frostpunk 1 closely",
+        "No signal anomalies"
+      ],
+      "tags": ["medium-team", "sim-revival", "publisher-disciplined", "predictable", "next-bet-question"]
+    }
+  ]
+}

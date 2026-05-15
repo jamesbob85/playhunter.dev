@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T20:45:59Z",
+  "generated_at": "2026-05-15T21:04:34Z",
   "cadence": "daily",
   "upstream": {
     "roblox": [
@@ -650,6 +650,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "witcher-3",
+          "name": "The Witcher 3",
+          "year": 2015,
+          "outcome": "durable-classic",
+          "peak_ccu": 110000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch hit \u2192 Netflix bump (2019) \u2192 durable",
+          "key_lesson": "Media tie-ins drive measurable cohort renewal on back-catalogue. Catalogue ownership compounds when IP carries cross-media weight.",
+          "similarity": 12
+        },
+        {
+          "id": "skyrim",
+          "name": "The Elder Scrolls V: Skyrim",
+          "year": 2011,
+          "outcome": "durable-classic",
+          "peak_ccu": 287000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch phenom \u2192 15-year durable classic",
+          "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+          "similarity": 10
+        },
+        {
+          "id": "hogwarts-legacy",
+          "name": "Hogwarts Legacy",
+          "year": 2023,
+          "outcome": "phenom",
+          "peak_ccu": 879000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Announce \u2192 IP-driven phenom \u2192 flat tail",
+          "key_lesson": "IP-led launches capture phenom-scale peaks but cohort retention is decoupled. Sequel cadence becomes binding for the franchise. Controversy can be marketing \u2014 engagement velocity exceeded boycott velocity.",
+          "similarity": 9
+        }
+      ],
       "thesis": {
         "the_read": [
           "BG3 is past the breakout question. The interesting analytical layer is now what Larian's next project signals.",
@@ -913,6 +948,41 @@
           "magnitude": 0.2,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "elden-ring",
+          "name": "Elden Ring",
+          "year": 2022,
+          "outcome": "phenom",
+          "peak_ccu": 953000,
+          "primary_cluster": "Soulslike",
+          "stage_arc": "Announce \u2192 18-month build \u2192 launch phenom",
+          "key_lesson": "Minimal pre-launch marketing density is FromSoft's signature playbook \u2014 works because brand premium does the work. Cross-cohort capture (open-world fans + soulslike fans) was the multiplier.",
+          "similarity": 10
+        },
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 9
+        },
+        {
+          "id": "skyrim",
+          "name": "The Elder Scrolls V: Skyrim",
+          "year": 2011,
+          "outcome": "durable-classic",
+          "peak_ccu": 287000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch phenom \u2192 15-year durable classic",
+          "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+          "similarity": 9
         }
       ],
       "thesis": {
@@ -1183,6 +1253,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "manor-lords",
+          "name": "Manor Lords",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 174000,
+          "primary_cluster": "Sim-revival",
+          "stage_arc": "Multi-year wishlist anomaly \u2192 EA-launch phenom",
+          "key_lesson": "Wishlist anomalies that compound over multi-year horizons are almost impossible to fake. Hooded Horse's publisher-light model gives the dev majority of marginal revenue while providing platform-relations leverage.",
+          "similarity": 7
+        },
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 7
+        },
+        {
+          "id": "hogwarts-legacy",
+          "name": "Hogwarts Legacy",
+          "year": 2023,
+          "outcome": "phenom",
+          "peak_ccu": 879000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Announce \u2192 IP-driven phenom \u2192 flat tail",
+          "key_lesson": "IP-led launches capture phenom-scale peaks but cohort retention is decoupled. Sequel cadence becomes binding for the franchise. Controversy can be marketing \u2014 engagement velocity exceeded boycott velocity.",
+          "similarity": 7
+        }
+      ],
       "thesis": {
         "the_read": [
           "Silksong has been the canonical wishlist anomaly for six years. Steam followers +35% WoW on a base that was already saturated. There is no normal pre-launch arc that produces this number.",
@@ -1446,6 +1551,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 458000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "Quiet launch \u2192 cascade \u2192 PSN crisis \u2192 recovery",
+          "key_lesson": "Sony's PSN policy is a structural tail risk on any platform-linked PC title. Co-op live-service with strong narrative pacing (Major Orders) can sustain 100K+ CCU base for 18+ months.",
+          "similarity": 7
+        },
+        {
+          "id": "marvels-avengers",
+          "name": "Marvel's Avengers",
+          "year": 2020,
+          "outcome": "flop",
+          "peak_ccu": null,
+          "primary_cluster": "Hero-shooter",
+          "stage_arc": "IP-led launch \u2192 live-service flop",
+          "key_lesson": "IP licence + live-service framework requires loop fundamentals that license can't paper over. Marvel weight on the shelf is no substitute for retention design.",
+          "similarity": 7
+        },
+        {
+          "id": "anthem",
+          "name": "Anthem",
+          "year": 2019,
+          "outcome": "flop",
+          "peak_ccu": null,
+          "primary_cluster": "Hero-shooter",
+          "stage_arc": "Mega-hype launch \u2192 swift abandonment",
+          "key_lesson": "Studio-genre fit dominates pre-launch wishlist signals. BioWare in a loot-shooter framework was structurally fragile regardless of marketing spend. Misalignment compounds \u2014 content roadmap couldn't repair the loop.",
+          "similarity": 5
+        }
+      ],
       "thesis": {
         "the_read": [
           "Marvel Rivals' hero-shooter cluster placement is now backwards-looking \u2014 the genre is cooling broadly. NetEase is fighting against macro headwinds.",
@@ -1707,6 +1847,41 @@
           "magnitude": 0.2,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "lethal-company",
+          "name": "Lethal Company",
+          "year": 2023,
+          "outcome": "phenom",
+          "peak_ccu": 250000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 viral",
+          "key_lesson": "Solo developer + zero marketing + sub-$10 SKU + an inherently streamable loop is the highest-EV indie configuration of the last five years. Competitors have failed to clone the loop three times.",
+          "similarity": 11
+        },
+        {
+          "id": "phasmophobia",
+          "name": "Phasmophobia",
+          "year": 2020,
+          "outcome": "phenom",
+          "peak_ccu": 113000,
+          "primary_cluster": "Asymmetric horror",
+          "stage_arc": "EA stealth \u2192 streamer cascade \u2192 durable cult",
+          "key_lesson": "Co-op horror EA with VR support captures both gameplay-niche and broadcasting-niche markets simultaneously. October-November release window is structurally optimal for the cluster.",
+          "similarity": 11
+        },
+        {
+          "id": "among-us",
+          "name": "Among Us",
+          "year": 2020,
+          "outcome": "phenom",
+          "peak_ccu": 447000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "Launch 2018 \u2192 flat 2 years \u2192 viral cascade 2020",
+          "key_lesson": "Post-launch viral capture is possible years after release if loop matches a shifted cultural moment. COVID-era social need + simple co-op accelerated the cascade. Streamer-led viral is regional in origin but global in spread.",
+          "similarity": 11
         }
       ],
       "thesis": {
@@ -1979,6 +2154,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "elden-ring",
+          "name": "Elden Ring",
+          "year": 2022,
+          "outcome": "phenom",
+          "peak_ccu": 953000,
+          "primary_cluster": "Soulslike",
+          "stage_arc": "Announce \u2192 18-month build \u2192 launch phenom",
+          "key_lesson": "Minimal pre-launch marketing density is FromSoft's signature playbook \u2014 works because brand premium does the work. Cross-cohort capture (open-world fans + soulslike fans) was the multiplier.",
+          "similarity": 9
+        },
+        {
+          "id": "black-myth-wukong",
+          "name": "Black Myth: Wukong",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 2415000,
+          "primary_cluster": "Soulslike",
+          "stage_arc": "Multi-year hype build \u2192 launch phenom \u2192 settled",
+          "key_lesson": "Regional-first marketing (Chinese cohort first, Western late) is a viable AAA-indie model. Studio risk shifts from product to follow-up \u2014 second project is the EV question.",
+          "similarity": 9
+        },
+        {
+          "id": "palworld",
+          "name": "Palworld",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 2100000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 meme phenom \u2192 settled",
+          "key_lesson": "Meme-driven launches can capture phenom-scale CCU but cohort retention is decoupled from peak. The follow-up product is the real EV question, not the current SKU.",
+          "similarity": 7
+        }
+      ],
       "thesis": {
         "the_read": [
           "Elden Ring Nightreign is the cleanest pre-launch signal in the universe right now \u2014 Steam followers and streamer-pre-coverage both running ahead of base Elden Ring at the equivalent T-minus point.",
@@ -2248,6 +2458,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 458000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "Quiet launch \u2192 cascade \u2192 PSN crisis \u2192 recovery",
+          "key_lesson": "Sony's PSN policy is a structural tail risk on any platform-linked PC title. Co-op live-service with strong narrative pacing (Major Orders) can sustain 100K+ CCU base for 18+ months.",
+          "similarity": 12
+        },
+        {
+          "id": "palworld",
+          "name": "Palworld",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 2100000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 meme phenom \u2192 settled",
+          "key_lesson": "Meme-driven launches can capture phenom-scale CCU but cohort retention is decoupled from peak. The follow-up product is the real EV question, not the current SKU.",
+          "similarity": 9
+        },
+        {
+          "id": "marvels-avengers",
+          "name": "Marvel's Avengers",
+          "year": 2020,
+          "outcome": "flop",
+          "peak_ccu": null,
+          "primary_cluster": "Hero-shooter",
+          "stage_arc": "IP-led launch \u2192 live-service flop",
+          "key_lesson": "IP licence + live-service framework requires loop fundamentals that license can't paper over. Marvel weight on the shelf is no substitute for retention design.",
+          "similarity": 7
+        }
+      ],
       "thesis": {
         "the_read": [
           "Helldivers 2 is in the standard live-service decay phase \u2014 Twitch flatter than its EA equivalents, but CCU still ahead of any non-Sony non-Activision shooter on the platform.",
@@ -2506,6 +2751,41 @@
           "magnitude": 0.6,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "elden-ring",
+          "name": "Elden Ring",
+          "year": 2022,
+          "outcome": "phenom",
+          "peak_ccu": 953000,
+          "primary_cluster": "Soulslike",
+          "stage_arc": "Announce \u2192 18-month build \u2192 launch phenom",
+          "key_lesson": "Minimal pre-launch marketing density is FromSoft's signature playbook \u2014 works because brand premium does the work. Cross-cohort capture (open-world fans + soulslike fans) was the multiplier.",
+          "similarity": 10
+        },
+        {
+          "id": "black-myth-wukong",
+          "name": "Black Myth: Wukong",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 2415000,
+          "primary_cluster": "Soulslike",
+          "stage_arc": "Multi-year hype build \u2192 launch phenom \u2192 settled",
+          "key_lesson": "Regional-first marketing (Chinese cohort first, Western late) is a viable AAA-indie model. Studio risk shifts from product to follow-up \u2014 second project is the EV question.",
+          "similarity": 10
+        },
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 9
         }
       ],
       "thesis": {
@@ -2769,6 +3049,41 @@
           "magnitude": 0.2,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 12
+        },
+        {
+          "id": "skyrim",
+          "name": "The Elder Scrolls V: Skyrim",
+          "year": 2011,
+          "outcome": "durable-classic",
+          "peak_ccu": 287000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch phenom \u2192 15-year durable classic",
+          "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+          "similarity": 9
+        },
+        {
+          "id": "pacific-drive",
+          "name": "Pacific Drive",
+          "year": 2024,
+          "outcome": "hit",
+          "peak_ccu": 23000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch hit \u2192 long-tail with creator-led second peak",
+          "key_lesson": "Creator-led second waves on launched products are predictable but bounded \u2014 typically capture 30-50% of launch peak for 6-10 weeks. Publisher-controlled marketing pacing limits follow-through density.",
+          "similarity": 9
         }
       ],
       "thesis": {
@@ -3045,6 +3360,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "valheim",
+          "name": "Valheim",
+          "year": 2021,
+          "outcome": "phenom",
+          "peak_ccu": 502000,
+          "primary_cluster": "Survival crafting",
+          "stage_arc": "EA-launch \u2192 phenom \u2192 durable",
+          "key_lesson": "Five-person team with proven publisher relationships (Coffee Stain) can convert EA momentum but content cadence is the binding constraint on long-tail durability. Slow content kills the second wave.",
+          "similarity": 11
+        },
+        {
+          "id": "no-mans-sky",
+          "name": "No Man's Sky",
+          "year": 2016,
+          "outcome": "recovered",
+          "peak_ccu": 212000,
+          "primary_cluster": "Survival crafting",
+          "stage_arc": "Hype launch \u2192 crash \u2192 8-year recovery arc",
+          "key_lesson": "Sustained free-content cadence over multi-year horizon can repair a damaged cohort. Most studios don't have the runway for this \u2014 Hello Games did because they had no publisher overhead.",
+          "similarity": 10
+        },
+        {
+          "id": "lethal-company",
+          "name": "Lethal Company",
+          "year": 2023,
+          "outcome": "phenom",
+          "peak_ccu": 250000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 viral",
+          "key_lesson": "Solo developer + zero marketing + sub-$10 SKU + an inherently streamable loop is the highest-EV indie configuration of the last five years. Competitors have failed to clone the loop three times.",
+          "similarity": 8
+        }
+      ],
       "thesis": {
         "the_read": [
           "Palworld's post-meme-phase settle is now readable. CCU floor is roughly 15K \u2014 durable but not phenomenal.",
@@ -3305,6 +3655,41 @@
           "magnitude": 0.2,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "phasmophobia",
+          "name": "Phasmophobia",
+          "year": 2020,
+          "outcome": "phenom",
+          "peak_ccu": 113000,
+          "primary_cluster": "Asymmetric horror",
+          "stage_arc": "EA stealth \u2192 streamer cascade \u2192 durable cult",
+          "key_lesson": "Co-op horror EA with VR support captures both gameplay-niche and broadcasting-niche markets simultaneously. October-November release window is structurally optimal for the cluster.",
+          "similarity": 13
+        },
+        {
+          "id": "among-us",
+          "name": "Among Us",
+          "year": 2020,
+          "outcome": "phenom",
+          "peak_ccu": 447000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "Launch 2018 \u2192 flat 2 years \u2192 viral cascade 2020",
+          "key_lesson": "Post-launch viral capture is possible years after release if loop matches a shifted cultural moment. COVID-era social need + simple co-op accelerated the cascade. Streamer-led viral is regional in origin but global in spread.",
+          "similarity": 13
+        },
+        {
+          "id": "schedule-i",
+          "name": "Schedule I",
+          "year": 2025,
+          "outcome": "phenom",
+          "peak_ccu": 38000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 TikTok cascade",
+          "key_lesson": "TikTok-driven curves decay faster than streamer-driven ones but capture broader non-gaming audiences in week one. Solo dev with rich mechanical depth beats meme-only competitors in retention.",
+          "similarity": 10
         }
       ],
       "thesis": {
@@ -3581,6 +3966,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "lethal-company",
+          "name": "Lethal Company",
+          "year": 2023,
+          "outcome": "phenom",
+          "peak_ccu": 250000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 viral",
+          "key_lesson": "Solo developer + zero marketing + sub-$10 SKU + an inherently streamable loop is the highest-EV indie configuration of the last five years. Competitors have failed to clone the loop three times.",
+          "similarity": 10
+        },
+        {
+          "id": "manor-lords",
+          "name": "Manor Lords",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 174000,
+          "primary_cluster": "Sim-revival",
+          "stage_arc": "Multi-year wishlist anomaly \u2192 EA-launch phenom",
+          "key_lesson": "Wishlist anomalies that compound over multi-year horizons are almost impossible to fake. Hooded Horse's publisher-light model gives the dev majority of marginal revenue while providing platform-relations leverage.",
+          "similarity": 10
+        },
+        {
+          "id": "among-us",
+          "name": "Among Us",
+          "year": 2020,
+          "outcome": "phenom",
+          "peak_ccu": 447000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "Launch 2018 \u2192 flat 2 years \u2192 viral cascade 2020",
+          "key_lesson": "Post-launch viral capture is possible years after release if loop matches a shifted cultural moment. COVID-era social need + simple co-op accelerated the cascade. Streamer-led viral is regional in origin but global in spread.",
+          "similarity": 10
+        }
+      ],
       "thesis": {
         "the_read": [
           "Schedule I broke through on TikTok last year and the long-tail is still compounding. Twitch hours +164% WoW, follower count +38% \u2014 both into territory normally reserved for new releases, not month-eight EA.",
@@ -3854,6 +4274,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 9
+        },
+        {
+          "id": "skyrim",
+          "name": "The Elder Scrolls V: Skyrim",
+          "year": 2011,
+          "outcome": "durable-classic",
+          "peak_ccu": 287000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch phenom \u2192 15-year durable classic",
+          "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+          "similarity": 9
+        },
+        {
+          "id": "pacific-drive",
+          "name": "Pacific Drive",
+          "year": 2024,
+          "outcome": "hit",
+          "peak_ccu": 23000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch hit \u2192 long-tail with creator-led second peak",
+          "key_lesson": "Creator-led second waves on launched products are predictable but bounded \u2014 typically capture 30-50% of launch peak for 6-10 weeks. Publisher-controlled marketing pacing limits follow-through density.",
+          "similarity": 9
+        }
+      ],
       "thesis": {
         "the_read": [
           "Spider-Man Remastered is the AAA port long-tail in its mature phase. No surprises in the signal, no surprises in the economics.",
@@ -4124,6 +4579,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 458000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "Quiet launch \u2192 cascade \u2192 PSN crisis \u2192 recovery",
+          "key_lesson": "Sony's PSN policy is a structural tail risk on any platform-linked PC title. Co-op live-service with strong narrative pacing (Major Orders) can sustain 100K+ CCU base for 18+ months.",
+          "similarity": 7
+        },
+        {
+          "id": "marvels-avengers",
+          "name": "Marvel's Avengers",
+          "year": 2020,
+          "outcome": "flop",
+          "peak_ccu": null,
+          "primary_cluster": "Hero-shooter",
+          "stage_arc": "IP-led launch \u2192 live-service flop",
+          "key_lesson": "IP licence + live-service framework requires loop fundamentals that license can't paper over. Marvel weight on the shelf is no substitute for retention design.",
+          "similarity": 7
+        },
+        {
+          "id": "anthem",
+          "name": "Anthem",
+          "year": 2019,
+          "outcome": "flop",
+          "peak_ccu": null,
+          "primary_cluster": "Hero-shooter",
+          "stage_arc": "Mega-hype launch \u2192 swift abandonment",
+          "key_lesson": "Studio-genre fit dominates pre-launch wishlist signals. BioWare in a loot-shooter framework was structurally fragile regardless of marketing spend. Misalignment compounds \u2014 content roadmap couldn't repair the loop.",
+          "similarity": 5
+        }
+      ],
       "thesis": {
         "the_read": [
           "Halo Infinite remains the case study of a live-service launch that compounded the wrong way. The current readings are a stabilised post-recovery base, not breakout territory.",
@@ -4390,6 +4880,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "frostpunk-2",
+          "name": "Frostpunk 2",
+          "year": 2024,
+          "outcome": "hit",
+          "peak_ccu": 27000,
+          "primary_cluster": "Sim-revival",
+          "stage_arc": "Predictable launch \u2192 settled long-tail",
+          "key_lesson": "Disciplined publisher launch curves don't surprise \u2014 but they don't disappoint either. The thesis attention should be on the studio's next bet (The Alters) not this SKU.",
+          "similarity": 7
+        },
+        {
+          "id": "schedule-i",
+          "name": "Schedule I",
+          "year": 2025,
+          "outcome": "phenom",
+          "peak_ccu": 38000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 TikTok cascade",
+          "key_lesson": "TikTok-driven curves decay faster than streamer-driven ones but capture broader non-gaming audiences in week one. Solo dev with rich mechanical depth beats meme-only competitors in retention.",
+          "similarity": 6
+        },
+        {
+          "id": "stardew-valley",
+          "name": "Stardew Valley",
+          "year": 2016,
+          "outcome": "durable-classic",
+          "peak_ccu": 95000,
+          "primary_cluster": "Cozy",
+          "stage_arc": "Multi-year solo dev \u2192 launch \u2192 durable classic",
+          "key_lesson": "Four-year solo dev cycle is viable when the loop and aesthetic are unique. Post-launch content cadence by the same solo dev maintains cohort indefinitely.",
+          "similarity": 6
+        }
+      ],
       "thesis": {
         "the_read": [
           "Manor Lords re-accelerated mid-Early-Access \u2014 Twitch hours +206% WoW on a build that has been out for over a year. This is the rare second wave, not the typical EA flatline.",
@@ -4641,6 +5166,41 @@
           "magnitude": 0.0,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 9
+        },
+        {
+          "id": "skyrim",
+          "name": "The Elder Scrolls V: Skyrim",
+          "year": 2011,
+          "outcome": "durable-classic",
+          "peak_ccu": 287000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch phenom \u2192 15-year durable classic",
+          "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+          "similarity": 9
+        },
+        {
+          "id": "pacific-drive",
+          "name": "Pacific Drive",
+          "year": 2024,
+          "outcome": "hit",
+          "peak_ccu": 23000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch hit \u2192 long-tail with creator-led second peak",
+          "key_lesson": "Creator-led second waves on launched products are predictable but bounded \u2014 typically capture 30-50% of launch peak for 6-10 weeks. Publisher-controlled marketing pacing limits follow-through density.",
+          "similarity": 9
         }
       ],
       "thesis": {
@@ -4910,6 +5470,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "manor-lords",
+          "name": "Manor Lords",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 174000,
+          "primary_cluster": "Sim-revival",
+          "stage_arc": "Multi-year wishlist anomaly \u2192 EA-launch phenom",
+          "key_lesson": "Wishlist anomalies that compound over multi-year horizons are almost impossible to fake. Hooded Horse's publisher-light model gives the dev majority of marginal revenue while providing platform-relations leverage.",
+          "similarity": 10
+        },
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 9
+        },
+        {
+          "id": "skyrim",
+          "name": "The Elder Scrolls V: Skyrim",
+          "year": 2011,
+          "outcome": "durable-classic",
+          "peak_ccu": 287000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch phenom \u2192 15-year durable classic",
+          "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+          "similarity": 9
+        }
+      ],
       "thesis": {
         "the_read": [
           "Frostpunk 2 is the textbook publisher-led launch curve \u2014 clean, predictable, no anomalies in either direction. The signal is that there is no signal.",
@@ -5174,6 +5769,41 @@
           "magnitude": 0.2,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "no-mans-sky",
+          "name": "No Man's Sky",
+          "year": 2016,
+          "outcome": "recovered",
+          "peak_ccu": 212000,
+          "primary_cluster": "Survival crafting",
+          "stage_arc": "Hype launch \u2192 crash \u2192 8-year recovery arc",
+          "key_lesson": "Sustained free-content cadence over multi-year horizon can repair a damaged cohort. Most studios don't have the runway for this \u2014 Hello Games did because they had no publisher overhead.",
+          "similarity": 12
+        },
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 9
+        },
+        {
+          "id": "skyrim",
+          "name": "The Elder Scrolls V: Skyrim",
+          "year": 2011,
+          "outcome": "durable-classic",
+          "peak_ccu": 287000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Launch phenom \u2192 15-year durable classic",
+          "key_lesson": "Mod-ecosystem-driven durability is the highest LTV in PC gaming. Every republish capture wave is incremental revenue at near-zero marginal cost. Reference for cohort-recurring-revenue arguments.",
+          "similarity": 9
         }
       ],
       "thesis": {
@@ -5441,6 +6071,41 @@
           "real": false
         }
       ],
+      "nearest_comparables": [
+        {
+          "id": "stardew-valley",
+          "name": "Stardew Valley",
+          "year": 2016,
+          "outcome": "durable-classic",
+          "peak_ccu": 95000,
+          "primary_cluster": "Cozy",
+          "stage_arc": "Multi-year solo dev \u2192 launch \u2192 durable classic",
+          "key_lesson": "Four-year solo dev cycle is viable when the loop and aesthetic are unique. Post-launch content cadence by the same solo dev maintains cohort indefinitely.",
+          "similarity": 10
+        },
+        {
+          "id": "frostpunk-2",
+          "name": "Frostpunk 2",
+          "year": 2024,
+          "outcome": "hit",
+          "peak_ccu": 27000,
+          "primary_cluster": "Sim-revival",
+          "stage_arc": "Predictable launch \u2192 settled long-tail",
+          "key_lesson": "Disciplined publisher launch curves don't surprise \u2014 but they don't disappoint either. The thesis attention should be on the studio's next bet (The Alters) not this SKU.",
+          "similarity": 9
+        },
+        {
+          "id": "manor-lords",
+          "name": "Manor Lords",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 174000,
+          "primary_cluster": "Sim-revival",
+          "stage_arc": "Multi-year wishlist anomaly \u2192 EA-launch phenom",
+          "key_lesson": "Wishlist anomalies that compound over multi-year horizons are almost impossible to fake. Hooded Horse's publisher-light model gives the dev majority of marginal revenue while providing platform-relations leverage.",
+          "similarity": 7
+        }
+      ],
       "thesis": {
         "the_read": [
           "Tiny Glade is the textbook cozy outlier \u2014 a 2-person team, no marketing budget, riding cluster tailwinds. The product is doing what was designed.",
@@ -5647,6 +6312,41 @@
           "magnitude": 0.0,
           "family": "press",
           "real": false
+        }
+      ],
+      "nearest_comparables": [
+        {
+          "id": "palworld",
+          "name": "Palworld",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 2100000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "EA-launch \u2192 meme phenom \u2192 settled",
+          "key_lesson": "Meme-driven launches can capture phenom-scale CCU but cohort retention is decoupled from peak. The follow-up product is the real EV question, not the current SKU.",
+          "similarity": 4
+        },
+        {
+          "id": "hades-1",
+          "name": "Hades",
+          "year": 2020,
+          "outcome": "critical-phenom",
+          "peak_ccu": 49000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "EA two years \u2192 1.0 launch \u2192 critical phenom",
+          "key_lesson": "EA \u2192 1.0 conversion is highest when EA is used for narrative + content polish rather than fundamental mechanics. Supergiant's awards-led marketing post-launch outperforms CCU-led marketing for narrative products.",
+          "similarity": 4
+        },
+        {
+          "id": "helldivers-2",
+          "name": "Helldivers 2",
+          "year": 2024,
+          "outcome": "phenom",
+          "peak_ccu": 458000,
+          "primary_cluster": "Friendslop",
+          "stage_arc": "Quiet launch \u2192 cascade \u2192 PSN crisis \u2192 recovery",
+          "key_lesson": "Sony's PSN policy is a structural tail risk on any platform-linked PC title. Co-op live-service with strong narrative pacing (Major Orders) can sustain 100K+ CCU base for 18+ months.",
+          "similarity": 4
         }
       ],
       "thesis": {

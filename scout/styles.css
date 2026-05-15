@@ -873,6 +873,149 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .up-row-desc { font-size: 13px; line-height: 1.5; color: var(--fg-1); margin: 4px 0 6px; }
 .up-row-why { font-size: 12px; color: var(--fg-3); line-height: 1.5; font-style: italic; margin: 0; }
 
+/* ── Comparables page ────────────────────────────────────────────── */
+.comp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 18px 0;
+}
+@media (max-width: 720px) { .comp-grid { grid-template-columns: 1fr; } }
+
+.comp-card {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.comp-card[data-outcome="flop"] { border-left: 2px solid var(--warn); }
+.comp-card[data-outcome="phenom"] { border-left: 2px solid var(--t-phenom); }
+.comp-card[data-outcome="critical-phenom"] { border-left: 2px solid var(--accent); }
+.comp-card[data-outcome="durable-classic"] { border-left: 2px solid var(--t-cult); }
+.comp-card[data-outcome="recovered"] { border-left: 2px solid var(--ok); }
+.comp-card[data-outcome="hit"] { border-left: 2px solid var(--t-hit); }
+
+.comp-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.comp-name { font-size: 18px; font-weight: 500; margin: 0; letter-spacing: -0.005em; }
+.comp-year {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--fg-3);
+  letter-spacing: 0.06em;
+}
+
+.comp-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+}
+.comp-stat { display: inline-flex; flex-direction: column; gap: 1px; min-width: 0; }
+.comp-stat .cs-k { color: var(--fg-3); letter-spacing: 0.1em; text-transform: uppercase; font-size: 9px; }
+.comp-stat .cs-v { color: var(--fg-1); }
+.outcome-tag {
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  text-transform: lowercase;
+  background: var(--bg-3);
+}
+.outcome-tag[data-outcome="phenom"] { background: #ff6a4522; color: #ffae8c; }
+.outcome-tag[data-outcome="critical-phenom"] { background: var(--accent-dim); color: var(--accent); }
+.outcome-tag[data-outcome="durable-classic"] { background: #4ed3b622; color: #87e3ce; }
+.outcome-tag[data-outcome="recovered"] { background: var(--ok-dim); color: var(--ok); }
+.outcome-tag[data-outcome="flop"] { background: var(--warn-dim); color: var(--warn); }
+.outcome-tag[data-outcome="hit"] { background: #f4b74022; color: #f5cf72; }
+
+.comp-arc {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--fg-2);
+  letter-spacing: 0.04em;
+  border-left: 1px solid var(--line);
+  padding-left: 10px;
+}
+.comp-clusters { display: flex; gap: 5px; flex-wrap: wrap; }
+.comp-narrative { font-size: 13px; line-height: 1.55; color: var(--fg-1); margin: 4px 0; }
+
+.comp-lesson {
+  padding: 10px 12px;
+  background: #88c0ff0c;
+  border: 1px solid #88c0ff33;
+  border-radius: 6px;
+}
+.comp-lesson-label {
+  display: block;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.comp-lesson p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--fg); font-style: italic; }
+
+.comp-signature {
+  font-size: 12px;
+}
+.comp-signature-label {
+  display: block;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.comp-signature ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 8px;
+  color: var(--fg-2);
+}
+.comp-signature li { padding: 2px 0; }
+.comp-signature li::before { content: "▸ "; color: var(--fg-3); }
+
+.comp-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+.comp-tag {
+  padding: 2px 8px;
+  font-size: 10px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  background: var(--bg-3);
+  color: var(--fg-3);
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+
+/* Nearest comparables on game detail */
+.nearest-comp-list { display: flex; flex-direction: column; gap: 8px; }
+.nearest-comp {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  padding: 10px 12px;
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  align-items: center;
+}
+.nearest-comp .nc-meta { font-size: 12px; color: var(--fg-2); line-height: 1.4; }
+.nearest-comp .nc-name { font-weight: 500; color: var(--fg); font-size: 14px; }
+.nearest-comp .nc-similarity {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
 /* ── Watchlist page ──────────────────────────────────────────────── */
 .tier-section {
   padding: 24px 0 22px;

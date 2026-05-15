@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Comparables · Scout · playhunter.dev</title>
+    <meta name="description" content="Hand-labelled past breakouts and notable misses. Scout's reference library for nearest-neighbour matching against live games." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" class="brief">
+      <header class="masthead">
+        <div class="masthead-l">
+          <a class="brand" href="./index.html">SCOUT</a>
+          <div class="tagline">the desk for breakout games</div>
+        </div>
+        <div class="masthead-r">
+          <a class="back" href="./index.html">← Brief</a>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <h1 class="page-title">Comparables</h1>
+        <p class="page-deck">The library of past breakouts and notable misses Scout uses as a nearest-neighbour reference. Each entry is here because it teaches a transferable lesson &mdash; curation over coverage. Live games are matched against this library on cluster, stage, and studio fingerprint to ground projected-scale estimates.</p>
+      </section>
+
+      <section class="uni-controls">
+        <div class="filter-group">
+          <span class="filter-label">Outcome</span>
+          <button class="filter-chip active" data-filter="outcome" data-value="">All</button>
+          <button class="filter-chip" data-filter="outcome" data-value="phenom">Phenom</button>
+          <button class="filter-chip" data-filter="outcome" data-value="hit">Hit</button>
+          <button class="filter-chip" data-filter="outcome" data-value="critical-phenom">Critical-phenom</button>
+          <button class="filter-chip" data-filter="outcome" data-value="durable-classic">Durable</button>
+          <button class="filter-chip" data-filter="outcome" data-value="recovered">Recovered</button>
+          <button class="filter-chip" data-filter="outcome" data-value="flop">Flop</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Cluster</span>
+          <button class="filter-chip active" data-filter="cluster" data-value="">All</button>
+          <button class="filter-chip" data-filter="cluster" data-value="Friendslop">Friendslop</button>
+          <button class="filter-chip" data-filter="cluster" data-value="Single-player narrative">SP narrative</button>
+          <button class="filter-chip" data-filter="cluster" data-value="Sim-revival">Sim-revival</button>
+          <button class="filter-chip" data-filter="cluster" data-value="Soulslike">Soulslike</button>
+          <button class="filter-chip" data-filter="cluster" data-value="Survival crafting">Survival</button>
+          <button class="filter-chip" data-filter="cluster" data-value="Hero-shooter">Hero-shooter</button>
+        </div>
+        <span class="uni-count" id="comp-count">—</span>
+      </section>
+
+      <section id="comp-grid" class="comp-grid"></section>
+
+      <footer class="footnav">
+        <a class="footlink" href="./index.html">Brief</a>
+        <a class="footlink" href="./watchlist.html">Watchlist</a>
+        <a class="footlink" href="./universe.html">Universe</a>
+        <a class="footlink" href="./meta.html">Meta</a>
+        <a class="footlink" href="./upstream.html">Upstream</a>
+        <a class="footlink active" href="./comparables.html">Comparables</a>
+        <a class="footlink" href="./methodology.html">Methodology</a>
+      </footer>
+    </main>
+    <script src="./comparables.js"></script>
+  </body>
+</html>

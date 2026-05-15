@@ -23,16 +23,64 @@ OUT = ROOT / "data" / "theses.json"
 MODEL = "claude-opus-4-7"
 
 
+from _comparables import comparables_by_id
+
+
+def _load_comparables_index():
+    return comparables_by_id()
+
+
 def build_user_message(game: dict) -> str:
     signals_lines = []
-    for s in game["signals"]:
-        signals_lines.append(f"  - {s['name']}: {s['value_label']} (magnitude {s['magnitude']:.2f}, family={s['family']})")
+    for s in game.get("signals") or []:
+        signals_lines.append(f"  - {s['name']}: {s['value_label']} (magnitude {s['magnitude']:.2f}, family={s['family']}, real={s.get('real', False)})")
     signals_block = "\n".join(signals_lines)
+
+    rs = game.get("real_signals") or {}
+    real_block_lines = []
+    for key, label in [
+        ("revenue", "Lifetime revenue"),
+        ("owners", "Estimated owners"),
+        ("followers", "Steam followers"),
+        ("wishlists", "Wishlists"),
+        ("reviews_total", "Reviews total"),
+        ("review_ratio", "Review % positive"),
+        ("twitch_viewers", "Twitch live viewers"),
+        ("twitch_streams", "Twitch streams"),
+        ("igdb_hypes", "IGDB hypes"),
+        ("reddit_subscribers", "Reddit subscribers"),
+    ]:
+        v = rs.get(key)
+        if v is None or v == 0:
+            continue
+        if key == "review_ratio":
+            real_block_lines.append(f"  - {label}: {v * 100:.0f}%")
+        elif key == "revenue":
+            real_block_lines.append(f"  - {label}: ${v:,}")
+        else:
+            real_block_lines.append(f"  - {label}: {v:,}")
+    real_block = "\n".join(real_block_lines) if real_block_lines else "  (none available)"
+
+    # Comparables block — Scout's grounded reference
+    comp_index = _load_comparables_index()
+    nearest = game.get("nearest_comparables") or []
+    comp_lines = []
+    for nc in nearest[:3]:
+        full = comp_index.get(nc.get("id"), {})
+        peak = full.get("peak_ccu")
+        peak_str = f"{peak/1000:.0f}K peak CCU" if peak else "no CCU recorded"
+        lesson = full.get("key_lesson") or ""
+        sig = " · ".join((full.get("signal_signature") or [])[:2])
+        comp_lines.append(
+            f"  • {full.get('name')} ({full.get('year')}, {full.get('outcome')}, {peak_str}) — "
+            f"{full.get('stage_arc', '')}\n    lesson: {lesson}\n    signal sig: {sig}"
+        )
+    comp_block = "\n".join(comp_lines) if comp_lines else "  (none — game has no clear cluster match in the library)"
 
     return f"""Game: {game['name']}
 Studio: {game['studio']}
 Stage: {game['stage_label']}
-Price: {game['price']}
+Price: {game.get('price') or 'TBD'}
 Release date: {game.get('release_date') or 'TBD'}
 Genres: {', '.join(game.get('genres') or []) or 'unspecified'}
 Meta clusters this fits: {', '.join(game.get('meta_clusters') or []) or 'none tagged'}
@@ -43,17 +91,17 @@ Computed readings:
   Scale band: {game['scale']} (projected peak CCU {game['scale_band'][0]:,}–{game['scale_band'][1]:,})
   Meta modifier: {game['meta_modifier']}
 
-This week's signal readings:
+This week's signal readings (● = real, ○ = synth):
 {signals_block}
 
-Real Steam data:
-  Current CCU snapshot: {game['real_signals']['ccu']:,}
-  Players (last 2 weeks): {game['real_signals']['players_2weeks']:,}
-  Reviews: {game['real_signals']['reviews_total']:,} total, {game['real_signals']['review_ratio']*100:.0f}% positive
+Real numbers (live from Steam / Gamalytic / Twitch / IGDB / Reddit):
+{real_block}
+
+Nearest comparables in Scout's library (use these as factual ground truth — cite them by name with the magnitude gap stated):
+{comp_block}
 
 Now produce the JSON thesis per the task spec. Lead with the business read.
-If a stat (e.g. "70% of the time in our comparables") would help your point,
-state it — but only if it's a reasonable industry rule-of-thumb you can defend.
+You must name one of the comparables above in the "comparable" field and state the magnitude gap by number.
 """
 
 

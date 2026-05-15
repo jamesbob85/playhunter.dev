@@ -119,6 +119,22 @@
         </ul>
       </section>` : ''}
 
+    ${(g.nearest_comparables && g.nearest_comparables.length) ? `
+      <section class="section">
+        <h3>Nearest comparables</h3>
+        <div class="nearest-comp-list">
+          ${g.nearest_comparables.map(nc => `
+            <a class="nearest-comp" href="./comparables.html">
+              <div>
+                <div class="nc-name">${escapeHtml(nc.name)} <span style="color: var(--fg-3); font-size: 12px;">(${nc.year})</span></div>
+                <div class="nc-meta">${escapeHtml(nc.stage_arc || '')} · ${escapeHtml(nc.primary_cluster || '')} · <span class="outcome-tag" data-outcome="${nc.outcome}">${nc.outcome}</span></div>
+              </div>
+              <span class="nc-similarity">similarity ${nc.similarity}</span>
+            </a>
+          `).join('')}
+        </div>
+      </section>` : ''}
+
     <section class="section">
       <h3>Top signals this week</h3>
       <div class="signals">

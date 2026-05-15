@@ -25,11 +25,13 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 
 from persona import SCOUT_SYSTEM_PROMPT  # noqa: E402
+from _comparables import load_comparables, nearest_comparables  # noqa: E402
 
 SCORED = ROOT / "data" / "scored.json"
 THESES = ROOT / "data" / "theses.json"
 RAW_ROBLOX = ROOT / "data" / "raw_roblox.json"
 RAW_ITCH = ROOT / "data" / "raw_itch.json"
+COMPARABLES = ROOT / "data" / "comparables.json"
 OUT = ROOT / "data" / "scout-data.json"
 
 THE_READ_PROMPT = """Write "The Read" — Scout's top-of-page editorial for today.
@@ -233,9 +235,12 @@ def generate_the_read(games, heating, cadence="daily"):
 def main():
     games = json.loads(SCORED.read_text())
     theses = json.loads(THESES.read_text()) if THESES.exists() else {}
+    comp_lib = load_comparables()
 
-    # Attach thesis to each game
+    # Attach nearest comparables BEFORE generate_theses runs (it reads from this)
+    # and thesis after (or fall back to whatever theses.json holds).
     for g in games:
+        g["nearest_comparables"] = nearest_comparables(g, comp_lib)
         g["thesis"] = theses.get(str(g["id"]), {})
 
     movers = sorted(games, key=lambda g: abs(g["score_delta"]), reverse=True)[:6]
