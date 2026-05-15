@@ -106,14 +106,16 @@ def main():
     games = json.loads(SCORED.read_text())
     api_key = os.environ.get("ANTHROPIC_API_KEY")
 
-    out = {}
     if not api_key:
-        print("No ANTHROPIC_API_KEY — writing stub theses.")
-        for g in games:
-            out[str(g["id"])] = stub_thesis(g)
-        OUT.write_text(json.dumps(out, indent=2))
-        print(f"wrote {OUT} (all stubbed)")
+        if OUT.exists():
+            print(f"No ANTHROPIC_API_KEY — keeping existing {OUT.name} (won't overwrite with stubs).")
+        else:
+            print("No ANTHROPIC_API_KEY and no existing theses — writing stubs as bootstrap.")
+            out = {str(g["id"]): stub_thesis(g) for g in games}
+            OUT.write_text(json.dumps(out, indent=2))
         return
+
+    out = {}
 
     from anthropic import Anthropic
     client = Anthropic(api_key=api_key)

@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-05-15T19:17:45Z",
+  "captured_at": "2026-05-15T19:20:26Z",
   "games": {
     "1086940": {
       "name": "Baldur's Gate 3",
@@ -11,7 +11,7 @@
       "revenue": 760073185,
       "reviews_total": 838584,
       "review_ratio": 0.97,
-      "twitch_viewers": 1790,
+      "twitch_viewers": 1789,
       "twitch_streams": 100,
       "igdb_hypes": 39
     },
@@ -25,8 +25,8 @@
       "revenue": 143775785,
       "reviews_total": 386823,
       "review_ratio": 0.96,
-      "twitch_viewers": 2481,
-      "twitch_streams": 100,
+      "twitch_viewers": 2491,
+      "twitch_streams": 99,
       "igdb_hypes": 0
     },
     "2358720": {
@@ -39,7 +39,7 @@
       "revenue": 581128834,
       "reviews_total": 1199554,
       "review_ratio": 0.97,
-      "twitch_viewers": 214,
+      "twitch_viewers": 206,
       "twitch_streams": 71,
       "igdb_hypes": 180
     },
@@ -53,8 +53,8 @@
       "revenue": 380959812,
       "reviews_total": 387105,
       "review_ratio": 0.77,
-      "twitch_viewers": 40730,
-      "twitch_streams": 96,
+      "twitch_viewers": 43117,
+      "twitch_streams": 95,
       "igdb_hypes": 252
     },
     "2622380": {
@@ -67,7 +67,7 @@
       "revenue": 118283505,
       "reviews_total": 182643,
       "review_ratio": 0.82,
-      "twitch_viewers": 1091,
+      "twitch_viewers": 1086,
       "twitch_streams": 100,
       "igdb_hypes": 65
     },
@@ -81,8 +81,8 @@
       "revenue": 393861353,
       "reviews_total": 420714,
       "review_ratio": 0.94,
-      "twitch_viewers": 392,
-      "twitch_streams": 72,
+      "twitch_viewers": 418,
+      "twitch_streams": 75,
       "igdb_hypes": 1
     },
     "2680010": {
@@ -95,8 +95,8 @@
       "revenue": 26298631,
       "reviews_total": 30522,
       "review_ratio": 0.85,
-      "twitch_viewers": 102,
-      "twitch_streams": 16,
+      "twitch_viewers": 108,
+      "twitch_streams": 17,
       "igdb_hypes": 57
     },
     "1030300": {
@@ -109,8 +109,8 @@
       "revenue": 82608338,
       "reviews_total": 405944,
       "review_ratio": 0.89,
-      "twitch_viewers": 1688,
-      "twitch_streams": 100,
+      "twitch_viewers": 1712,
+      "twitch_streams": 99,
       "igdb_hypes": 220
     },
     "1145350": {
@@ -123,8 +123,8 @@
       "revenue": 84563443,
       "reviews_total": 118550,
       "review_ratio": 0.96,
-      "twitch_viewers": 179,
-      "twitch_streams": 55,
+      "twitch_viewers": 202,
+      "twitch_streams": 56,
       "igdb_hypes": 25
     },
     "1363080": {
@@ -151,7 +151,7 @@
       "revenue": 109763826,
       "reviews_total": 132155,
       "review_ratio": 0.96,
-      "twitch_viewers": 58,
+      "twitch_viewers": 59,
       "twitch_streams": 24,
       "igdb_hypes": 1
     },
@@ -165,7 +165,7 @@
       "revenue": 104415636,
       "reviews_total": 180184,
       "review_ratio": 0.69,
-      "twitch_viewers": 2999,
+      "twitch_viewers": 3112,
       "twitch_streams": 61,
       "igdb_hypes": 151
     },
@@ -179,7 +179,7 @@
       "revenue": 431058690,
       "reviews_total": 1140895,
       "review_ratio": 0.75,
-      "twitch_viewers": 669,
+      "twitch_viewers": 659,
       "twitch_streams": 100,
       "igdb_hypes": 0
     },
@@ -193,8 +193,8 @@
       "revenue": 146273923,
       "reviews_total": 297908,
       "review_ratio": 0.98,
-      "twitch_viewers": 305,
-      "twitch_streams": 58,
+      "twitch_viewers": 331,
+      "twitch_streams": 62,
       "igdb_hypes": 7
     },
     "2050650": {
@@ -207,8 +207,8 @@
       "revenue": 133049338,
       "reviews_total": 249202,
       "review_ratio": 0.97,
-      "twitch_viewers": 1493,
-      "twitch_streams": 81,
+      "twitch_viewers": 1490,
+      "twitch_streams": 84,
       "igdb_hypes": 0
     },
     "1966720": {
@@ -221,8 +221,8 @@
       "revenue": 137567008,
       "reviews_total": 507266,
       "review_ratio": 0.97,
-      "twitch_viewers": 268,
-      "twitch_streams": 63,
+      "twitch_viewers": 264,
+      "twitch_streams": 64,
       "igdb_hypes": 0
     },
     "1458140": {
@@ -235,8 +235,8 @@
       "revenue": 19577067,
       "reviews_total": 25515,
       "review_ratio": 0.83,
-      "twitch_viewers": 33,
-      "twitch_streams": 7,
+      "twitch_viewers": 31,
+      "twitch_streams": 6,
       "igdb_hypes": 11
     },
     "1601580": {
@@ -277,8 +277,8 @@
       "revenue": 77,
       "reviews_total": 1,
       "review_ratio": 1.0,
-      "twitch_viewers": 1917,
-      "twitch_streams": 100,
+      "twitch_viewers": 1875,
+      "twitch_streams": 99,
       "igdb_hypes": 16
     }
   }
