@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Scout · the desk for breakout games · playhunter.dev</title>
+    <meta name="description" content="A daily-refreshed scouting desk for PC games. Ranks breakout candidates by signal strength with explicit confidence and scale." />
+    <link rel="preconnect" href="https://shared.akamai.steamstatic.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" class="brief">
+      <header class="masthead">
+        <div class="masthead-l">
+          <div class="brand">SCOUT</div>
+          <div class="tagline">the desk for breakout games</div>
+        </div>
+        <div class="masthead-r">
+          <div class="dateline" id="dateline">—</div>
+          <div class="cadence" role="tablist" aria-label="Cadence">
+            <button class="cad active" data-cad="daily">Daily</button>
+            <button class="cad" data-cad="weekly">Weekly</button>
+            <button class="cad" data-cad="monthly">Monthly</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="the-read" aria-label="The Read">
+        <h2 class="section-label">The Read</h2>
+        <p class="read-body" id="the-read">Loading the desk read…</p>
+        <div class="byline">Scout</div>
+      </section>
+
+      <section class="movers" aria-label="Movers">
+        <div class="section-head">
+          <h2 class="section-label">Movers <span class="meta-sub" id="movers-window">· last 24h</span></h2>
+          <a class="all-link" href="#" aria-disabled="true">all <span id="universe-count">—</span> →</a>
+        </div>
+        <table class="movers-table" id="movers-table">
+          <thead>
+            <tr>
+              <th class="col-delta"></th>
+              <th class="col-name">Game</th>
+              <th class="col-score">Score</th>
+              <th class="col-scale">Scale</th>
+              <th class="col-stage">Stage</th>
+              <th class="col-conf">Confidence</th>
+              <th class="col-arrow" aria-hidden="true"></th>
+            </tr>
+          </thead>
+          <tbody><!-- populated by app.js --></tbody>
+        </table>
+      </section>
+
+      <section class="picks">
+        <div class="pick-col" id="pick-conviction">
+          <h2 class="section-label">High Conviction</h2>
+          <div class="pick-list"></div>
+          <a class="open-list" href="#">open Watchlist →</a>
+        </div>
+        <div class="pick-col" id="pick-wild">
+          <h2 class="section-label">Wild Bets</h2>
+          <div class="pick-list"></div>
+          <a class="open-list" href="#">open Watchlist →</a>
+        </div>
+      </section>
+
+      <section class="meta" aria-label="The Meta">
+        <h2 class="section-label">The Meta <span class="meta-sub">· this week</span></h2>
+        <div class="meta-cols">
+          <div class="meta-col">
+            <div class="meta-head heat-up">Heating <span aria-hidden="true">▲</span></div>
+            <ul class="cluster-list" id="meta-heating"></ul>
+          </div>
+          <div class="meta-col">
+            <div class="meta-head heat-down">Cooling <span aria-hidden="true">▼</span></div>
+            <ul class="cluster-list" id="meta-cooling"></ul>
+          </div>
+        </div>
+        <a class="weekly-piece" href="#" id="weekly-piece">
+          <span class="weekly-label">Weekly piece →</span>
+          <span class="weekly-title">—</span>
+        </a>
+      </section>
+
+      <footer class="footnav">
+        <a class="footlink active" href="./index.html">Brief</a>
+        <a class="footlink" href="#">Watchlist</a>
+        <a class="footlink" href="#">Universe</a>
+        <a class="footlink" href="#">Meta</a>
+        <a class="footlink" href="#">Methodology</a>
+      </footer>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

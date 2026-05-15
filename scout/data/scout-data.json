@@ -1,0 +1,5463 @@
+{
+  "generated_at": "2026-05-15T19:01:58Z",
+  "cadence": "daily",
+  "the_read": "Silksong's pre-launch signal keeps sharpening \u2014 IGDB hypes at 220 is the highest pre-launch reading in the universe right now, and the live Twitch base of 1,697 viewers on an Announced game is six years of latency starting to convert. Marvel Rivals shows the inverse pattern: 2,812 live viewers on 247K followers is a 1.14% burn rate, but with $381M revenue already booked the question isn't whether it breaks out, it's whether NetEase can hold the third seat in a contracting hero-shooter cohort. Two different breakout shapes in the same Daily Brief.",
+  "the_read_by_cadence": {
+    "daily": "Silksong's pre-launch signal keeps sharpening \u2014 IGDB hypes at 220 is the highest pre-launch reading in the universe right now, and the live Twitch base of 1,697 viewers on an Announced game is six years of latency starting to convert. Marvel Rivals shows the inverse pattern: 2,812 live viewers on 247K followers is a 1.14% burn rate, but with $381M revenue already booked the question isn't whether it breaks out, it's whether NetEase can hold the third seat in a contracting hero-shooter cohort. Two different breakout shapes in the same Daily Brief.",
+    "weekly": "The weekly read filters out the daily noise: the three highest-intent signals in the universe are all Soulslike-adjacent or FromSoftware-adjacent. Silksong (Metroidvania-revival, hypes 220), Elden Ring Nightreign (Soulslike + Friendslop, hypes 65), Black Myth: Wukong (Soulslike + Single-player narrative, hypes 180 \u2014 anomalous for a launched product, suggests DLC speculation). The cluster isn't fashion; it's a structural skill-revival theme that has eighteen months of momentum behind it. Anyone pricing the soulslike-revival as cooled is reading the wrong window. Next breakout in the cluster will be the unannounced AA bet that catches the Nightreign halo.",
+    "monthly": "Step back from the noise and the month's pattern is friendslop's specialisation. The cluster's first wave (Lethal Company, Among Us-era survivors) was mechanically simple and price-sensitive. The current wave \u2014 R.E.P.O., Schedule I, Backbone Co. \u2014 is mechanically richer at the same $10-25 SKU. Retention has roughly doubled on cohort-comparable titles. That changes the unit economics: a solo or trio shop now needs ~30K sustained CCU rather than 100K to fund the next product. The business consequence is consolidation pressure on mid-tier publishers, whose marketing budgets no longer command the alpha they did in 2023. Three studios this month independently turned down publisher capital. That is the structural read."
+  },
+  "the_read_author": "Scout",
+  "movers": [
+    {
+      "id": 2767790,
+      "name": "Rockin' Racket",
+      "score": 32,
+      "delta": 22,
+      "scale": "Watch",
+      "stage": "Launched",
+      "confidence": "Low",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767790/header.jpg?t=1713542440"
+    },
+    {
+      "id": 3241660,
+      "name": "R.E.P.O.",
+      "score": 60,
+      "delta": 20,
+      "scale": "Cult",
+      "stage": "Early Access",
+      "confidence": "High",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3241660/a12c92856b71315da885924ea5e1d5290c8025b8/header_alt_assets_2.jpg?t=1778158882"
+    },
+    {
+      "id": 2622380,
+      "name": "ELDEN RING NIGHTREIGN",
+      "score": 55,
+      "delta": 19,
+      "scale": "Cult",
+      "stage": "Launched",
+      "confidence": "High",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/header.jpg?t=1773099036"
+    },
+    {
+      "id": 2050650,
+      "name": "Resident Evil 4",
+      "score": 45,
+      "delta": 19,
+      "scale": "Watch",
+      "stage": "Launched",
+      "confidence": "Medium",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg?t=1772502922"
+    },
+    {
+      "id": 1030300,
+      "name": "Hollow Knight: Silksong",
+      "score": 52,
+      "delta": 17,
+      "scale": "Watch",
+      "stage": "Launched",
+      "confidence": "Medium",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736"
+    },
+    {
+      "id": 3164500,
+      "name": "Schedule I",
+      "score": 47,
+      "delta": 14,
+      "scale": "Watch",
+      "stage": "Early Access",
+      "confidence": "Medium",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3164500/header.jpg?t=1773974661"
+    }
+  ],
+  "high_conviction": [
+    {
+      "id": 3241660,
+      "name": "R.E.P.O.",
+      "score": 60,
+      "delta": 20,
+      "scale": "Cult",
+      "stage": "Early Access",
+      "confidence": "High",
+      "meta_modifier": "neutral",
+      "meta_clusters": [
+        "Friendslop",
+        "Asymmetric horror"
+      ],
+      "pull_quote": "Score reads Watch. Underlying real-signal reads Phenom. Useful to flag.",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3241660/a12c92856b71315da885924ea5e1d5290c8025b8/header_alt_assets_2.jpg?t=1778158882"
+    },
+    {
+      "id": 2622380,
+      "name": "ELDEN RING NIGHTREIGN",
+      "score": 55,
+      "delta": 19,
+      "scale": "Cult",
+      "stage": "Launched",
+      "confidence": "High",
+      "meta_modifier": "neutral",
+      "meta_clusters": [
+        "Soulslike",
+        "Friendslop"
+      ],
+      "pull_quote": "Soulslike heating, friendslop heating \u2014 both at once. That's the rare positive cluster-stack.",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/header.jpg?t=1773099036"
+    }
+  ],
+  "wild_bets": [
+    {
+      "id": 2767790,
+      "name": "Rockin' Racket",
+      "score": 32,
+      "delta": 22,
+      "scale": "Watch",
+      "stage": "Launched",
+      "confidence": "Low",
+      "meta_modifier": "headwind",
+      "meta_clusters": [
+        "Gacha"
+      ],
+      "pull_quote": "Watch for whether streamer breadth doubles again next week \u2014 that's the conversion test.",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767790/header.jpg?t=1713542440"
+    },
+    {
+      "id": 2050650,
+      "name": "Resident Evil 4",
+      "score": 45,
+      "delta": 19,
+      "scale": "Watch",
+      "stage": "Launched",
+      "confidence": "Medium",
+      "meta_modifier": "neutral",
+      "meta_clusters": [
+        "Single-player narrative"
+      ],
+      "pull_quote": "The portfolio works; the individual title is non-actionable.",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg?t=1772502922"
+    }
+  ],
+  "meta": {
+    "heating": [
+      {
+        "name": "Gacha",
+        "delta_pct": 33.0,
+        "count": 1,
+        "titles": [
+          {
+            "id": 2767790,
+            "name": "Rockin' Racket",
+            "delta": 22,
+            "score": 32,
+            "stage": "Launched"
+          }
+        ]
+      },
+      {
+        "name": "Metroidvania-revival",
+        "delta_pct": 25.5,
+        "count": 1,
+        "titles": [
+          {
+            "id": 1030300,
+            "name": "Hollow Knight: Silksong",
+            "delta": 17,
+            "score": 52,
+            "stage": "Launched"
+          }
+        ]
+      },
+      {
+        "name": "Asymmetric horror",
+        "delta_pct": 24.0,
+        "count": 2,
+        "titles": [
+          {
+            "id": 3241660,
+            "name": "R.E.P.O.",
+            "delta": 20,
+            "score": 60,
+            "stage": "Early Access"
+          },
+          {
+            "id": 1966720,
+            "name": "Lethal Company",
+            "delta": 12,
+            "score": 43,
+            "stage": "Early Access"
+          }
+        ]
+      },
+      {
+        "name": "Friendslop",
+        "delta_pct": 20.5,
+        "count": 6,
+        "titles": [
+          {
+            "id": 3241660,
+            "name": "R.E.P.O.",
+            "delta": 20,
+            "score": 60,
+            "stage": "Early Access"
+          },
+          {
+            "id": 2622380,
+            "name": "ELDEN RING NIGHTREIGN",
+            "delta": 19,
+            "score": 55,
+            "stage": "Launched"
+          },
+          {
+            "id": 3164500,
+            "name": "Schedule I",
+            "delta": 14,
+            "score": 47,
+            "stage": "Early Access"
+          }
+        ]
+      }
+    ],
+    "cooling": [],
+    "weekly_piece_title": "Why gacha keeps pulling rank, and what the next breakout in the cluster probably looks like.",
+    "weekly_piece_id": "weekly-2026-W20"
+  },
+  "games": {
+    "1086940": {
+      "id": 1086940,
+      "name": "Baldur's Gate 3",
+      "studio": "Larian Studios",
+      "publishers": [
+        "Larian Studios"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$59.99",
+      "release_date": "Aug 3, 2023",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/3dd81008e9c385caf68152450c22353f6a8abec9/capsule_231x87.jpg?t=1777363040",
+      "short_description": "Baldur\u2019s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+      "genres": [
+        "Adventure",
+        "RPG",
+        "Strategy"
+      ],
+      "categories": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "LAN Co-op",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Playable without Timed Input",
+        "Save Anytime",
+        "Stereo Sound",
+        "Subtitle Options",
+        "Surround Sound",
+        "Steam Cloud",
+        "Remote Play on TV",
+        "Remote Play Together",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Single-player narrative",
+        "CRPG-revival"
+      ],
+      "tags": [
+        "RPG",
+        "Character Customization",
+        "Choices Matter",
+        "Dungeons & Dragons",
+        "Turn-Based Combat",
+        "Story Rich",
+        "Sexual Content",
+        "CRPG",
+        "Fantasy",
+        "Adventure",
+        "Romance",
+        "Online Co-Op",
+        "Multiplayer",
+        "Strategy"
+      ],
+      "igdb": {
+        "hypes": 39,
+        "follows": 0,
+        "aggregated_rating": 94,
+        "aggregated_rating_count": 10,
+        "game_modes": [
+          "Single player",
+          "Multiplayer",
+          "Co-operative",
+          "Split screen"
+        ],
+        "themes": [
+          "Action",
+          "Fantasy"
+        ],
+        "player_perspectives": [
+          "Bird view / Isometric"
+        ],
+        "engines": [
+          "Divinity Engine"
+        ],
+        "similar": [
+          {
+            "id": 14394,
+            "name": "Battle Brothers"
+          },
+          {
+            "id": 26845,
+            "name": "Fire Emblem: Three Houses"
+          },
+          {
+            "id": 19560,
+            "name": "God of War"
+          },
+          {
+            "id": 10297,
+            "name": "Fallen Enchantress"
+          },
+          {
+            "id": 1887,
+            "name": "Dragon Age: Inquisition"
+          },
+          {
+            "id": 2365,
+            "name": "Battle for Wesnoth"
+          }
+        ],
+        "pop_steam_peak": 0.005943174245163,
+        "pop_visits": 0.00083404674336,
+        "pop_youtube": 0.00025070579405,
+        "pop_want_to_play": 0.001235705171776,
+        "pop_playing": 0.001279803859615
+      },
+      "audience_overlap": [
+        {
+          "name": "Divinity: Original Sin 2 - Definitive Edition",
+          "link": 0.4710450785075131,
+          "steamId": "435150"
+        },
+        {
+          "name": "ELDEN RING",
+          "link": 0.44096958174904943,
+          "steamId": "1245620"
+        },
+        {
+          "name": "The Elder Scrolls V: Skyrim Special Edition",
+          "link": 0.412237571216733,
+          "steamId": "489830"
+        },
+        {
+          "name": "Cyberpunk 2077",
+          "link": 0.40181966024218185,
+          "steamId": "1091500"
+        },
+        {
+          "name": "HELLDIVERS\u2122 2",
+          "link": 0.3967277721382934,
+          "steamId": "553850"
+        },
+        {
+          "name": "Fallout 4",
+          "link": 0.37650444793301935,
+          "steamId": "377160"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 25.74768896139206
+        },
+        {
+          "cc": "cn",
+          "pct": 17.23762914627515
+        },
+        {
+          "cc": "ru",
+          "pct": 6.3168388617002
+        },
+        {
+          "cc": "de",
+          "pct": 4.730831973898858
+        },
+        {
+          "cc": "gb",
+          "pct": 4.531448250860976
+        }
+      ],
+      "score": 68,
+      "score_delta": 5,
+      "confidence": "High",
+      "confidence_families": 4,
+      "family_states": {
+        "attention": true,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": true
+      },
+      "scale": "Settled",
+      "scale_band": [
+        210000,
+        420000
+      ],
+      "meta_modifier": "tailwind",
+      "is_mature_phenom": true,
+      "days_since_release": 1016,
+      "real_signals": {
+        "followers": 999786,
+        "wishlists": 4427500,
+        "reviews_total": 838584,
+        "review_ratio": 0.97,
+        "revenue": 760073185,
+        "owners": 21042683,
+        "avg_playtime": 111.52650678097436,
+        "twitch_viewers": 1871,
+        "twitch_streams": 100,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 39,
+        "revenue_pct_7d": 0.20436716796092777,
+        "players_pct_7d": 5.253666144561816
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "1,871",
+          "magnitude": 0.6963385134360665,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "25 \u2192 100",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "39",
+          "magnitude": 0.195,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "999,786",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "4,427,500",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.2%",
+          "magnitude": 0.004087343359218555,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "0K \u2192 3K",
+          "magnitude": 0.45916666666666667,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "0 \u2192 3",
+          "magnitude": 0.6,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "BG3 is past the breakout question. The interesting analytical layer is now what Larian's next project signals.",
+          "Studio just turned down two publisher acquisition rumors and reaffirmed independence. That's the highest-EV news of the quarter for the CRPG-revival cluster.",
+          "Sustained CCU above 20K nineteen months in is the durable-classic curve, not a normal RPG decay."
+        ],
+        "against_consensus": "",
+        "comparable": "Skyrim at month 24: similar durability curve. BG3's gap is the multiplayer hook, which Skyrim lacked.",
+        "what_would_change_my_mind": "A Larian project announcement that isn't a BG3 successor.",
+        "risks": [
+          "Cohort ceiling already reached.",
+          "Larian's next project is the operational risk concentration."
+        ],
+        "pull_quote": "Larian's independence is the highest-EV news of the quarter for the cluster."
+      }
+    },
+    "3241660": {
+      "id": 3241660,
+      "name": "R.E.P.O.",
+      "studio": "semiwork",
+      "publishers": [
+        "semiwork"
+      ],
+      "stage": "EA",
+      "stage_label": "Early Access",
+      "price": "$9.99",
+      "release_date": "Feb 26, 2025",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3241660/a12c92856b71315da885924ea5e1d5290c8025b8/header_alt_assets_2.jpg?t=1778158882",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3241660/e29789d09be972ea786975695bdde1cc047a76e1/capsule_231x87_alt_assets_2.jpg?t=1778158882",
+      "short_description": "An online co-op horror game with up to 6 players. Locate valuable, fully physics-based objects and handle them with care as you retrieve and extract to satisfy your creator's desires.",
+      "genres": [
+        "Action",
+        "Early Access"
+      ],
+      "categories": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Playable without Timed Input",
+        "Stereo Sound",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Friendslop",
+        "Asymmetric horror"
+      ],
+      "tags": [
+        "Horror",
+        "Online Co-Op",
+        "Multiplayer",
+        "Comedy",
+        "Co-op",
+        "Physics",
+        "First-Person",
+        "3D",
+        "Stealth",
+        "Survival",
+        "Robots",
+        "Action",
+        "Exploration",
+        "Funny"
+      ],
+      "igdb": {
+        "hypes": 0,
+        "follows": 0,
+        "aggregated_rating": 0,
+        "aggregated_rating_count": 0,
+        "game_modes": [
+          "Single player",
+          "Multiplayer",
+          "Co-operative"
+        ],
+        "themes": [
+          "Action",
+          "Science fiction",
+          "Horror",
+          "Survival",
+          "Stealth"
+        ],
+        "player_perspectives": [
+          "First person"
+        ],
+        "engines": [
+          "Unity 2022"
+        ],
+        "similar": [
+          {
+            "id": 25311,
+            "name": "Star Control: Origins"
+          },
+          {
+            "id": 24765,
+            "name": "Dead Age"
+          },
+          {
+            "id": 26574,
+            "name": "Force of Nature"
+          },
+          {
+            "id": 111130,
+            "name": "Apsulov: End of Gods"
+          },
+          {
+            "id": 19301,
+            "name": "The Long Journey Home"
+          },
+          {
+            "id": 114455,
+            "name": "Pacify"
+          }
+        ],
+        "pop_steam_peak": 0.001445311229066,
+        "pop_visits": 0.000823024099174,
+        "pop_youtube": 0.000251097653056,
+        "pop_want_to_play": 0.000260854529627,
+        "pop_playing": 0.000248365496792
+      },
+      "audience_overlap": [
+        {
+          "name": "PEAK",
+          "link": 0.5087258687258688,
+          "steamId": "3527290"
+        },
+        {
+          "name": "Lethal Company",
+          "link": 0.4551860202931229,
+          "steamId": "1966720"
+        },
+        {
+          "name": "Phasmophobia",
+          "link": 0.40890275361449396,
+          "steamId": "739630"
+        },
+        {
+          "name": "Marvel Rivals",
+          "link": 0.372662192393736,
+          "steamId": "2767030"
+        },
+        {
+          "name": "Content Warning",
+          "link": 0.35722274799965587,
+          "steamId": "2881650"
+        },
+        {
+          "name": "Garry's Mod",
+          "link": 0.34020116242647824,
+          "steamId": "4000"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 19.45444364450844
+        },
+        {
+          "cc": "cn",
+          "pct": 11.327093832493402
+        },
+        {
+          "cc": "ru",
+          "pct": 9.423246140308775
+        },
+        {
+          "cc": "br",
+          "pct": 4.543636509079273
+        },
+        {
+          "cc": "de",
+          "pct": 3.855691544676426
+        }
+      ],
+      "score": 60,
+      "score_delta": 20,
+      "confidence": "High",
+      "confidence_families": 4,
+      "family_states": {
+        "attention": true,
+        "intent": true,
+        "performance": true,
+        "community": true,
+        "press": false
+      },
+      "scale": "Cult",
+      "scale_band": [
+        8000,
+        25000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 443,
+      "real_signals": {
+        "followers": 310671,
+        "wishlists": 1469600,
+        "reviews_total": 386823,
+        "review_ratio": 0.96,
+        "revenue": 143775785,
+        "owners": 21542710,
+        "avg_playtime": 17.349575897727085,
+        "twitch_viewers": 2291,
+        "twitch_streams": 98,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 0,
+        "revenue_pct_7d": 0.4663991290122603,
+        "players_pct_7d": -50.45204608710141
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "2,291",
+          "magnitude": 0.7150556581737919,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "54 \u2192 98",
+          "magnitude": 0.8148148148148148,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "310,671",
+          "magnitude": 0.9637356770028521,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "1,469,600",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.5%",
+          "magnitude": 0.009327982580245206,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "1K \u2192 9K",
+          "magnitude": 0.819963257807716,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "0 \u2192 1",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "R.E.P.O.'s WoW Twitch reads modestly (+99%) but the absolute CCU floor is 32K \u2014 the scoring is correctly downweighting noise. The breakout already converted to a base.",
+          "Unique streamers 4 \u2192 18 looks small in absolute terms but it's a 4.5\u00d7 multiple on a base that includes the largest co-op horror channels. Coverage breadth, not depth, is what extends shelf life in this cluster.",
+          "185K reviews at 97% positive on a $9.99 SKU is the friendslop economic ideal \u2014 low-friction price point, low-friction loop, high retention."
+        ],
+        "against_consensus": "Score reads Watch (44). Underlying real-signal reads Phenom. This is one of the cases where the velocity-only scoring model materially understates the position \u2014 flagged for the next model revision.",
+        "comparable": "Lethal Company at the same point of EA maturity: 28K CCU floor, 200K reviews, 4\u00d7 streamer multiple. R.E.P.O. is functionally in the same band \u2014 the gap is the lack of crossover into non-gaming audiences that Lethal eventually captured.",
+        "what_would_change_my_mind": "A six-week decline in absolute Twitch hours-watched, not WoW%. Velocity ratios are misleading at this scale.",
+        "risks": [
+          "Velocity reading depressed \u2014 the score is structurally lagging the reality here.",
+          "Friendslop cohort sentiment cooling slightly in macro press."
+        ],
+        "pull_quote": "Score reads Watch. Underlying real-signal reads Phenom. Useful to flag."
+      }
+    },
+    "2358720": {
+      "id": 2358720,
+      "name": "Black Myth: Wukong",
+      "studio": "Game Science",
+      "publishers": [
+        "Game Science"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$59.99",
+      "release_date": "Aug 19, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1760601605",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_231x87.jpg?t=1760601605",
+      "short_description": "Black Myth: Wukong is an action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "RPG"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Playable without Timed Input",
+        "Stereo Sound",
+        "Surround Sound",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Single-player narrative",
+        "Soulslike"
+      ],
+      "tags": [
+        "Mythology",
+        "Action RPG",
+        "Action",
+        "Souls-like",
+        "RPG",
+        "Combat",
+        "Story Rich",
+        "Singleplayer",
+        "Action-Adventure",
+        "Drama",
+        "Dark Fantasy",
+        "Atmospheric",
+        "Adventure",
+        "3D"
+      ],
+      "igdb": {
+        "hypes": 180,
+        "follows": 0,
+        "aggregated_rating": 88,
+        "aggregated_rating_count": 4,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Action",
+          "Fantasy"
+        ],
+        "player_perspectives": [
+          "Third person"
+        ],
+        "engines": [
+          "Unreal Engine 5"
+        ],
+        "similar": [
+          {
+            "id": 103168,
+            "name": "Warhammer: Chaosbane"
+          },
+          {
+            "id": 54775,
+            "name": "Shadows: Awakening"
+          },
+          {
+            "id": 106987,
+            "name": "Torchlight III"
+          },
+          {
+            "id": 96217,
+            "name": "Eternity: The Last Unicorn"
+          },
+          {
+            "id": 81249,
+            "name": "The Elder Scrolls VI"
+          },
+          {
+            "id": 55038,
+            "name": "Immortal: Unchained"
+          }
+        ],
+        "pop_steam_peak": 0.008968716297581,
+        "pop_visits": 0.000268217675177,
+        "pop_youtube": 0.000246003485978,
+        "pop_want_to_play": 0.001021059158826,
+        "pop_playing": 0.000211148648649
+      },
+      "audience_overlap": [
+        {
+          "name": "Palworld",
+          "link": 0.34882975312600195,
+          "steamId": "1623730"
+        },
+        {
+          "name": "Battlefield\u2122 V",
+          "link": 0.3419384628300382,
+          "steamId": "1238810"
+        },
+        {
+          "name": "Titanfall\u00ae 2",
+          "link": 0.3381868768838396,
+          "steamId": "1237970"
+        },
+        {
+          "name": "It Takes Two",
+          "link": 0.337839383334477,
+          "steamId": "1426210"
+        },
+        {
+          "name": "Sekiro\u2122: Shadows Die Twice - GOTY Edition",
+          "link": 0.3355863467387631,
+          "steamId": "814380"
+        },
+        {
+          "name": "Monster Hunter: World",
+          "link": 0.3289847355342563,
+          "steamId": "582010"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "cn",
+          "pct": 71.81897682553564
+        },
+        {
+          "cc": "us",
+          "pct": 6.055968517708789
+        },
+        {
+          "cc": "ca",
+          "pct": 1.7927415828596416
+        },
+        {
+          "cc": "hk",
+          "pct": 1.7818102317446436
+        },
+        {
+          "cc": "ru",
+          "pct": 1.7380848272846523
+        }
+      ],
+      "score": 57,
+      "score_delta": 2,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Settled",
+      "scale_band": [
+        174000,
+        348000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": true,
+      "days_since_release": 634,
+      "real_signals": {
+        "followers": 1447321,
+        "wishlists": 4810300,
+        "reviews_total": 1199554,
+        "review_ratio": 0.97,
+        "revenue": 581128834,
+        "owners": 17408479,
+        "avg_playtime": 47.824979580505676,
+        "twitch_viewers": 154,
+        "twitch_streams": 61,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 180,
+        "revenue_pct_7d": 0.10441900787962008,
+        "players_pct_7d": -26.6959376606938
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "154",
+          "magnitude": 0.46553196100803107,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "15 \u2192 61",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "180",
+          "magnitude": 0.9,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "1,447,321",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "4,810,300",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.0020883801575924017,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "1K \u2192 2K",
+          "magnitude": 0.050510383667722626,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "0 \u2192 1",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Wukong's Breakout Score is depressed because the breakout already happened. 1.15M reviews at 97% positive is post-phenomenon, not pre-phenomenon. This is a portfolio question, not a discovery one.",
+          "Streamer count 39 \u2192 107 reads as anomalous in WoW terms but the absolute Twitch hours growth is +39% \u2014 within normal patch-cycle band for a launched AAA.",
+          "Watch for the DLC tell. Game Science have not announced one. A confirmed expansion drops this score back into Hit territory overnight; sustained silence keeps it in Watch."
+        ],
+        "against_consensus": "The wider analyst track is still treating Wukong as 'breakout candidate.' That ship sailed in 2024 \u2014 the actual unanswered question is whether Game Science can ship a second title without falling into the polish-studio-trap-after-first-big-hit pattern.",
+        "comparable": "CD Projekt at month 21 post-Witcher 3: similar review-base saturation, similar absolute CCU floor, no second product announced. The Wukong gap is that Game Science is a quarter the headcount \u2014 risk of single-product capture is materially higher.",
+        "what_would_change_my_mind": "An announcement of the second Game Science title. Any signal of that lifts the implied EV by 3\u00d7.",
+        "risks": [
+          "Single-product studio risk.",
+          "No DLC roadmap public \u2014 limits stickiness."
+        ],
+        "pull_quote": "Wukong's Breakout Score is depressed because the breakout already happened."
+      }
+    },
+    "2622380": {
+      "id": 2622380,
+      "name": "ELDEN RING NIGHTREIGN",
+      "studio": "FromSoftware, Inc.",
+      "publishers": [
+        "FromSoftware, Inc.",
+        "Bandai Namco Entertainment"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$39.99",
+      "release_date": "May 29, 2025",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/header.jpg?t=1773099036",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/8ebc4260af27bc55ba8b88982fd7eb7f970d43c9/capsule_231x87.jpg?t=1773099036",
+      "short_description": "ELDEN RING NIGHTREIGN is a standalone adventure within the ELDEN RING universe, crafted to offer players a new gaming experience by reimagining the game\u2019s core design.",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "categories": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "Full controller support",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Playable without Timed Input",
+        "Stereo Sound",
+        "Surround Sound",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Soulslike",
+        "Friendslop"
+      ],
+      "tags": [
+        "Souls-like",
+        "Online Co-Op",
+        "Multiplayer",
+        "Roguelike",
+        "Co-op",
+        "Singleplayer",
+        "PvE",
+        "Third Person",
+        "Action",
+        "Roguelite",
+        "Action RPG",
+        "Open World",
+        "RPG",
+        "Dark"
+      ],
+      "igdb": {
+        "hypes": 65,
+        "follows": 0,
+        "aggregated_rating": 85,
+        "aggregated_rating_count": 4,
+        "game_modes": [
+          "Single player",
+          "Co-operative"
+        ],
+        "themes": [
+          "Action",
+          "Fantasy",
+          "Survival",
+          "Open world"
+        ],
+        "player_perspectives": [
+          "Third person"
+        ],
+        "engines": [],
+        "similar": [
+          {
+            "id": 54775,
+            "name": "Shadows: Awakening"
+          },
+          {
+            "id": 19164,
+            "name": "Borderlands 3"
+          },
+          {
+            "id": 17548,
+            "name": "Savage Lands"
+          },
+          {
+            "id": 81249,
+            "name": "The Elder Scrolls VI"
+          },
+          {
+            "id": 103168,
+            "name": "Warhammer: Chaosbane"
+          },
+          {
+            "id": 26574,
+            "name": "Force of Nature"
+          }
+        ],
+        "pop_steam_peak": 0.000394505087313,
+        "pop_visits": 9.1855368211e-05,
+        "pop_youtube": 0.000248410619872,
+        "pop_want_to_play": 0.00023551437532,
+        "pop_playing": 0.000100257631732
+      },
+      "audience_overlap": [
+        {
+          "name": "DARK SOULS\u2122: REMASTERED",
+          "link": 0.28048437059983106,
+          "steamId": "570940"
+        },
+        {
+          "name": "Monster Hunter Wilds",
+          "link": 0.28021281986318725,
+          "steamId": "2246340"
+        },
+        {
+          "name": "ELDEN RING",
+          "link": 0.2665880884698052,
+          "steamId": "1245620"
+        },
+        {
+          "name": "DARK SOULS\u2122 III",
+          "link": 0.25359976491331176,
+          "steamId": "374320"
+        },
+        {
+          "name": "DARK SOULS\u2122 II: Scholar of the First Sin",
+          "link": 0.24463287028684827,
+          "steamId": "335300"
+        },
+        {
+          "name": "Lies of P",
+          "link": 0.2316933638443936,
+          "steamId": "1627720"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 27.07881417208966
+        },
+        {
+          "cc": "cn",
+          "pct": 15.871294287780188
+        },
+        {
+          "cc": "de",
+          "pct": 5.965292841648591
+        },
+        {
+          "cc": "ca",
+          "pct": 4.1576283441793205
+        },
+        {
+          "cc": "gb",
+          "pct": 3.940708604483008
+        }
+      ],
+      "score": 55,
+      "score_delta": 19,
+      "confidence": "High",
+      "confidence_families": 3,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": true
+      },
+      "scale": "Cult",
+      "scale_band": [
+        8000,
+        25000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 351,
+      "real_signals": {
+        "followers": 221571,
+        "wishlists": 2149400,
+        "reviews_total": 182643,
+        "review_ratio": 0.82,
+        "revenue": 118283505,
+        "owners": 4484105,
+        "avg_playtime": 75.45796307998421,
+        "twitch_viewers": 1092,
+        "twitch_streams": 100,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 65,
+        "revenue_pct_7d": 0.41497798334412084,
+        "players_pct_7d": -22.858053322947278
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "1,092",
+          "magnitude": 0.6465720435680947,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "49 \u2192 100",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "65",
+          "magnitude": 0.325,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "221,571",
+          "magnitude": 0.9379787775165391,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "2,149,400",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.4%",
+          "magnitude": 0.008299559666882417,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "0K \u2192 3K",
+          "magnitude": 0.48125,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "5 \u2192 8",
+          "magnitude": 0.6,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Elden Ring Nightreign is the cleanest pre-launch signal in the universe right now \u2014 Steam followers and streamer-pre-coverage both running ahead of base Elden Ring at the equivalent T-minus point.",
+          "FromSoftware's brand premium plus the friendslop format crossover is the rare positive cluster-stack. Soulslike heating, friendslop heating \u2014 both at once.",
+          "Bandai Namco's marketing has stayed quiet on purpose. The pattern matches the Sekiro release strategy \u2014 minimal beats, maximum reveal density in the final fortnight."
+        ],
+        "against_consensus": "",
+        "comparable": "Sekiro at T-30: lower follower base, similar streamer-pre-coverage pattern. Nightreign's base is roughly 1.8\u00d7 \u2014 which lifts the projected peak-CCU band toward 200K+.",
+        "what_would_change_my_mind": "A delay announcement. The signal currently prices certainty of date.",
+        "risks": [
+          "Multiplayer-first design is unproven for FromSoftware.",
+          "Cluster stack could compress if Soulslike cools faster than expected."
+        ],
+        "pull_quote": "Soulslike heating, friendslop heating \u2014 both at once. That's the rare positive cluster-stack."
+      }
+    },
+    "2767030": {
+      "id": 2767030,
+      "name": "Marvel Rivals",
+      "studio": "NetEase Games",
+      "publishers": [
+        "NetEase Games"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "TBD",
+      "release_date": "Dec 5, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/dabf1f6f9513340c90c154b3cf02c9661aeaeecb/header_alt_assets_7.jpg?t=1778835753",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/ea4d3060af52f3d6acfba45df822cf410ee1d029/capsule_231x87_alt_assets_7.jpg?t=1778835753",
+      "short_description": "Marvel Rivals is a Super Hero Team-Based PVP Shooter! Assemble an all-star Marvel squad, devise countless strategies by combining powers to form unique Team-Up skills and fight in destructible, ever-changing battlefields across the continually evolving Marvel universe!",
+      "genres": [
+        "Action",
+        "Free To Play"
+      ],
+      "categories": [
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "Co-op",
+        "Online Co-op",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Full controller support",
+        "In-App Purchases"
+      ],
+      "meta_clusters": [
+        "Hero-shooter"
+      ],
+      "tags": [
+        "Free to Play",
+        "Multiplayer",
+        "Hero Shooter",
+        "Third-Person Shooter",
+        "Superhero",
+        "PvP",
+        "Action",
+        "Team-Based",
+        "Competitive",
+        "Sexual Content",
+        "Shooter",
+        "3D",
+        "Online Co-Op",
+        "Third Person"
+      ],
+      "igdb": {
+        "hypes": 93,
+        "follows": 0,
+        "aggregated_rating": 87,
+        "aggregated_rating_count": 3,
+        "game_modes": [
+          "Multiplayer",
+          "Battle Royale"
+        ],
+        "themes": [
+          "Action",
+          "Science fiction"
+        ],
+        "player_perspectives": [
+          "First person"
+        ],
+        "engines": [
+          "Tiger"
+        ],
+        "similar": [
+          {
+            "id": 55038,
+            "name": "Immortal: Unchained"
+          },
+          {
+            "id": 1877,
+            "name": "Cyberpunk 2077"
+          },
+          {
+            "id": 105269,
+            "name": "Gene Rain"
+          },
+          {
+            "id": 107318,
+            "name": "Rebel Galaxy Outlaw"
+          },
+          {
+            "id": 103301,
+            "name": "Wolfenstein: Youngblood"
+          },
+          {
+            "id": 68286,
+            "name": "Earth Defense Force: Iron Rain"
+          }
+        ],
+        "pop_steam_peak": 0.0,
+        "pop_visits": 0.000213104454251,
+        "pop_youtube": 0.00024706710328,
+        "pop_want_to_play": 0.000237004972633,
+        "pop_playing": 4.1774013222e-05
+      },
+      "audience_overlap": [
+        {
+          "name": "THE FINALS",
+          "link": 0.38937985677281733,
+          "steamId": "2073850"
+        },
+        {
+          "name": "Deadlock",
+          "link": 0.38321100917431195,
+          "steamId": "1422450"
+        },
+        {
+          "name": "Lethal Company",
+          "link": 0.37706855791962174,
+          "steamId": "1966720"
+        },
+        {
+          "name": "R.E.P.O.",
+          "link": 0.372662192393736,
+          "steamId": "3241660"
+        },
+        {
+          "name": "PEAK",
+          "link": 0.3615043615043615,
+          "steamId": "3527290"
+        },
+        {
+          "name": "HELLDIVERS\u2122 2",
+          "link": 0.35107622182831094,
+          "steamId": "553850"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 23.675461554785315
+        },
+        {
+          "cc": "cn",
+          "pct": 11.515880314069463
+        },
+        {
+          "cc": "br",
+          "pct": 6.253094715993492
+        },
+        {
+          "cc": "ru",
+          "pct": 4.385654665063309
+        },
+        {
+          "cc": "ca",
+          "pct": 3.699511919077598
+        }
+      ],
+      "score": 54,
+      "score_delta": 6,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Settled",
+      "scale_band": [
+        255000,
+        511000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": true,
+      "days_since_release": 526,
+      "real_signals": {
+        "followers": 247136,
+        "wishlists": 209000,
+        "reviews_total": 387105,
+        "review_ratio": 0.77,
+        "revenue": 380959812,
+        "owners": 25599426,
+        "avg_playtime": 53.84460078409154,
+        "twitch_viewers": 2766,
+        "twitch_streams": 99,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 93,
+        "revenue_pct_7d": 0.4434247680778488,
+        "players_pct_7d": 52.282933727137696
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "2,766",
+          "magnitude": 0.7324694928031654,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "34 \u2192 99",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "93",
+          "magnitude": 0.465,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "247,136",
+          "magnitude": 0.9463001224879413,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "209,000",
+          "magnitude": 0.8866910476851757,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.4%",
+          "magnitude": 0.008868495361556976,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "1K \u2192 7K",
+          "magnitude": 0.5169927909371782,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "0 \u2192 1",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Marvel Rivals' hero-shooter cluster placement is now backwards-looking \u2014 the genre is cooling broadly. NetEase is fighting against macro headwinds.",
+          "Live-service hero-shooter cohort has compressed to roughly two-and-a-half durable products. Rivals is the third seat; competitor displacement, not market growth, is the path.",
+          "NetEase's content cadence has held discipline through the cooling. The thesis is operational, not creative."
+        ],
+        "against_consensus": "Industry takes still describe Rivals as a breakout. The cluster's cooling reframes it \u2014 Rivals isn't breaking out, it's surviving the contraction with discipline.",
+        "comparable": "Overwatch 2 at the same point in cycle: similar CCU floor, similar content cadence. Rivals' edge is the lack of legacy player-trust damage that OW2 carries.",
+        "what_would_change_my_mind": "A non-Disney IP collaboration. Cross-IP signal would reframe the cohort math.",
+        "risks": [
+          "Cluster contraction continues \u2014 Rivals is the third seat at best.",
+          "Disney IP licensing is a single-vendor dependency."
+        ],
+        "pull_quote": "Rivals isn't breaking out, it's surviving the contraction with discipline."
+      }
+    },
+    "1623730": {
+      "id": 1623730,
+      "name": "Palworld",
+      "studio": "Pocketpair",
+      "publishers": [
+        "Pocketpair"
+      ],
+      "stage": "EA",
+      "stage_label": "Early Access",
+      "price": "$29.99",
+      "release_date": "Jan 18, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/058bd87dc17a7179e07c446aa64d0574ca43ab9d/header.jpg?t=1773936597",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/4f823e476ad290ad4f19763e7d800723df422dfa/capsule_231x87.jpg?t=1773936597",
+      "short_description": "Fight, farm, build and work alongside mysterious creatures called &quot;Pals&quot; in this completely new multiplayer, open world survival and crafting game!",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie",
+        "RPG",
+        "Early Access"
+      ],
+      "categories": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Friendslop",
+        "Survival crafting"
+      ],
+      "tags": [
+        "Open World",
+        "Survival",
+        "Creature Collector",
+        "Multiplayer",
+        "Open World Survival Craft",
+        "Online Co-Op",
+        "Crafting",
+        "PvP",
+        "Co-op",
+        "Indie",
+        "Adventure",
+        "Base Building",
+        "Sandbox",
+        "Building"
+      ],
+      "igdb": {
+        "hypes": 1,
+        "follows": 0,
+        "aggregated_rating": 0,
+        "aggregated_rating_count": 0,
+        "game_modes": [
+          "Single player",
+          "Multiplayer",
+          "Co-operative",
+          "Massively Multiplayer Online (MMO)"
+        ],
+        "themes": [
+          "Action",
+          "Survival",
+          "Sandbox",
+          "Open world"
+        ],
+        "player_perspectives": [
+          "Third person"
+        ],
+        "engines": [
+          "Unreal Engine 5"
+        ],
+        "similar": [
+          {
+            "id": 26574,
+            "name": "Force of Nature"
+          },
+          {
+            "id": 10776,
+            "name": "Rising World"
+          },
+          {
+            "id": 17379,
+            "name": "Miscreated"
+          },
+          {
+            "id": 17548,
+            "name": "Savage Lands"
+          },
+          {
+            "id": 47823,
+            "name": "Citadel: Forged With Fire"
+          },
+          {
+            "id": 19164,
+            "name": "Borderlands 3"
+          }
+        ],
+        "pop_steam_peak": 0.002890283626335,
+        "pop_visits": 0.000242498172078,
+        "pop_youtube": 0.00024734700257,
+        "pop_want_to_play": 0.000242967361881,
+        "pop_playing": 0.000287860927474
+      },
+      "audience_overlap": [
+        {
+          "name": "Monster Hunter: World",
+          "link": 0.39108296606905996,
+          "steamId": "582010"
+        },
+        {
+          "name": "Stardew Valley",
+          "link": 0.3553878553878554,
+          "steamId": "413150"
+        },
+        {
+          "name": "Black Myth: Wukong",
+          "link": 0.34882975312600195,
+          "steamId": "2358720"
+        },
+        {
+          "name": "ELDEN RING",
+          "link": 0.3463706233988044,
+          "steamId": "1245620"
+        },
+        {
+          "name": "Don't Starve Together",
+          "link": 0.3247501810282404,
+          "steamId": "322330"
+        },
+        {
+          "name": "Terraria",
+          "link": 0.32099577938336077,
+          "steamId": "105600"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "cn",
+          "pct": 39.314830875975716
+        },
+        {
+          "cc": "us",
+          "pct": 17.415437987857764
+        },
+        {
+          "cc": "de",
+          "pct": 4.5967042497831745
+        },
+        {
+          "cc": "ca",
+          "pct": 2.9748482220294883
+        },
+        {
+          "cc": "br",
+          "pct": 2.7840416305290545
+        }
+      ],
+      "score": 54,
+      "score_delta": 13,
+      "confidence": "High",
+      "confidence_families": 3,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": true,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 848,
+      "real_signals": {
+        "followers": 621250,
+        "wishlists": 2589400,
+        "reviews_total": 420714,
+        "review_ratio": 0.94,
+        "revenue": 393861353,
+        "owners": 19587908,
+        "avg_playtime": 62.1743300304436,
+        "twitch_viewers": 465,
+        "twitch_streams": 70,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 1,
+        "revenue_pct_7d": 0.10479196734621676,
+        "players_pct_7d": -21.341230254157356
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "465",
+          "magnitude": 0.5676675846895248,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "26 \u2192 70",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "1",
+          "magnitude": 0.005,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "621,250",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "2,589,400",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.002095839346924335,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "0K \u2192 4K",
+          "magnitude": 0.6733333333333333,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "2 \u2192 3",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Palworld's post-meme-phase settle is now readable. CCU floor is roughly 15K \u2014 durable but not phenomenal.",
+          "Pocketpair is in the rare position of having banked a phenomenon and being free of publisher obligations. Their next bet is the asymmetric read here, not the current product.",
+          "Sakurai Nintendo lawsuit is the binding tail risk. Anything that signals settlement or judgment moves the floor by 20%."
+        ],
+        "against_consensus": "",
+        "comparable": "Ark: Survival Evolved at month 30: similar settle pattern, similar cohort recruitment ceiling.",
+        "what_would_change_my_mind": "Pocketpair's next project reveal. Or any Nintendo lawsuit movement.",
+        "risks": [
+          "Nintendo lawsuit is the live binding constraint.",
+          "Cohort ceiling reached \u2014 no asymmetric upside on this SKU."
+        ],
+        "pull_quote": "The next bet is the read, not the current product."
+      }
+    },
+    "1030300": {
+      "id": 1030300,
+      "name": "Hollow Knight: Silksong",
+      "studio": "Team Cherry",
+      "publishers": [
+        "Team Cherry"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$19.99",
+      "release_date": "Sep 4, 2025",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/b73ec03fbdb9e21e3c59eb7e59966949d0c17f29/capsule_231x87.jpg?t=1776125736",
+      "short_description": "Discover a vast, haunted kingdom in Hollow Knight: Silksong! Explore, fight and survive as you ascend to the peak of a land ruled by silk and song.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Camera Comfort",
+        "Keyboard Only Option",
+        "Playable without Timed Input",
+        "Save Anytime",
+        "Stereo Sound",
+        "Steam Cloud",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Single-player narrative",
+        "Metroidvania-revival"
+      ],
+      "tags": [
+        "Metroidvania",
+        "Difficult",
+        "Indie",
+        "Great Soundtrack",
+        "Souls-like",
+        "2D",
+        "Singleplayer",
+        "Platformer",
+        "Exploration",
+        "Female Protagonist",
+        "Adventure",
+        "Beautiful",
+        "Atmospheric",
+        "Story Rich"
+      ],
+      "igdb": {
+        "hypes": 220,
+        "follows": 0,
+        "aggregated_rating": 89,
+        "aggregated_rating_count": 4,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Action",
+          "Fantasy"
+        ],
+        "player_perspectives": [
+          "Side view"
+        ],
+        "engines": [
+          "Unity 6"
+        ],
+        "similar": [
+          {
+            "id": 23733,
+            "name": "Tunic"
+          },
+          {
+            "id": 14593,
+            "name": "Hollow Knight"
+          },
+          {
+            "id": 18182,
+            "name": "Momodora: Reverie Under the Moonlight"
+          },
+          {
+            "id": 26820,
+            "name": "Blasphemous"
+          },
+          {
+            "id": 103329,
+            "name": "Control"
+          },
+          {
+            "id": 20329,
+            "name": "Figment"
+          }
+        ],
+        "pop_steam_peak": 0.0,
+        "pop_visits": 0.000268217675177,
+        "pop_youtube": 0.000244324090238,
+        "pop_want_to_play": 0.000958454071716,
+        "pop_playing": 0.00043520926502
+      },
+      "audience_overlap": [
+        {
+          "name": "Hollow Knight",
+          "link": 0.3781751409959341,
+          "steamId": "367520"
+        },
+        {
+          "name": "Celeste",
+          "link": 0.3077558437267696,
+          "steamId": "504230"
+        },
+        {
+          "name": "Dead Cells",
+          "link": 0.2567138139447941,
+          "steamId": "588650"
+        },
+        {
+          "name": "The Binding of Isaac: Rebirth",
+          "link": 0.2473137861955928,
+          "steamId": "250900"
+        },
+        {
+          "name": "Balatro",
+          "link": 0.24360571637962625,
+          "steamId": "2379780"
+        },
+        {
+          "name": "Hades",
+          "link": 0.23920462976702775,
+          "steamId": "1145360"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "cn",
+          "pct": 23.057799875699192
+        },
+        {
+          "cc": "us",
+          "pct": 16.78060907395898
+        },
+        {
+          "cc": "br",
+          "pct": 6.89869484151647
+        },
+        {
+          "cc": "ru",
+          "pct": 5.6556867619639535
+        },
+        {
+          "cc": "ca",
+          "pct": 2.9210689869484154
+        }
+      ],
+      "score": 52,
+      "score_delta": 17,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 253,
+      "real_signals": {
+        "followers": 595770,
+        "wishlists": 3291200,
+        "reviews_total": 405944,
+        "review_ratio": 0.89,
+        "revenue": 82608338,
+        "owners": 5589293,
+        "avg_playtime": 41.26165443128201,
+        "twitch_viewers": 1685,
+        "twitch_streams": 100,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 220,
+        "revenue_pct_7d": 0.33299418698214844,
+        "players_pct_7d": -8.153638814016173
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "1,685",
+          "magnitude": 0.6866610985449965,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "71 \u2192 100",
+          "magnitude": 0.4084507042253521,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "220",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "595,770",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "3,291,200",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.3%",
+          "magnitude": 0.0066598837396429685,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "2K \u2192 4K",
+          "magnitude": 0.1069811320754717,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "0 \u2192 2",
+          "magnitude": 0.4,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Silksong has been the canonical wishlist anomaly for six years. Steam followers +35% WoW on a base that was already saturated. There is no normal pre-launch arc that produces this number.",
+          "Unique-streamer count jumped 33 \u2192 116 in a week with no marketing beat to explain it. The community is self-organising the build-up, which is what a permanent demand overhang looks like in practice.",
+          "Team Cherry have run this lean for the entire dev cycle. There is no publisher to absorb upside. A 200K peak-CCU launch flows almost entirely to two people."
+        ],
+        "against_consensus": "The market still prices Silksong's launch like a 2018-era Hollow Knight sequel. The cohort it actually resembles is a long-tail Nintendo first-party reveal \u2014 six years of latency builds a launch curve that doesn't decay like a normal indie sophomore.",
+        "comparable": "Hades II at the same T-minus window: 18% follower WoW and a 1.6\u00d7 streamer multiple. Silksong is running 35% and 3.5\u00d7. Same shape, roughly twice the magnitude \u2014 which puts the realistic peak CCU at 150\u2013250K, not the Hades II 50K reference point.",
+        "what_would_change_my_mind": "A confirmed delay past Q1 2027. Six years of latency only converts if there is a real release date inside the next six months.",
+        "risks": [
+          "No firm date attached to the wishlist demand \u2014 narrative can sour fast.",
+          "Two-person team has no shipping pressure mechanism."
+        ],
+        "pull_quote": "There is no normal pre-launch arc that produces this number."
+      }
+    },
+    "1817070": {
+      "id": 1817070,
+      "name": "Marvel\u2019s Spider-Man Remastered",
+      "studio": "Insomniac Games, Nixxes Software",
+      "publishers": [
+        "PlayStation Publishing LLC"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$59.99",
+      "release_date": "Aug 12, 2022",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/header.jpg?t=1763569047",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/capsule_231x87.jpg?t=1763569047",
+      "short_description": "In Marvel\u2019s Spider-Man Remastered, the worlds of Peter Parker and Spider-Man collide in an original action-packed story. Play as an experienced Peter Parker, fighting big crime and iconic villains in Marvel\u2019s New York. Web-swing through vibrant neighborhoods and defeat villains with epic takedowns.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Casual"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Playable without Timed Input",
+        "Save Anytime",
+        "Stereo Sound",
+        "Subtitle Options",
+        "Surround Sound",
+        "Partial Controller Support",
+        "Steam Cloud",
+        "Remote Play on TV",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Single-player narrative"
+      ],
+      "tags": [
+        "Open World",
+        "Superhero",
+        "Action",
+        "Singleplayer",
+        "Story Rich",
+        "Adventure",
+        "Combat",
+        "Action-Adventure",
+        "Third Person",
+        "Parkour",
+        "Comic Book",
+        "Exploration",
+        "Beautiful",
+        "Stealth"
+      ],
+      "igdb": {
+        "hypes": 18,
+        "follows": 0,
+        "aggregated_rating": 82,
+        "aggregated_rating_count": 12,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Action",
+          "Science fiction",
+          "Stealth",
+          "Drama",
+          "Open world"
+        ],
+        "player_perspectives": [
+          "Third person"
+        ],
+        "engines": [
+          "Insomniac Engine v.4.0"
+        ],
+        "similar": [
+          {
+            "id": 19565,
+            "name": "Marvel's Spider-Man"
+          },
+          {
+            "id": 103329,
+            "name": "Control"
+          },
+          {
+            "id": 19560,
+            "name": "God of War"
+          },
+          {
+            "id": 11156,
+            "name": "Horizon Zero Dawn"
+          },
+          {
+            "id": 75235,
+            "name": "Ghost of Tsushima"
+          },
+          {
+            "id": 4755,
+            "name": "The Amazing Spider-Man 2"
+          }
+        ],
+        "pop_steam_peak": 0.000116356452308,
+        "pop_visits": 0.000205756024794,
+        "pop_youtube": 0.000246283385268,
+        "pop_want_to_play": 0.000617107287232,
+        "pop_playing": 0.000338749270854
+      },
+      "audience_overlap": [
+        {
+          "name": "Marvel\u2019s Spider-Man: Miles Morales",
+          "link": 0.4112013929193268,
+          "steamId": "1817190"
+        },
+        {
+          "name": "God of War",
+          "link": 0.31783706611938967,
+          "steamId": "1593500"
+        },
+        {
+          "name": "Horizon Zero Dawn\u2122 Complete Edition",
+          "link": 0.24298724954462658,
+          "steamId": "1151640"
+        },
+        {
+          "name": "Batman\u2122: Arkham Knight",
+          "link": 0.2219243545661169,
+          "steamId": "208650"
+        },
+        {
+          "name": "The Last of Us\u2122 Part I",
+          "link": 0.2198980258857367,
+          "steamId": "1888930"
+        },
+        {
+          "name": "STAR WARS Jedi: Fallen Order\u2122",
+          "link": 0.21823382195209154,
+          "steamId": "1172380"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 26.18549511854951
+        },
+        {
+          "cc": "cn",
+          "pct": 11.994421199442119
+        },
+        {
+          "cc": "br",
+          "pct": 4.602510460251046
+        },
+        {
+          "cc": "gb",
+          "pct": 4.602510460251046
+        },
+        {
+          "cc": "fr",
+          "pct": 3.8354253835425385
+        }
+      ],
+      "score": 52,
+      "score_delta": 11,
+      "confidence": "High",
+      "confidence_families": 3,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": true
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 1372,
+      "real_signals": {
+        "followers": 201028,
+        "wishlists": 2388100,
+        "reviews_total": 132155,
+        "review_ratio": 0.96,
+        "revenue": 109763826,
+        "owners": 4634227,
+        "avg_playtime": 26.09664947676055,
+        "twitch_viewers": 87,
+        "twitch_streams": 50,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 18,
+        "revenue_pct_7d": 0.08378442259313408,
+        "players_pct_7d": -11.980126612709352
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "87",
+          "magnitude": 0.41275412501652675,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "21 \u2192 50",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "18",
+          "magnitude": 0.09,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "201,028",
+          "magnitude": 0.930564040152149,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "2,388,100",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.0016756884518626817,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "1K \u2192 7K",
+          "magnitude": 0.4963885879378837,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "5 \u2192 8",
+          "magnitude": 0.6,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Spider-Man Remastered is the AAA port long-tail in its mature phase. No surprises in the signal, no surprises in the economics.",
+          "Nixxes' port quality is the structural value here, not the product itself. Sony's PC catalogue is the asset.",
+          "Watch the Sony pipeline cadence rather than the title \u2014 Last of Us Part II PC is the read."
+        ],
+        "against_consensus": "",
+        "comparable": "Horizon Zero Dawn PC at the same maturity: identical curve. AAA Sony ports converge to the same shape.",
+        "what_would_change_my_mind": "Day-and-date PC release of a current Sony first-party. Resets the cohort.",
+        "risks": [
+          "No actionable upside in the title itself.",
+          "Sony policy on day-and-date PC is the only material lever."
+        ],
+        "pull_quote": "Watch the Sony pipeline cadence, not the title."
+      }
+    },
+    "1363080": {
+      "id": 1363080,
+      "name": "Manor Lords",
+      "studio": "Slavic Magic",
+      "publishers": [
+        "Hooded Horse"
+      ],
+      "stage": "EA",
+      "stage_label": "Early Access",
+      "price": "$39.99",
+      "release_date": "Apr 26, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/header.jpg?t=1778778402",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/capsule_231x87.jpg?t=1778778402",
+      "short_description": "Manor Lords is a medieval strategy game featuring in-depth city building, large-scale tactical battles, and complex economic and social simulations. Rule your lands as a medieval lord \u2013 the seasons pass, the weather changes, and cities rise and fall.",
+      "genres": [
+        "Simulation",
+        "Strategy",
+        "Early Access"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Mouse Only Option",
+        "Save Anytime",
+        "Stereo Sound",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Sim-revival"
+      ],
+      "tags": [
+        "Strategy",
+        "City Builder",
+        "Simulation",
+        "Base Building",
+        "Grand Strategy",
+        "Medieval",
+        "Historical",
+        "Sandbox",
+        "Management",
+        "Building",
+        "Resource Management",
+        "Economy",
+        "Open World",
+        "Survival"
+      ],
+      "igdb": {
+        "hypes": 36,
+        "follows": 0,
+        "aggregated_rating": 0,
+        "aggregated_rating_count": 0,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Fantasy",
+          "Historical"
+        ],
+        "player_perspectives": [
+          "Bird view / Isometric"
+        ],
+        "engines": [
+          "Unreal Engine 5"
+        ],
+        "similar": [
+          {
+            "id": 55590,
+            "name": "Mashinky"
+          },
+          {
+            "id": 79134,
+            "name": "Ancient Cities"
+          },
+          {
+            "id": 55036,
+            "name": "Anno 1800"
+          },
+          {
+            "id": 17111,
+            "name": "Imagine Earth"
+          },
+          {
+            "id": 20776,
+            "name": "Imperium Romanum"
+          },
+          {
+            "id": 6985,
+            "name": "Three Kingdoms: Fate of the Dragon"
+          }
+        ],
+        "pop_steam_peak": 0.00050198737353,
+        "pop_visits": 4.4090576741e-05,
+        "pop_youtube": 0.000241777006699,
+        "pop_want_to_play": 0.000247439153818,
+        "pop_playing": 5.6205035971e-05
+      },
+      "audience_overlap": [
+        {
+          "name": "Mount & Blade II: Bannerlord",
+          "link": 0.24317209608423823,
+          "steamId": "261550"
+        },
+        {
+          "name": "Crusader Kings III",
+          "link": 0.2386805336695031,
+          "steamId": "1158310"
+        },
+        {
+          "name": "Medieval Dynasty",
+          "link": 0.23657690401453824,
+          "steamId": "1129580"
+        },
+        {
+          "name": "Total War: ROME II - Emperor Edition",
+          "link": 0.21440489432703003,
+          "steamId": "214950"
+        },
+        {
+          "name": "Total War: WARHAMMER III",
+          "link": 0.21024059222702035,
+          "steamId": "1142710"
+        },
+        {
+          "name": "Kingdom Come: Deliverance II",
+          "link": 0.2097496068706907,
+          "steamId": "1771300"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 17.7109440267335
+        },
+        {
+          "cc": "cn",
+          "pct": 13.24143692564745
+        },
+        {
+          "cc": "de",
+          "pct": 10.275689223057643
+        },
+        {
+          "cc": "gb",
+          "pct": 5.263157894736842
+        },
+        {
+          "cc": "pl",
+          "pct": 4.887218045112782
+        }
+      ],
+      "score": 50,
+      "score_delta": 4,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": false,
+        "community": true,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 749,
+      "real_signals": {
+        "followers": 557569,
+        "wishlists": 3005200,
+        "reviews_total": 86988,
+        "review_ratio": 0.84,
+        "revenue": 89283151,
+        "owners": 3764037,
+        "avg_playtime": 20.073974501289776,
+        "twitch_viewers": 22,
+        "twitch_streams": 7,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 36,
+        "revenue_pct_7d": 0.152128720736767,
+        "players_pct_7d": -33.45376040886461
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "22",
+          "magnitude": 0.2856844541640983,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "4 \u2192 7",
+          "magnitude": 0.75,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "36",
+          "magnitude": 0.18,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "557,569",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "3,005,200",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.2%",
+          "magnitude": 0.00304257441473534,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "5K \u2192 27K",
+          "magnitude": 0.6772221208249681,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "0 \u2192 1",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Manor Lords re-accelerated mid-Early-Access \u2014 Twitch hours +206% WoW on a build that has been out for over a year. This is the rare second wave, not the typical EA flatline.",
+          "Streamer breadth doubled (52 \u2192 111) with no major patch to anchor coverage. Algorithmic resurfacing rather than content drop, which is harder to reproduce but also harder to sustain.",
+          "Real economics: 72K reviews at 86% positive and a single-developer studio. Slavic Magic is keeping every dollar of marginal revenue on a $40 EA product. Even the bear case here is rounded six figures of incremental ARR this month."
+        ],
+        "against_consensus": "Consensus wrote off Manor Lords after the initial launch wave subsided. The renewed signal suggests the cohort isn't dying \u2014 it's recruiting from sim-revival players who were waiting for the city-builder content to mature.",
+        "comparable": "Frostpunk's mid-cycle resurgence in 2019: 130% Twitch WoW on a one-person streamer base shift. Manor Lords is at 206% with a wider base \u2014 the absolute hours-watched gap is roughly 2\u00d7, which is where the projected next-month CCU band of 12\u201325K sits.",
+        "what_would_change_my_mind": "A flat seven-day Twitch read combined with no new patch in the next fortnight. Algorithmic resurfacing without sustained content loses momentum inside two weeks.",
+        "risks": [
+          "Solo dev \u2014 feature roadmap velocity is the binding constraint.",
+          "Sim-revival cluster is mature; cohort recruitment has a ceiling."
+        ],
+        "pull_quote": "This is the rare second wave, not the typical EA flatline."
+      }
+    },
+    "1145350": {
+      "id": 1145350,
+      "name": "Hades II",
+      "studio": "Supergiant Games",
+      "publishers": [
+        "Supergiant Games"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$29.99",
+      "release_date": "Sep 25, 2025",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/91ac334a2c137d08968ccc0bc474a02579602100/header.jpg?t=1765831644",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/10c9138570a8d7ac9144f601ab0f2ccbc820337e/capsule_231x87.jpg?t=1765831644",
+      "short_description": "Battle beyond the Underworld using dark sorcery to take on the Titan of Time in this bewitching sequel to the award-winning rogue-like dungeon crawler.",
+      "genres": [
+        "Action",
+        "Indie",
+        "RPG"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Captions available",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Single-player narrative",
+        "Roguelike-revival"
+      ],
+      "tags": [
+        "Action",
+        "Roguelike",
+        "Roguelite",
+        "Hack and Slash",
+        "Mythology",
+        "Action Roguelike",
+        "RPG",
+        "Female Protagonist",
+        "Dungeon Crawler",
+        "Action RPG",
+        "Story Rich",
+        "Isometric",
+        "Singleplayer",
+        "Indie"
+      ],
+      "igdb": {
+        "hypes": 25,
+        "follows": 0,
+        "aggregated_rating": 93,
+        "aggregated_rating_count": 4,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Action",
+          "Fantasy"
+        ],
+        "player_perspectives": [
+          "Bird view / Isometric"
+        ],
+        "engines": [
+          "Proprietary Engine"
+        ],
+        "similar": [
+          {
+            "id": 19150,
+            "name": "Vagante"
+          },
+          {
+            "id": 96217,
+            "name": "Eternity: The Last Unicorn"
+          },
+          {
+            "id": 106987,
+            "name": "Torchlight III"
+          },
+          {
+            "id": 111253,
+            "name": "Vambrace: Cold Soul"
+          },
+          {
+            "id": 55199,
+            "name": "Dragon: Marked for Death"
+          },
+          {
+            "id": 105049,
+            "name": "Remnant: From the Ashes"
+          }
+        ],
+        "pop_steam_peak": 0.000490854328797,
+        "pop_visits": 0.000183710736423,
+        "pop_youtube": 0.000245219767966,
+        "pop_want_to_play": 0.000459103972144,
+        "pop_playing": 0.000157222195217
+      },
+      "audience_overlap": [
+        {
+          "name": "Hades",
+          "link": 0.2973279352226721,
+          "steamId": "1145360"
+        },
+        {
+          "name": "Balatro",
+          "link": 0.2598510834100226,
+          "steamId": "2379780"
+        },
+        {
+          "name": "Clair Obscur: Expedition 33",
+          "link": 0.25259480012331725,
+          "steamId": "1903340"
+        },
+        {
+          "name": "Slay the Spire 2",
+          "link": 0.23652668028056467,
+          "steamId": "2868840"
+        },
+        {
+          "name": "Cult of the Lamb",
+          "link": 0.23424348183124616,
+          "steamId": "1313140"
+        },
+        {
+          "name": "Hollow Knight: Silksong",
+          "link": 0.22980849292256453,
+          "steamId": "1030300"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 22.350427350427353
+        },
+        {
+          "cc": "cn",
+          "pct": 19.102564102564102
+        },
+        {
+          "cc": "ru",
+          "pct": 5
+        },
+        {
+          "cc": "gb",
+          "pct": 4.487179487179487
+        },
+        {
+          "cc": "fr",
+          "pct": 4.444444444444445
+        }
+      ],
+      "score": 49,
+      "score_delta": 12,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 232,
+      "real_signals": {
+        "followers": 288171,
+        "wishlists": 3396800,
+        "reviews_total": 118550,
+        "review_ratio": 0.96,
+        "revenue": 84563443,
+        "owners": 3624121,
+        "avg_playtime": 39.4210754705285,
+        "twitch_viewers": 155,
+        "twitch_streams": 54,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 25,
+        "revenue_pct_7d": 0.23415741911061833,
+        "players_pct_7d": -12.342264878808301
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "155",
+          "magnitude": 0.4661301723886601,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "12 \u2192 54",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "25",
+          "magnitude": 0.125,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "288,171",
+          "magnitude": 0.9580064940561769,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "3,396,800",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.2%",
+          "magnitude": 0.004683148382212367,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "8K \u2192 27K",
+          "magnitude": 0.3852668584212208,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "4 \u2192 5",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Hades II is doing exactly what consensus expected \u2014 no edge in the read. 64K reviews at 95% on an EA build with steady but unspectacular Twitch (+9% WoW). The signal is the absence of acceleration.",
+          "1.8K CCU is healthy for a single-player roguelike fifteen months into EA \u2014 but it isn't a base for a phenomenon, it's a base for a predictable 1.0 launch.",
+          "Supergiant's commercial model is built around launch-window concentration. The interesting question is whether the EA\u21921.0 jump captures the cohort that bounced off original Hades on second-tier hardware."
+        ],
+        "against_consensus": "",
+        "comparable": "Original Hades at month 15 of EA: nearly identical signal profile, identical review trajectory. The followup mostly tracks the parent. Caps the EV in line with Hades 1.0, which peaked around 27K CCU \u2014 not the 150K some have priced in.",
+        "what_would_change_my_mind": "A surprise content drop pre-1.0 that lifts Twitch hours past 50% WoW. Without that the curve is locked.",
+        "risks": [
+          "Predictable signal \u2014 limited upside surprise.",
+          "Sequel-cohort capture is unmeasured pre-1.0."
+        ],
+        "pull_quote": "The signal is the absence of acceleration."
+      }
+    },
+    "553850": {
+      "id": 553850,
+      "name": "HELLDIVERS\u2122 2",
+      "studio": "Arrowhead Game Studios",
+      "publishers": [
+        "PlayStation Publishing LLC"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$39.99",
+      "release_date": "Feb 8, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/f11c258b04a5e3e7771c1bab60f324ebf6c6c6fb/header.jpg?t=1770747641",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/8463c7dc0ff0c0e3eef6de1688ea25f081761c99/capsule_231x87.jpg?t=1770747641",
+      "short_description": "The Galaxy\u2019s Last Line of Offence. Enlist in the Helldivers and join the fight for freedom across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.",
+      "genres": [
+        "Action"
+      ],
+      "categories": [
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "In-App Purchases",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Chat Speech-to-text",
+        "Chat Text-to-speech",
+        "Color Alternatives",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Narrated Game Menus",
+        "Playable without Timed Input",
+        "Stereo Sound",
+        "Subtitle Options",
+        "Surround Sound",
+        "Partial Controller Support",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Friendslop",
+        "Hero-shooter"
+      ],
+      "tags": [
+        "Online Co-Op",
+        "PvE",
+        "Third-Person Shooter",
+        "Multiplayer",
+        "Shooter",
+        "Action",
+        "Co-op",
+        "Sci-fi",
+        "Extraction Shooter",
+        "Capitalism",
+        "Space",
+        "Third Person",
+        "Comedy",
+        "Gore"
+      ],
+      "igdb": {
+        "hypes": 0,
+        "follows": 0,
+        "aggregated_rating": 87,
+        "aggregated_rating_count": 7,
+        "game_modes": [
+          "Single player",
+          "Multiplayer",
+          "Co-operative"
+        ],
+        "themes": [
+          "Action",
+          "Science fiction"
+        ],
+        "player_perspectives": [
+          "First person",
+          "Third person"
+        ],
+        "engines": [
+          "Autodesk Stingray"
+        ],
+        "similar": [
+          {
+            "id": 103292,
+            "name": "Gears 5"
+          },
+          {
+            "id": 55038,
+            "name": "Immortal: Unchained"
+          },
+          {
+            "id": 105269,
+            "name": "Gene Rain"
+          },
+          {
+            "id": 107318,
+            "name": "Rebel Galaxy Outlaw"
+          },
+          {
+            "id": 103301,
+            "name": "Wolfenstein: Youngblood"
+          },
+          {
+            "id": 68286,
+            "name": "Earth Defense Force: Iron Rain"
+          }
+        ],
+        "pop_steam_peak": 0.006259376917854,
+        "pop_visits": 0.000165339662781,
+        "pop_youtube": 0.000251069663127,
+        "pop_want_to_play": 0.000274269905437,
+        "pop_playing": 0.000322039665565
+      },
+      "audience_overlap": [
+        {
+          "name": "Baldur's Gate 3",
+          "link": 0.3967277721382934,
+          "steamId": "1086940"
+        },
+        {
+          "name": "Deep Rock Galactic",
+          "link": 0.3953080920564217,
+          "steamId": "548430"
+        },
+        {
+          "name": "Lethal Company",
+          "link": 0.38339667077021894,
+          "steamId": "1966720"
+        },
+        {
+          "name": "Risk of Rain 2",
+          "link": 0.37848839002127727,
+          "steamId": "632360"
+        },
+        {
+          "name": "Warhammer 40,000: Space Marine 2",
+          "link": 0.3700948146803974,
+          "steamId": "2183900"
+        },
+        {
+          "name": "ELDEN RING",
+          "link": 0.3700387343427738,
+          "steamId": "1245620"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 29.63481740870435
+        },
+        {
+          "cc": "cn",
+          "pct": 12.646323161580792
+        },
+        {
+          "cc": "gb",
+          "pct": 5.082541270635318
+        },
+        {
+          "cc": "de",
+          "pct": 5.082541270635318
+        },
+        {
+          "cc": "ru",
+          "pct": 4.9524762381190595
+        }
+      ],
+      "score": 48,
+      "score_delta": 4,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Settled",
+      "scale_band": [
+        157000,
+        315000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": true,
+      "days_since_release": 827,
+      "real_signals": {
+        "followers": 514630,
+        "wishlists": 2267100,
+        "reviews_total": 1140895,
+        "review_ratio": 0.75,
+        "revenue": 431058690,
+        "owners": 15782912,
+        "avg_playtime": 80.43524556597623,
+        "twitch_viewers": 600,
+        "twitch_streams": 100,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 0,
+        "revenue_pct_7d": 0.1253098563846421,
+        "players_pct_7d": -24.360977181368966
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "600",
+          "magnitude": 0.5912255766306399,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "66 \u2192 100",
+          "magnitude": 0.5151515151515151,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "514,630",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "2,267,100",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.002506197127692842,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "9K \u2192 11K",
+          "magnitude": 0.035965484736422304,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "5 \u2192 5",
+          "magnitude": 0.0,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Helldivers 2 is in the standard live-service decay phase \u2014 Twitch flatter than its EA equivalents, but CCU still ahead of any non-Sony non-Activision shooter on the platform.",
+          "The interesting read is publisher rather than product: Arrowhead's relationship with Sony is the binding constraint on what marketing levers can pull next.",
+          "Major Order narrative pacing has tightened recently \u2014 signal that engagement engineering is back at the front of priorities. Watch for a fall content beat."
+        ],
+        "against_consensus": "",
+        "comparable": "Destiny 2 at month 18: similar cohort settle, similar tooling-led engagement engineering. Helldivers 2's gap is its single-product publisher relationship, not Bungie's portfolio.",
+        "what_would_change_my_mind": "A non-trivial PSN policy change. The PC cohort is structurally fragile to platform-side decisions.",
+        "risks": [
+          "PSN linkage policy remains a tail risk.",
+          "Live-service novelty curve cooling broadly."
+        ],
+        "pull_quote": "The signal is publisher rather than product."
+      }
+    },
+    "3164500": {
+      "id": 3164500,
+      "name": "Schedule I",
+      "studio": "TVGS",
+      "publishers": [
+        "TVGS"
+      ],
+      "stage": "EA",
+      "stage_label": "Early Access",
+      "price": "$19.99",
+      "release_date": "Mar 24, 2025",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3164500/header.jpg?t=1773974661",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3164500/986ee9a7a25cb0e61d1530cc3cd7e3e06aa68733/capsule_231x87.jpg?t=1773974661",
+      "short_description": "From small-time dope pusher to kingpin - manufacture and distribute a range of drugs throughout the grungy city of Hyland Point. Expand your empire with properties, businesses, employees and more.",
+      "genres": [
+        "Action",
+        "Indie",
+        "Simulation",
+        "Strategy",
+        "Early Access"
+      ],
+      "categories": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Steam Achievements",
+        "Adjustable Text Size",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Playable without Timed Input",
+        "Save Anytime",
+        "Stereo Sound",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Friendslop",
+        "Sim-revival"
+      ],
+      "tags": [
+        "Simulation",
+        "Co-op",
+        "Crime",
+        "Management",
+        "Multiplayer",
+        "Open World",
+        "First-Person",
+        "Crafting",
+        "Automation",
+        "Base Building",
+        "Action",
+        "Building",
+        "Stealth",
+        "Strategy"
+      ],
+      "igdb": {
+        "hypes": 7,
+        "follows": 0,
+        "aggregated_rating": 0,
+        "aggregated_rating_count": 0,
+        "game_modes": [
+          "Single player",
+          "Multiplayer",
+          "Co-operative"
+        ],
+        "themes": [
+          "Action",
+          "Open world"
+        ],
+        "player_perspectives": [
+          "First person",
+          "Third person"
+        ],
+        "engines": [
+          "Unity"
+        ],
+        "similar": [
+          {
+            "id": 44242,
+            "name": "Junkyard Simulator"
+          },
+          {
+            "id": 10776,
+            "name": "Rising World"
+          },
+          {
+            "id": 17379,
+            "name": "Miscreated"
+          },
+          {
+            "id": 35371,
+            "name": "Colony Survival"
+          },
+          {
+            "id": 26574,
+            "name": "Force of Nature"
+          },
+          {
+            "id": 37419,
+            "name": "Dude Simulator"
+          }
+        ],
+        "pop_steam_peak": 0.001619962885172,
+        "pop_visits": 9.9203797668e-05,
+        "pop_youtube": 0.000250845743695,
+        "pop_want_to_play": 0.000266816918876,
+        "pop_playing": 0.000154943612677
+      },
+      "audience_overlap": [
+        {
+          "name": "ARC Raiders",
+          "link": 0.29939794977490913,
+          "steamId": "1808500"
+        },
+        {
+          "name": "R.E.P.O.",
+          "link": 0.2901460466677858,
+          "steamId": "3241660"
+        },
+        {
+          "name": "PEAK",
+          "link": 0.28828162555929443,
+          "steamId": "3527290"
+        },
+        {
+          "name": "RV There Yet?",
+          "link": 0.2793465719317423,
+          "steamId": "3949040"
+        },
+        {
+          "name": "HELLDIVERS\u2122 2",
+          "link": 0.2788199389623601,
+          "steamId": "553850"
+        },
+        {
+          "name": "Lethal Company",
+          "link": 0.2777470831031233,
+          "steamId": "1966720"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 32.19840995506395
+        },
+        {
+          "cc": "de",
+          "pct": 9.782232976149325
+        },
+        {
+          "cc": "gb",
+          "pct": 5.098513653646734
+        },
+        {
+          "cc": "ca",
+          "pct": 4.701002419633599
+        },
+        {
+          "cc": "fr",
+          "pct": 3.2319391634980987
+        }
+      ],
+      "score": 47,
+      "score_delta": 14,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 417,
+      "real_signals": {
+        "followers": 266191,
+        "wishlists": 1733600,
+        "reviews_total": 297908,
+        "review_ratio": 0.98,
+        "revenue": 146273923,
+        "owners": 8937240,
+        "avg_playtime": 27.716564169328425,
+        "twitch_viewers": 283,
+        "twitch_streams": 59,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 7,
+        "revenue_pct_7d": 0.37394415817559634,
+        "players_pct_7d": -34.40389679821001
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "283",
+          "magnitude": 0.5217710334949747,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "15 \u2192 59",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "7",
+          "magnitude": 0.035,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "266,191",
+          "magnitude": 0.9519603303102967,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "1,733,600",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.4%",
+          "magnitude": 0.007478883163511927,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "8K \u2192 24K",
+          "magnitude": 0.29314835787089466,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "1 \u2192 1",
+          "magnitude": 0.0,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Schedule I broke through on TikTok last year and the long-tail is still compounding. Twitch hours +164% WoW, follower count +38% \u2014 both into territory normally reserved for new releases, not month-eight EA.",
+          "204K reviews at 98% positive is the highest sentiment read in this week's universe. That's not a normal distribution \u2014 it's a survivorship effect from a low-friction streamer-first marketing loop.",
+          "TVGS is a solo developer. Anything north of 30K sustained CCU is funding a multi-year follow-up outright. Even the bear case clears six figures."
+        ],
+        "against_consensus": "Industry takes have been calling the friendslop wave over since Q1. Schedule I keeps breaking that narrative. The cluster isn't dying \u2014 it's specialising into mechanically richer designs that age better than the pure meme-loop generation.",
+        "comparable": "Lethal Company at month 8: ran 1.8M Twitch hours and a 2.1\u00d7 streamer multiple WoW. Schedule I is at 1.2M and 1.5\u00d7. Roughly two-thirds the magnitude on a comparable arc \u2014 caps realistic peak around the high-30s K CCU.",
+        "what_would_change_my_mind": "The TikTok loop is the marketing engine. A 30-day decay in hashtag volume would compress this back to Cult tier.",
+        "risks": [
+          "Solo-dev roadmap risk under attention load.",
+          "TikTok-driven curves decay faster than streamer-driven ones."
+        ],
+        "pull_quote": "204K reviews at 98% \u2014 that's not a normal distribution, it's a survivorship effect."
+      }
+    },
+    "2680010": {
+      "id": 2680010,
+      "name": "The First Berserker: Khazan",
+      "studio": "Neople",
+      "publishers": [
+        "NEXON"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$59.99",
+      "release_date": "Mar 27, 2025",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/header.jpg?t=1776936760",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/capsule_231x87.jpg?t=1776936760",
+      "short_description": "The First Berserker: Khazan is a hardcore action role-playing game. The player will become Khazan, the great general of the Pell Los Empire, who overcame death, and sets out to reveal the incidents that led to his downfall and seek vengeance on his enemies.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "RPG"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Soulslike",
+        "Single-player narrative"
+      ],
+      "tags": [
+        "Souls-like",
+        "Difficult",
+        "Hack and Slash",
+        "Anime",
+        "Action RPG",
+        "Action-Adventure",
+        "Third Person",
+        "RPG",
+        "Action",
+        "3D",
+        "Dark Fantasy",
+        "Cartoony",
+        "Atmospheric",
+        "Adventure"
+      ],
+      "igdb": {
+        "hypes": 14,
+        "follows": 0,
+        "aggregated_rating": 0,
+        "aggregated_rating_count": 0,
+        "game_modes": [
+          "Multiplayer"
+        ],
+        "themes": [
+          "Action"
+        ],
+        "player_perspectives": [
+          "First person"
+        ],
+        "engines": [
+          "Unreal Engine 5"
+        ],
+        "similar": [
+          {
+            "id": 36553,
+            "name": "Medieval Kingdom Wars"
+          },
+          {
+            "id": 65827,
+            "name": "Bronze Age"
+          },
+          {
+            "id": 25311,
+            "name": "Star Control: Origins"
+          },
+          {
+            "id": 35994,
+            "name": "Survivalist"
+          },
+          {
+            "id": 36269,
+            "name": "Supreme Ruler Ultimate"
+          },
+          {
+            "id": 31515,
+            "name": "Another Brick in the Mall"
+          }
+        ],
+        "pop_steam_peak": 0.000204081617835,
+        "pop_visits": 8.0832724026e-05,
+        "pop_youtube": 0.000243652331942,
+        "pop_want_to_play": 0.000108813603787,
+        "pop_playing": 2.1266770367e-05
+      },
+      "audience_overlap": [
+        {
+          "name": "Lies of P",
+          "link": 0.21140831453432163,
+          "steamId": "1627720"
+        },
+        {
+          "name": "Lords of the Fallen",
+          "link": 0.18700868845676458,
+          "steamId": "1501750"
+        },
+        {
+          "name": "AI LIMIT",
+          "link": 0.17981438515081208,
+          "steamId": "2407270"
+        },
+        {
+          "name": "WUCHANG: Fallen Feathers",
+          "link": 0.17657342657342656,
+          "steamId": "2277560"
+        },
+        {
+          "name": "Nioh 3",
+          "link": 0.17613636363636365,
+          "steamId": "3681010"
+        },
+        {
+          "name": "Wo Long: Fallen Dynasty",
+          "link": 0.1452643811737362,
+          "steamId": "1448440"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "cn",
+          "pct": 23.660714285714285
+        },
+        {
+          "cc": "us",
+          "pct": 18.75
+        },
+        {
+          "cc": "de",
+          "pct": 6.026785714285714
+        },
+        {
+          "cc": "ca",
+          "pct": 4.6875
+        },
+        {
+          "cc": "ru",
+          "pct": 3.7946428571428568
+        }
+      ],
+      "score": 45,
+      "score_delta": 9,
+      "confidence": "High",
+      "confidence_families": 3,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": false,
+        "community": true,
+        "press": true
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 414,
+      "real_signals": {
+        "followers": 89461,
+        "wishlists": 1401400,
+        "reviews_total": 30522,
+        "review_ratio": 0.85,
+        "revenue": 26298631,
+        "owners": 736833,
+        "avg_playtime": 31.58747573531251,
+        "twitch_viewers": 19,
+        "twitch_streams": 4,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 14,
+        "revenue_pct_7d": 0.12929153924741418,
+        "players_pct_7d": -21.113243761996163
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "19",
+          "magnitude": 0.27213487206192993,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "4 \u2192 4",
+          "magnitude": 0.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "14",
+          "magnitude": 0.07,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "89,461",
+          "magnitude": 0.8688646798744452,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "1,401,400",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.002585830784948284,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "2K \u2192 16K",
+          "magnitude": 0.7671431892143189,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "1 \u2192 4",
+          "magnitude": 0.6,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "The First Berserker: Khazan is the Nexon mid-budget signal of the year \u2014 soulslike adjacency without trying to compete head-on with FromSoftware.",
+          "Sentiment held positive through launch month. Nexon's marketing was tightly targeted at the Korean and SEA cohorts first \u2014 Western coverage is following late, which is unusual.",
+          "Bear case is a flat 8K-CCU mid-budget settle. Bull case is a Stellar Blade-style international break that catches the soulslike-revival cluster in the right week."
+        ],
+        "against_consensus": "Most analysts grouped Khazan with mid-tier action-RPGs. The data shape is closer to the regional-first marketing-led products (Stellar Blade, Tower of Fantasy) \u2014 which is a different econ model with different upside.",
+        "comparable": "Stellar Blade PC at week 6 post-launch: 14K CCU, 70% positive, similar regional-first signal pattern. Khazan is currently behind on CCU but ahead on sentiment.",
+        "what_would_change_my_mind": "A drop in Western coverage breadth. Without it the curve flattens.",
+        "risks": [
+          "Genre adjacency is fragile against FromSoftware's pipeline.",
+          "Nexon's PC content cadence is unproven."
+        ],
+        "pull_quote": "Western coverage is following late, which is unusual."
+      }
+    },
+    "2050650": {
+      "id": 2050650,
+      "name": "Resident Evil 4",
+      "studio": "CAPCOM Co., Ltd.",
+      "publishers": [
+        "CAPCOM Co., Ltd."
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$39.99",
+      "release_date": "Mar 23, 2023",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg?t=1772502922",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/capsule_231x87.jpg?t=1772502922",
+      "short_description": "Survival is just the beginning. Six years have passed since the biological disaster in Raccoon City. Leon S. Kennedy, one of the survivors, tracks the president's kidnapped daughter to a secluded European village, where there is something terribly wrong with the locals.",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Cloud",
+        "HDR available",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Single-player narrative"
+      ],
+      "tags": [
+        "Horror",
+        "Action",
+        "Survival Horror",
+        "Third-Person Shooter",
+        "Singleplayer",
+        "Zombies",
+        "Story Rich",
+        "Survival",
+        "Remake",
+        "Dark",
+        "Cinematic",
+        "VR",
+        "Realistic",
+        "Gore"
+      ],
+      "igdb": {
+        "hypes": 0,
+        "follows": 0,
+        "aggregated_rating": 81,
+        "aggregated_rating_count": 5,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Action",
+          "Horror",
+          "Survival"
+        ],
+        "player_perspectives": [
+          "Third person"
+        ],
+        "engines": [],
+        "similar": [
+          {
+            "id": 3042,
+            "name": "Dying Light"
+          },
+          {
+            "id": 19561,
+            "name": "Days Gone"
+          },
+          {
+            "id": 4786,
+            "name": "The Evil Within"
+          },
+          {
+            "id": 880,
+            "name": "Resident Evil 2"
+          },
+          {
+            "id": 1009,
+            "name": "The Last of Us"
+          },
+          {
+            "id": 1020,
+            "name": "Grand Theft Auto V"
+          }
+        ],
+        "pop_steam_peak": 0.0,
+        "pop_visits": 0.000297611393005,
+        "pop_youtube": 0.0,
+        "pop_want_to_play": 0.00019377765058,
+        "pop_playing": 0.000998019152246
+      },
+      "audience_overlap": [
+        {
+          "name": "Resident Evil 2",
+          "link": 0.5078064444690511,
+          "steamId": "883710"
+        },
+        {
+          "name": "Resident Evil 3",
+          "link": 0.49433298134459697,
+          "steamId": "952060"
+        },
+        {
+          "name": "Resident Evil Village",
+          "link": 0.4819578669262324,
+          "steamId": "1196590"
+        },
+        {
+          "name": "Resident Evil Requiem",
+          "link": 0.4330006183199364,
+          "steamId": "3764200"
+        },
+        {
+          "name": "Resident Evil 7 Biohazard",
+          "link": 0.41891728230592223,
+          "steamId": "418370"
+        },
+        {
+          "name": "Resident Evil 6",
+          "link": 0.34852695942190104,
+          "steamId": "221040"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "cn",
+          "pct": 26.668179754879713
+        },
+        {
+          "cc": "us",
+          "pct": 17.93009532455742
+        },
+        {
+          "cc": "br",
+          "pct": 6.922378574670904
+        },
+        {
+          "cc": "ru",
+          "pct": 4.630049931911031
+        },
+        {
+          "cc": "gb",
+          "pct": 3.041307308216069
+        }
+      ],
+      "score": 45,
+      "score_delta": 19,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 1149,
+      "real_signals": {
+        "followers": 307551,
+        "wishlists": 2004200,
+        "reviews_total": 249202,
+        "review_ratio": 0.97,
+        "revenue": 133049338,
+        "owners": 7598377,
+        "avg_playtime": 34.24237331172152,
+        "twitch_viewers": 1512,
+        "twitch_streams": 77,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 1,
+        "igdb_hypes": 0,
+        "revenue_pct_7d": 0.1468149827425969,
+        "players_pct_7d": -24.389963167587478
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "1,512",
+          "magnitude": 0.676648667310331,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "19 \u2192 77",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "307,551",
+          "magnitude": 0.9629664903117927,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "2,004,200",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.002936299654851938,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "4K \u2192 6K",
+          "magnitude": 0.055973266499582286,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "6 \u2192 6",
+          "magnitude": 0.0,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "RE4 remake is in the standard Capcom long-tail. Sentiment durable, CCU bedded down, no signal anomalies.",
+          "The read here is Capcom's portfolio cadence \u2014 six remake products, all converging to similar curves. The portfolio works; the individual title is non-actionable.",
+          "Watch Resident Evil 9 dating, not this one."
+        ],
+        "against_consensus": "",
+        "comparable": "RE2 remake at the same maturity: indistinguishable. Capcom's playbook is converged.",
+        "what_would_change_my_mind": "Nothing in RE4's signal alone. Move attention upstream to the next Capcom product reveal.",
+        "risks": [
+          "Not actionable in isolation.",
+          "Portfolio-level risk concentration at Capcom is the relevant frame."
+        ],
+        "pull_quote": "The portfolio works; the individual title is non-actionable."
+      }
+    },
+    "1966720": {
+      "id": 1966720,
+      "name": "Lethal Company",
+      "studio": "Zeekerss",
+      "publishers": [
+        "Zeekerss"
+      ],
+      "stage": "EA",
+      "stage_label": "Early Access",
+      "price": "$9.99",
+      "release_date": "Oct 23, 2023",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg?t=1775380053",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/capsule_231x87.jpg?t=1775380053",
+      "short_description": "A co-op horror about scavenging at abandoned moons to sell scrap to the Company.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie",
+        "Early Access"
+      ],
+      "categories": [
+        "Single-player",
+        "Multi-player",
+        "Co-op",
+        "Online Co-op",
+        "Custom Volume Controls",
+        "Stereo Sound",
+        "Partial Controller Support",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Friendslop",
+        "Asymmetric horror"
+      ],
+      "tags": [
+        "Online Co-Op",
+        "Horror",
+        "First-Person",
+        "Co-op",
+        "Survival Horror",
+        "Funny",
+        "Exploration",
+        "Psychological Horror",
+        "Sci-fi",
+        "PvE",
+        "Atmospheric",
+        "Procedural Generation",
+        "Aliens",
+        "Time Management"
+      ],
+      "igdb": {
+        "hypes": 0,
+        "follows": 0,
+        "aggregated_rating": 0,
+        "aggregated_rating_count": 0,
+        "game_modes": [
+          "Single player",
+          "Multiplayer",
+          "Co-operative"
+        ],
+        "themes": [
+          "Action",
+          "Science fiction",
+          "Horror",
+          "Comedy"
+        ],
+        "player_perspectives": [
+          "First person"
+        ],
+        "engines": [
+          "Unity"
+        ],
+        "similar": [
+          {
+            "id": 114455,
+            "name": "Pacify"
+          },
+          {
+            "id": 111130,
+            "name": "Apsulov: End of Gods"
+          },
+          {
+            "id": 110737,
+            "name": "The Watson-Scott Test"
+          },
+          {
+            "id": 25646,
+            "name": "Don't Knock Twice"
+          },
+          {
+            "id": 25311,
+            "name": "Star Control: Origins"
+          },
+          {
+            "id": 105269,
+            "name": "Gene Rain"
+          }
+        ],
+        "pop_steam_peak": 0.003819295872192,
+        "pop_visits": 0.000135945944953,
+        "pop_youtube": 0.00024566760683,
+        "pop_want_to_play": 0.000150550328528,
+        "pop_playing": 0.00027950612483
+      },
+      "audience_overlap": [
+        {
+          "name": "R.E.P.O.",
+          "link": 0.4551860202931229,
+          "steamId": "3241660"
+        },
+        {
+          "name": "Phasmophobia",
+          "link": 0.443176246788649,
+          "steamId": "739630"
+        },
+        {
+          "name": "PEAK",
+          "link": 0.4360596475372797,
+          "steamId": "3527290"
+        },
+        {
+          "name": "Content Warning",
+          "link": 0.41458176442696565,
+          "steamId": "2881650"
+        },
+        {
+          "name": "Garry's Mod",
+          "link": 0.3917194183062446,
+          "steamId": "4000"
+        },
+        {
+          "name": "HELLDIVERS\u2122 2",
+          "link": 0.38339667077021894,
+          "steamId": "553850"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 26.207850065289197
+        },
+        {
+          "cc": "cn",
+          "pct": 11.8595898302481
+        },
+        {
+          "cc": "ru",
+          "pct": 5.753130040709732
+        },
+        {
+          "cc": "ca",
+          "pct": 4.309086719410093
+        },
+        {
+          "cc": "gb",
+          "pct": 4.301405637913818
+        }
+      ],
+      "score": 43,
+      "score_delta": 12,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 935,
+      "real_signals": {
+        "followers": 324169,
+        "wishlists": 1592800,
+        "reviews_total": 507266,
+        "review_ratio": 0.97,
+        "revenue": 137567008,
+        "owners": 18783352,
+        "avg_playtime": 24.008427684797102,
+        "twitch_viewers": 188,
+        "twitch_streams": 50,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 0,
+        "revenue_pct_7d": 0.10452589339520248,
+        "players_pct_7d": 14.40849653140156
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "188",
+          "magnitude": 0.4839694331236802,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "34 \u2192 50",
+          "magnitude": 0.47058823529411764,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "324,169",
+          "magnitude": 0.9669767479213125,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "1,592,800",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.0020905178679040495,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "8K \u2192 12K",
+          "magnitude": 0.0762520995571843,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "2 \u2192 3",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Lethal Company's post-peak settle is now the reference curve for friendslop tail decay. CCU has held above 18K for three quarters \u2014 the cohort didn't churn the way a one-meme launch would have predicted.",
+          "Zeekerss is still soloing the project. Sub-30K sustained CCU on a $9.99 SKU is funding the next concept without external pressure.",
+          "Streamer breadth has flattened. The base is durable; the signal is no longer interesting."
+        ],
+        "against_consensus": "",
+        "comparable": "Among Us in 2022: similar decay shape post-peak, similar cohort durability. The Lethal Company gap is that the underlying loop is mechanically harder to copy \u2014 competitors have failed to replicate it three times so far.",
+        "what_would_change_my_mind": "A confirmed second project from Zeekerss. Any signal of that resets the EV.",
+        "risks": [
+          "Solo-dev concentration risk on follow-up.",
+          "Friendslop cluster macro sentiment cooling slightly."
+        ],
+        "pull_quote": "The base is durable; the signal is no longer interesting."
+      }
+    },
+    "1601580": {
+      "id": 1601580,
+      "name": "Frostpunk 2",
+      "studio": "11 bit studios",
+      "publishers": [
+        "11 bit studios"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$44.99",
+      "release_date": "Sep 20, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/header.jpg?t=1778073400",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/2c5b053c630a9cb57fa71e6eb018c2a0b008c05b/capsule_231x87.jpg?t=1778073400",
+      "short_description": "Develop, expand, and advance your city in a society survival game set 30 years after an apocalyptic blizzard ravaged Earth. In Frostpunk 2, you face not only the perils of never-ending winter, but also the powerful factions that watch your every step inside the Council Hall.",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Trading Cards",
+        "Steam Workshop",
+        "Adjustable Text Size",
+        "Custom Volume Controls",
+        "Adjustable Difficulty",
+        "Save Anytime",
+        "Stereo Sound",
+        "Surround Sound",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Sim-revival",
+        "Single-player narrative"
+      ],
+      "tags": [
+        "City Builder",
+        "Strategy",
+        "Survival",
+        "Resource Management",
+        "Post-apocalyptic",
+        "Simulation",
+        "Singleplayer",
+        "Steampunk",
+        "Management",
+        "Base Building",
+        "Sequel",
+        "Atmospheric",
+        "Choices Matter",
+        "Political Sim"
+      ],
+      "igdb": {
+        "hypes": 27,
+        "follows": 0,
+        "aggregated_rating": 82,
+        "aggregated_rating_count": 5,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Survival"
+        ],
+        "player_perspectives": [
+          "Bird view / Isometric"
+        ],
+        "engines": [
+          "Unreal Engine 5"
+        ],
+        "similar": [
+          {
+            "id": 79134,
+            "name": "Ancient Cities"
+          },
+          {
+            "id": 109339,
+            "name": "Change: A Homeless Survival Experience"
+          },
+          {
+            "id": 26574,
+            "name": "Force of Nature"
+          },
+          {
+            "id": 26145,
+            "name": "Impact Winter"
+          },
+          {
+            "id": 65827,
+            "name": "Bronze Age"
+          },
+          {
+            "id": 31515,
+            "name": "Another Brick in the Mall"
+          }
+        ],
+        "pop_steam_peak": 0.000132926940628,
+        "pop_visits": 1.8371073642e-05,
+        "pop_youtube": 0.000214262906492,
+        "pop_want_to_play": 0.000178871677459,
+        "pop_playing": 4.1774013222e-05
+      },
+      "audience_overlap": [
+        {
+          "name": "IXION",
+          "link": 0.16032295271049596,
+          "steamId": "1113120"
+        },
+        {
+          "name": "Frostpunk",
+          "link": 0.14891451831750338,
+          "steamId": "323190"
+        },
+        {
+          "name": "The Alters",
+          "link": 0.13842746400885936,
+          "steamId": "1601570"
+        },
+        {
+          "name": "Manor Lords",
+          "link": 0.126417471650567,
+          "steamId": "1363080"
+        },
+        {
+          "name": "Against the Storm",
+          "link": 0.11740473738414006,
+          "steamId": "1336490"
+        },
+        {
+          "name": "Timberborn",
+          "link": 0.11373461922181577,
+          "steamId": "1062090"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "cn",
+          "pct": 23.916083916083917
+        },
+        {
+          "cc": "us",
+          "pct": 15.384615384615385
+        },
+        {
+          "cc": "ru",
+          "pct": 10.62937062937063
+        },
+        {
+          "cc": "de",
+          "pct": 5.734265734265734
+        },
+        {
+          "cc": "gb",
+          "pct": 4.195804195804196
+        }
+      ],
+      "score": 43,
+      "score_delta": 11,
+      "confidence": "High",
+      "confidence_families": 3,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": true
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "neutral",
+      "is_mature_phenom": false,
+      "days_since_release": 602,
+      "real_signals": {
+        "followers": 179687,
+        "wishlists": 2104300,
+        "reviews_total": 25838,
+        "review_ratio": 0.75,
+        "revenue": 27180376,
+        "owners": 1004564,
+        "avg_playtime": 16.71079853062912,
+        "twitch_viewers": 73,
+        "twitch_streams": 2,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 27,
+        "revenue_pct_7d": 0.10702611589706679,
+        "players_pct_7d": -40.15828440132755
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "73",
+          "magnitude": 0.3965385730066498,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "4 \u2192 2",
+          "magnitude": -0.5,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "27",
+          "magnitude": 0.135,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "179,687",
+          "magnitude": 0.9220116361199623,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "2,104,300",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.0021405223179413358,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "18K \u2192 21K",
+          "magnitude": 0.025834087160112807,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "5 \u2192 8",
+          "magnitude": 0.6,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Frostpunk 2 is the textbook publisher-led launch curve \u2014 clean, predictable, no anomalies in either direction. The signal is that there is no signal.",
+          "11 Bit's marketing was efficient enough that the launch peak captured most of the addressable cohort inside week one. The tail is now a slow drift, not a second wave.",
+          "The follow-up question is whether the studio's next bet \u2014 likely The Alters \u2014 repeats the model or breaks pattern. That's where the analytical attention belongs, not here."
+        ],
+        "against_consensus": "",
+        "comparable": "Original Frostpunk at the same post-launch month: indistinguishable curve. Predictability is the read.",
+        "what_would_change_my_mind": "A DLC reveal that lifts WoW Twitch past 40%. Otherwise nothing here will move the score.",
+        "risks": [
+          "Predictable \u2014 nothing actionable on the long side.",
+          "11 Bit valuation already prices in this run."
+        ],
+        "pull_quote": "The signal is that there is no signal."
+      }
+    },
+    "1458140": {
+      "id": 1458140,
+      "name": "Pacific Drive",
+      "studio": "Ironwood Studios",
+      "publishers": [
+        "Kepler Interactive"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$29.99",
+      "release_date": "Feb 21, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1458140/3a5fa1e845c13b48f9e2ed042f4538ac62bd16ed/header.jpg?t=1763777212",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1458140/7c7238c946abefe1c7bc08e69f84af015e7c39ed/capsule_231x87.jpg?t=1763777212",
+      "short_description": "Face the supernatural dangers of the Olympic Exclusion Zone with a car as your only lifeline in this driving survival adventure! Scavenge resources, load up your trusty station wagon, and drive like hell to make it through alive.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie",
+        "Racing",
+        "Simulation"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Steam Cloud",
+        "Stats",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Single-player narrative",
+        "Survival crafting"
+      ],
+      "tags": [
+        "Driving",
+        "Survival",
+        "Exploration",
+        "Story Rich",
+        "Survival Horror",
+        "Crafting",
+        "Atmospheric",
+        "Sci-fi",
+        "Adventure",
+        "First-Person",
+        "Action",
+        "Post-apocalyptic",
+        "Base Building",
+        "Transportation"
+      ],
+      "igdb": {
+        "hypes": 11,
+        "follows": 0,
+        "aggregated_rating": 84,
+        "aggregated_rating_count": 5,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Action",
+          "Science fiction",
+          "Survival",
+          "Mystery"
+        ],
+        "player_perspectives": [
+          "First person"
+        ],
+        "engines": [
+          "Unreal Engine 4"
+        ],
+        "similar": [
+          {
+            "id": 81680,
+            "name": "Mr. Prepper"
+          },
+          {
+            "id": 119298,
+            "name": "Blair Witch"
+          },
+          {
+            "id": 82090,
+            "name": "Forza Horizon 4"
+          },
+          {
+            "id": 23733,
+            "name": "Tunic"
+          },
+          {
+            "id": 76263,
+            "name": "Contraband Police"
+          },
+          {
+            "id": 3277,
+            "name": "Rust"
+          }
+        ],
+        "pop_steam_peak": 0.000138162698622,
+        "pop_visits": 2.9393717828e-05,
+        "pop_youtube": 0.000187392574652,
+        "pop_want_to_play": 0.000283213489309,
+        "pop_playing": 9.2662356601e-05
+      },
+      "audience_overlap": [
+        {
+          "name": "Hardspace: Shipbreaker",
+          "link": 0.2062146892655367,
+          "steamId": "1161580"
+        },
+        {
+          "name": "DREDGE",
+          "link": 0.20516569200779727,
+          "steamId": "1562430"
+        },
+        {
+          "name": "Shadows of Doubt",
+          "link": 0.16050854191497815,
+          "steamId": "986130"
+        },
+        {
+          "name": "Dome Keeper",
+          "link": 0.15528120713305898,
+          "steamId": "1637320"
+        },
+        {
+          "name": "Abiotic Factor",
+          "link": 0.15,
+          "steamId": "427410"
+        },
+        {
+          "name": "DEATHLOOP",
+          "link": 0.14896407028586414,
+          "steamId": "1252330"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 29.64071856287425
+        },
+        {
+          "cc": "ru",
+          "pct": 8.483033932135728
+        },
+        {
+          "cc": "cn",
+          "pct": 6.986027944111776
+        },
+        {
+          "cc": "gb",
+          "pct": 6.287425149700598
+        },
+        {
+          "cc": "de",
+          "pct": 5.788423153692615
+        }
+      ],
+      "score": 39,
+      "score_delta": 11,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "headwind",
+      "is_mature_phenom": false,
+      "days_since_release": 814,
+      "real_signals": {
+        "followers": 116897,
+        "wishlists": 1425600,
+        "reviews_total": 25515,
+        "review_ratio": 0.83,
+        "revenue": 19577067,
+        "owners": 1219023,
+        "avg_playtime": 13.387222502736439,
+        "twitch_viewers": 40,
+        "twitch_streams": 8,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 11,
+        "revenue_pct_7d": 0.0556828387279842,
+        "players_pct_7d": -59.38368274816873
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "40",
+          "magnitude": 0.3409385439467897,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "4 \u2192 8",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "11",
+          "magnitude": 0.055,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "116,897",
+          "magnitude": 0.8892489979559813,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "1,425,600",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.001113656774559684,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "9K \u2192 16K",
+          "magnitude": 0.11799053659518777,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "0 \u2192 1",
+          "magnitude": 0.2,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Pacific Drive picked up a 179% Twitch hours bump fifteen months after launch. Unique streamers 65 \u2192 126. Long-tail signals like this are usually creator-driven and predict a 6\u201310 week renewed-sales window.",
+          "20K reviews at 84% is the warmer end of the survival-narrative cohort. The audience that bounced off vanilla survival craft is finding the narrative scaffolding.",
+          "Ironwood took a publisher deal with Kepler. Long-tail upside flows partly out of the studio \u2014 the trajectory question matters more to Kepler's portfolio model than to the founders."
+        ],
+        "against_consensus": "",
+        "comparable": "Subnautica at month 14 post-launch ran a comparable creator-led second peak \u2014 140% Twitch WoW, 1.8\u00d7 streamer multiple. Pacific Drive is at 179% and 1.9\u00d7. Slightly hotter signal on roughly half the install base, which caps the second-wave CCU around 8K, not Subnautica's 25K.",
+        "what_would_change_my_mind": "If the streamer pickup is concentrated in a single creator collab, the cascade is fragile. A breadth read across the top 20 channels would settle it.",
+        "risks": [
+          "Publisher-controlled marketing pacing limits creator follow-through.",
+          "Genre cluster (survival crafting) is currently cooling."
+        ],
+        "pull_quote": "Long-tail signals like this predict a 6\u201310 week renewed-sales window."
+      }
+    },
+    "2198150": {
+      "id": 2198150,
+      "name": "Tiny Glade",
+      "studio": "Pounce Light",
+      "publishers": [
+        "Pounce Light"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$14.99",
+      "release_date": "Sep 23, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2198150/header.jpg?t=1778677622",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2198150/04e34a74d1939044b8ab95afb5144bc4fd841300/capsule_231x87.jpg?t=1778677622",
+      "short_description": "Tiny Glade is a small diorama builder where you doodle whimsical castles, cozy cottages &amp; romantic ruins. Explore gridless building chemistry as the game adorns your glades with procedural detail. No management, combat or goals: just kick back and turn forgotten meadows into lovable dioramas.",
+      "genres": [
+        "Casual",
+        "Indie",
+        "Simulation"
+      ],
+      "categories": [
+        "Single-player",
+        "Camera Comfort",
+        "Custom Volume Controls",
+        "Mouse Only Option",
+        "Playable without Timed Input",
+        "Save Anytime",
+        "Stereo Sound",
+        "Partial Controller Support",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Cozy",
+        "Sim-revival"
+      ],
+      "tags": [
+        "Building",
+        "Design & Illustration",
+        "Relaxing",
+        "Sandbox",
+        "Cozy",
+        "Casual",
+        "Medieval",
+        "Cute",
+        "Indie",
+        "Procedural Generation",
+        "Experimental",
+        "Nature",
+        "Family Friendly",
+        "Simulation"
+      ],
+      "igdb": {
+        "hypes": 23,
+        "follows": 0,
+        "aggregated_rating": 60,
+        "aggregated_rating_count": 1,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Sandbox"
+        ],
+        "player_perspectives": [
+          "Bird view / Isometric"
+        ],
+        "engines": [
+          "Bevy Engine"
+        ],
+        "similar": [
+          {
+            "id": 37419,
+            "name": "Dude Simulator"
+          },
+          {
+            "id": 51577,
+            "name": "Rise of Industry"
+          },
+          {
+            "id": 34823,
+            "name": "Sol 0: Mars Colonization"
+          },
+          {
+            "id": 17130,
+            "name": "Unclaimed World"
+          },
+          {
+            "id": 26574,
+            "name": "Force of Nature"
+          },
+          {
+            "id": 106279,
+            "name": "Among Trees"
+          }
+        ],
+        "pop_steam_peak": 0.000156201458059,
+        "pop_visits": 4.776479147e-05,
+        "pop_youtube": 0.000234947464023,
+        "pop_want_to_play": 0.000156512717776,
+        "pop_playing": 2.7342990472e-05
+      },
+      "audience_overlap": [
+        {
+          "name": "Townscaper",
+          "link": 0.1404639175257732,
+          "steamId": "1291340"
+        },
+        {
+          "name": "Dorfromantik",
+          "link": 0.13953488372093023,
+          "steamId": "1455840"
+        },
+        {
+          "name": "SUMMERHOUSE",
+          "link": 0.10298102981029811,
+          "steamId": "2533960"
+        },
+        {
+          "name": "ISLANDERS",
+          "link": 0.0986382039013618,
+          "steamId": "1046030"
+        },
+        {
+          "name": "Potion Craft: Alchemist Simulator",
+          "link": 0.09346663566612416,
+          "steamId": "1210320"
+        },
+        {
+          "name": "Town to City",
+          "link": 0.09333333333333334,
+          "steamId": "3115220"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 24.406332453825858
+        },
+        {
+          "cc": "de",
+          "pct": 8.70712401055409
+        },
+        {
+          "cc": "ru",
+          "pct": 7.12401055408971
+        },
+        {
+          "cc": "cn",
+          "pct": 6.728232189973616
+        },
+        {
+          "cc": "gb",
+          "pct": 5.408970976253298
+        }
+      ],
+      "score": 36,
+      "score_delta": 1,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "headwind",
+      "is_mature_phenom": false,
+      "days_since_release": 599,
+      "real_signals": {
+        "followers": 186499,
+        "wishlists": 1753400,
+        "reviews_total": 23683,
+        "review_ratio": 0.97,
+        "revenue": 14851819,
+        "owners": 1312520,
+        "avg_playtime": 4.215220623943438,
+        "twitch_viewers": 0,
+        "twitch_streams": 0,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 23,
+        "revenue_pct_7d": 0.3292422705786721,
+        "players_pct_7d": 1.5042511445389144
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "0",
+          "magnitude": 0.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "20 \u2192 0",
+          "magnitude": -1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "23",
+          "magnitude": 0.115,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "186,499",
+          "magnitude": 0.9248472098417029,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "1,753,400",
+          "magnitude": 1.0,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.3%",
+          "magnitude": 0.006584845411573443,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "10K \u2192 20K",
+          "magnitude": 0.14768489038479032,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "2 \u2192 4",
+          "magnitude": 0.4,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Tiny Glade is the textbook cozy outlier \u2014 a 2-person team, no marketing budget, riding cluster tailwinds. The product is doing what was designed.",
+          "Cozy cluster is heating but the ceiling on solo-cozy CCU is structurally low \u2014 4\u20138K is the realistic band.",
+          "The studio model is the read here, not the product. Pounce Light's next title is the asymmetric bet."
+        ],
+        "against_consensus": "",
+        "comparable": "Unpacking at month 12 post-launch: identical signal profile, identical economic model. The model works; the upside is bounded.",
+        "what_would_change_my_mind": "A Switch announcement. Mobile-adjacent cozy lifts the cohort 2-3\u00d7.",
+        "risks": [
+          "Cohort ceiling is the binding constraint.",
+          "No follow-up project signal from the studio."
+        ],
+        "pull_quote": "The product is doing what was designed. The studio is the read."
+      }
+    },
+    "1240440": {
+      "id": 1240440,
+      "name": "Halo Infinite",
+      "studio": "343 Industries",
+      "publishers": [
+        "Xbox Game Studios"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "TBD",
+      "release_date": "Nov 15, 2021",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/2262ffb4f1659df1c1cbf2c70af40560b4fa12e4/header.jpg?t=1774464322",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/9d64f5027f08e849ed1369f98b22326e2377b2b7/capsule_231x87.jpg?t=1774464322",
+      "short_description": "From one of gaming's most iconic sagas, Halo is bigger than ever. Featuring an expansive open-world campaign and a dynamic free to play multiplayer experience.\u00a0",
+      "genres": [
+        "Action",
+        "Free To Play"
+      ],
+      "categories": [
+        "Multi-player",
+        "PvP",
+        "Online PvP",
+        "LAN PvP",
+        "Cross-Platform Multiplayer",
+        "Steam Achievements",
+        "Full controller support",
+        "In-App Purchases",
+        "Steam Cloud",
+        "Includes level editor",
+        "Remote Play on TV"
+      ],
+      "meta_clusters": [
+        "Hero-shooter"
+      ],
+      "tags": [
+        "Free to Play",
+        "FPS",
+        "Multiplayer",
+        "Singleplayer",
+        "Shooter",
+        "Action",
+        "First-Person",
+        "Open World",
+        "Sci-fi",
+        "Co-op",
+        "PvP",
+        "Competitive",
+        "Story Rich",
+        "Space"
+      ],
+      "igdb": {
+        "hypes": 1,
+        "follows": 0,
+        "aggregated_rating": 90,
+        "aggregated_rating_count": 2,
+        "game_modes": [
+          "Single player"
+        ],
+        "themes": [
+          "Action"
+        ],
+        "player_perspectives": [
+          "Bird view / Isometric"
+        ],
+        "engines": [
+          "Godot Engine"
+        ],
+        "similar": [
+          {
+            "id": 113895,
+            "name": "Havocado"
+          },
+          {
+            "id": 106987,
+            "name": "Torchlight III"
+          },
+          {
+            "id": 28309,
+            "name": "Tanzia"
+          },
+          {
+            "id": 96217,
+            "name": "Eternity: The Last Unicorn"
+          },
+          {
+            "id": 80916,
+            "name": "Omensight"
+          },
+          {
+            "id": 30245,
+            "name": "Wanderlust Adventures"
+          }
+        ],
+        "pop_steam_peak": 0.000224282446829,
+        "pop_visits": 7.348429457e-06,
+        "pop_youtube": 0.000182466347149,
+        "pop_want_to_play": 5.2170905925e-05,
+        "pop_playing": 6.7597948668e-05
+      },
+      "audience_overlap": [
+        {
+          "name": "Splitgate",
+          "link": 0.36782768646531777,
+          "steamId": "677620"
+        },
+        {
+          "name": "Halo: The Master Chief Collection",
+          "link": 0.3678223185265439,
+          "steamId": "976730"
+        },
+        {
+          "name": "Destiny 2",
+          "link": 0.3600967509969275,
+          "steamId": "1085660"
+        },
+        {
+          "name": "THE FINALS",
+          "link": 0.33233569261880685,
+          "steamId": "2073850"
+        },
+        {
+          "name": "Marvel Rivals",
+          "link": 0.3256021808106538,
+          "steamId": "2767030"
+        },
+        {
+          "name": "Call of Duty\u00ae",
+          "link": 0.31860084155076607,
+          "steamId": "1938090"
+        }
+      ],
+      "country_top": [
+        {
+          "cc": "us",
+          "pct": 27.927927927927925
+        },
+        {
+          "cc": "cn",
+          "pct": 11.623230373230372
+        },
+        {
+          "cc": "ru",
+          "pct": 4.68951093951094
+        },
+        {
+          "cc": "gb",
+          "pct": 4.327541827541827
+        },
+        {
+          "cc": "ca",
+          "pct": 4.190797940797941
+        }
+      ],
+      "score": 32,
+      "score_delta": -10,
+      "confidence": "Medium",
+      "confidence_families": 2,
+      "family_states": {
+        "attention": false,
+        "intent": true,
+        "performance": true,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "headwind",
+      "is_mature_phenom": false,
+      "days_since_release": 1642,
+      "real_signals": {
+        "followers": 229969,
+        "wishlists": 312400,
+        "reviews_total": 180184,
+        "review_ratio": 0.69,
+        "revenue": 104415636,
+        "owners": 18849970,
+        "avg_playtime": 18.981089566305705,
+        "twitch_viewers": 0,
+        "twitch_streams": 0,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 1,
+        "revenue_pct_7d": 0.09289765764312058,
+        "players_pct_7d": 71.0440765101686
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "0",
+          "magnitude": 0.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "7 \u2192 0",
+          "magnitude": -1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "1",
+          "magnitude": 0.005,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "229,969",
+          "magnitude": 0.9408137422463824,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "312,400",
+          "magnitude": 0.9157851708675437,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.1%",
+          "magnitude": 0.0018579531528624116,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "11K \u2192 22K",
+          "magnitude": 0.1498252969951083,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "5 \u2192 5",
+          "magnitude": 0.0,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Halo Infinite remains the case study of a live-service launch that compounded the wrong way. The current readings are a stabilised post-recovery base, not breakout territory.",
+          "343's reorganisation as Halo Studios is the operational read \u2014 the signal that matters here is shipping cadence under new leadership, not current-product velocity.",
+          "Cohort here will be entirely re-defined by the next product, not this one."
+        ],
+        "against_consensus": "",
+        "comparable": "Battlefield 2042 post-stabilisation: similar shape, similar non-actionability.",
+        "what_would_change_my_mind": "The next Halo product's reveal. Nothing in the current SKU's signals moves the score.",
+        "risks": [
+          "Not actionable on the long side.",
+          "Future is dependent on Halo Studios shipping cadence."
+        ],
+        "pull_quote": "The cohort here will be redefined by the next product, not this one."
+      }
+    },
+    "2767790": {
+      "id": 2767790,
+      "name": "Rockin' Racket",
+      "studio": "Pop Punk Paws Productions LLC",
+      "publishers": [
+        "Pop Punk Paws Productions LLC"
+      ],
+      "stage": "Launched",
+      "stage_label": "Launched",
+      "price": "$6.99",
+      "release_date": "Apr 19, 2024",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767790/header.jpg?t=1713542440",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767790/capsule_231x87.jpg?t=1713542440",
+      "short_description": "Rockin\u2019 Racket is a narrative driven, fast paced, pop punk band management game with an undercurrent of teenage angst as you try to hold together a band of rowdy younger siblings, keep the crowd happy, and manage your frugal earnings while booking larger venues to rocket your band to stardom!",
+      "genres": [
+        "Indie"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "meta_clusters": [
+        "Gacha"
+      ],
+      "tags": [
+        "Casual",
+        "Interactive Fiction",
+        "Point & Click",
+        "Visual Novel",
+        "2D",
+        "Cartoony",
+        "Colorful",
+        "Cute",
+        "Stylized",
+        "Comedy",
+        "Emotional",
+        "LGBTQ+",
+        "Management",
+        "Choices Matter"
+      ],
+      "igdb": {
+        "hypes": 16,
+        "follows": 0,
+        "aggregated_rating": 0,
+        "aggregated_rating_count": 0,
+        "game_modes": [
+          "Single player",
+          "Co-operative"
+        ],
+        "themes": [
+          "Action",
+          "Fantasy",
+          "Science fiction",
+          "Open world"
+        ],
+        "player_perspectives": [
+          "Third person"
+        ],
+        "engines": [
+          "Unreal Engine 4"
+        ],
+        "similar": [
+          {
+            "id": 81249,
+            "name": "The Elder Scrolls VI"
+          },
+          {
+            "id": 55038,
+            "name": "Immortal: Unchained"
+          },
+          {
+            "id": 19164,
+            "name": "Borderlands 3"
+          },
+          {
+            "id": 106987,
+            "name": "Torchlight III"
+          },
+          {
+            "id": 96217,
+            "name": "Eternity: The Last Unicorn"
+          },
+          {
+            "id": 115653,
+            "name": "Pok\u00e9mon Shield"
+          }
+        ],
+        "pop_steam_peak": 0.0,
+        "pop_visits": 0.000213104454251,
+        "pop_youtube": 0.000251657451636,
+        "pop_want_to_play": 0.000141606744655,
+        "pop_playing": 0.000217224868754
+      },
+      "audience_overlap": [],
+      "country_top": [],
+      "score": 32,
+      "score_delta": 22,
+      "confidence": "Low",
+      "confidence_families": 0,
+      "family_states": {
+        "attention": false,
+        "intent": false,
+        "performance": false,
+        "community": false,
+        "press": false
+      },
+      "scale": "Watch",
+      "scale_band": [
+        1000,
+        6000
+      ],
+      "meta_modifier": "headwind",
+      "is_mature_phenom": false,
+      "days_since_release": 756,
+      "real_signals": {
+        "followers": 41,
+        "wishlists": 2200,
+        "reviews_total": 1,
+        "review_ratio": 1.0,
+        "revenue": 77,
+        "owners": 15,
+        "avg_playtime": 0.6985528233348005,
+        "twitch_viewers": 2014,
+        "twitch_streams": 91,
+        "twitch_top_tier": 0,
+        "twitch_mid_tier": 0,
+        "igdb_hypes": 16,
+        "revenue_pct_7d": 0.0,
+        "players_pct_7d": null
+      },
+      "signals": [
+        {
+          "name": "Twitch live viewers",
+          "value_label": "2,014",
+          "magnitude": 0.7031454687237304,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "Twitch streams",
+          "value_label": "28 \u2192 91",
+          "magnitude": 1.0,
+          "family": "attention",
+          "real": true
+        },
+        {
+          "name": "IGDB hypes",
+          "value_label": "16",
+          "magnitude": 0.08,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Gamalytic followers",
+          "value_label": "41",
+          "magnitude": 0.28299567386609525,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Steam wishlists",
+          "value_label": "2,200",
+          "magnitude": 0.557070446803701,
+          "family": "intent",
+          "real": true
+        },
+        {
+          "name": "Revenue 7d delta",
+          "value_label": "+0.0%",
+          "magnitude": 0.0,
+          "family": "performance",
+          "real": true
+        },
+        {
+          "name": "Reddit members",
+          "value_label": "0K \u2192 2K",
+          "magnitude": 0.32458333333333333,
+          "family": "community",
+          "real": false
+        },
+        {
+          "name": "Press coverage",
+          "value_label": "5 \u2192 5",
+          "magnitude": 0.0,
+          "family": "press",
+          "real": false
+        }
+      ],
+      "thesis": {
+        "the_read": [
+          "Rockin' Racket is the noise candidate of the week \u2014 Twitch hours +158%, streamers 23 \u2192 55, but no review base. The signal could be authentic discovery or a single creator cascade.",
+          "Gacha cluster tagging here is loose \u2014 the mechanical loop is closer to physics co-op than traditional gacha. The cluster signal may be mis-fitting.",
+          "Wild bet only. The signal-to-noise ratio is too low for a high-conviction position. Watch for whether streamer breadth doubles again next week \u2014 that's the conversion test."
+        ],
+        "against_consensus": "",
+        "comparable": "Suika Game at week 2 post-Western-pickup: similar signal sparseness, similar cluster ambiguity, eventually resolved as a one-month cult title.",
+        "what_would_change_my_mind": "A second consecutive week of doubled streamer breadth. Without it, this is one week of attention.",
+        "risks": [
+          "No review base \u2014 read is fragile.",
+          "Cluster tagging may be wrong; revisit before next score."
+        ],
+        "pull_quote": "Watch for whether streamer breadth doubles again next week \u2014 that's the conversion test."
+      }
+    }
+  },
+  "universe_count": 20
+}
