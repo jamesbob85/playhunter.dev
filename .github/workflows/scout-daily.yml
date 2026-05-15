@@ -17,6 +17,13 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      GAMALYTIC_API_KEY: ${{ secrets.GAMALYTIC_API_KEY }}
+      TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+      TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+      IGDB_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+      IGDB_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,39 +34,25 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Anthropic SDK (only if API key present)
-        if: env.ANTHROPIC_API_KEY != ''
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Install dependencies
         run: pip install -r pipeline/requirements.txt
 
       - name: Fetch Steam + SteamSpy
         run: python pipeline/fetch_steam.py
 
       - name: Fetch Gamalytic
-        env:
-          GAMALYTIC_API_KEY: ${{ secrets.GAMALYTIC_API_KEY }}
         run: python pipeline/fetch_gamalytic.py
 
       - name: Fetch Twitch (live signals — always refresh)
-        env:
-          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
-          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python pipeline/fetch_twitch.py --refresh
 
       - name: Fetch IGDB
-        env:
-          IGDB_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
-          IGDB_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python pipeline/fetch_igdb.py
 
       - name: Score
         run: python pipeline/score.py
 
-      - name: Regenerate theses (LLM)
-        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Regenerate theses (skipped internally if ANTHROPIC_API_KEY empty)
         run: python pipeline/generate_theses.py
 
       - name: Build scout-data.json
@@ -69,7 +62,7 @@ jobs:
         run: |
           git config user.name  "scout-bot"
           git config user.email "scout-bot@users.noreply.github.com"
-          git add scout/data/scout-data.json scout/data/snapshots/
+          git add scout/data/scout-data.json scout/data/snapshots/ scout/data/theses.json || true
           if git diff --cached --quiet; then
             echo "no changes"
           else
