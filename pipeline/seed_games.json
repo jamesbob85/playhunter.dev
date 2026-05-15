@@ -1,0 +1,26 @@
+{
+  "seeded": "2026-05-15",
+  "note": "Hand-picked breakout candidates across lifecycle stages. Real Steam appids. twitch_name must match Twitch's game directory exactly.",
+  "games": [
+    {"appid": 1030300, "twitch_name": "Hollow Knight: Silksong",          "stage_hint": "Announced", "meta_clusters": ["Single-player narrative", "Metroidvania-revival"]},
+    {"appid": 1966720, "twitch_name": "Lethal Company",                   "stage_hint": "Launched",  "meta_clusters": ["Friendslop", "Asymmetric horror"]},
+    {"appid": 3164500, "twitch_name": "Schedule I",                       "stage_hint": "EA",        "meta_clusters": ["Friendslop", "Sim-revival"]},
+    {"appid": 3241660, "twitch_name": "R.E.P.O.",                         "stage_hint": "EA",        "meta_clusters": ["Friendslop", "Asymmetric horror"]},
+    {"appid": 1145350, "twitch_name": "Hades II",                         "stage_hint": "EA",        "meta_clusters": ["Single-player narrative", "Roguelike-revival"]},
+    {"appid": 1363080, "twitch_name": "Manor Lords",                      "stage_hint": "EA",        "meta_clusters": ["Sim-revival"]},
+    {"appid": 1601580, "twitch_name": "Frostpunk 2",                      "stage_hint": "Launched",  "meta_clusters": ["Sim-revival", "Single-player narrative"]},
+    {"appid": 1458140, "twitch_name": "Pacific Drive",                    "stage_hint": "Launched",  "meta_clusters": ["Single-player narrative", "Survival crafting"]},
+    {"appid": 553850,  "twitch_name": "HELLDIVERS 2",                     "stage_hint": "Launched",  "meta_clusters": ["Friendslop", "Hero-shooter"]},
+    {"appid": 2198150, "twitch_name": "Tiny Glade",                       "stage_hint": "Launched",  "meta_clusters": ["Cozy", "Sim-revival"]},
+    {"appid": 1817070, "twitch_name": "Marvel's Spider-Man Remastered",   "stage_hint": "Launched",  "meta_clusters": ["Single-player narrative"]},
+    {"appid": 2767030, "twitch_name": "Marvel Rivals",                    "stage_hint": "Launched",  "meta_clusters": ["Hero-shooter"]},
+    {"appid": 1086940, "twitch_name": "Baldur's Gate 3",                  "stage_hint": "Launched",  "meta_clusters": ["Single-player narrative", "CRPG-revival"]},
+    {"appid": 1240440, "twitch_name": "Halo Infinite",                    "stage_hint": "Launched",  "meta_clusters": ["Hero-shooter"]},
+    {"appid": 2680010, "twitch_name": "The First Berserker: Khazan",      "stage_hint": "Launched",  "meta_clusters": ["Soulslike", "Single-player narrative"]},
+    {"appid": 2622380, "twitch_name": "ELDEN RING NIGHTREIGN",            "stage_hint": "Launched",  "meta_clusters": ["Soulslike", "Friendslop"]},
+    {"appid": 2050650, "twitch_name": "Resident Evil 4",                  "stage_hint": "Launched",  "meta_clusters": ["Single-player narrative"]},
+    {"appid": 1623730, "twitch_name": "Palworld",                         "stage_hint": "EA",        "meta_clusters": ["Friendslop", "Survival crafting"]},
+    {"appid": 2767790, "twitch_name": "Wuthering Waves",                  "stage_hint": "Launched",  "meta_clusters": ["Gacha"]},
+    {"appid": 2358720, "twitch_name": "Black Myth: Wukong",               "stage_hint": "Launched",  "meta_clusters": ["Single-player narrative", "Soulslike"]}
+  ]
+}

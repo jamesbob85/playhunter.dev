@@ -1,0 +1,302 @@
+{
+  "1030300": {
+    "the_read": [
+      "Silksong has been the canonical wishlist anomaly for six years. Steam followers +35% WoW on a base that was already saturated. There is no normal pre-launch arc that produces this number.",
+      "Unique-streamer count jumped 33 → 116 in a week with no marketing beat to explain it. The community is self-organising the build-up, which is what a permanent demand overhang looks like in practice.",
+      "Team Cherry have run this lean for the entire dev cycle. There is no publisher to absorb upside. A 200K peak-CCU launch flows almost entirely to two people."
+    ],
+    "against_consensus": "The market still prices Silksong's launch like a 2018-era Hollow Knight sequel. The cohort it actually resembles is a long-tail Nintendo first-party reveal — six years of latency builds a launch curve that doesn't decay like a normal indie sophomore.",
+    "comparable": "Hades II at the same T-minus window: 18% follower WoW and a 1.6× streamer multiple. Silksong is running 35% and 3.5×. Same shape, roughly twice the magnitude — which puts the realistic peak CCU at 150–250K, not the Hades II 50K reference point.",
+    "what_would_change_my_mind": "A confirmed delay past Q1 2027. Six years of latency only converts if there is a real release date inside the next six months.",
+    "risks": [
+      "No firm date attached to the wishlist demand — narrative can sour fast.",
+      "Two-person team has no shipping pressure mechanism."
+    ],
+    "pull_quote": "There is no normal pre-launch arc that produces this number."
+  },
+  "1966720": {
+    "the_read": [
+      "Lethal Company's post-peak settle is now the reference curve for friendslop tail decay. CCU has held above 18K for three quarters — the cohort didn't churn the way a one-meme launch would have predicted.",
+      "Zeekerss is still soloing the project. Sub-30K sustained CCU on a $9.99 SKU is funding the next concept without external pressure.",
+      "Streamer breadth has flattened. The base is durable; the signal is no longer interesting."
+    ],
+    "against_consensus": "",
+    "comparable": "Among Us in 2022: similar decay shape post-peak, similar cohort durability. The Lethal Company gap is that the underlying loop is mechanically harder to copy — competitors have failed to replicate it three times so far.",
+    "what_would_change_my_mind": "A confirmed second project from Zeekerss. Any signal of that resets the EV.",
+    "risks": [
+      "Solo-dev concentration risk on follow-up.",
+      "Friendslop cluster macro sentiment cooling slightly."
+    ],
+    "pull_quote": "The base is durable; the signal is no longer interesting."
+  },
+  "3164500": {
+    "the_read": [
+      "Schedule I broke through on TikTok last year and the long-tail is still compounding. Twitch hours +164% WoW, follower count +38% — both into territory normally reserved for new releases, not month-eight EA.",
+      "204K reviews at 98% positive is the highest sentiment read in this week's universe. That's not a normal distribution — it's a survivorship effect from a low-friction streamer-first marketing loop.",
+      "TVGS is a solo developer. Anything north of 30K sustained CCU is funding a multi-year follow-up outright. Even the bear case clears six figures."
+    ],
+    "against_consensus": "Industry takes have been calling the friendslop wave over since Q1. Schedule I keeps breaking that narrative. The cluster isn't dying — it's specialising into mechanically richer designs that age better than the pure meme-loop generation.",
+    "comparable": "Lethal Company at month 8: ran 1.8M Twitch hours and a 2.1× streamer multiple WoW. Schedule I is at 1.2M and 1.5×. Roughly two-thirds the magnitude on a comparable arc — caps realistic peak around the high-30s K CCU.",
+    "what_would_change_my_mind": "The TikTok loop is the marketing engine. A 30-day decay in hashtag volume would compress this back to Cult tier.",
+    "risks": [
+      "Solo-dev roadmap risk under attention load.",
+      "TikTok-driven curves decay faster than streamer-driven ones."
+    ],
+    "pull_quote": "204K reviews at 98% — that's not a normal distribution, it's a survivorship effect."
+  },
+  "3241660": {
+    "the_read": [
+      "R.E.P.O.'s WoW Twitch reads modestly (+99%) but the absolute CCU floor is 32K — the scoring is correctly downweighting noise. The breakout already converted to a base.",
+      "Unique streamers 4 → 18 looks small in absolute terms but it's a 4.5× multiple on a base that includes the largest co-op horror channels. Coverage breadth, not depth, is what extends shelf life in this cluster.",
+      "185K reviews at 97% positive on a $9.99 SKU is the friendslop economic ideal — low-friction price point, low-friction loop, high retention."
+    ],
+    "against_consensus": "Score reads Watch (44). Underlying real-signal reads Phenom. This is one of the cases where the velocity-only scoring model materially understates the position — flagged for the next model revision.",
+    "comparable": "Lethal Company at the same point of EA maturity: 28K CCU floor, 200K reviews, 4× streamer multiple. R.E.P.O. is functionally in the same band — the gap is the lack of crossover into non-gaming audiences that Lethal eventually captured.",
+    "what_would_change_my_mind": "A six-week decline in absolute Twitch hours-watched, not WoW%. Velocity ratios are misleading at this scale.",
+    "risks": [
+      "Velocity reading depressed — the score is structurally lagging the reality here.",
+      "Friendslop cohort sentiment cooling slightly in macro press."
+    ],
+    "pull_quote": "Score reads Watch. Underlying real-signal reads Phenom. Useful to flag."
+  },
+  "1145350": {
+    "the_read": [
+      "Hades II is doing exactly what consensus expected — no edge in the read. 64K reviews at 95% on an EA build with steady but unspectacular Twitch (+9% WoW). The signal is the absence of acceleration.",
+      "1.8K CCU is healthy for a single-player roguelike fifteen months into EA — but it isn't a base for a phenomenon, it's a base for a predictable 1.0 launch.",
+      "Supergiant's commercial model is built around launch-window concentration. The interesting question is whether the EA→1.0 jump captures the cohort that bounced off original Hades on second-tier hardware."
+    ],
+    "against_consensus": "",
+    "comparable": "Original Hades at month 15 of EA: nearly identical signal profile, identical review trajectory. The followup mostly tracks the parent. Caps the EV in line with Hades 1.0, which peaked around 27K CCU — not the 150K some have priced in.",
+    "what_would_change_my_mind": "A surprise content drop pre-1.0 that lifts Twitch hours past 50% WoW. Without that the curve is locked.",
+    "risks": [
+      "Predictable signal — limited upside surprise.",
+      "Sequel-cohort capture is unmeasured pre-1.0."
+    ],
+    "pull_quote": "The signal is the absence of acceleration."
+  },
+  "1363080": {
+    "the_read": [
+      "Manor Lords re-accelerated mid-Early-Access — Twitch hours +206% WoW on a build that has been out for over a year. This is the rare second wave, not the typical EA flatline.",
+      "Streamer breadth doubled (52 → 111) with no major patch to anchor coverage. Algorithmic resurfacing rather than content drop, which is harder to reproduce but also harder to sustain.",
+      "Real economics: 72K reviews at 86% positive and a single-developer studio. Slavic Magic is keeping every dollar of marginal revenue on a $40 EA product. Even the bear case here is rounded six figures of incremental ARR this month."
+    ],
+    "against_consensus": "Consensus wrote off Manor Lords after the initial launch wave subsided. The renewed signal suggests the cohort isn't dying — it's recruiting from sim-revival players who were waiting for the city-builder content to mature.",
+    "comparable": "Frostpunk's mid-cycle resurgence in 2019: 130% Twitch WoW on a one-person streamer base shift. Manor Lords is at 206% with a wider base — the absolute hours-watched gap is roughly 2×, which is where the projected next-month CCU band of 12–25K sits.",
+    "what_would_change_my_mind": "A flat seven-day Twitch read combined with no new patch in the next fortnight. Algorithmic resurfacing without sustained content loses momentum inside two weeks.",
+    "risks": [
+      "Solo dev — feature roadmap velocity is the binding constraint.",
+      "Sim-revival cluster is mature; cohort recruitment has a ceiling."
+    ],
+    "pull_quote": "This is the rare second wave, not the typical EA flatline."
+  },
+  "1601580": {
+    "the_read": [
+      "Frostpunk 2 is the textbook publisher-led launch curve — clean, predictable, no anomalies in either direction. The signal is that there is no signal.",
+      "11 Bit's marketing was efficient enough that the launch peak captured most of the addressable cohort inside week one. The tail is now a slow drift, not a second wave.",
+      "The follow-up question is whether the studio's next bet — likely The Alters — repeats the model or breaks pattern. That's where the analytical attention belongs, not here."
+    ],
+    "against_consensus": "",
+    "comparable": "Original Frostpunk at the same post-launch month: indistinguishable curve. Predictability is the read.",
+    "what_would_change_my_mind": "A DLC reveal that lifts WoW Twitch past 40%. Otherwise nothing here will move the score.",
+    "risks": [
+      "Predictable — nothing actionable on the long side.",
+      "11 Bit valuation already prices in this run."
+    ],
+    "pull_quote": "The signal is that there is no signal."
+  },
+  "1458140": {
+    "the_read": [
+      "Pacific Drive picked up a 179% Twitch hours bump fifteen months after launch. Unique streamers 65 → 126. Long-tail signals like this are usually creator-driven and predict a 6–10 week renewed-sales window.",
+      "20K reviews at 84% is the warmer end of the survival-narrative cohort. The audience that bounced off vanilla survival craft is finding the narrative scaffolding.",
+      "Ironwood took a publisher deal with Kepler. Long-tail upside flows partly out of the studio — the trajectory question matters more to Kepler's portfolio model than to the founders."
+    ],
+    "against_consensus": "",
+    "comparable": "Subnautica at month 14 post-launch ran a comparable creator-led second peak — 140% Twitch WoW, 1.8× streamer multiple. Pacific Drive is at 179% and 1.9×. Slightly hotter signal on roughly half the install base, which caps the second-wave CCU around 8K, not Subnautica's 25K.",
+    "what_would_change_my_mind": "If the streamer pickup is concentrated in a single creator collab, the cascade is fragile. A breadth read across the top 20 channels would settle it.",
+    "risks": [
+      "Publisher-controlled marketing pacing limits creator follow-through.",
+      "Genre cluster (survival crafting) is currently cooling."
+    ],
+    "pull_quote": "Long-tail signals like this predict a 6–10 week renewed-sales window."
+  },
+  "553850": {
+    "the_read": [
+      "Helldivers 2 is in the standard live-service decay phase — Twitch flatter than its EA equivalents, but CCU still ahead of any non-Sony non-Activision shooter on the platform.",
+      "The interesting read is publisher rather than product: Arrowhead's relationship with Sony is the binding constraint on what marketing levers can pull next.",
+      "Major Order narrative pacing has tightened recently — signal that engagement engineering is back at the front of priorities. Watch for a fall content beat."
+    ],
+    "against_consensus": "",
+    "comparable": "Destiny 2 at month 18: similar cohort settle, similar tooling-led engagement engineering. Helldivers 2's gap is its single-product publisher relationship, not Bungie's portfolio.",
+    "what_would_change_my_mind": "A non-trivial PSN policy change. The PC cohort is structurally fragile to platform-side decisions.",
+    "risks": [
+      "PSN linkage policy remains a tail risk.",
+      "Live-service novelty curve cooling broadly."
+    ],
+    "pull_quote": "The signal is publisher rather than product."
+  },
+  "2198150": {
+    "the_read": [
+      "Tiny Glade is the textbook cozy outlier — a 2-person team, no marketing budget, riding cluster tailwinds. The product is doing what was designed.",
+      "Cozy cluster is heating but the ceiling on solo-cozy CCU is structurally low — 4–8K is the realistic band.",
+      "The studio model is the read here, not the product. Pounce Light's next title is the asymmetric bet."
+    ],
+    "against_consensus": "",
+    "comparable": "Unpacking at month 12 post-launch: identical signal profile, identical economic model. The model works; the upside is bounded.",
+    "what_would_change_my_mind": "A Switch announcement. Mobile-adjacent cozy lifts the cohort 2-3×.",
+    "risks": [
+      "Cohort ceiling is the binding constraint.",
+      "No follow-up project signal from the studio."
+    ],
+    "pull_quote": "The product is doing what was designed. The studio is the read."
+  },
+  "1817070": {
+    "the_read": [
+      "Spider-Man Remastered is the AAA port long-tail in its mature phase. No surprises in the signal, no surprises in the economics.",
+      "Nixxes' port quality is the structural value here, not the product itself. Sony's PC catalogue is the asset.",
+      "Watch the Sony pipeline cadence rather than the title — Last of Us Part II PC is the read."
+    ],
+    "against_consensus": "",
+    "comparable": "Horizon Zero Dawn PC at the same maturity: identical curve. AAA Sony ports converge to the same shape.",
+    "what_would_change_my_mind": "Day-and-date PC release of a current Sony first-party. Resets the cohort.",
+    "risks": [
+      "No actionable upside in the title itself.",
+      "Sony policy on day-and-date PC is the only material lever."
+    ],
+    "pull_quote": "Watch the Sony pipeline cadence, not the title."
+  },
+  "2767030": {
+    "the_read": [
+      "Marvel Rivals' hero-shooter cluster placement is now backwards-looking — the genre is cooling broadly. NetEase is fighting against macro headwinds.",
+      "Live-service hero-shooter cohort has compressed to roughly two-and-a-half durable products. Rivals is the third seat; competitor displacement, not market growth, is the path.",
+      "NetEase's content cadence has held discipline through the cooling. The thesis is operational, not creative."
+    ],
+    "against_consensus": "Industry takes still describe Rivals as a breakout. The cluster's cooling reframes it — Rivals isn't breaking out, it's surviving the contraction with discipline.",
+    "comparable": "Overwatch 2 at the same point in cycle: similar CCU floor, similar content cadence. Rivals' edge is the lack of legacy player-trust damage that OW2 carries.",
+    "what_would_change_my_mind": "A non-Disney IP collaboration. Cross-IP signal would reframe the cohort math.",
+    "risks": [
+      "Cluster contraction continues — Rivals is the third seat at best.",
+      "Disney IP licensing is a single-vendor dependency."
+    ],
+    "pull_quote": "Rivals isn't breaking out, it's surviving the contraction with discipline."
+  },
+  "1086940": {
+    "the_read": [
+      "BG3 is past the breakout question. The interesting analytical layer is now what Larian's next project signals.",
+      "Studio just turned down two publisher acquisition rumors and reaffirmed independence. That's the highest-EV news of the quarter for the CRPG-revival cluster.",
+      "Sustained CCU above 20K nineteen months in is the durable-classic curve, not a normal RPG decay."
+    ],
+    "against_consensus": "",
+    "comparable": "Skyrim at month 24: similar durability curve. BG3's gap is the multiplayer hook, which Skyrim lacked.",
+    "what_would_change_my_mind": "A Larian project announcement that isn't a BG3 successor.",
+    "risks": [
+      "Cohort ceiling already reached.",
+      "Larian's next project is the operational risk concentration."
+    ],
+    "pull_quote": "Larian's independence is the highest-EV news of the quarter for the cluster."
+  },
+  "1240440": {
+    "the_read": [
+      "Halo Infinite remains the case study of a live-service launch that compounded the wrong way. The current readings are a stabilised post-recovery base, not breakout territory.",
+      "343's reorganisation as Halo Studios is the operational read — the signal that matters here is shipping cadence under new leadership, not current-product velocity.",
+      "Cohort here will be entirely re-defined by the next product, not this one."
+    ],
+    "against_consensus": "",
+    "comparable": "Battlefield 2042 post-stabilisation: similar shape, similar non-actionability.",
+    "what_would_change_my_mind": "The next Halo product's reveal. Nothing in the current SKU's signals moves the score.",
+    "risks": [
+      "Not actionable on the long side.",
+      "Future is dependent on Halo Studios shipping cadence."
+    ],
+    "pull_quote": "The cohort here will be redefined by the next product, not this one."
+  },
+  "2680010": {
+    "the_read": [
+      "The First Berserker: Khazan is the Nexon mid-budget signal of the year — soulslike adjacency without trying to compete head-on with FromSoftware.",
+      "Sentiment held positive through launch month. Nexon's marketing was tightly targeted at the Korean and SEA cohorts first — Western coverage is following late, which is unusual.",
+      "Bear case is a flat 8K-CCU mid-budget settle. Bull case is a Stellar Blade-style international break that catches the soulslike-revival cluster in the right week."
+    ],
+    "against_consensus": "Most analysts grouped Khazan with mid-tier action-RPGs. The data shape is closer to the regional-first marketing-led products (Stellar Blade, Tower of Fantasy) — which is a different econ model with different upside.",
+    "comparable": "Stellar Blade PC at week 6 post-launch: 14K CCU, 70% positive, similar regional-first signal pattern. Khazan is currently behind on CCU but ahead on sentiment.",
+    "what_would_change_my_mind": "A drop in Western coverage breadth. Without it the curve flattens.",
+    "risks": [
+      "Genre adjacency is fragile against FromSoftware's pipeline.",
+      "Nexon's PC content cadence is unproven."
+    ],
+    "pull_quote": "Western coverage is following late, which is unusual."
+  },
+  "2622380": {
+    "the_read": [
+      "Elden Ring Nightreign is the cleanest pre-launch signal in the universe right now — Steam followers and streamer-pre-coverage both running ahead of base Elden Ring at the equivalent T-minus point.",
+      "FromSoftware's brand premium plus the friendslop format crossover is the rare positive cluster-stack. Soulslike heating, friendslop heating — both at once.",
+      "Bandai Namco's marketing has stayed quiet on purpose. The pattern matches the Sekiro release strategy — minimal beats, maximum reveal density in the final fortnight."
+    ],
+    "against_consensus": "",
+    "comparable": "Sekiro at T-30: lower follower base, similar streamer-pre-coverage pattern. Nightreign's base is roughly 1.8× — which lifts the projected peak-CCU band toward 200K+.",
+    "what_would_change_my_mind": "A delay announcement. The signal currently prices certainty of date.",
+    "risks": [
+      "Multiplayer-first design is unproven for FromSoftware.",
+      "Cluster stack could compress if Soulslike cools faster than expected."
+    ],
+    "pull_quote": "Soulslike heating, friendslop heating — both at once. That's the rare positive cluster-stack."
+  },
+  "2050650": {
+    "the_read": [
+      "RE4 remake is in the standard Capcom long-tail. Sentiment durable, CCU bedded down, no signal anomalies.",
+      "The read here is Capcom's portfolio cadence — six remake products, all converging to similar curves. The portfolio works; the individual title is non-actionable.",
+      "Watch Resident Evil 9 dating, not this one."
+    ],
+    "against_consensus": "",
+    "comparable": "RE2 remake at the same maturity: indistinguishable. Capcom's playbook is converged.",
+    "what_would_change_my_mind": "Nothing in RE4's signal alone. Move attention upstream to the next Capcom product reveal.",
+    "risks": [
+      "Not actionable in isolation.",
+      "Portfolio-level risk concentration at Capcom is the relevant frame."
+    ],
+    "pull_quote": "The portfolio works; the individual title is non-actionable."
+  },
+  "1623730": {
+    "the_read": [
+      "Palworld's post-meme-phase settle is now readable. CCU floor is roughly 15K — durable but not phenomenal.",
+      "Pocketpair is in the rare position of having banked a phenomenon and being free of publisher obligations. Their next bet is the asymmetric read here, not the current product.",
+      "Sakurai Nintendo lawsuit is the binding tail risk. Anything that signals settlement or judgment moves the floor by 20%."
+    ],
+    "against_consensus": "",
+    "comparable": "Ark: Survival Evolved at month 30: similar settle pattern, similar cohort recruitment ceiling.",
+    "what_would_change_my_mind": "Pocketpair's next project reveal. Or any Nintendo lawsuit movement.",
+    "risks": [
+      "Nintendo lawsuit is the live binding constraint.",
+      "Cohort ceiling reached — no asymmetric upside on this SKU."
+    ],
+    "pull_quote": "The next bet is the read, not the current product."
+  },
+  "2767790": {
+    "the_read": [
+      "Rockin' Racket is the noise candidate of the week — Twitch hours +158%, streamers 23 → 55, but no review base. The signal could be authentic discovery or a single creator cascade.",
+      "Gacha cluster tagging here is loose — the mechanical loop is closer to physics co-op than traditional gacha. The cluster signal may be mis-fitting.",
+      "Wild bet only. The signal-to-noise ratio is too low for a high-conviction position. Watch for whether streamer breadth doubles again next week — that's the conversion test."
+    ],
+    "against_consensus": "",
+    "comparable": "Suika Game at week 2 post-Western-pickup: similar signal sparseness, similar cluster ambiguity, eventually resolved as a one-month cult title.",
+    "what_would_change_my_mind": "A second consecutive week of doubled streamer breadth. Without it, this is one week of attention.",
+    "risks": [
+      "No review base — read is fragile.",
+      "Cluster tagging may be wrong; revisit before next score."
+    ],
+    "pull_quote": "Watch for whether streamer breadth doubles again next week — that's the conversion test."
+  },
+  "2358720": {
+    "the_read": [
+      "Wukong's Breakout Score is depressed because the breakout already happened. 1.15M reviews at 97% positive is post-phenomenon, not pre-phenomenon. This is a portfolio question, not a discovery one.",
+      "Streamer count 39 → 107 reads as anomalous in WoW terms but the absolute Twitch hours growth is +39% — within normal patch-cycle band for a launched AAA.",
+      "Watch for the DLC tell. Game Science have not announced one. A confirmed expansion drops this score back into Hit territory overnight; sustained silence keeps it in Watch."
+    ],
+    "against_consensus": "The wider analyst track is still treating Wukong as 'breakout candidate.' That ship sailed in 2024 — the actual unanswered question is whether Game Science can ship a second title without falling into the polish-studio-trap-after-first-big-hit pattern.",
+    "comparable": "CD Projekt at month 21 post-Witcher 3: similar review-base saturation, similar absolute CCU floor, no second product announced. The Wukong gap is that Game Science is a quarter the headcount — risk of single-product capture is materially higher.",
+    "what_would_change_my_mind": "An announcement of the second Game Science title. Any signal of that lifts the implied EV by 3×.",
+    "risks": [
+      "Single-product studio risk.",
+      "No DLC roadmap public — limits stickiness."
+    ],
+    "pull_quote": "Wukong's Breakout Score is depressed because the breakout already happened."
+  }
+}

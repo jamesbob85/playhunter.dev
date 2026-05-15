@@ -1,0 +1,78 @@
+name: Scout daily refresh
+
+on:
+  schedule:
+    # 06:00 UTC every day. GitHub Actions cron is in UTC.
+    - cron: "0 6 * * *"
+  workflow_dispatch:    # allow manual trigger from the Actions tab
+
+permissions:
+  contents: write       # needed to commit the refreshed scout-data.json back
+
+concurrency:
+  group: scout-daily
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Anthropic SDK (only if API key present)
+        if: env.ANTHROPIC_API_KEY != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Fetch Steam + SteamSpy
+        run: python pipeline/fetch_steam.py
+
+      - name: Fetch Gamalytic
+        env:
+          GAMALYTIC_API_KEY: ${{ secrets.GAMALYTIC_API_KEY }}
+        run: python pipeline/fetch_gamalytic.py
+
+      - name: Fetch Twitch (live signals — always refresh)
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: python pipeline/fetch_twitch.py --refresh
+
+      - name: Fetch IGDB
+        env:
+          IGDB_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          IGDB_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: python pipeline/fetch_igdb.py
+
+      - name: Score
+        run: python pipeline/score.py
+
+      - name: Regenerate theses (LLM)
+        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python pipeline/generate_theses.py
+
+      - name: Build scout-data.json
+        run: python pipeline/build.py
+
+      - name: Commit and push (if changed)
+        run: |
+          git config user.name  "scout-bot"
+          git config user.email "scout-bot@users.noreply.github.com"
+          git add scout/data/scout-data.json scout/data/snapshots/
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "scout: daily refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi
