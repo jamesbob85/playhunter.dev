@@ -1,302 +1,304 @@
 {
-  "1030300": {
+  "1086940": {
     "the_read": [
-      "Silksong has been the canonical wishlist anomaly for six years. Steam followers +35% WoW on a base that was already saturated. There is no normal pre-launch arc that produces this number.",
-      "Unique-streamer count jumped 33 → 116 in a week with no marketing beat to explain it. The community is self-organising the build-up, which is what a permanent demand overhang looks like in practice.",
-      "Team Cherry have run this lean for the entire dev cycle. There is no publisher to absorb upside. A 200K peak-CCU launch flows almost entirely to two people."
+      "BG3 is in settled-classic mode at 27 months post-launch: $760M lifetime revenue, 21M owners, and a 7-day revenue delta of +0.2% means the tail is flat but still printing. Larian's leverage here is catalogue-economics, not new-user acquisition.",
+      "The 4.43M residual wishlist pile is the headline anomaly. That is a wishlist book larger than most AAA launches ever achieve, sitting on a 2-year-old SKU. It implies a structural conversion drip at every seasonal sale and a coiled spring for any console-version port refresh or definitive-edition repackage.",
+      "Attention signals have decayed to maintenance levels (1,910 concurrent Twitch viewers, 25 to 100 stream count) which is exactly what you want at this lifecycle stage \u2014 no marketing spend, organic floor intact, 97% positive across 838K reviews. The unit economics now favor mod tooling investment and a Definitive Edition SKU over a sequel rush."
     ],
-    "against_consensus": "The market still prices Silksong's launch like a 2018-era Hollow Knight sequel. The cohort it actually resembles is a long-tail Nintendo first-party reveal — six years of latency builds a launch curve that doesn't decay like a normal indie sophomore.",
-    "comparable": "Hades II at the same T-minus window: 18% follower WoW and a 1.6× streamer multiple. Silksong is running 35% and 3.5×. Same shape, roughly twice the magnitude — which puts the realistic peak CCU at 150–250K, not the Hades II 50K reference point.",
-    "what_would_change_my_mind": "A confirmed delay past Q1 2027. Six years of latency only converts if there is a real release date inside the next six months.",
+    "against_consensus": "Consensus treats BG3 as the genre's high-water mark and Larian's next move as the only question. The contrarian read: the 4.4M wishlist overhang is worth more than most people model, because CRPG buyers are notoriously sale-elastic. A 75%-off Steam event on this title moves more incremental gross than a mid-tier publisher's full-price Q4 release. Larian's most valuable asset right now might be patience.",
+    "comparable": "Closest analogue is Skyrim (2011), which at a comparable 24-month mark was still riding mod-ecosystem cohort renewal toward what became a 287K peak CCU and a 15-year tail. BG3's projected settled band of 210K\u2013420K peak CCU sits roughly 25% above Skyrim's peak, but Skyrim's lifetime unit count is roughly 1.5\u00d7 BG3's current 21M \u2014 the gap closes only if Larian ships official mod tooling parity.",
+    "what_would_change_my_mind": "If the 4.43M wishlist count fails to convert meaningfully (under 8% conversion) during the next two major Steam sales, the residual-demand thesis collapses and BG3 becomes a flat-tail asset rather than a compounding one.",
     "risks": [
-      "No firm date attached to the wishlist demand — narrative can sour fast.",
-      "Two-person team has no shipping pressure mechanism."
+      "Larian's stated pivot away from D&D caps franchise compounding optionality.",
+      "CRPG TAM ceiling means scale band is genuinely settled, not latent."
     ],
-    "pull_quote": "There is no normal pre-launch arc that produces this number."
-  },
-  "1966720": {
-    "the_read": [
-      "Lethal Company's post-peak settle is now the reference curve for friendslop tail decay. CCU has held above 18K for three quarters — the cohort didn't churn the way a one-meme launch would have predicted.",
-      "Zeekerss is still soloing the project. Sub-30K sustained CCU on a $9.99 SKU is funding the next concept without external pressure.",
-      "Streamer breadth has flattened. The base is durable; the signal is no longer interesting."
-    ],
-    "against_consensus": "",
-    "comparable": "Among Us in 2022: similar decay shape post-peak, similar cohort durability. The Lethal Company gap is that the underlying loop is mechanically harder to copy — competitors have failed to replicate it three times so far.",
-    "what_would_change_my_mind": "A confirmed second project from Zeekerss. Any signal of that resets the EV.",
-    "risks": [
-      "Solo-dev concentration risk on follow-up.",
-      "Friendslop cluster macro sentiment cooling slightly."
-    ],
-    "pull_quote": "The base is durable; the signal is no longer interesting."
-  },
-  "3164500": {
-    "the_read": [
-      "Schedule I broke through on TikTok last year and the long-tail is still compounding. Twitch hours +164% WoW, follower count +38% — both into territory normally reserved for new releases, not month-eight EA.",
-      "204K reviews at 98% positive is the highest sentiment read in this week's universe. That's not a normal distribution — it's a survivorship effect from a low-friction streamer-first marketing loop.",
-      "TVGS is a solo developer. Anything north of 30K sustained CCU is funding a multi-year follow-up outright. Even the bear case clears six figures."
-    ],
-    "against_consensus": "Industry takes have been calling the friendslop wave over since Q1. Schedule I keeps breaking that narrative. The cluster isn't dying — it's specialising into mechanically richer designs that age better than the pure meme-loop generation.",
-    "comparable": "Lethal Company at month 8: ran 1.8M Twitch hours and a 2.1× streamer multiple WoW. Schedule I is at 1.2M and 1.5×. Roughly two-thirds the magnitude on a comparable arc — caps realistic peak around the high-30s K CCU.",
-    "what_would_change_my_mind": "The TikTok loop is the marketing engine. A 30-day decay in hashtag volume would compress this back to Cult tier.",
-    "risks": [
-      "Solo-dev roadmap risk under attention load.",
-      "TikTok-driven curves decay faster than streamer-driven ones."
-    ],
-    "pull_quote": "204K reviews at 98% — that's not a normal distribution, it's a survivorship effect."
+    "pull_quote": "A 4.4M wishlist book on a two-year-old SKU is a coiled spring, not a leftover."
   },
   "3241660": {
     "the_read": [
-      "R.E.P.O.'s WoW Twitch reads modestly (+99%) but the absolute CCU floor is 32K — the scoring is correctly downweighting noise. The breakout already converted to a base.",
-      "Unique streamers 4 → 18 looks small in absolute terms but it's a 4.5× multiple on a base that includes the largest co-op horror channels. Coverage breadth, not depth, is what extends shelf life in this cluster.",
-      "185K reviews at 97% positive on a $9.99 SKU is the friendslop economic ideal — low-friction price point, low-friction loop, high retention."
+      "R.E.P.O. has already cleared the cult threshold by an order of magnitude: 21.5M owners, $143.8M lifetime revenue at a $9.99 SKU, and 386K reviews at 96% positive. The 'Cult 8-25K CCU' band in the scorecard is stale \u2014 this is a phenom that's now in its tail-management phase, not its discovery phase.",
+      "The interesting signal this week is the wishlist stack: 1.47M wishlists post-launch is not a discovery queue, it's a price-sensitivity reservoir waiting on the first meaningful discount or 1.0 transition. Twitch at 2.3K CCV with streams doubling 55\u2192100 suggests a small second-wave cresting, not a fresh cascade.",
+      "Unit economics are already settled. At ~$143M gross on a four-person studio, the question for buy-side is no longer whether R.E.P.O. works \u2014 it's whether semiwork can convert the audience into a second SKU or a 1.0 monetization event without fumbling the goodwill."
     ],
-    "against_consensus": "Score reads Watch (44). Underlying real-signal reads Phenom. This is one of the cases where the velocity-only scoring model materially understates the position — flagged for the next model revision.",
-    "comparable": "Lethal Company at the same point of EA maturity: 28K CCU floor, 200K reviews, 4× streamer multiple. R.E.P.O. is functionally in the same band — the gap is the lack of crossover into non-gaming audiences that Lethal eventually captured.",
-    "what_would_change_my_mind": "A six-week decline in absolute Twitch hours-watched, not WoW%. Velocity ratios are misleading at this scale.",
+    "against_consensus": "Consensus still files R.E.P.O. under 'current breakout.' The numbers say it's already broken out and the relevant question is decay curve management. Revenue 7d delta of +0.5% is the tell \u2014 this is a mature EA asset coasting on installed base, not an accelerating one. Pricing the studio's next move matters more than tracking this week's Twitch chart.",
+    "comparable": "Lethal Company peaked at 250K CCU on a similar streamable-coop-under-$10 configuration. R.E.P.O. is running a different shape: lower CCU ceiling but a much wider owner base at 21.5M versus Lethal Company's roughly 15M, a gap of about 6.5M owners in R.E.P.O.'s favor. The Friendslop cluster monetizes breadth over concurrency, and R.E.P.O. is the cleanest current example.",
+    "what_would_change_my_mind": "If the 1.0 release lands without a meaningful CCU spike above the EA peak, the thesis that 1.47M wishlists represent a real conversion reservoir is falsified.",
     "risks": [
-      "Velocity reading depressed — the score is structurally lagging the reality here.",
-      "Friendslop cohort sentiment cooling slightly in macro press."
+      "Semiwork has no track record managing a phenom-scale community.",
+      "Friendslop half-life is short once the streamer rotation moves on."
     ],
-    "pull_quote": "Score reads Watch. Underlying real-signal reads Phenom. Useful to flag."
-  },
-  "1145350": {
-    "the_read": [
-      "Hades II is doing exactly what consensus expected — no edge in the read. 64K reviews at 95% on an EA build with steady but unspectacular Twitch (+9% WoW). The signal is the absence of acceleration.",
-      "1.8K CCU is healthy for a single-player roguelike fifteen months into EA — but it isn't a base for a phenomenon, it's a base for a predictable 1.0 launch.",
-      "Supergiant's commercial model is built around launch-window concentration. The interesting question is whether the EA→1.0 jump captures the cohort that bounced off original Hades on second-tier hardware."
-    ],
-    "against_consensus": "",
-    "comparable": "Original Hades at month 15 of EA: nearly identical signal profile, identical review trajectory. The followup mostly tracks the parent. Caps the EV in line with Hades 1.0, which peaked around 27K CCU — not the 150K some have priced in.",
-    "what_would_change_my_mind": "A surprise content drop pre-1.0 that lifts Twitch hours past 50% WoW. Without that the curve is locked.",
-    "risks": [
-      "Predictable signal — limited upside surprise.",
-      "Sequel-cohort capture is unmeasured pre-1.0."
-    ],
-    "pull_quote": "The signal is the absence of acceleration."
-  },
-  "1363080": {
-    "the_read": [
-      "Manor Lords re-accelerated mid-Early-Access — Twitch hours +206% WoW on a build that has been out for over a year. This is the rare second wave, not the typical EA flatline.",
-      "Streamer breadth doubled (52 → 111) with no major patch to anchor coverage. Algorithmic resurfacing rather than content drop, which is harder to reproduce but also harder to sustain.",
-      "Real economics: 72K reviews at 86% positive and a single-developer studio. Slavic Magic is keeping every dollar of marginal revenue on a $40 EA product. Even the bear case here is rounded six figures of incremental ARR this month."
-    ],
-    "against_consensus": "Consensus wrote off Manor Lords after the initial launch wave subsided. The renewed signal suggests the cohort isn't dying — it's recruiting from sim-revival players who were waiting for the city-builder content to mature.",
-    "comparable": "Frostpunk's mid-cycle resurgence in 2019: 130% Twitch WoW on a one-person streamer base shift. Manor Lords is at 206% with a wider base — the absolute hours-watched gap is roughly 2×, which is where the projected next-month CCU band of 12–25K sits.",
-    "what_would_change_my_mind": "A flat seven-day Twitch read combined with no new patch in the next fortnight. Algorithmic resurfacing without sustained content loses momentum inside two weeks.",
-    "risks": [
-      "Solo dev — feature roadmap velocity is the binding constraint.",
-      "Sim-revival cluster is mature; cohort recruitment has a ceiling."
-    ],
-    "pull_quote": "This is the rare second wave, not the typical EA flatline."
-  },
-  "1601580": {
-    "the_read": [
-      "Frostpunk 2 is the textbook publisher-led launch curve — clean, predictable, no anomalies in either direction. The signal is that there is no signal.",
-      "11 Bit's marketing was efficient enough that the launch peak captured most of the addressable cohort inside week one. The tail is now a slow drift, not a second wave.",
-      "The follow-up question is whether the studio's next bet — likely The Alters — repeats the model or breaks pattern. That's where the analytical attention belongs, not here."
-    ],
-    "against_consensus": "",
-    "comparable": "Original Frostpunk at the same post-launch month: indistinguishable curve. Predictability is the read.",
-    "what_would_change_my_mind": "A DLC reveal that lifts WoW Twitch past 40%. Otherwise nothing here will move the score.",
-    "risks": [
-      "Predictable — nothing actionable on the long side.",
-      "11 Bit valuation already prices in this run."
-    ],
-    "pull_quote": "The signal is that there is no signal."
-  },
-  "1458140": {
-    "the_read": [
-      "Pacific Drive picked up a 179% Twitch hours bump fifteen months after launch. Unique streamers 65 → 126. Long-tail signals like this are usually creator-driven and predict a 6–10 week renewed-sales window.",
-      "20K reviews at 84% is the warmer end of the survival-narrative cohort. The audience that bounced off vanilla survival craft is finding the narrative scaffolding.",
-      "Ironwood took a publisher deal with Kepler. Long-tail upside flows partly out of the studio — the trajectory question matters more to Kepler's portfolio model than to the founders."
-    ],
-    "against_consensus": "",
-    "comparable": "Subnautica at month 14 post-launch ran a comparable creator-led second peak — 140% Twitch WoW, 1.8× streamer multiple. Pacific Drive is at 179% and 1.9×. Slightly hotter signal on roughly half the install base, which caps the second-wave CCU around 8K, not Subnautica's 25K.",
-    "what_would_change_my_mind": "If the streamer pickup is concentrated in a single creator collab, the cascade is fragile. A breadth read across the top 20 channels would settle it.",
-    "risks": [
-      "Publisher-controlled marketing pacing limits creator follow-through.",
-      "Genre cluster (survival crafting) is currently cooling."
-    ],
-    "pull_quote": "Long-tail signals like this predict a 6–10 week renewed-sales window."
-  },
-  "553850": {
-    "the_read": [
-      "Helldivers 2 is in the standard live-service decay phase — Twitch flatter than its EA equivalents, but CCU still ahead of any non-Sony non-Activision shooter on the platform.",
-      "The interesting read is publisher rather than product: Arrowhead's relationship with Sony is the binding constraint on what marketing levers can pull next.",
-      "Major Order narrative pacing has tightened recently — signal that engagement engineering is back at the front of priorities. Watch for a fall content beat."
-    ],
-    "against_consensus": "",
-    "comparable": "Destiny 2 at month 18: similar cohort settle, similar tooling-led engagement engineering. Helldivers 2's gap is its single-product publisher relationship, not Bungie's portfolio.",
-    "what_would_change_my_mind": "A non-trivial PSN policy change. The PC cohort is structurally fragile to platform-side decisions.",
-    "risks": [
-      "PSN linkage policy remains a tail risk.",
-      "Live-service novelty curve cooling broadly."
-    ],
-    "pull_quote": "The signal is publisher rather than product."
-  },
-  "2198150": {
-    "the_read": [
-      "Tiny Glade is the textbook cozy outlier — a 2-person team, no marketing budget, riding cluster tailwinds. The product is doing what was designed.",
-      "Cozy cluster is heating but the ceiling on solo-cozy CCU is structurally low — 4–8K is the realistic band.",
-      "The studio model is the read here, not the product. Pounce Light's next title is the asymmetric bet."
-    ],
-    "against_consensus": "",
-    "comparable": "Unpacking at month 12 post-launch: identical signal profile, identical economic model. The model works; the upside is bounded.",
-    "what_would_change_my_mind": "A Switch announcement. Mobile-adjacent cozy lifts the cohort 2-3×.",
-    "risks": [
-      "Cohort ceiling is the binding constraint.",
-      "No follow-up project signal from the studio."
-    ],
-    "pull_quote": "The product is doing what was designed. The studio is the read."
-  },
-  "1817070": {
-    "the_read": [
-      "Spider-Man Remastered is the AAA port long-tail in its mature phase. No surprises in the signal, no surprises in the economics.",
-      "Nixxes' port quality is the structural value here, not the product itself. Sony's PC catalogue is the asset.",
-      "Watch the Sony pipeline cadence rather than the title — Last of Us Part II PC is the read."
-    ],
-    "against_consensus": "",
-    "comparable": "Horizon Zero Dawn PC at the same maturity: identical curve. AAA Sony ports converge to the same shape.",
-    "what_would_change_my_mind": "Day-and-date PC release of a current Sony first-party. Resets the cohort.",
-    "risks": [
-      "No actionable upside in the title itself.",
-      "Sony policy on day-and-date PC is the only material lever."
-    ],
-    "pull_quote": "Watch the Sony pipeline cadence, not the title."
-  },
-  "2767030": {
-    "the_read": [
-      "Marvel Rivals' hero-shooter cluster placement is now backwards-looking — the genre is cooling broadly. NetEase is fighting against macro headwinds.",
-      "Live-service hero-shooter cohort has compressed to roughly two-and-a-half durable products. Rivals is the third seat; competitor displacement, not market growth, is the path.",
-      "NetEase's content cadence has held discipline through the cooling. The thesis is operational, not creative."
-    ],
-    "against_consensus": "Industry takes still describe Rivals as a breakout. The cluster's cooling reframes it — Rivals isn't breaking out, it's surviving the contraction with discipline.",
-    "comparable": "Overwatch 2 at the same point in cycle: similar CCU floor, similar content cadence. Rivals' edge is the lack of legacy player-trust damage that OW2 carries.",
-    "what_would_change_my_mind": "A non-Disney IP collaboration. Cross-IP signal would reframe the cohort math.",
-    "risks": [
-      "Cluster contraction continues — Rivals is the third seat at best.",
-      "Disney IP licensing is a single-vendor dependency."
-    ],
-    "pull_quote": "Rivals isn't breaking out, it's surviving the contraction with discipline."
-  },
-  "1086940": {
-    "the_read": [
-      "BG3 is past the breakout question. The interesting analytical layer is now what Larian's next project signals.",
-      "Studio just turned down two publisher acquisition rumors and reaffirmed independence. That's the highest-EV news of the quarter for the CRPG-revival cluster.",
-      "Sustained CCU above 20K nineteen months in is the durable-classic curve, not a normal RPG decay."
-    ],
-    "against_consensus": "",
-    "comparable": "Skyrim at month 24: similar durability curve. BG3's gap is the multiplayer hook, which Skyrim lacked.",
-    "what_would_change_my_mind": "A Larian project announcement that isn't a BG3 successor.",
-    "risks": [
-      "Cohort ceiling already reached.",
-      "Larian's next project is the operational risk concentration."
-    ],
-    "pull_quote": "Larian's independence is the highest-EV news of the quarter for the cluster."
-  },
-  "1240440": {
-    "the_read": [
-      "Halo Infinite remains the case study of a live-service launch that compounded the wrong way. The current readings are a stabilised post-recovery base, not breakout territory.",
-      "343's reorganisation as Halo Studios is the operational read — the signal that matters here is shipping cadence under new leadership, not current-product velocity.",
-      "Cohort here will be entirely re-defined by the next product, not this one."
-    ],
-    "against_consensus": "",
-    "comparable": "Battlefield 2042 post-stabilisation: similar shape, similar non-actionability.",
-    "what_would_change_my_mind": "The next Halo product's reveal. Nothing in the current SKU's signals moves the score.",
-    "risks": [
-      "Not actionable on the long side.",
-      "Future is dependent on Halo Studios shipping cadence."
-    ],
-    "pull_quote": "The cohort here will be redefined by the next product, not this one."
-  },
-  "2680010": {
-    "the_read": [
-      "The First Berserker: Khazan is the Nexon mid-budget signal of the year — soulslike adjacency without trying to compete head-on with FromSoftware.",
-      "Sentiment held positive through launch month. Nexon's marketing was tightly targeted at the Korean and SEA cohorts first — Western coverage is following late, which is unusual.",
-      "Bear case is a flat 8K-CCU mid-budget settle. Bull case is a Stellar Blade-style international break that catches the soulslike-revival cluster in the right week."
-    ],
-    "against_consensus": "Most analysts grouped Khazan with mid-tier action-RPGs. The data shape is closer to the regional-first marketing-led products (Stellar Blade, Tower of Fantasy) — which is a different econ model with different upside.",
-    "comparable": "Stellar Blade PC at week 6 post-launch: 14K CCU, 70% positive, similar regional-first signal pattern. Khazan is currently behind on CCU but ahead on sentiment.",
-    "what_would_change_my_mind": "A drop in Western coverage breadth. Without it the curve flattens.",
-    "risks": [
-      "Genre adjacency is fragile against FromSoftware's pipeline.",
-      "Nexon's PC content cadence is unproven."
-    ],
-    "pull_quote": "Western coverage is following late, which is unusual."
-  },
-  "2622380": {
-    "the_read": [
-      "Elden Ring Nightreign is the cleanest pre-launch signal in the universe right now — Steam followers and streamer-pre-coverage both running ahead of base Elden Ring at the equivalent T-minus point.",
-      "FromSoftware's brand premium plus the friendslop format crossover is the rare positive cluster-stack. Soulslike heating, friendslop heating — both at once.",
-      "Bandai Namco's marketing has stayed quiet on purpose. The pattern matches the Sekiro release strategy — minimal beats, maximum reveal density in the final fortnight."
-    ],
-    "against_consensus": "",
-    "comparable": "Sekiro at T-30: lower follower base, similar streamer-pre-coverage pattern. Nightreign's base is roughly 1.8× — which lifts the projected peak-CCU band toward 200K+.",
-    "what_would_change_my_mind": "A delay announcement. The signal currently prices certainty of date.",
-    "risks": [
-      "Multiplayer-first design is unproven for FromSoftware.",
-      "Cluster stack could compress if Soulslike cools faster than expected."
-    ],
-    "pull_quote": "Soulslike heating, friendslop heating — both at once. That's the rare positive cluster-stack."
-  },
-  "2050650": {
-    "the_read": [
-      "RE4 remake is in the standard Capcom long-tail. Sentiment durable, CCU bedded down, no signal anomalies.",
-      "The read here is Capcom's portfolio cadence — six remake products, all converging to similar curves. The portfolio works; the individual title is non-actionable.",
-      "Watch Resident Evil 9 dating, not this one."
-    ],
-    "against_consensus": "",
-    "comparable": "RE2 remake at the same maturity: indistinguishable. Capcom's playbook is converged.",
-    "what_would_change_my_mind": "Nothing in RE4's signal alone. Move attention upstream to the next Capcom product reveal.",
-    "risks": [
-      "Not actionable in isolation.",
-      "Portfolio-level risk concentration at Capcom is the relevant frame."
-    ],
-    "pull_quote": "The portfolio works; the individual title is non-actionable."
-  },
-  "1623730": {
-    "the_read": [
-      "Palworld's post-meme-phase settle is now readable. CCU floor is roughly 15K — durable but not phenomenal.",
-      "Pocketpair is in the rare position of having banked a phenomenon and being free of publisher obligations. Their next bet is the asymmetric read here, not the current product.",
-      "Sakurai Nintendo lawsuit is the binding tail risk. Anything that signals settlement or judgment moves the floor by 20%."
-    ],
-    "against_consensus": "",
-    "comparable": "Ark: Survival Evolved at month 30: similar settle pattern, similar cohort recruitment ceiling.",
-    "what_would_change_my_mind": "Pocketpair's next project reveal. Or any Nintendo lawsuit movement.",
-    "risks": [
-      "Nintendo lawsuit is the live binding constraint.",
-      "Cohort ceiling reached — no asymmetric upside on this SKU."
-    ],
-    "pull_quote": "The next bet is the read, not the current product."
-  },
-  "2767790": {
-    "the_read": [
-      "Rockin' Racket is the noise candidate of the week — Twitch hours +158%, streamers 23 → 55, but no review base. The signal could be authentic discovery or a single creator cascade.",
-      "Gacha cluster tagging here is loose — the mechanical loop is closer to physics co-op than traditional gacha. The cluster signal may be mis-fitting.",
-      "Wild bet only. The signal-to-noise ratio is too low for a high-conviction position. Watch for whether streamer breadth doubles again next week — that's the conversion test."
-    ],
-    "against_consensus": "",
-    "comparable": "Suika Game at week 2 post-Western-pickup: similar signal sparseness, similar cluster ambiguity, eventually resolved as a one-month cult title.",
-    "what_would_change_my_mind": "A second consecutive week of doubled streamer breadth. Without it, this is one week of attention.",
-    "risks": [
-      "No review base — read is fragile.",
-      "Cluster tagging may be wrong; revisit before next score."
-    ],
-    "pull_quote": "Watch for whether streamer breadth doubles again next week — that's the conversion test."
+    "pull_quote": "1.47M wishlists post-launch isn't a discovery queue, it's a price-sensitivity reservoir waiting on the first meaningful discount."
   },
   "2358720": {
     "the_read": [
-      "Wukong's Breakout Score is depressed because the breakout already happened. 1.15M reviews at 97% positive is post-phenomenon, not pre-phenomenon. This is a portfolio question, not a discovery one.",
-      "Streamer count 39 → 107 reads as anomalous in WoW terms but the absolute Twitch hours growth is +39% — within normal patch-cycle band for a launched AAA.",
-      "Watch for the DLC tell. Game Science have not announced one. A confirmed expansion drops this score back into Hit territory overnight; sustained silence keeps it in Watch."
+      "Lifetime revenue of $581M on 17.4M owners puts Wukong inside the top five Chinese-developed PC launches ever, but the week-over-week revenue delta of +0.1% confirms what the Twitch read (273 CCV across 55 streams) already says: the tail is normalizing and the front-loaded curve is what it is.",
+      "Wishlist stock of 4.81M is the headline metric being misread. That's a conversion overhang, not future demand \u2014 most of those were stacked pre-launch and the ~17.4M owners suggest the easy conversions have already triggered. Discount elasticity, not new cohort capture, is the lever from here.",
+      "On unit economics this is already a returned bet many times over. The interesting question for buy-side is whether Game Science behaves like FromSoft (15-year IP compounder) or like a one-shot studio milking the catalog. No DLC roadmap announced is the tell worth tracking."
     ],
-    "against_consensus": "The wider analyst track is still treating Wukong as 'breakout candidate.' That ship sailed in 2024 — the actual unanswered question is whether Game Science can ship a second title without falling into the polish-studio-trap-after-first-big-hit pattern.",
-    "comparable": "CD Projekt at month 21 post-Witcher 3: similar review-base saturation, similar absolute CCU floor, no second product announced. The Wukong gap is that Game Science is a quarter the headcount — risk of single-product capture is materially higher.",
-    "what_would_change_my_mind": "An announcement of the second Game Science title. Any signal of that lifts the implied EV by 3×.",
+    "against_consensus": "Consensus still files Wukong under active breakout. It isn't \u2014 it's a settled hit with a 97% review score and a flat revenue line. The contrarian read is that the cultural significance ($581M, largely China-domestic) is being double-counted by Western analysts who keep waiting for a second wave. The second wave needs a DLC trigger, and there isn't one on the board.",
+    "comparable": "Elden Ring (2022) sat at roughly $700M lifetime revenue and 13.4M units at the six-month mark, with active DLC speculation sustaining 80K+ concurrent Twitch viewership well into year two. Wukong is at $581M and 17.4M owners on a comparable timeline \u2014 higher unit count, lower revenue capture per unit (price + regional mix), and Twitch CCV of 273 versus Elden Ring's ~80K. The attention gap is roughly 290x.",
+    "what_would_change_my_mind": "A dated DLC or expansion announcement with a Steam page would reset the wishlist stock into actual forward intent and re-open the breakout argument.",
     "risks": [
-      "Single-product studio risk.",
-      "No DLC roadmap public — limits stickiness."
+      "No announced DLC means no second-wave catalyst on the calendar.",
+      "Revenue mix is China-heavy; Western re-engagement requires a specific trigger."
     ],
-    "pull_quote": "Wukong's Breakout Score is depressed because the breakout already happened."
+    "pull_quote": "Wishlist stock of 4.81M is a conversion overhang, not future demand."
+  },
+  "2767030": {
+    "the_read": [
+      "Lifetime gross of $381M against 25.6M owners on a free-to-play title implies roughly $15 ARPU \u2014 strong for hero-shooter, and the +0.4% week-over-week revenue delta on a six-week-old launch suggests monetization is holding rather than front-loaded.",
+      "149K concurrent Twitch viewers against 99 streams is a thin creator base relative to audience appetite \u2014 a viewership-to-streamer ratio over 1,500:1 typically signals demand outstripping content supply, which is the inverse of the Marvel's Avengers attention shape.",
+      "77% positive on 387K reviews is the structural watch-point. Hero-shooters historically need the high 70s to clear the six-month live-service hurdle; Overwatch 2 launched at 18% on Steam and never recovered the cohort, so Rivals having survived the first patch cycle without sentiment collapse matters more than the raw CCU."
+    ],
+    "against_consensus": "Consensus reads Rivals as the Overwatch killer. Scout reads it as a Settled phenom that has already capped its growth curve \u2014 peak CCU projection of 255K-511K is excellent, but the IP ceiling is the IP ceiling. The relevant question isn't whether it scales further, it's whether NetEase can hold 150K CCU through season three without a content cliff.",
+    "comparable": "Marvel's Avengers (2020) launched on the same IP licence and never cleared 30K peak CCU on Steam before live-service collapse inside six months. Rivals is operating at roughly 10x that scale on concurrent attention and has already booked $381M versus Avengers' rumoured sub-$100M lifetime PC take. The gap is structural loop design, not marketing spend.",
+    "what_would_change_my_mind": "If season two retention shows a week-3 cohort drop exceeding 40% against season one's baseline, the Avengers comparison reactivates.",
+    "risks": [
+      "Hero-shooter content treadmill is the most expensive in the genre.",
+      "NetEase-Marvel licence terms remain opaque to outside analysts."
+    ],
+    "pull_quote": "Marvel weight on the shelf didn't save Avengers; the loop saved Rivals."
+  },
+  "2622380": {
+    "the_read": [
+      "$118M lifetime revenue inside the first window at a $40 SKU implies roughly 3M paid units net of refunds and regional pricing \u2014 a co-op spinoff doing better than most full-price AAA launches, but trailing the mothership by an order of magnitude on CCU.",
+      "Wishlist tail at 2.15M post-launch is the number to watch: that is conversion overhang, not pre-launch intent. People are buying in waves as friends form squads, which is the Friendslop signature rather than the Soulslike one.",
+      "Attention has cooled hard. Twitch at 913 CCV with 99 streams is cult-band territory, and the +0.4% revenue delta says the launch spike is over. The question is whether this settles as a $150M one-and-done or compounds via patches and a DLC roadmap FromSoft has not historically run."
+    ],
+    "against_consensus": "Consensus is reading Nightreign as a disappointment against Elden Ring's shadow. The business read is different: a $40 derivative project shipping 3M units with 82% positive on a format FromSoft has never attempted before is a strong portfolio outcome for Bandai Namco. The mistake is benchmarking it as a mainline sequel rather than as a margin-accretive experiment.",
+    "comparable": "Elden Ring (2022) was doing 953K peak CCU and dominating Twitch front-page at the equivalent post-launch window. Nightreign is sitting in the 8K\u201325K projected band against that 953K mark \u2014 roughly a 40x to 100x gap in concurrency. Revenue gap is narrower but still material: Elden Ring cleared a billion inside three months versus Nightreign's $118M trajectory.",
+    "what_would_change_my_mind": "A patch or content drop that pushes Twitch CCV back above 5,000 sustained for a week would signal genuine multiplayer compounding rather than a fading launch tail.",
+    "risks": [
+      "Co-op matchmaking decay is steeper than solo-game decay.",
+      "FromSoft has no live-ops muscle memory for retention patches."
+    ],
+    "pull_quote": "Stop benchmarking a $40 derivative against the mainline \u2014 3M units on an experiment is a portfolio win, not a miss."
+  },
+  "2680010": {
+    "the_read": [
+      "Khazan has done $26.3M lifetime against 736K owners at $59.99 \u2014 a credible mid-tier soulslike result for Neople, but the 1.40M wishlist stockpile at launch implied a much larger conversion than the install base suggests. Roughly 53% wishlist conversion is fine; it is not the cohort capture the wishlist count was pricing in.",
+      "The signal mix is lopsided: intent and community fired hard (89K followers, 16K subreddit, 1.4M wishlists), but attention has collapsed post-launch to 95 concurrent Twitch viewers across 14 streams. That is a single-player narrative soulslike behaving exactly as the category dictates \u2014 front-loaded sales, no streamer tail, no second wind.",
+      "Unit economics still work. 85% positive across 30.5K reviews is healthy for the subgenre, and a Nexon-adjacent publisher with DNF Duel/Dungeon Fighter infrastructure absorbs marketing cost differently than an indie would. The commercial question is whether DLC or a New Game+ content drop can reactivate the wishlist residual that did not convert at launch."
+    ],
+    "against_consensus": "Consensus reads Khazan as a quiet win because reviews are positive and it shipped clean. The business read is more cautious: a 1.4M wishlist game converting to roughly 737K owners is underperforming its own pre-launch intent curve, and the attention signals say the discovery window has closed. This is a respectable mid-tier outcome, not a sleeper trajectory.",
+    "comparable": "Hades (2020) at a comparable post-launch window was running ~49K peak CCU on a $24.99 narrative product with critical-phenom positioning, monetizing via awards-driven retention. Khazan projects to 1K\u20136K peak CCU at $59.99 \u2014 a roughly 10\u201350\u00d7 CCU gap, though ARPU is roughly 2.4\u00d7 higher. Different category math entirely, but the EA-to-retention playbook is not available to Khazan as a launched single-player product.",
+    "what_would_change_my_mind": "A paid DLC or substantive content patch within six months driving a sustained 3\u00d7-plus CCU rebound and renewed press cycle would reframe this as a platform rather than a one-shot.",
+    "risks": [
+      "Single-player soulslike tail decays fast without DLC cadence.",
+      "Twitch attention already collapsed under 100 CCU."
+    ],
+    "pull_quote": "A 1.4M wishlist game converting to 737K owners is a respectable mid-tier outcome, not a sleeper trajectory."
+  },
+  "1623730": {
+    "the_read": [
+      "Palworld at 19.6M owners and $394M lifetime revenue is not a breakout candidate \u2014 it is a post-breakout asset cooling into its long tail, with revenue 7d delta at +0.1% and Twitch live viewers at 348.",
+      "The interesting datapoint is the streams count moving 29 to 78 week-over-week against flat viewership. That is creator-side speculation, not audience-side demand, and historically precedes a content drop or a Pocketpair PR beat rather than organic resurgence.",
+      "Wishlists holding at 2.59M this deep into EA is the genuinely unusual reading here. Conversion has already happened for the core cohort, so that pool is either 1.0 vs 1.1 patch waiters or a free-weekend lever Pocketpair hasn't pulled yet."
+    ],
+    "against_consensus": "Consensus treats Palworld as a finished story after the Nintendo suit and the Q2 2024 CCU collapse from 2.1M to sub-50K. The contrarian read: 2.59M unconverted wishlists is a marketing asset most live-service publishers would pay seven figures to rent. Pocketpair has a dormant install base larger than most AAA launches and has not yet attempted a true comeback beat.",
+    "comparable": "Lethal Company peaked near 250K CCU on a sub-$10 SKU with a solo dev and zero wishlist runway. Palworld already cleared 2.1M CCU at $29.99 \u2014 roughly an 8x CCU gap and 3x price gap. The relevant comp is not the breakout phase but the cooldown: Palworld's current 348 Twitch viewers sit roughly 10x below Lethal Company's equivalent month-22 reading.",
+    "what_would_change_my_mind": "A major content drop or 1.0 announcement that pushes Twitch concurrents above 25,000 and converts more than 200,000 of the standing wishlist pool within two weeks.",
+    "risks": [
+      "Nintendo litigation overhang constrains platform expansion and feature scope.",
+      "Creator interest has migrated; re-acquisition cost is now non-trivial."
+    ],
+    "pull_quote": "Pocketpair is sitting on 2.59M unconverted wishlists \u2014 a dormant marketing asset most live-service publishers would pay seven figures to rent."
+  },
+  "1030300": {
+    "the_read": [
+      "Silksong shipped 5.6M units and $82.6M lifetime revenue at $19.99 in roughly twelve weeks, off a 3.29M wishlist book that accumulated across a six-year wait \u2014 the cleanest conversion of a pre-launch intent stockpile we've logged this cycle.",
+      "Attention is where the thesis gets uncomfortable: 1,528 concurrent Twitch viewers and 97 active streams put it well below the streamer-retention threshold metroidvanias need for a long tail, and the +0.3% revenue delta this week says the launch cohort has already been served.",
+      "Unit economics remain the story. Team Cherry is three people on a self-published title with no publisher rev-share drag \u2014 at 89% positive across 406K reviews, contribution margin on every marginal unit is structurally higher than anything a publisher-funded comp can match, which lets the tail compound at low absolute volume.",
+      "Projected peak CCU sits in the 1K\u20136K Watch band, which is the correct read for a launched product 12 weeks in, not a verdict on the title's quality."
+    ],
+    "against_consensus": "Consensus treats Silksong as a generational success and stops there. The numerate read is that the IP did the work the product now has to defend \u2014 attention metrics have already normalized to indie-mid levels, and the question for anyone modeling Team Cherry's next move is whether a six-year gap recurs or whether the studio scales. Those are different businesses.",
+    "comparable": "Closest analog is Hades (2020): at the equivalent post-1.0 window Supergiant was running ~25K peak CCU sustained by awards-cycle coverage and EA-cohort word-of-mouth. Silksong's current 1,528 Twitch viewers and Watch-band CCU projection sit roughly 15-20x below where Hades was building its month-2-onwards retention curve, despite Silksong's lifetime revenue already exceeding Hades' first-year haul by a wide margin.",
+    "what_would_change_my_mind": "If Twitch concurrents re-accelerate above 5,000 on a content patch or DLC drop within six months, the tail thesis flips from decay to compounding.",
+    "risks": [
+      "Wishlist book is spent; no second intent reservoir behind it.",
+      "Three-person studio means content cadence is structurally slow.",
+      "Streamer attention already normalized 12 weeks in."
+    ],
+    "pull_quote": "The IP did the work the product now has to defend."
+  },
+  "3164500": {
+    "the_read": [
+      "Schedule I is already a commercial fact, not a forecast: $146M lifetime revenue and 8.9M owners off a $19.99 EA SKU, with 297K reviews at 98% positive. The Breakout Score delta is the wrong lens here \u2014 the question is whether 1.73M residual wishlists convert at 1.0 release or roll into a sequel-grade IP.",
+      "Twitch streams quadrupling 17 to 68 week-over-week against 1,923 concurrent viewers is the TikTok-loop residue, not a fresh cascade. The interesting tell is that revenue is only +0.4% week-over-week \u2014 the title has decoupled from streaming velocity and is now coasting on wishlist conversion plus word-of-mouth.",
+      "Unit economics here are obscene. Solo dev, no publisher, Steam's 70% cut on ~$130M gross translates to roughly $90M+ net to TVGS before tax. The 1.73M wishlist overhang is the asset to underwrite \u2014 that is a 1.0 launch detonator most Hooded Horse or Devolver titles would underwrite a sequel against."
+    ],
+    "against_consensus": "Consensus has moved on \u2014 Schedule I peaked as a discourse object in April-May and the trade press treats it as a closed chapter. The contrarian read is that 1.73M wishlists nine months post-launch is not a decaying tail, it is a coiled spring for 1.0. Most analysts are pricing this as a single-cycle meme rather than a durable franchise asset.",
+    "comparable": "Closest analogue is Schedule I's own ancestor in the streamer-loop lineage, Lethal Company, which hit 250K peak CCU on a sub-$10 SKU in late 2023. Schedule I projects to a 1,000\u20136,000 CCU Watch band currently, a roughly 40-to-100x gap versus Lethal at peak, but Lethal never carried a 1.73M wishlist reserve into a paid 1.0 event \u2014 that is the asymmetry.",
+    "what_would_change_my_mind": "If wishlist count drops below 1.4M before 1.0 without a corresponding revenue spike, the residual demand thesis is dead and this is a closed book.",
+    "risks": [
+      "Solo dev burnout or scope creep delays 1.0 indefinitely.",
+      "TikTok loop does not re-ignite at 1.0; wishlists convert at 5% not 25%."
+    ],
+    "pull_quote": "The Breakout Score delta is the wrong lens here \u2014 the question is whether 1.73M residual wishlists convert at 1.0 or roll into a sequel-grade IP."
+  },
+  "1145350": {
+    "the_read": [
+      "Hades II launched Sept 25 at $29.99 and is already at $84.6M lifetime revenue against 3.62M owners \u2014 that implies a roughly $23 net-of-Steam ASP and tells you Supergiant got close to full-price conversion on a sequel into a critically saturated genre. The 96% positive on 118K reviews removes the review-bomb tail risk.",
+      "Attention signals are the soft spot: 270 concurrent Twitch viewers and 52 streams is a post-launch desk read of a single-player narrative roguelike that has already cleared its core audience, not a streamer cascade like Lethal Company. Performance delta of +0.2% week-over-week means the launch spike is normalizing into the long-tail phase faster than a live-service curve.",
+      "Where it gets interesting commercially: 3.4M wishlists still sitting on the books after launch. That is conversion ammunition for the awards-season push and any subsequent content drop. Supergiant has historically monetized post-launch narrative beats and TGA cycles better than they monetize launch week."
+    ],
+    "against_consensus": "Consensus is treating Hades II as a guaranteed franchise compounder. The numbers say the easy money has been made \u2014 $84M lifetime and a flatlining 7-day delta means incremental upside now depends on awards coverage and a creator-led second wave, neither of which Supergiant pushes aggressively. Buy-side modelling a linear ramp from here is mispricing the curve.",
+    "comparable": "Hades (2020) hit roughly 49K peak CCU on 1.0 launch and converted EA goodwill into a critical-phenom run that durably compounded via awards coverage. Hades II is currently tracking a Watch-band 1K-6K projected peak CCU \u2014 a 8-10x CCU gap versus the original at the equivalent lifecycle point. Revenue per owner is comparable, but the attention thinness is the divergence.",
+    "what_would_change_my_mind": "A TGA nomination sweep in November paired with Twitch concurrents recovering above 5,000 on a content patch would re-rate this from Watch to Hit band.",
+    "risks": [
+      "Twitch concurrents at 270 signal creator fatigue with the franchise.",
+      "Wishlist conversion may already be priced into lifetime revenue."
+    ],
+    "pull_quote": "Supergiant has historically monetized post-launch narrative beats and TGA cycles better than they monetize launch week."
+  },
+  "1363080": {
+    "the_read": [
+      "Manor Lords is 18 months post-EA with $89.3M lifetime revenue against 3.76M owners \u2014 a ~$23.70 effective ARPU on a $39.99 SKU, signaling heavy regional/sale mix but still a top-decile EA outcome for a solo-led project.",
+      "Live attention has collapsed to 23 Twitch viewers across 4 streams. That's the tell: this is now a tail-phase asset, not a breakout-phase one. The +4 score delta is noise on a base that's already cashed most of its hype check.",
+      "What's underappreciated: the wishlist pool still reads 3.00M. That reservoir only matters if Greebo Games ships a content beat that re-triggers it \u2014 otherwise it's a vanity number decaying at 1-2% monthly as lapsed-intent users drift off."
+    ],
+    "against_consensus": "Consensus still files Manor Lords under 'breakout in progress' on the strength of its 2024 wishlist anomaly. The desk read is colder: the breakout already happened, was monetized efficiently, and the SKU is now a slow-burn EA with a single-developer update risk profile. Watch-band projected CCU of 1,000-6,000 is the honest read, not a setup for a second wave.",
+    "comparable": "Stardew Valley at the equivalent 18-month post-launch mark was sustaining 15-20K concurrent on the back of solo-dev content drops and had crossed roughly 3.5M units. Manor Lords sits at 3.76M owners but with Twitch live viewers of 23 versus Stardew's persistent four-figure concurrent stream presence in the same window \u2014 a roughly 100x gap in active attention, which is what separates durable-classic trajectories from tail-decay ones.",
+    "what_would_change_my_mind": "A dated 1.0 roadmap with a combat or diplomacy overhaul shipping inside six months, accompanied by Twitch concurrents re-crossing 5,000 on patch week.",
+    "risks": [
+      "Solo developer cadence; any 12-month content gap accelerates tail decay.",
+      "Wishlist conversion rate falls as competing medieval sims ship in 2025."
+    ],
+    "pull_quote": "The breakout already happened, was monetized efficiently, and the SKU is now a slow-burn EA with single-developer update risk."
+  },
+  "1817070": {
+    "the_read": [
+      "Insomniac's PC port is 28 months post-launch with $109.8M lifetime revenue and 4.63M owners \u2014 the Breakout Score delta of +12 is a re-engagement blip, not a second act. Twitch streams doubling from 14 to 35 on 91 viewers is noise inside a catalog title, and revenue 7d delta of +0.1% confirms no commercial inflection.",
+      "The 2.39M wishlist count is the only number worth lingering on: it is structurally stranded demand waiting on a discount trigger or a sequel halo (Spider-Man 2 PC remains the obvious unlock). Wishlist-to-owner ratio of roughly 0.52 on a 28-month-old port is a publisher's option, not a player signal.",
+      "Unit economics here favor Sony as a portfolio data point, not Backbone's watchlist. Nixxes ports run on first-party overhead; the incremental PC margin is already harvested. A Watch band of 1K\u20136K CCU implies this is a holiday-discount re-rate candidate, not a breakout."
+    ],
+    "against_consensus": "Consensus treats every Spider-Man 2 PC rumor cycle as a tailwind for the original. The contrarian read: the sequel's PC launch cannibalizes the back-catalog at full price and only lifts the original through a bundled or steep-discount mechanic. The 2.39M wishlist pile is a Sony pricing lever, not latent organic demand.",
+    "comparable": "Pacific Drive is the cleanest analog: a launched single-player narrative title showing creator-led second-wave behavior, with 180% Twitch hours WoW on a stable follower base producing a 23K peak CCU echo. Spider-Man Remastered is printing 35 streams and 91 viewers \u2014 roughly a 50\u00d7 gap in attention magnitude versus what a real second wave looks like at this stage.",
+    "what_would_change_my_mind": "A Spider-Man 2 PC release date confirmed with the original bundled at 60%+ off, driving sustained Twitch concurrents above 5,000 for two consecutive weeks.",
+    "risks": [
+      "Sequel PC port announcement cannibalizes original at full price.",
+      "Catalog fatigue caps wishlist conversion below 8% on discount."
+    ],
+    "pull_quote": "The 2.39M wishlist pile is a Sony pricing lever, not latent organic demand."
+  },
+  "1240440": {
+    "the_read": [
+      "Halo Infinite is a four-year-old F2P shooter sitting on $104M lifetime revenue and 18.8M owners, with a 7-day revenue delta of +0.1% \u2014 this is not a breakout, it is a flat ambient base catching a Twitch ripple of 12.3K CLV off 70 streams.",
+      "The intent signals (312K wishlists, 230K followers) are stock, not flow \u2014 accumulated over a multi-year tail, not a fresh demand spike. Wishlist on an already-launched F2P title is a near-meaningless number that the breakout score is over-weighting.",
+      "69% positive across 180K reviews is the structural ceiling here. The economics of a Microsoft-funded live-service flagship mean Infinite doesn't need to break out to justify itself internally, but for outside capital there is no ride to buy \u2014 the float is owned by Xbox and the upside is capped by a loop the market has already priced."
+    ],
+    "against_consensus": "Consensus treats every Halo Twitch flicker as a potential revival arc. The contrarian read: Infinite's curve is a flat utility, not a coiled spring. Each season cycle produces a 10-14 day attention bump that decays to baseline. The +22 score delta is noise on a low base, not the front edge of a Lethal Company-style cascade.",
+    "comparable": "Closest analog is Marvel's Avengers \u2014 an IP-led live-service that mistook brand weight for loop strength. Avengers had similar mid-cycle attention spasms with no revenue conversion. Infinite's gap to a real breakout reference like Helldivers 2 is roughly 35-40x on peak CCU (projected 1-6K here versus 458K), and the signal mix doesn't support closing it.",
+    "what_would_change_my_mind": "A sustained 50K+ Twitch CLV held for three consecutive weeks alongside a revenue 7d delta above +15% would indicate a genuine re-engagement loop rather than seasonal noise.",
+    "risks": [
+      "Microsoft strategy pivot could deprecate Infinite for a successor title.",
+      "Hero-shooter cluster is overcrowded post-Marvel Rivals; oxygen is thin."
+    ],
+    "pull_quote": "Wishlist on an already-launched F2P title is a near-meaningless number that the breakout score is over-weighting."
+  },
+  "553850": {
+    "the_read": [
+      "Twenty-one months post-launch, Helldivers 2 is sitting on $431M lifetime revenue, 15.8M owners, and 2.27M wishlists still queued \u2014 the wishlist tail alone implies a discount-driven conversion engine worth tracking through the next two Steam sales.",
+      "The +5 breakout delta with only attention and intent firing is a settled-tier wobble, not a second cascade: Twitch at 843 CCV and revenue effectively flat (+0.1%) say the base is intact but nothing is reigniting.",
+      "Worth noting the 75% review score against 1.14M reviews \u2014 that is a meaningful drag on new-buyer conversion at $39.99, and explains why the wishlist pool keeps growing rather than converting at full price."
+    ],
+    "against_consensus": "Consensus treats Helldivers 2 as a stabilized live-service success story with Sony quietly minting cash. The contrarian read: 2.27M unconverted wishlists against a 75% review score is a pricing problem, not a demand problem. The next permanent price cut to $29.99 is where the real second-wave economics get tested, and Arrowhead's warchest depends on it.",
+    "comparable": "Helldivers 2 itself at peak hit 458K CCU on Steam in February 2024. Current projected band is 157K\u2013315K, a 1.5\u20133x gap from peak. The settled floor is holding at roughly 30\u201360% of phenom-week CCU, which is structurally healthy for an 18-month-old co-op title but leaves no room to call this a re-acceleration.",
+    "what_would_change_my_mind": "A Twitch CCV breach above 15,000 sustained for seven days, paired with a revenue 7d delta above +25%, would signal a genuine second cascade rather than baseline noise.",
+    "risks": [
+      "PSN-style platform policy reversal remains a structural tail risk.",
+      "75% review score caps full-price conversion on the wishlist pool."
+    ],
+    "pull_quote": "2.27M unconverted wishlists against a 75% review score is a pricing problem, not a demand problem."
+  },
+  "1966720": {
+    "the_read": [
+      "Lethal Company is two years post-EA, sitting on $137.6M lifetime revenue and 18.8M owners, with a +16 breakout delta this week driven by 1.59M wishlists still on the board \u2014 that wishlist pool is the anomaly, not the live CCU.",
+      "Attention signals are modest (576 live viewers, 82 concurrent streams) but intent is at ceiling: 324K followers and a 1.59M wishlist overhang on a $9.99 SKU that has already converted 18M owners. Translation \u2014 there is still a long tail of price-sensitive buyers who parked the card and never pulled the trigger.",
+      "Unit economics remain absurd for a solo-dev EA title at this maturity: 97% positive across 507K reviews, no meaningful 7d revenue movement (+0.1%), and a Watch-band CCU projection. This is a re-acceleration watch, not a fresh cascade \u2014 the question is whether a 1.0 push or content drop converts the dormant wishlist stack."
+    ],
+    "against_consensus": "Consensus treats Lethal Company as a closed chapter \u2014 the 2023 streamer cascade peaked, the Friendslop torch passed to Content Warning and REPO. The contrarian read: a 1.59M wishlist reservoir on a still-EA product is not a closed chapter, it is loaded ammunition. Whoever ships the 1.0 build catches that conversion event, and the market is not pricing it.",
+    "comparable": "Phasmophobia (2020, 113K peak CCU) is the structural analog \u2014 co-op horror EA with a streamer cascade and a durable cult tail. At Lethal Company's current lifecycle point Phasmophobia was still climbing on a smaller wishlist base. Lethal sits roughly 5x larger on lifetime owners (18.8M vs Phasmophobia's ~3-4M at equivalent stage) but with a CCU footprint an order of magnitude smaller today.",
+    "what_would_change_my_mind": "If Twitch concurrent streams fail to clear 300 within sixty days of any 1.0 or major content announcement, the dormant wishlist thesis is dead.",
+    "risks": [
+      "Solo dev cadence \u2014 1.0 could slip another full year.",
+      "Friendslop cluster fatigue post-Content Warning and REPO saturation."
+    ],
+    "pull_quote": "A 1.59M wishlist reservoir on a still-EA product is not a closed chapter, it is loaded ammunition."
+  },
+  "2050650": {
+    "the_read": [
+      "Capcom's RE4 remake is twenty months post-launch at 7.6M owners and $133M lifetime gross on Steam alone \u2014 the +15 breakout delta this week is a creator-led second wave signature, not a new product story. Stream count quadrupling 20 to 81 on a stable 430 CCU base mirrors the Pacific Drive month-15 pattern almost exactly.",
+      "The 2.0M wishlist tail on a launched product is the number to stare at \u2014 that is a discount-conversion reservoir, not intent for a future release. At $39.99 with a 97% positive rating across 249K reviews, the next seasonal sale is a near-deterministic revenue event for Capcom's PC P&L.",
+      "Worth flagging: revenue 7d delta of +0.1% confirms this is an attention spike preceding monetization, not concurrent with it. Classic lag pattern on premium SKUs above $30."
+    ],
+    "against_consensus": "Consensus treats RE4 as a finished story \u2014 shipped, reviewed, banked. The contrarian read is that Capcom's back catalogue on PC behaves more like a recurring-revenue annuity than a packaged-goods release, and the market consistently under-models second-wave creator cascades on 18-month-old AAA remakes because the absolute CCU numbers stay modest.",
+    "comparable": "Closest analogue is Pacific Drive's month-15 creator-led second wave \u2014 180% Twitch hours week-over-week on a stable follower base, capturing roughly 30-50% of launch peak. RE4's stream count went 20 to 81, a 305% lift, but on a much larger installed base. The gap: Pacific Drive peaked at 23K CCU; RE4's projected second-wave CCU sits in the 1,000-6,000 band, roughly 4-20\u00d7 smaller in concurrent terms but on 7.6M owners.",
+    "what_would_change_my_mind": "If Twitch live viewers fail to clear 2,000 within three weeks while stream count holds above 80, the cascade is creator-supply-driven without audience pull and the revenue tail will not materialize.",
+    "risks": [
+      "Premium $39.99 price point limits impulse conversion without a sale event.",
+      "Catalogue attention spikes often decay before Capcom's discount calendar catches them."
+    ],
+    "pull_quote": "The 2.0M wishlist tail on a launched product is a discount-conversion reservoir, not intent for a future release."
+  },
+  "2198150": {
+    "the_read": [
+      "Tiny Glade has cleared $14.8M lifetime revenue at $14.99 with 1.31M owners and a 97% review score \u2014 a clean two-person-studio outcome that's already returned the four-year dev cycle many times over without a traditional publisher taking a cut.",
+      "The interesting number isn't the launch \u2014 it's the residual 1.75M wishlist tail. That's a larger unconverted reservoir than most cozy SKUs ever accumulate, suggesting Pounce Light is sitting on a discount-cycle annuity rather than a one-shot.",
+      "Live attention has collapsed to 10 Twitch viewers and 1 concurrent stream, which is fine: this was never a streamer-cascade title. The unit economics work because the audience is the non-gaming cozy buyer who finds it via algorithmic discovery and gifting, not via watch-time."
+    ],
+    "against_consensus": "Consensus treats Tiny Glade as a finished story \u2014 launched, peaked, moved on. The contrarian read is that a 1.75M wishlist overhang at fifteen months post-launch is not a dead reservoir; it's a deferred-purchase pipeline that converts on every seasonal sale. The Watch band understates the discount-cycle revenue this SKU will quietly print through 2026.",
+    "comparable": "Stardew Valley is the structural analog \u2014 solo/micro-team, multi-year dev, non-gaming audience, durable tail. At fifteen months post-launch Stardew was already past 2M units and climbing toward its 95K peak CCU ceiling. Tiny Glade sits at 1.31M owners against that benchmark \u2014 a roughly 35% gap in unit terms, with no combat hook or multiplayer vector to close it.",
+    "what_would_change_my_mind": "A content update or sandbox-export feature that pushes concurrent Twitch streams back above 50 sustained for a fortnight would reframe this from annuity to second-wave candidate.",
+    "risks": [
+      "No content roadmap disclosed; wishlist tail decays without re-trigger.",
+      "Cozy cluster is now crowded; discount visibility competes with twenty similar SKUs."
+    ],
+    "pull_quote": "A 1.75M wishlist overhang fifteen months in isn't a dead reservoir \u2014 it's a deferred-purchase pipeline that prints quietly on every seasonal sale."
+  },
+  "1601580": {
+    "the_read": [
+      "Frostpunk 2 cleared 1M units and $27.2M lifetime gross at a $44.99 ASP roughly five months post-launch \u2014 respectable for a sequel sim, but the 75% positive review band is the commercial story: 11 bit converted only a fraction of a 2.1M wishlist stockpile, suggesting the design pivot from city-builder to society-sim cost them the casual half of the funnel.",
+      "Attention signals have collapsed to maintenance levels \u2014 8 concurrent Twitch viewers, 2 active streams \u2014 which for a single-player narrative sim is expected but kills the streamer-cascade optionality entirely. Future revenue waves now depend on roadmap execution and discount ladders, not organic discovery.",
+      "Unit economics are the saving grace here. 11 bit self-publishes, owns the IP, and the Frostpunk 1 tail (still selling eight years on) plus This War of Mine give them a credible cohort-recurring-revenue argument. A $25M+ launch on a sub-$10M budget is a solid base hit; the question is whether DLC and a Game Pass-style deal extend the curve."
+    ],
+    "against_consensus": "Consensus framed the mixed reviews as a launch wobble that patches would fix. Six months in, the 75% positive figure has barely moved, and CCU has decayed faster than Frostpunk 1's did at the equivalent point. The read is not that the game failed \u2014 it cleared a million units \u2014 but that the addressable ceiling is materially lower than the wishlist count implied, and the sequel premium did not compound.",
+    "comparable": "Hades sits 49,000 peak CCU at its 1.0 moment with a 98% positive review band; Frostpunk 2 peaked around 27,000 CCU at launch with 75% positive. The gap is roughly 23 review points and a 1.8\u00d7 CCU shortfall against a critical-phenom benchmark. Frostpunk 2 is not in that conversion category \u2014 it is a competent sequel that will earn out on IP strength rather than awards-led tailwind.",
+    "what_would_change_my_mind": "A major expansion DLC lifting review sentiment above 85% recent-positive and pushing CCU back above 15,000 for a sustained two-week window would re-rate this from Watch to a genuine durable-sim thesis.",
+    "risks": [
+      "Mixed reviews compound \u2014 sequel fatigue blocks DLC attach rates.",
+      "Console port window cannibalizes PC discount-wave revenue."
+    ],
+    "pull_quote": "11 bit converted only a fraction of a 2.1M wishlist stockpile \u2014 the design pivot cost them the casual half of the funnel."
+  },
+  "1458140": {
+    "the_read": [
+      "Pacific Drive crossed 1.2M owners and $19.6M lifetime gross against 1.43M wishlists \u2014 a wishlist-to-owner conversion near 85% that is healthy but tells you the long tail is now the entire story, not launch.",
+      "Attention signals are functionally dead: 33 concurrent Twitch viewers across 2 streams, with the stream count halving week-over-week. This is a product that has fully exited the discovery layer and is running on organic search and sale-window spikes.",
+      "Where the math still works: 83% positive across 25.5K reviews on a $29.99 SKU with a single-player loop means Kepler can keep harvesting Steam sale visibility for years. Revenue delta of +0.1% week-on-week is the flat hum of a catalog title, not a breakout in motion."
+    ],
+    "against_consensus": "Consensus filed Pacific Drive as a modest 2024 win and moved on. The contrarian read is that the 1.43M wishlist pool \u2014 most of which never converted \u2014 is a dormant asset, not a failure signal. At $29.99 with strong reviews, every Steam seasonal sale is a re-acquisition event. The ceiling is low; the floor is unusually durable for a debut studio.",
+    "comparable": "Hades hit roughly 49K peak CCU at 1.0 and rode awards coverage into month-two retention on a narrative-forward loop. Pacific Drive's projected peak CCU band of 1,000\u20136,000 sits roughly 8\u201350x below that, and review volume of 25.5K is about 4x behind Hades' equivalent lifecycle point. The shape rhymes; the magnitude does not.",
+    "what_would_change_my_mind": "A sustained content drop or roguelike-mode pivot that pushes concurrent Twitch viewership above 2,000 for two consecutive weeks would force a re-rate from Watch to genuine breakout candidate.",
+    "risks": [
+      "Single-player survival has no replay flywheel at current cadence.",
+      "Attention signals decaying faster than wishlist pool can convert."
+    ],
+    "pull_quote": "The ceiling is low; the floor is unusually durable for a debut studio."
+  },
+  "2767790": {
+    "the_read": [
+      "Twitch is showing 2,563 concurrent viewers across 100 streams against $77 lifetime revenue and 15 estimated owners \u2014 a textbook attention-without-conversion split that screams paid creator activation or a brief novelty loop, not organic demand.",
+      "The intent stack does not corroborate: 2,200 wishlists, 41 Steam followers, 16 IGDB hypes. Wishlist-to-follower ratio of 54:1 is abnormally wide and suggests the wishlist count was banked pre-launch and is now stale rather than compounding.",
+      "Unit economics are the tell. At $6.99 with one review on file twelve months post-launch, the revenue line is flat at 0.0% week-over-week. Gacha-cluster headwind plus a sub-$10 SKU caps LTV before any cosmetic monetization can carry the P&L."
+    ],
+    "against_consensus": "Twitch CCU of 2,500-plus on an indie usually triggers a breakout call. The contrarian read: this is a streamer-novelty spike on a 12-month-old SKU with one review and effectively zero revenue movement. Attention without a wishlist re-acceleration or follower inflow is a closed loop, not a cascade ignition.",
+    "comparable": "Lethal Company's streamer cascade in late 2023 converted creator attention into roughly 200K peak CCU because the wishlist and follower curves bent upward in the same 72-hour window. Rockin' Racket's Twitch reading sits in a Watch band projecting 1K-6K CCU \u2014 a 30-to-200\u00d7 gap to Lethal Company at the comparable cascade-onset point, and without the intent corroboration.",
+    "what_would_change_my_mind": "If wishlists add 10,000-plus net within two weeks and review count crosses 50 with positive sentiment intact, the attention is converting and the thesis flips.",
+    "risks": [
+      "Twitch spike may be a paid campaign, not organic discovery.",
+      "Single-review status leaves storefront conversion structurally weak."
+    ],
+    "pull_quote": "Twitch is loud, the till is quiet, and the wishlist-to-follower ratio of 54:1 says the audience banked interest a long time ago and never came back."
   }
 }
