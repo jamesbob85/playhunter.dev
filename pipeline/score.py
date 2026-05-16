@@ -320,13 +320,15 @@ def score_one(appid_key: str, steam_rec: dict, gam: dict, twitch: dict, igdb: di
     # The burn-rate captures *current* engagement intensity; high burn = breakout-now signal.
     import math as _math
     burn_rate = 0.0
-    if real_followers > 0 and twitch_viewers > 0:
-        burn_rate = (twitch_viewers / max(1, real_followers)) * 100.0   # % of followers watching live
-    # Log-scale: 0.01% burn → 7, 0.1% → 14, 1% → 21
-    if burn_rate <= 0.0001:
+    # Require a minimum follower base for the burn-rate signal to fire. Tiny new
+    # games with 50 followers and 200 viewers get falsely inflated otherwise.
+    if real_followers >= 5000 and twitch_viewers > 0:
+        burn_rate = (twitch_viewers / max(1, real_followers)) * 100.0
+    # Log-scale tuned so that 0.05% burn → 7, 0.5% → 14, 5% → 21.
+    if burn_rate <= 0.001:
         burn_delta = 0.0
     else:
-        burn_delta = min(22.0, _math.log10(max(1.0, burn_rate * 1000)) * 7.0)
+        burn_delta = min(18.0, _math.log10(max(1.0, burn_rate * 100)) * 7.0)
 
     rev_delta = 0.0
     if revenue_pct_7d is not None:

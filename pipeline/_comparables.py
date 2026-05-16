@@ -45,9 +45,14 @@ def nearest_comparables(game, comp_lib, k=3):
         team_bucket = "medium"
 
     game_name_norm = (game.get("name") or "").strip().lower()
+    # For high-confidence breakout candidates, don't surface flop comparables —
+    # flops are reference-library entries for risk-tagging, not "your game looks like this."
+    high_conviction = game.get("confidence") in ("High", "Medium") and game.get("score", 0) >= 55
     scored_list = []
     for c in comp_lib:
         if (c.get("name") or "").strip().lower() == game_name_norm:
+            continue
+        if high_conviction and c.get("outcome") == "flop":
             continue
         score = 0
         comp_clusters = {c.get("primary_cluster")} | set(c.get("secondary_clusters") or [])

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-16T01:00:02Z",
+  "generated_at": "2026-05-16T02:08:12Z",
   "cadence": "daily",
   "upstream": {
     "roblox": [
       {
         "name": "Slime RNG",
         "source": "Roblox",
-        "signal_label": "248,112 concurrent \u00b7 99% approval",
-        "player_count": 248112,
+        "signal_label": "257,195 concurrent \u00b7 99% approval",
+        "player_count": 257195,
         "approval_ratio": 0.986,
         "min_age": 5,
         "url": "https://www.roblox.com/games/92416421522960",
@@ -16,8 +16,8 @@
       {
         "name": "The Strongest Battlegrounds",
         "source": "Roblox",
-        "signal_label": "94,674 concurrent \u00b7 84% approval",
-        "player_count": 94674,
+        "signal_label": "96,211 concurrent \u00b7 84% approval",
+        "player_count": 96211,
         "approval_ratio": 0.838,
         "min_age": 5,
         "url": "https://www.roblox.com/games/10449761463",
@@ -26,8 +26,8 @@
       {
         "name": "[\ud83d\udc1d] Grow a Garden \ud83c\udf36\ufe0f",
         "source": "Roblox",
-        "signal_label": "58,412 concurrent \u00b7 90% approval",
-        "player_count": 58412,
+        "signal_label": "58,245 concurrent \u00b7 90% approval",
+        "player_count": 58245,
         "approval_ratio": 0.899,
         "min_age": 5,
         "url": "https://www.roblox.com/games/126884695634066",
@@ -36,8 +36,8 @@
       {
         "name": "Anime Vanguards",
         "source": "Roblox",
-        "signal_label": "40,244 concurrent \u00b7 97% approval",
-        "player_count": 40244,
+        "signal_label": "40,668 concurrent \u00b7 97% approval",
+        "player_count": 40668,
         "approval_ratio": 0.969,
         "min_age": 5,
         "url": "https://www.roblox.com/games/16146832113",
@@ -46,8 +46,8 @@
       {
         "name": "[W2] +1 Speed Keyboard Escape | Candy & Chocolate",
         "source": "Roblox",
-        "signal_label": "86,390 concurrent \u00b7 98% approval",
-        "player_count": 86390,
+        "signal_label": "90,511 concurrent \u00b7 98% approval",
+        "player_count": 90511,
         "approval_ratio": 0.981,
         "min_age": 5,
         "url": "https://www.roblox.com/games/95082159892680",
@@ -56,8 +56,8 @@
       {
         "name": " \ud83c\udfb2 Pet Simulator 99! \ud83c\udf0c",
         "source": "Roblox",
-        "signal_label": "101,078 concurrent \u00b7 95% approval",
-        "player_count": 101078,
+        "signal_label": "101,633 concurrent \u00b7 95% approval",
+        "player_count": 101633,
         "approval_ratio": 0.948,
         "min_age": 5,
         "url": "https://www.roblox.com/games/8737899170",
@@ -126,18 +126,6 @@
         "why": "New indie release \u2014 small signal but worth tracking."
       },
       {
-        "name": "Baldi's Basics in Education and Learning",
-        "source": "itch.io",
-        "author": "Basically Games",
-        "signal_label": "featured",
-        "rating": null,
-        "rating_count": null,
-        "sort": "featured",
-        "url": "https://basically-games.itch.io/baldis-basics",
-        "desc": "Learn with Baldi in his fully 3D interactive schoolhouse! ...Just don't get any questions wrong.",
-        "why": "New indie release \u2014 small signal but worth tracking."
-      },
-      {
         "name": "Dragonsweeper",
         "source": "itch.io",
         "author": "Daniel Benmergui",
@@ -147,6 +135,18 @@
         "sort": "featured",
         "url": "https://danielben.itch.io/dragonsweeper",
         "desc": "A roguelike minesweeper adventure",
+        "why": "New indie release \u2014 small signal but worth tracking."
+      },
+      {
+        "name": "Moss Moss",
+        "source": "itch.io",
+        "author": "Noel Cody",
+        "signal_label": "featured",
+        "rating": null,
+        "rating_count": null,
+        "sort": "featured",
+        "url": "https://noelcody.itch.io/moss-moss",
+        "desc": "Moss the world and find secrets (PICO-8).",
         "why": "New indie release \u2014 small signal but worth tracking."
       },
       {
@@ -176,7 +176,7 @@
       "id": 2483190,
       "name": "Forza Horizon 6",
       "score": 83,
-      "delta": 22,
+      "delta": 18,
       "scale": "Hit",
       "stage": "Announced",
       "confidence": "High",
@@ -187,7 +187,7 @@
       "id": 1962700,
       "name": "Subnautica 2",
       "score": 66,
-      "delta": 22,
+      "delta": 18,
       "scale": "Cult",
       "stage": "Early Access",
       "confidence": "Medium",
@@ -195,47 +195,47 @@
       "lifecycle_class": "just-launched"
     },
     {
-      "id": 2255370,
-      "name": "Directive 8020",
-      "score": 62,
-      "delta": 22,
-      "scale": "Cult",
-      "stage": "Launched",
-      "confidence": "High",
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2255370/bd086ffa9cc8b8f237f1a577e2c82b0da0af4238/header.jpg?t=1778850414",
+      "id": 3105440,
+      "name": "Heroes of Might and Magic: Olden Era",
+      "score": 54,
+      "delta": 20,
+      "scale": "Watch",
+      "stage": "Early Access",
+      "confidence": "Low",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3105440/e2bef853b7cb19e3d5f019022309783609e8454f/header.jpg?t=1778780197",
+      "lifecycle_class": "just-launched"
+    },
+    {
+      "id": 3124540,
+      "name": "Far Far West",
+      "score": 49,
+      "delta": 20,
+      "scale": "Watch",
+      "stage": "Early Access",
+      "confidence": "Low",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3124540/21362a3efa8067bf28d0abf350c2a13cd39e61bc/header_alt_assets_3.jpg?t=1778234595",
+      "lifecycle_class": "just-launched"
+    },
+    {
+      "id": 3404260,
+      "name": "Dead as Disco",
+      "score": 47,
+      "delta": 20,
+      "scale": "Watch",
+      "stage": "Early Access",
+      "confidence": "Low",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3404260/ae0f4b71735adf4f2494ecb7914fcbafee215277/header.jpg?t=1778694984",
       "lifecycle_class": "just-launched"
     },
     {
       "id": 3041230,
       "name": "Windrose",
       "score": 55,
-      "delta": 22,
+      "delta": 18,
       "scale": "Cult",
       "stage": "Early Access",
       "confidence": "Low",
       "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3041230/7e838d87d787735d5d29d72777c5ee55653dfb2b/header.jpg?t=1777529081",
-      "lifecycle_class": "just-launched"
-    },
-    {
-      "id": 2868840,
-      "name": "Slay the Spire 2",
-      "score": 55,
-      "delta": 22,
-      "scale": "Cult",
-      "stage": "Early Access",
-      "confidence": "Low",
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg?t=1776735385",
-      "lifecycle_class": "just-launched"
-    },
-    {
-      "id": 3672400,
-      "name": "Farever",
-      "score": 54,
-      "delta": 22,
-      "scale": "Watch",
-      "stage": "Early Access",
-      "confidence": "Medium",
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3672400/ff981ed8998cc1ecbb10bd0badcf3a5e2b1c2193/header_alt_assets_1.jpg?t=1778346609",
       "lifecycle_class": "just-launched"
     }
   ],
@@ -244,7 +244,7 @@
       "id": 2483190,
       "name": "Forza Horizon 6",
       "score": 83,
-      "delta": 22,
+      "delta": 18,
       "scale": "Hit",
       "stage": "Announced",
       "confidence": "High",
@@ -257,7 +257,7 @@
       "id": 2255370,
       "name": "Directive 8020",
       "score": 62,
-      "delta": 22,
+      "delta": 18,
       "scale": "Cult",
       "stage": "Launched",
       "confidence": "High",
@@ -269,30 +269,30 @@
   ],
   "wild_bets": [
     {
-      "id": 1962700,
-      "name": "Subnautica 2",
-      "score": 66,
-      "delta": 22,
-      "scale": "Cult",
-      "stage": "Early Access",
-      "confidence": "Medium",
-      "meta_modifier": "tailwind",
-      "meta_clusters": [],
-      "pull_quote": "Every leading signal is firing. The 3.2M wishlists held through EA \u2014 that's the rarer signal.",
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962700/header.jpg?t=1778777511"
-    },
-    {
-      "id": 3041230,
-      "name": "Windrose",
-      "score": 55,
-      "delta": 22,
-      "scale": "Cult",
+      "id": 3105440,
+      "name": "Heroes of Might and Magic: Olden Era",
+      "score": 54,
+      "delta": 20,
+      "scale": "Watch",
       "stage": "Early Access",
       "confidence": "Low",
       "meta_modifier": "neutral",
       "meta_clusters": [],
-      "pull_quote": "Pocketpair Publishing's first non-Palworld bet. The dev is unknown \u2014 the publishing apparatus is the read.",
-      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3041230/7e838d87d787735d5d29d72777c5ee55653dfb2b/header.jpg?t=1777529081"
+      "pull_quote": "Heroes of Might and Magic: Olden Era is the official prequel hailing back to the origins of the genre-defining, critically acclaimed series of turn-based strategy games. Raise grand armies and wield devastating spells to overcome your foes in both solo and multiplayer.",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3105440/e2bef853b7cb19e3d5f019022309783609e8454f/header.jpg?t=1778780197"
+    },
+    {
+      "id": 3672400,
+      "name": "Farever",
+      "score": 54,
+      "delta": 20,
+      "scale": "Watch",
+      "stage": "Early Access",
+      "confidence": "Medium",
+      "meta_modifier": "neutral",
+      "meta_clusters": [],
+      "pull_quote": "Engaged cohort, contested loop. The next two patches resolve it.",
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3672400/ff981ed8998cc1ecbb10bd0badcf3a5e2b1c2193/header_alt_assets_1.jpg?t=1778346609"
     }
   ],
   "meta": {
@@ -436,7 +436,7 @@
         }
       ],
       "score": 83,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -527,17 +527,6 @@
       ],
       "nearest_comparables": [
         {
-          "id": "the-day-before",
-          "name": "The Day Before",
-          "year": 2023,
-          "outcome": "flop",
-          "peak_ccu": null,
-          "primary_cluster": "Survival crafting",
-          "stage_arc": "Pre-launch scam pattern \u2192 4-day flop \u2192 studio shutdown",
-          "key_lesson": "Wishlist anomalies that aren't backed by sustained gameplay evidence are diagnostic \u2014 multi-year pre-launch with no playable demos is a tell.",
-          "similarity": 5
-        },
-        {
           "id": "manor-lords",
           "name": "Manor Lords",
           "year": 2024,
@@ -557,6 +546,17 @@
           "primary_cluster": "Soulslike",
           "stage_arc": "Announce \u2192 18-month build \u2192 launch phenom",
           "key_lesson": "Minimal pre-launch marketing density is FromSoft's signature playbook \u2014 works because brand premium does the work. Cross-cohort capture (open-world fans + soulslike fans) was the multiplier.",
+          "similarity": 3
+        },
+        {
+          "id": "hogwarts-legacy",
+          "name": "Hogwarts Legacy",
+          "year": 2023,
+          "outcome": "phenom",
+          "peak_ccu": 879000,
+          "primary_cluster": "Single-player narrative",
+          "stage_arc": "Announce \u2192 IP-driven phenom \u2192 flat tail",
+          "key_lesson": "IP-led launches capture phenom-scale peaks but cohort retention is decoupled. Sequel cadence becomes binding for the franchise. Controversy can be marketing \u2014 engagement velocity exceeded boycott velocity.",
           "similarity": 3
         }
       ],
@@ -991,7 +991,7 @@
         }
       ],
       "score": 73,
-      "score_delta": 7,
+      "score_delta": 4,
       "confidence": "High",
       "confidence_families": 4,
       "family_states": {
@@ -1293,7 +1293,7 @@
         }
       ],
       "score": 69,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "High",
       "confidence_families": 4,
       "family_states": {
@@ -1581,7 +1581,7 @@
         }
       ],
       "score": 68,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "High",
       "confidence_families": 4,
       "family_states": {
@@ -1871,7 +1871,7 @@
         }
       ],
       "score": 67,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -2167,7 +2167,7 @@
         }
       ],
       "score": 67,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -2432,7 +2432,7 @@
         }
       ],
       "score": 66,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -2697,7 +2697,7 @@
         }
       ],
       "score": 62,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "High",
       "confidence_families": 4,
       "family_states": {
@@ -2990,7 +2990,7 @@
         }
       ],
       "score": 62,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -3277,7 +3277,7 @@
         }
       ],
       "score": 61,
-      "score_delta": 20,
+      "score_delta": 13,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -3581,7 +3581,7 @@
         }
       ],
       "score": 61,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "High",
       "confidence_families": 4,
       "family_states": {
@@ -3869,7 +3869,7 @@
         }
       ],
       "score": 61,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -4164,7 +4164,7 @@
         }
       ],
       "score": 61,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -4458,7 +4458,7 @@
         }
       ],
       "score": 60,
-      "score_delta": 3,
+      "score_delta": 1,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -4747,7 +4747,7 @@
         }
       ],
       "score": 59,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "High",
       "confidence_families": 4,
       "family_states": {
@@ -5035,7 +5035,7 @@
         }
       ],
       "score": 59,
-      "score_delta": 2,
+      "score_delta": 0,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -5327,7 +5327,7 @@
         }
       ],
       "score": 59,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "High",
       "confidence_families": 4,
       "family_states": {
@@ -5611,7 +5611,7 @@
         }
       ],
       "score": 58,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -5909,7 +5909,7 @@
         }
       ],
       "score": 57,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -6201,7 +6201,7 @@
         }
       ],
       "score": 57,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -6482,7 +6482,7 @@
         }
       ],
       "score": 57,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -6765,7 +6765,7 @@
         }
       ],
       "score": 56,
-      "score_delta": 21,
+      "score_delta": 14,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -7063,7 +7063,7 @@
         }
       ],
       "score": 56,
-      "score_delta": 3,
+      "score_delta": 2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -7352,7 +7352,7 @@
         }
       ],
       "score": 56,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -7642,7 +7642,7 @@
         }
       ],
       "score": 55,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -7946,7 +7946,7 @@
         }
       ],
       "score": 55,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -8250,7 +8250,7 @@
         }
       ],
       "score": 55,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -8298,7 +8298,7 @@
         },
         {
           "name": "Twitch streams",
-          "value_label": "48 \u2192 99",
+          "value_label": "49 \u2192 100",
           "magnitude": 1.0,
           "family": "attention",
           "real": true
@@ -8313,7 +8313,7 @@
         {
           "name": "Gamalytic followers",
           "value_label": "221,571",
-          "magnitude": 0.937978777516539,
+          "magnitude": 0.9379787775165391,
           "family": "intent",
           "real": true
         },
@@ -8536,7 +8536,7 @@
         }
       ],
       "score": 55,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -8822,7 +8822,7 @@
         }
       ],
       "score": 55,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -9109,7 +9109,7 @@
         }
       ],
       "score": 55,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -9657,7 +9657,7 @@
         }
       ],
       "score": 54,
-      "score_delta": 22,
+      "score_delta": 20,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -9968,7 +9968,7 @@
         }
       ],
       "score": 54,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -10254,7 +10254,7 @@
         }
       ],
       "score": 54,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -10536,7 +10536,7 @@
         }
       ],
       "score": 54,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -10824,7 +10824,7 @@
         }
       ],
       "score": 53,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -11405,7 +11405,7 @@
         }
       ],
       "score": 52,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -11697,7 +11697,7 @@
         }
       ],
       "score": 52,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -11985,7 +11985,7 @@
         }
       ],
       "score": 51,
-      "score_delta": 20,
+      "score_delta": 13,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -12278,7 +12278,7 @@
         }
       ],
       "score": 51,
-      "score_delta": 22,
+      "score_delta": 15,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -12817,7 +12817,7 @@
         }
       ],
       "score": 51,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -13116,7 +13116,7 @@
         }
       ],
       "score": 51,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -13398,7 +13398,7 @@
         }
       ],
       "score": 51,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -13681,7 +13681,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -13973,7 +13973,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -14273,7 +14273,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -14560,7 +14560,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -14844,7 +14844,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -15131,7 +15131,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 3,
+      "score_delta": 1,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -15424,7 +15424,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -15724,7 +15724,7 @@
         }
       ],
       "score": 50,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -16015,7 +16015,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 22,
+      "score_delta": 20,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -16540,7 +16540,7 @@
       "audience_overlap": [],
       "country_top": [],
       "score": 49,
-      "score_delta": 15,
+      "score_delta": 8,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -17338,7 +17338,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -17623,7 +17623,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -17919,7 +17919,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -18208,7 +18208,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -18502,7 +18502,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 2,
+      "score_delta": 4,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -18799,7 +18799,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -19091,7 +19091,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -19373,7 +19373,7 @@
         }
       ],
       "score": 49,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -19629,7 +19629,7 @@
         }
       ],
       "score": 48,
-      "score_delta": 22,
+      "score_delta": 20,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -19907,7 +19907,7 @@
         }
       ],
       "score": 48,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -20462,7 +20462,7 @@
         }
       ],
       "score": 48,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -20759,7 +20759,7 @@
         }
       ],
       "score": 48,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -21040,7 +21040,7 @@
         }
       ],
       "score": 48,
-      "score_delta": 3,
+      "score_delta": 0,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -21290,7 +21290,7 @@
         }
       ],
       "score": 47,
-      "score_delta": 22,
+      "score_delta": 20,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -21584,7 +21584,7 @@
         }
       ],
       "score": 47,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -22159,7 +22159,7 @@
         }
       ],
       "score": 47,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -22440,7 +22440,7 @@
         }
       ],
       "score": 47,
-      "score_delta": 2,
+      "score_delta": 0,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -22723,7 +22723,7 @@
         }
       ],
       "score": 46,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -23018,7 +23018,7 @@
         }
       ],
       "score": 46,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -23314,7 +23314,7 @@
         }
       ],
       "score": 46,
-      "score_delta": 2,
+      "score_delta": 5,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -23565,7 +23565,7 @@
         }
       ],
       "score": 45,
-      "score_delta": 20,
+      "score_delta": 13,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -24061,7 +24061,7 @@
         }
       ],
       "score": 45,
-      "score_delta": 19,
+      "score_delta": 12,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -24345,7 +24345,7 @@
         }
       ],
       "score": 45,
-      "score_delta": 3,
+      "score_delta": 0,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -24637,7 +24637,7 @@
         }
       ],
       "score": 45,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -24858,7 +24858,7 @@
       "audience_overlap": [],
       "country_top": [],
       "score": 44,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -25742,7 +25742,7 @@
         }
       ],
       "score": 44,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -26301,7 +26301,7 @@
         }
       ],
       "score": 43,
-      "score_delta": 3,
+      "score_delta": -3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -26579,7 +26579,7 @@
         }
       ],
       "score": 43,
-      "score_delta": 3,
+      "score_delta": 1,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -26866,7 +26866,7 @@
         }
       ],
       "score": 43,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -27151,7 +27151,7 @@
         }
       ],
       "score": 43,
-      "score_delta": 6,
+      "score_delta": 4,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -27403,7 +27403,7 @@
         }
       ],
       "score": 42,
-      "score_delta": 22,
+      "score_delta": 20,
       "confidence": "Low",
       "confidence_families": 0,
       "family_states": {
@@ -27620,7 +27620,7 @@
       "audience_overlap": [],
       "country_top": [],
       "score": 42,
-      "score_delta": 16,
+      "score_delta": 9,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -27891,7 +27891,7 @@
         }
       ],
       "score": 42,
-      "score_delta": 7,
+      "score_delta": 5,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -28183,7 +28183,7 @@
         }
       ],
       "score": 42,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -28465,7 +28465,7 @@
         }
       ],
       "score": 42,
-      "score_delta": 3,
+      "score_delta": -2,
       "confidence": "High",
       "confidence_families": 3,
       "family_states": {
@@ -29047,7 +29047,7 @@
         }
       ],
       "score": 41,
-      "score_delta": 17,
+      "score_delta": 10,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -29327,7 +29327,7 @@
         }
       ],
       "score": 41,
-      "score_delta": 4,
+      "score_delta": 2,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -30036,7 +30036,7 @@
         }
       ],
       "score": 40,
-      "score_delta": 5,
+      "score_delta": 3,
       "confidence": "Low",
       "confidence_families": 1,
       "family_states": {
@@ -30325,7 +30325,7 @@
         }
       ],
       "score": 39,
-      "score_delta": 22,
+      "score_delta": 18,
       "confidence": "Low",
       "confidence_families": 0,
       "family_states": {
@@ -31097,7 +31097,7 @@
         }
       ],
       "score": 38,
-      "score_delta": 15,
+      "score_delta": 11,
       "confidence": "Medium",
       "confidence_families": 2,
       "family_states": {
@@ -32557,7 +32557,7 @@
       "audience_overlap": [],
       "country_top": [],
       "score": 33,
-      "score_delta": 10,
+      "score_delta": -5,
       "confidence": "Low",
       "confidence_families": 0,
       "family_states": {
@@ -33499,7 +33499,7 @@
       "is_mature_phenom": false,
       "is_broken_out": false,
       "lifecycle_class": "pre-launch",
-      "days_since_release": -3,
+      "days_since_release": -2,
       "real_signals": {
         "followers": 537,
         "wishlists": 10796,
@@ -34645,7 +34645,7 @@
       "is_mature_phenom": false,
       "is_broken_out": false,
       "lifecycle_class": "pre-launch",
-      "days_since_release": -3,
+      "days_since_release": -2,
       "real_signals": {
         "followers": 291,
         "wishlists": 8000,
@@ -48339,7 +48339,7 @@
       "is_mature_phenom": false,
       "is_broken_out": false,
       "lifecycle_class": "pre-launch",
-      "days_since_release": -4,
+      "days_since_release": -3,
       "real_signals": {
         "followers": 1,
         "wishlists": 12,

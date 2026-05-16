@@ -247,7 +247,22 @@ def main():
     # Movers / Conviction / Wild Bets. Broken-out and mature-launched are excluded.
     eligible = [g for g in games if not g.get("is_broken_out")]
 
-    movers = sorted(eligible, key=lambda g: abs(g["score_delta"]), reverse=True)[:6]
+    # Significance-weighted mover ranking: a +20 on 50K revenue is noise;
+    # a +18 on a 200K-follower pre-launch is a story. Multiply delta by a
+    # log-scaled attention floor (followers + hypes) so big games get priority.
+    import math as _math
+    def mover_priority(g):
+        delta = abs(g.get("score_delta", 0))
+        rs = g.get("real_signals") or {}
+        followers = rs.get("followers") or 0
+        hypes = rs.get("igdb_hypes") or 0
+        wishlists = rs.get("wishlists") or 0
+        # Attention floor: log10 of best of (followers, wishlists/3, hypes*1000).
+        attention = max(followers, (wishlists or 0) / 3, (hypes or 0) * 1000)
+        floor = max(1.0, _math.log10(max(1, attention) / 1000.0))
+        return delta * floor
+
+    movers = sorted(eligible, key=mover_priority, reverse=True)[:6]
     movers_compact = [
         {
             "id": g["id"], "name": g["name"], "score": g["score"], "delta": g["score_delta"],
