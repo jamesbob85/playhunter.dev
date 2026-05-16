@@ -36,9 +36,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import _env  # noqa: E402
 import _cache  # noqa: E402
+import _universe  # noqa: E402
 _env.load()
 
-SEED = ROOT / "pipeline" / "seed_games.json"
 OUT = ROOT / "data" / "raw_igdb.json"
 
 CLIENT_ID = os.environ.get("IGDB_CLIENT_ID") or os.environ.get("TWITCH_CLIENT_ID")
@@ -180,7 +180,7 @@ def main() -> None:
         return
 
     token = get_token()
-    seed = json.loads(SEED.read_text())
+    candidates = _universe.load_candidates(include_other=True)
     # Try to pull igdb_id from twitch cache if available
     twitch_data = {}
     twitch_blob_path = ROOT / "data" / "raw_twitch.json"
@@ -193,9 +193,11 @@ def main() -> None:
     out = {"games": {}}
     hit, miss = 0, 0
 
-    for i, g in enumerate(seed["games"]):
+    for i, g in enumerate(candidates):
         appid = g["appid"]
-        name = g["twitch_name"]
+        name = g.get("name") or ""
+        if not name:
+            continue
 
         cached = _cache.read("igdb", appid, STALE, args.refresh)
         if cached:
@@ -219,15 +221,10 @@ def main() -> None:
             time.sleep(0.3)
 
         out["games"][str(appid)] = payload
-        gn = (payload.get("game") or {}).get("name") if isinstance(payload, dict) else None
-        hypes = (payload.get("game") or {}).get("hypes") if isinstance(payload, dict) else None
-        pop = payload.get("popularity") if isinstance(payload, dict) else None
-        pop_summary = ""
-        if isinstance(pop, dict):
-            steam_peak = (pop.get("steam_24h_peak") or {}).get("value")
-            visits = (pop.get("igdb_visits") or {}).get("value")
-            pop_summary = f" pop[steam_peak={steam_peak}, visits={visits}]"
-        print(f"[{i+1}/{len(seed['games'])}] {gn or name} hypes={hypes}{pop_summary}", flush=True)
+        if (i + 1) % 25 == 0 or i == 0:
+            gn = (payload.get("game") or {}).get("name") if isinstance(payload, dict) else None
+            hypes = (payload.get("game") or {}).get("hypes") if isinstance(payload, dict) else None
+            print(f"[{i+1}/{len(candidates)}] {gn or name} hypes={hypes}", flush=True)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=2))

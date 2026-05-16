@@ -22,8 +22,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import _cache  # noqa: E402
+import _universe  # noqa: E402
 
-SEED = ROOT / "pipeline" / "seed_games.json"
 OUT = ROOT / "data" / "raw_steam.json"
 
 UA = "Mozilla/5.0 (scout.playhunter.dev research bot)"
@@ -92,10 +92,13 @@ def main() -> None:
     ap.add_argument("--refresh", action="store_true", help="Force refresh of all cached records")
     args = ap.parse_args()
 
-    seed = json.loads(SEED.read_text())
+    candidates = _universe.load_candidates(include_other=True)
+    if not candidates:
+        print("No universe.json — run fetch_universe.py first.")
+        return
     out = {}
     hit, miss = 0, 0
-    for i, g in enumerate(seed["games"]):
+    for i, g in enumerate(candidates):
         appid = g["appid"]
 
         cached_steam = _cache.read("steam", appid, STEAM_STALE, args.refresh)
@@ -119,10 +122,17 @@ def main() -> None:
             miss += 1
             time.sleep(0.7)
 
-        print(f"[{i+1}/{len(seed['games'])}] {appid} {(details or {}).get('name') or '?'}", flush=True)
+        if (i + 1) % 25 == 0 or i == 0:
+            print(f"[{i+1}/{len(candidates)}] {appid} {(details or {}).get('name') or '?'}", flush=True)
         out[str(appid)] = {
             "appid": appid,
-            "seed": g,
+            "seed": {
+                "appid": appid,
+                "twitch_name": (details or {}).get("name") or g.get("name"),
+                "stage_hint": g.get("lifecycle_class"),
+                "lifecycle_class": g.get("lifecycle_class"),
+                "meta_clusters": [],
+            },
             "appdetails": details,
             "steamspy": spy,
             "fetched_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),

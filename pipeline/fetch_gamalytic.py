@@ -17,9 +17,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import _env  # noqa: E402
 import _cache  # noqa: E402
+import _universe  # noqa: E402
 _env.load()
 
-SEED = ROOT / "pipeline" / "seed_games.json"
 OUT = ROOT / "data" / "raw_gamalytic.json"
 
 ENDPOINT = "https://api.gamalytic.com/game"
@@ -66,10 +66,10 @@ def main() -> None:
         OUT.write_text(json.dumps({"_no_creds": True, "games": {}}, indent=2))
         return
 
-    seed = json.loads(SEED.read_text())
+    candidates = _universe.load_candidates(include_other=True)
     out = {"games": {}}
     hit, miss = 0, 0
-    for i, g in enumerate(seed["games"]):
+    for i, g in enumerate(candidates):
         appid = g["appid"]
         cached = _cache.read("gamalytic", appid, STALE_SECONDS, args.refresh)
         if cached:
@@ -85,7 +85,8 @@ def main() -> None:
             miss += 1
             time.sleep(RATE_DELAY)
         out["games"][str(appid)] = data
-        print(f"[{i+1}/{len(seed['games'])}] {appid}", flush=True)
+        if (i + 1) % 25 == 0 or i == 0:
+            print(f"[{i+1}/{len(candidates)}] {appid}", flush=True)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=2))

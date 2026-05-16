@@ -243,32 +243,35 @@ def main():
         g["nearest_comparables"] = nearest_comparables(g, comp_lib)
         g["thesis"] = theses.get(str(g["id"]), {})
 
-    movers = sorted(games, key=lambda g: abs(g["score_delta"]), reverse=True)[:6]
+    # FRONT-PAGE LIFECYCLE FILTER: only breakout-candidate-eligible games appear in
+    # Movers / Conviction / Wild Bets. Broken-out and mature-launched are excluded.
+    eligible = [g for g in games if not g.get("is_broken_out")]
+
+    movers = sorted(eligible, key=lambda g: abs(g["score_delta"]), reverse=True)[:6]
     movers_compact = [
         {
             "id": g["id"], "name": g["name"], "score": g["score"], "delta": g["score_delta"],
             "scale": g["scale"], "stage": g["stage_label"], "confidence": g["confidence"],
             "header_image": g.get("header_image"),
+            "lifecycle_class": g.get("lifecycle_class"),
         }
         for g in movers
     ]
 
-    # Conviction = high-signal active products. Excludes settled phenoms.
+    # Conviction = high-signal pre-launch or just-launched products only.
     high_conviction = [
-        g for g in games
-        if not g.get("is_mature_phenom")
-        and g["confidence"] in ("High", "Medium")
+        g for g in eligible
+        if g["confidence"] in ("High", "Medium")
         and g["scale"] in ("Phenom", "Hit", "Cult")
         and g["score"] >= 55
     ]
     high_conviction.sort(key=lambda g: (g["confidence"] == "High", g["score"], g["score_delta"]), reverse=True)
 
-    # Wild bets = high-delta picks not in conviction. Lower base rate but higher payoff.
+    # Wild bets = high-delta picks not in conviction.
     conviction_ids = {g["id"] for g in high_conviction[:2]}
     wild_bets = [
-        g for g in games
+        g for g in eligible
         if g["id"] not in conviction_ids
-        and not g.get("is_mature_phenom")
         and g["score_delta"] >= 12
         and g["score"] >= 30
     ]

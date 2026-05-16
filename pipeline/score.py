@@ -48,15 +48,12 @@ def deterministic_jitter(appid: int, salt: str, lo: float, hi: float) -> float:
 
 def infer_stage(steam_rec: dict, gam: dict) -> str:
     details = steam_rec.get("appdetails") or {}
-    if gam.get("unreleased") is True:
+    # Prefer the lifecycle classification carried by universe discovery
+    lc = steam_rec.get("seed", {}).get("lifecycle_class")
+    if gam.get("unreleased") is True or details.get("coming_soon"):
         return "Announced"
-    if gam.get("earlyAccess") is True:
+    if gam.get("earlyAccess") is True or "Early Access" in (details.get("genres") or []):
         return "EA"
-    if details.get("coming_soon"):
-        return "Announced"
-    if "Early Access" in (details.get("genres") or []):
-        return "EA"
-    # If we have a release_date in the past, it's Launched
     rd = gam.get("releaseDate") or gam.get("firstReleaseDate")
     if rd:
         try:
@@ -64,7 +61,11 @@ def infer_stage(steam_rec: dict, gam: dict) -> str:
                 return "Launched"
         except (TypeError, ValueError):
             pass
-    return steam_rec["seed"].get("stage_hint", "Launched")
+    if lc == "pre-launch":
+        return "Announced"
+    if lc in ("just-launched", "launched"):
+        return "Launched"
+    return "Launched"
 
 
 def load_snapshot(days_ago: int):
@@ -239,14 +240,31 @@ def score_one(appid_key: str, steam_rec: dict, gam: dict, twitch: dict, igdb: di
             days_since_release = (NOW - float(release_ts) / 1000.0) / 86400.0
         except (TypeError, ValueError):
             pass
-    # Maturity dampener only applies to fully launched products. Active EA games
-    # can still break out (Manor Lords, R.E.P.O., Schedule I are all live examples).
-    is_mature_phenom = (
-        stage == "Launched"
-        and real_revenue >= 150_000_000
-        and days_since_release is not None
-        and days_since_release > 365
-    )
+    # Maturity dampener: any of these patterns means front-page exclusion.
+    # The product is about identifying breakout candidates, not retrospective hits.
+    lifecycle_class = steam_rec.get("seed", {}).get("lifecycle_class") or "launched"
+
+    is_mature_phenom = False
+    is_broken_out = False  # already had its breakout — not a candidate anymore
+
+    # Pattern 1: mature high-revenue launched products
+    if (stage == "Launched"
+            and real_revenue >= 30_000_000
+            and days_since_release is not None
+            and days_since_release > 365):
+        is_mature_phenom = True
+        is_broken_out = True
+
+    # Pattern 2: already-broken-out recently-launched products
+    # (revenue floor higher than scout-eligible bar but not yet "mature")
+    if stage == "Launched" and real_revenue >= 100_000_000:
+        is_broken_out = True
+
+    # Pattern 3: lifecycle_class explicitly says "launched" (not "just-launched") —
+    # comes from fetch_universe's classifier, meaning >90 days post-release
+    if lifecycle_class == "launched" and days_since_release and days_since_release > 90:
+        is_mature_phenom = True
+        is_broken_out = True
 
     # ---- Signal magnitudes (0..1) ----
     # Attention: Twitch live (real) + IGDB visits/youtube popscore (real)
@@ -439,6 +457,8 @@ def score_one(appid_key: str, steam_rec: dict, gam: dict, twitch: dict, igdb: di
         "scale_band": [scale_min, scale_max],
         "meta_modifier": meta_modifier,
         "is_mature_phenom": is_mature_phenom,
+        "is_broken_out": is_broken_out,
+        "lifecycle_class": lifecycle_class,
         "days_since_release": int(days_since_release) if days_since_release else None,
         "real_signals": {
             "followers": real_followers,

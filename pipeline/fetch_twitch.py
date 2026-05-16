@@ -23,9 +23,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import _env  # noqa: E402
 import _cache  # noqa: E402
+import _universe  # noqa: E402
 _env.load()
 
-SEED = ROOT / "pipeline" / "seed_games.json"
 OUT = ROOT / "data" / "raw_twitch.json"
 
 CLIENT_ID = os.environ.get("TWITCH_CLIENT_ID")
@@ -101,13 +101,15 @@ def main() -> None:
         return
 
     token = get_token()
-    seed = json.loads(SEED.read_text())
+    candidates = _universe.load_candidates(include_other=True)
     out = {"_synthetic": False, "games": {}}
     hit, miss = 0, 0
 
-    for i, g in enumerate(seed["games"]):
+    for i, g in enumerate(candidates):
         appid = g["appid"]
-        name = g["twitch_name"]
+        name = g.get("name") or ""
+        if not name:
+            continue
         cached_live = _cache.read("twitch", appid, LIVE_STALE, args.refresh)
         if cached_live:
             payload = cached_live.get("payload")
@@ -130,10 +132,12 @@ def main() -> None:
 
         out["games"][name] = payload
         out["games"].setdefault("_by_appid", {})[str(appid)] = name
-        print(f"[{i+1}/{len(seed['games'])}] {name}: " + (
-            f"{payload.get('current_streams', 0)} streams, {payload.get('current_viewers', 0)} viewers"
-            if isinstance(payload, dict) and "current_streams" in payload else "—"
-        ), flush=True)
+        if (i + 1) % 25 == 0 or i == 0:
+            summary = (
+                f"{payload.get('current_streams', 0)} streams, {payload.get('current_viewers', 0)} viewers"
+                if isinstance(payload, dict) and "current_streams" in payload else "—"
+            )
+            print(f"[{i+1}/{len(candidates)}] {name}: {summary}", flush=True)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=2))

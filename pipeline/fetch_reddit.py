@@ -21,29 +21,36 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import _cache  # noqa: E402
+import _universe  # noqa: E402
 
 OUT = ROOT / "data" / "raw_reddit.json"
 STALE = 12 * 3600
 
 UA = "scout.playhunter.dev:v1 (by /u/scoutbot)"
 
-# Per-game subreddits (when one exists for a tracked title)
-GAME_SUBS = {
-    "1030300": "HollowKnight",      # also covers Silksong discussion
-    "1966720": "lethalcompany",
-    "3164500": "Schedule_I",
+# Per-game subreddit overrides — when the auto-derived name from title differs.
+# Most games can be derived from the title (e.g. "Manor Lords" → "ManorLords").
+GAME_SUBS_OVERRIDES = {
+    "1030300": "HollowKnight",       # Silksong discussion lives in HK sub
     "3241660": "REPOgame",
     "1145350": "HadesTheGame",
-    "1363080": "ManorLords",
-    "1601580": "Frostpunk",
     "1458140": "PacificDriveGame",
     "553850":  "Helldivers",
-    "2198150": "TinyGlade",
-    "1086940": "BaldursGate3",
     "2622380": "Eldenring",          # includes Nightreign
-    "1623730": "Palworld",
     "2358720": "BlackMythWukong",
+    "1962700": "Subnautica",         # Subnautica 2 → same sub
+    "1086940": "BaldursGate3",
+    "2767030": "marvelrivals",
+    "2807960": "Battlefield",        # Battlefield 6 → Battlefield sub
+    "3321460": "CrimsonDesert",
 }
+
+
+def derive_subreddit_name(title: str) -> str:
+    """Best-effort: strip punctuation + spaces from title."""
+    import re
+    s = re.sub(r"[^A-Za-z0-9]+", "", title or "")
+    return s[:21] if s else ""
 
 # Cross-cutting taste subreddits
 TASTE_SUBS = [
@@ -90,9 +97,13 @@ def main() -> None:
         "taste": {},
     }
 
+    candidates = _universe.load_candidates(include_other=True)
     all_targets = []
-    for appid, sub in GAME_SUBS.items():
-        all_targets.append(("game", appid, sub))
+    for c in candidates:
+        appid = str(c["appid"])
+        sub = GAME_SUBS_OVERRIDES.get(appid) or derive_subreddit_name(c.get("name", ""))
+        if sub:
+            all_targets.append(("game", appid, sub))
     for sub in TASTE_SUBS:
         all_targets.append(("taste", None, sub))
 
@@ -117,8 +128,9 @@ def main() -> None:
         else:
             out["taste"][sub] = payload
 
-        sub_count = payload.get("subscribers") if isinstance(payload, dict) else None
-        print(f"[{i+1}/{len(all_targets)}] r/{sub}: " + (f"{sub_count:,}" if isinstance(sub_count, int) else "—"))
+        if (i + 1) % 30 == 0 or i == 0:
+            sub_count = payload.get("subscribers") if isinstance(payload, dict) else None
+            print(f"[{i+1}/{len(all_targets)}] r/{sub}: " + (f"{sub_count:,}" if isinstance(sub_count, int) else "—"))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=2))
