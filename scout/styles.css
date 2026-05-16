@@ -358,10 +358,38 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 12px;
   letter-spacing: 0.06em;
+  flex-wrap: wrap;
 }
 .footlink { color: var(--fg-3); }
 .footlink:hover { color: var(--fg-1); }
 .footlink.active { color: var(--fg); }
+
+/* ── Top nav (mirrors footer, shown after masthead) ──────────────── */
+.topnav {
+  display: flex;
+  gap: 22px;
+  padding: 12px 0 14px;
+  border-bottom: 1px solid var(--line);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  flex-wrap: wrap;
+}
+.topnav a { color: var(--fg-3); text-decoration: none; padding: 2px 0; transition: color 0.15s; }
+.topnav a:hover { color: var(--fg-1); }
+.topnav a.active {
+  color: var(--fg);
+  position: relative;
+}
+.topnav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+}
 
 /* ── Game Detail ─────────────────────────────────────────────────── */
 .detail {
