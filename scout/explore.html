@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Explore · Scout · playhunter.dev</title>
+    <meta name="description" content="The full breakout-candidate universe as a visual map. Position shows lifecycle stage and score. Bubble size shows wishlist intent. Color shows projected scale." />
+    <link rel="preconnect" href="https://shared.akamai.steamstatic.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" class="brief">
+      <header class="masthead">
+        <div class="masthead-l">
+          <a class="brand" href="./index.html">SCOUT</a>
+          <div class="tagline">the desk for breakout games</div>
+        </div>
+        <div class="masthead-r">
+          <a class="back" href="./index.html">← Brief</a>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <h1 class="page-title">Explore</h1>
+        <p class="page-deck">Every tracked candidate on a single map. Position is lifecycle × score. Bubble size is wishlist intent. Color is projected scale band. Hover for a read, click to drill in.</p>
+      </section>
+
+      <section class="explore-controls">
+        <div class="filter-group">
+          <span class="filter-label">Scale</span>
+          <button class="filter-chip active" data-filter="scale" data-value="">All</button>
+          <button class="filter-chip" data-filter="scale" data-value="Phenom">Phenom</button>
+          <button class="filter-chip" data-filter="scale" data-value="Hit">Hit</button>
+          <button class="filter-chip" data-filter="scale" data-value="Cult">Cult</button>
+          <button class="filter-chip" data-filter="scale" data-value="Watch">Watch</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Stage</span>
+          <button class="filter-chip active" data-filter="stage" data-value="">All</button>
+          <button class="filter-chip" data-filter="stage" data-value="Announced">Announced</button>
+          <button class="filter-chip" data-filter="stage" data-value="Early Access">Early Access</button>
+          <button class="filter-chip" data-filter="stage" data-value="Launched">Launched</button>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Bubble size</span>
+          <button class="filter-chip active" data-filter="size" data-value="wishlists">Wishlists</button>
+          <button class="filter-chip" data-filter="size" data-value="followers">Followers</button>
+          <button class="filter-chip" data-filter="size" data-value="hypes">Hypes</button>
+          <button class="filter-chip" data-filter="size" data-value="revenue">Revenue</button>
+        </div>
+      </section>
+
+      <section class="explore-wrap">
+        <div class="explore-chart-container">
+          <div id="explore-chart"></div>
+          <div id="explore-tooltip" class="explore-tooltip" hidden></div>
+        </div>
+        <div class="explore-legend">
+          <span class="elg"><span class="ed-dot" style="background:#ff6a45"></span>Phenom</span>
+          <span class="elg"><span class="ed-dot" style="background:#f4b740"></span>Hit</span>
+          <span class="elg"><span class="ed-dot" style="background:#4ed3b6"></span>Cult</span>
+          <span class="elg"><span class="ed-dot" style="background:#6e6e7c"></span>Watch</span>
+          <span class="elg muted">Y: Breakout Score · X: Lifecycle stage (left = pre-launch, right = launched)</span>
+        </div>
+      </section>
+
+      <section class="explore-callouts" id="explore-callouts"></section>
+
+      <footer class="footnav">
+        <a class="footlink" href="./index.html">Brief</a>
+        <a class="footlink" href="./watchlist.html">Watchlist</a>
+        <a class="footlink" href="./universe.html">Universe</a>
+        <a class="footlink active" href="./explore.html">Explore</a>
+        <a class="footlink" href="./meta.html">Meta</a>
+        <a class="footlink" href="./upstream.html">Upstream</a>
+        <a class="footlink" href="./comparables.html">Comparables</a>
+        <a class="footlink" href="./methodology.html">Methodology</a>
+      </footer>
+    </main>
+    <script src="./explore.js"></script>
+  </body>
+</html>

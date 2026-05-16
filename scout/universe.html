@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Universe · Scout · playhunter.dev</title>
-    <meta name="description" content="The full universe of tracked candidates. Sort by score, delta, scale, stage. Filter by stage, scale, confidence, meta cluster." />
+    <meta name="description" content="The full breakout-candidate universe as an image-led tile grid. Filter, sort, drill in." />
+    <link rel="preconnect" href="https://shared.akamai.steamstatic.com" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -21,7 +22,7 @@
 
       <section class="page-head">
         <h1 class="page-title">Universe</h1>
-        <p class="page-deck">Every tracked candidate. Click a row to drill into the thesis. Click a column header to sort.</p>
+        <p class="page-deck">Every tracked candidate as a card. Sorted by score by default. Click any tile to drill in.</p>
       </section>
 
       <section class="uni-controls">
@@ -41,29 +42,24 @@
           <button class="filter-chip" data-filter="scale" data-value="Watch">Watch</button>
           <button class="filter-chip" data-filter="scale" data-value="Settled">Settled</button>
         </div>
+        <div class="filter-group">
+          <span class="filter-label">Sort</span>
+          <button class="filter-chip active" data-filter="sort" data-value="score">Score</button>
+          <button class="filter-chip" data-filter="sort" data-value="delta">Delta</button>
+          <button class="filter-chip" data-filter="sort" data-value="wishlists">Wishlists</button>
+          <button class="filter-chip" data-filter="sort" data-value="hypes">Hypes</button>
+          <button class="filter-chip" data-filter="sort" data-value="revenue">Revenue</button>
+        </div>
         <span class="uni-count" id="uni-count">—</span>
       </section>
 
-      <table class="uni-table" id="uni-table">
-        <thead>
-          <tr>
-            <th data-sort="score" class="active-sort">Score</th>
-            <th data-sort="delta">Δ</th>
-            <th data-sort="name">Game</th>
-            <th data-sort="scale">Scale</th>
-            <th data-sort="stage">Stage</th>
-            <th data-sort="confidence">Conf.</th>
-            <th>Cluster</th>
-            <th>Tags</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <section id="uni-grid" class="uni-grid"></section>
 
       <footer class="footnav">
         <a class="footlink" href="./index.html">Brief</a>
         <a class="footlink" href="./watchlist.html">Watchlist</a>
         <a class="footlink active" href="./universe.html">Universe</a>
+        <a class="footlink" href="./explore.html">Explore</a>
         <a class="footlink" href="./meta.html">Meta</a>
         <a class="footlink" href="./upstream.html">Upstream</a>
         <a class="footlink" href="./comparables.html">Comparables</a>
