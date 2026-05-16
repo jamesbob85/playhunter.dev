@@ -6,8 +6,8 @@
       {
         "name": "Slime RNG",
         "source": "Roblox",
-        "signal_label": "257,195 concurrent \u00b7 99% approval",
-        "player_count": 257195,
+        "signal_label": "248,112 concurrent \u00b7 99% approval",
+        "player_count": 248112,
         "approval_ratio": 0.986,
         "min_age": 5,
         "url": "https://www.roblox.com/games/92416421522960",
@@ -16,8 +16,8 @@
       {
         "name": "The Strongest Battlegrounds",
         "source": "Roblox",
-        "signal_label": "96,211 concurrent \u00b7 84% approval",
-        "player_count": 96211,
+        "signal_label": "94,674 concurrent \u00b7 84% approval",
+        "player_count": 94674,
         "approval_ratio": 0.838,
         "min_age": 5,
         "url": "https://www.roblox.com/games/10449761463",
@@ -26,8 +26,8 @@
       {
         "name": "[\ud83d\udc1d] Grow a Garden \ud83c\udf36\ufe0f",
         "source": "Roblox",
-        "signal_label": "58,245 concurrent \u00b7 90% approval",
-        "player_count": 58245,
+        "signal_label": "58,412 concurrent \u00b7 90% approval",
+        "player_count": 58412,
         "approval_ratio": 0.899,
         "min_age": 5,
         "url": "https://www.roblox.com/games/126884695634066",
@@ -36,8 +36,8 @@
       {
         "name": "Anime Vanguards",
         "source": "Roblox",
-        "signal_label": "40,668 concurrent \u00b7 97% approval",
-        "player_count": 40668,
+        "signal_label": "40,244 concurrent \u00b7 97% approval",
+        "player_count": 40244,
         "approval_ratio": 0.969,
         "min_age": 5,
         "url": "https://www.roblox.com/games/16146832113",
@@ -46,8 +46,8 @@
       {
         "name": "[W2] +1 Speed Keyboard Escape | Candy & Chocolate",
         "source": "Roblox",
-        "signal_label": "90,511 concurrent \u00b7 98% approval",
-        "player_count": 90511,
+        "signal_label": "86,390 concurrent \u00b7 98% approval",
+        "player_count": 86390,
         "approval_ratio": 0.981,
         "min_age": 5,
         "url": "https://www.roblox.com/games/95082159892680",
@@ -56,8 +56,8 @@
       {
         "name": " \ud83c\udfb2 Pet Simulator 99! \ud83c\udf0c",
         "source": "Roblox",
-        "signal_label": "101,633 concurrent \u00b7 95% approval",
-        "player_count": 101633,
+        "signal_label": "101,078 concurrent \u00b7 95% approval",
+        "player_count": 101078,
         "approval_ratio": 0.948,
         "min_age": 5,
         "url": "https://www.roblox.com/games/8737899170",
@@ -126,6 +126,18 @@
         "why": "New indie release \u2014 small signal but worth tracking."
       },
       {
+        "name": "Baldi's Basics in Education and Learning",
+        "source": "itch.io",
+        "author": "Basically Games",
+        "signal_label": "featured",
+        "rating": null,
+        "rating_count": null,
+        "sort": "featured",
+        "url": "https://basically-games.itch.io/baldis-basics",
+        "desc": "Learn with Baldi in his fully 3D interactive schoolhouse! ...Just don't get any questions wrong.",
+        "why": "New indie release \u2014 small signal but worth tracking."
+      },
+      {
         "name": "Dragonsweeper",
         "source": "itch.io",
         "author": "Daniel Benmergui",
@@ -135,18 +147,6 @@
         "sort": "featured",
         "url": "https://danielben.itch.io/dragonsweeper",
         "desc": "A roguelike minesweeper adventure",
-        "why": "New indie release \u2014 small signal but worth tracking."
-      },
-      {
-        "name": "Moss Moss",
-        "source": "itch.io",
-        "author": "Noel Cody",
-        "signal_label": "featured",
-        "rating": null,
-        "rating_count": null,
-        "sort": "featured",
-        "url": "https://noelcody.itch.io/moss-moss",
-        "desc": "Moss the world and find secrets (PICO-8).",
         "why": "New indie release \u2014 small signal but worth tracking."
       },
       {
@@ -8298,7 +8298,7 @@
         },
         {
           "name": "Twitch streams",
-          "value_label": "49 \u2192 100",
+          "value_label": "48 \u2192 99",
           "magnitude": 1.0,
           "family": "attention",
           "real": true
@@ -8313,7 +8313,7 @@
         {
           "name": "Gamalytic followers",
           "value_label": "221,571",
-          "magnitude": 0.9379787775165391,
+          "magnitude": 0.937978777516539,
           "family": "intent",
           "real": true
         },
