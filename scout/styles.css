@@ -995,6 +995,127 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   letter-spacing: 0.04em;
 }
 
+/* ── Visual conviction primitives ─────────────────────────────────── */
+
+/* Confidence radar */
+.score-stat-radar {
+  align-items: flex-start;
+}
+.radar {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin-top: 4px;
+}
+.rd-axis, .rd-axis-on {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+.rd-axis { fill: var(--fg-3); }
+.rd-axis-on { fill: var(--ok); }
+.conf-fam-count {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--fg-3);
+  margin-left: 6px;
+}
+
+/* Sparkline */
+.sparkline {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* Arc chart */
+.arc-wrap {
+  margin-top: 8px;
+}
+.arc-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ax-tick {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 9px;
+  fill: var(--fg-3);
+}
+.arc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+  font-size: 12px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+.leg-item { display: inline-flex; align-items: center; gap: 6px; color: var(--fg-2); }
+.leg-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.leg-label { color: var(--fg-1); }
+.leg-value {
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+.arc-empty {
+  padding: 16px 20px;
+  background: var(--bg-1);
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  color: var(--fg-3);
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Comparable overlay block on nearest-comp cards */
+.nearest-comp-wrap { display: flex; flex-direction: column; gap: 6px; }
+.comp-overlay {
+  padding: 10px 12px 8px;
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-top: -2px;
+}
+.comp-overlay-label {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* Sentiment shift */
+.sentiment-shift {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+}
+.sentiment-shift .ss-arrow { font-size: 10px; }
+.sentiment-shift[data-dir="up"] .ss-arrow,
+.sentiment-shift[data-dir="up"] .ss-diff { color: var(--ok); }
+.sentiment-shift[data-dir="down"] .ss-arrow,
+.sentiment-shift[data-dir="down"] .ss-diff { color: var(--warn); }
+.sentiment-shift[data-dir="flat"] .ss-arrow,
+.sentiment-shift[data-dir="flat"] .ss-diff { color: var(--fg-3); }
+.sentiment-shift .ss-current { color: var(--fg-1); }
+.sentiment-flat {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--fg-2);
+}
+
+/* Update metric layout for sparkline embedding */
+.metric { position: relative; }
+.metric .sparkline { float: right; margin-top: 1px; }
+
 /* Nearest comparables on game detail */
 .nearest-comp-list { display: flex; flex-direction: column; gap: 8px; }
 .nearest-comp {

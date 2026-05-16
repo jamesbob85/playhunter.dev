@@ -3,6 +3,50 @@
   "curated": "2026-05-15",
   "comparables": [
     {
+      "id": "subnautica",
+      "name": "Subnautica",
+      "year": 2018,
+      "steam_appid": 264710,
+      "peak_ccu": 22000,
+      "lifetime_revenue_usd": 200000000,
+      "stage_arc": "EA 2014–2018 → 1.0 → durable",
+      "primary_cluster": "Survival crafting",
+      "secondary_clusters": ["Single-player narrative"],
+      "team_size": 35,
+      "publisher": null,
+      "outcome": "durable-classic",
+      "narrative": "Unknown Worlds ran four years of EA before 1.0. Released January 2018 to 22K peak CCU on Steam, sustained tail through eight years of free content. Reference shape for indie-AAA survival narrative.",
+      "key_lesson": "Long EA cycles work when narrative content lands at 1.0, not earlier. Sub's slow content cadence post-1.0 capped the long-tail upside — Sub 2 has the opposite incentive structure.",
+      "signal_signature": [
+        "Multi-year EA built the cohort",
+        "1.0 launch was the conversion event",
+        "Post-launch content gaps capped long-tail"
+      ],
+      "tags": ["small-team", "survival", "single-player", "EA-pacing", "durable"]
+    },
+    {
+      "id": "slay-the-spire-1",
+      "name": "Slay the Spire",
+      "year": 2019,
+      "steam_appid": 646570,
+      "peak_ccu": 26000,
+      "lifetime_revenue_usd": 200000000,
+      "stage_arc": "EA 2017–2019 → 1.0 → durable",
+      "primary_cluster": "Roguelike-revival",
+      "secondary_clusters": [],
+      "team_size": 2,
+      "publisher": null,
+      "outcome": "durable-classic",
+      "narrative": "Mega Crit two-person team. EA in 2017, 1.0 in 2019. Defined the roguelike-deckbuilder sub-genre. Sustained 5-10K CCU for years; periodic resurgences from Twitch.",
+      "key_lesson": "Two-person studio + genre-defining product = highest-LTV configuration in indie gaming. Eight years post-launch, the catalogue still prints monthly via word-of-mouth.",
+      "signal_signature": [
+        "Pre-launch wishlist anomaly via Twitch coverage",
+        "EA-to-1.0 multiplier was modest (~1.5×)",
+        "Genre-defining IP value compounds over years"
+      ],
+      "tags": ["solo-dev", "roguelike-deckbuilder", "EA-pacing", "durable-classic", "genre-defining"]
+    },
+    {
       "id": "lethal-company",
       "name": "Lethal Company",
       "year": 2023,

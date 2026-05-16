@@ -31,6 +31,7 @@ SCORED = ROOT / "data" / "scored.json"
 THESES = ROOT / "data" / "theses.json"
 RAW_ROBLOX = ROOT / "data" / "raw_roblox.json"
 RAW_ITCH = ROOT / "data" / "raw_itch.json"
+RAW_GAM = ROOT / "data" / "raw_gamalytic.json"
 COMPARABLES = ROOT / "data" / "comparables.json"
 OUT = ROOT / "data" / "scout-data.json"
 
@@ -45,6 +46,76 @@ You'll be given today's top movers and which meta clusters are heating up.
 
 Follow Scout's hard rules: no banned vocab, business-first framing, one
 pull-quotable line. Output plain text only — no quotes, no attribution."""
+
+
+def extract_signal_arc(gam: dict):
+    """Pull a slim signal-arc series from the Gamalytic history.
+
+    Returns a list of points, each with:
+      ts (unix seconds), wishlists, followers, players, revenue, reviews, score
+    Keeps up to 60 most-recent points to bound scout-data.json size.
+    """
+    hist = (gam or {}).get("history_last90") or []
+    if not isinstance(hist, list) or not hist:
+        return []
+    points = []
+    for h in hist[-60:]:
+        if not isinstance(h, dict):
+            continue
+        ts = h.get("timeStamp")
+        if ts is None:
+            continue
+        # Gamalytic uses ms timestamps
+        ts = int(ts) // 1000 if ts > 1e11 else int(ts)
+        points.append({
+            "ts": ts,
+            "wishlists": h.get("wishlists"),
+            "followers": h.get("followers"),
+            "players": h.get("players"),
+            "revenue": h.get("revenue"),
+            "reviews": h.get("reviews"),
+            "score": h.get("score"),
+        })
+    return points
+
+
+def comparable_arc_data(comp_id: str, gam_blob: dict):
+    """For comparables that are also in our universe (we have Gamalytic data for them),
+    return their signal arc so we can overlay it on the candidate's chart."""
+    # Map comp id → known Steam appid where applicable. This lets the matcher
+    # link comparables back to live Gamalytic history we already pulled.
+    COMP_APPID_MAP = {
+        "lethal-company": "1966720",
+        "schedule-i": "3164500",
+        "manor-lords": "1363080",
+        "palworld": "1623730",
+        "stardew-valley": "413150",
+        "vampire-survivors": "1794680",
+        "phasmophobia": "739630",
+        "valheim": "892970",
+        "hades-1": "1145360",
+        "elden-ring": "1245620",
+        "hogwarts-legacy": "990080",
+        "baldurs-gate-3": "1086940",
+        "helldivers-2": "553850",
+        "no-mans-sky": "275850",
+        "cyberpunk-2077": "1091500",
+        "skyrim": "489830",
+        "witcher-3": "292030",
+        "pacific-drive": "1458140",
+        "frostpunk-2": "1601580",
+        "black-myth-wukong": "2358720",
+        "rep0": "3241660",
+        "subnautica": "264710",
+        "slay-the-spire-1": "646570",
+    }
+    appid = COMP_APPID_MAP.get(comp_id)
+    if not appid:
+        return None
+    gam = (gam_blob.get("games") or {}).get(appid)
+    if not gam:
+        return None
+    return extract_signal_arc(gam)
 
 
 def build_upstream():
@@ -237,11 +308,20 @@ def main():
     theses = json.loads(THESES.read_text()) if THESES.exists() else {}
     comp_lib = load_comparables()
 
-    # Attach nearest comparables BEFORE generate_theses runs (it reads from this)
-    # and thesis after (or fall back to whatever theses.json holds).
+    # Load Gamalytic raw data so we can extract per-game arcs + comparable arcs
+    gam_blob = json.loads(RAW_GAM.read_text()) if RAW_GAM.exists() else {"games": {}}
+
+    # Attach nearest comparables + thesis + signal arc to each game
     for g in games:
         g["nearest_comparables"] = nearest_comparables(g, comp_lib)
         g["thesis"] = theses.get(str(g["id"]), {})
+        gam_rec = (gam_blob.get("games") or {}).get(str(g["id"])) or {}
+        g["signal_arc"] = extract_signal_arc(gam_rec)
+        # Attach a comparable's arc to each nearest match where we have data
+        for nc in g["nearest_comparables"]:
+            arc = comparable_arc_data(nc.get("id"), gam_blob)
+            if arc:
+                nc["arc"] = arc
 
     # FRONT-PAGE LIFECYCLE FILTER: only breakout-candidate-eligible games appear in
     # Movers / Conviction / Wild Bets. Broken-out and mature-launched are excluded.

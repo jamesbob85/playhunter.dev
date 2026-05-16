@@ -41,17 +41,16 @@
         <span class="stat-label">Breakout Score</span>
         <div class="stat-value">${g.score} <span class="stat-delta ${up ? '' : 'down'}">${signed(g.score_delta)}</span></div>
       </div>
-      <div class="score-stat">
+      <div class="score-stat score-stat-radar">
         <span class="stat-label">Confidence</span>
-        <div class="stat-value">${g.confidence}</div>
-        <div class="family-dots" aria-label="Signal families firing">
-          ${['attention','intent','performance','community','press'].map(f => `
-            <span class="fam-dot ${fam[f] ? 'on' : ''}" title="${f}${fam[f] ? ' — firing' : ''}">
-              <span class="dot"></span>
-              <span class="lbl">${f}</span>
-            </span>
-          `).join('')}
-        </div>
+        <div class="stat-value">${g.confidence} <span class="conf-fam-count">${g.confidence_families}/5</span></div>
+        ${scoutCharts.renderRadar([
+          {label: 'attention', magnitude: famMag(g, 'attention')},
+          {label: 'intent', magnitude: famMag(g, 'intent')},
+          {label: 'performance', magnitude: famMag(g, 'performance')},
+          {label: 'community', magnitude: famMag(g, 'community')},
+          {label: 'press', magnitude: famMag(g, 'press')},
+        ], {width: 180, height: 160})}
       </div>
       <div class="score-stat">
         <span class="stat-label">Scale</span>
@@ -119,18 +118,26 @@
         </ul>
       </section>` : ''}
 
+    <section class="section">
+      <h3>Signal arc — last ${(g.signal_arc || []).length || '?'} days</h3>
+      ${renderSignalArcSection(g)}
+    </section>
+
     ${(g.nearest_comparables && g.nearest_comparables.length) ? `
       <section class="section">
         <h3>Nearest comparables</h3>
         <div class="nearest-comp-list">
           ${g.nearest_comparables.map(nc => `
-            <a class="nearest-comp" href="./comparables.html">
-              <div>
-                <div class="nc-name">${escapeHtml(nc.name)} <span style="color: var(--fg-3); font-size: 12px;">(${nc.year})</span></div>
-                <div class="nc-meta">${escapeHtml(nc.stage_arc || '')} · ${escapeHtml(nc.primary_cluster || '')} · <span class="outcome-tag" data-outcome="${nc.outcome}">${nc.outcome}</span></div>
-              </div>
-              <span class="nc-similarity">similarity ${nc.similarity}</span>
-            </a>
+            <div class="nearest-comp-wrap">
+              <a class="nearest-comp" href="./comparables.html">
+                <div>
+                  <div class="nc-name">${escapeHtml(nc.name)} <span style="color: var(--fg-3); font-size: 12px;">(${nc.year})</span></div>
+                  <div class="nc-meta">${escapeHtml(nc.stage_arc || '')} · ${escapeHtml(nc.primary_cluster || '')} · <span class="outcome-tag" data-outcome="${nc.outcome}">${nc.outcome}</span></div>
+                </div>
+                <span class="nc-similarity">similarity ${nc.similarity}</span>
+              </a>
+              ${nc.arc && nc.arc.length >= 3 ? renderComparableOverlay(g, nc) : ''}
+            </div>
           `).join('')}
         </div>
       </section>` : ''}
@@ -184,23 +191,108 @@
 
   function renderRealMetrics(g, rs, igdb) {
     const items = [];
-    if (rs.revenue) items.push({k: 'Revenue (lifetime)', v: fmtRev(rs.revenue)});
-    if (rs.owners) items.push({k: 'Owners', v: fmtNum(rs.owners)});
-    if (rs.followers) items.push({k: 'Steam followers', v: fmtNum(rs.followers)});
-    if (rs.wishlists) items.push({k: 'Wishlists', v: fmtNum(rs.wishlists)});
-    if (rs.reviews_total) items.push({k: 'Reviews', v: `${fmtNum(rs.reviews_total)}` + (rs.review_ratio ? ` <span class="muted">(${Math.round(rs.review_ratio*100)}%)</span>` : '')});
-    if (rs.twitch_viewers !== undefined) items.push({k: 'Twitch live', v: `${fmtNum(rs.twitch_viewers)} viewers · ${rs.twitch_streams} streams`});
-    if (rs.avg_playtime) items.push({k: 'Avg playtime', v: `${rs.avg_playtime.toFixed(1)} h`});
-    if (igdb.hypes) items.push({k: 'IGDB hypes', v: `${igdb.hypes}`});
-    if (igdb.aggregated_rating) items.push({k: 'Critic score', v: `${Math.round(igdb.aggregated_rating)} <span class="muted">(${igdb.aggregated_rating_count} sources)</span>`});
+    const arc = g.signal_arc || [];
+    const sparkVals = field => {
+      const vs = arc.map(p => p[field]).filter(v => v != null && !isNaN(v));
+      return vs.length >= 3 ? vs : null;
+    };
+    const sparkFor = field => {
+      const vs = sparkVals(field);
+      return vs ? scoutCharts.renderSparkline(vs, {width: 64, height: 18}) : '';
+    };
+    if (rs.revenue) items.push({k: 'Revenue (lifetime)', v: fmtRev(rs.revenue), spark: sparkFor('revenue')});
+    if (rs.owners) items.push({k: 'Owners', v: fmtNum(rs.owners), spark: ''});
+    if (rs.followers) items.push({k: 'Steam followers', v: fmtNum(rs.followers), spark: sparkFor('followers')});
+    if (rs.wishlists) items.push({k: 'Wishlists', v: fmtNum(rs.wishlists), spark: sparkFor('wishlists')});
+    if (rs.reviews_total) {
+      // Sentiment shift if we have history
+      const scoreVals = sparkVals('score');
+      const shiftMarkup = scoreVals && scoreVals.length >= 2
+        ? scoutCharts.renderSentimentShift(scoreVals[scoreVals.length - 1], scoreVals[0])
+        : (rs.review_ratio ? `<span class="muted">(${Math.round(rs.review_ratio*100)}%)</span>` : '');
+      items.push({k: 'Reviews', v: `${fmtNum(rs.reviews_total)} ${shiftMarkup}`, spark: sparkFor('reviews')});
+    }
+    if (rs.twitch_viewers !== undefined) items.push({k: 'Twitch live', v: `${fmtNum(rs.twitch_viewers)} viewers · ${rs.twitch_streams} streams`, spark: ''});
+    if (rs.avg_playtime) items.push({k: 'Avg playtime', v: `${rs.avg_playtime.toFixed(1)} h`, spark: ''});
+    if (igdb.hypes) items.push({k: 'IGDB hypes', v: `${igdb.hypes}`, spark: ''});
+    if (igdb.aggregated_rating) items.push({k: 'Critic score', v: `${Math.round(igdb.aggregated_rating)} <span class="muted">(${igdb.aggregated_rating_count} sources)</span>`, spark: ''});
 
     if (!items.length) return '';
     return `
       <div class="vcard">
         <div class="vcard-label">Real numbers</div>
         <div class="metric-grid">
-          ${items.map(i => `<div class="metric"><span class="m-k">${i.k}</span><span class="m-v">${i.v}</span></div>`).join('')}
+          ${items.map(i => `
+            <div class="metric">
+              <span class="m-k">${i.k}</span>
+              <span class="m-v">${i.v}</span>
+              ${i.spark || ''}
+            </div>
+          `).join('')}
         </div>
+      </div>
+    `;
+  }
+
+  function famMag(g, fam) {
+    const sig = (g.signals || []).find(s => s.family === fam);
+    if (sig) return sig.magnitude || 0;
+    // Fallback to firing-state if signal not in list
+    return (g.family_states || {})[fam] ? 0.7 : 0.25;
+  }
+
+  function renderSignalArcSection(g) {
+    const arc = g.signal_arc || [];
+    if (arc.length < 2) {
+      return `<div class="arc-empty">Tracking begins as snapshot history accumulates. Currently ${arc.length} point${arc.length === 1 ? '' : 's'} on file.</div>`;
+    }
+    // Build datasets from what's available
+    const buildSeries = field => arc.map(p => ({t: p.ts, v: p[field]})).filter(p => p.v != null);
+    const datasets = [];
+    const wishVals = buildSeries('wishlists');
+    if (wishVals.length >= 2) datasets.push({label: 'Wishlists', color: '#88c0ff', values: wishVals});
+    const followerVals = buildSeries('followers');
+    if (followerVals.length >= 2) datasets.push({label: 'Followers', color: '#4ed3b6', values: followerVals});
+    const playerVals = buildSeries('players');
+    if (playerVals.length >= 2) datasets.push({label: 'Concurrent', color: '#f4b740', values: playerVals});
+    const revVals = buildSeries('revenue');
+    if (revVals.length >= 2) datasets.push({label: 'Revenue', color: '#ff6a45', values: revVals});
+    if (!datasets.length) {
+      return `<div class="arc-empty">No multi-point series available yet.</div>`;
+    }
+    return scoutCharts.renderArcChart(datasets, {width: 760, height: 220});
+  }
+
+  function renderComparableOverlay(g, nc) {
+    const gArc = g.signal_arc || [];
+    const ncArc = nc.arc || [];
+    // Pick the best shared field — usually wishlists for pre-launch, players for launched.
+    const fields = g.stage === 'Launched' || g.stage === 'EA'
+      ? ['players', 'revenue', 'wishlists', 'followers']
+      : ['wishlists', 'followers'];
+    let field = null;
+    for (const f of fields) {
+      const a = gArc.filter(p => p[f] != null);
+      const b = ncArc.filter(p => p[f] != null);
+      if (a.length >= 2 && b.length >= 2) { field = f; break; }
+    }
+    if (!field) return '';
+    const gSeries = gArc.map(p => ({t: p.ts, v: p[field]})).filter(p => p.v != null);
+    const ncSeries = ncArc.map(p => ({t: p.ts, v: p[field]})).filter(p => p.v != null);
+    if (!gSeries.length || !ncSeries.length) return '';
+
+    // Normalise both series to a "days-since-first-point" X axis so they overlay properly
+    const normalise = series => {
+      const t0 = series[0].t;
+      return series.map(p => ({t: (p.t - t0) / 86400, v: p.v}));
+    };
+    return `
+      <div class="comp-overlay">
+        <div class="comp-overlay-label">Overlay on ${escapeHtml(field)} — relative arc</div>
+        ${scoutCharts.renderArcChart([
+          {label: g.name, color: '#88c0ff', values: normalise(gSeries)},
+          {label: nc.name, color: '#ff7a90', dashed: true, values: normalise(ncSeries)},
+        ], {width: 600, height: 140})}
       </div>
     `;
   }
