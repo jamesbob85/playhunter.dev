@@ -1,0 +1,27 @@
+---
+import { playImg } from '../lib/facts';
+
+interface Props { shots: string[]; title: string }
+const { shots, title } = Astro.props;
+---
+
+<div class="rail gallery">
+  {shots.map((s, i) => (
+    <img
+      src={playImg(s, 800)}
+      alt={`${title} screenshot ${i + 1}`}
+      loading="lazy"
+      decoding="async"
+    />
+  ))}
+</div>
+
+<style>
+  .gallery img {
+    height: clamp(16rem, 42vw, 24rem);
+    width: auto;
+    border-radius: 6px;
+    border: 1px solid var(--hair);
+    background: var(--bg-raise);
+  }
+</style>

@@ -1,0 +1,139 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  accent?: string;
+  ogImage?: string;
+  jsonLd?: object[];
+}
+const { title, description, accent = '#e8c15a', ogImage, jsonLd = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" style={`--accent:${accent}`}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="theme-color" content="#0e0e11" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0e11'/%3E%3Cpath d='M10 8l14 8-14 8z' fill='%23e8c15a'/%3E%3C/svg%3E" />
+    {jsonLd.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+    <script is:inline>
+      // enable reveal animations only when JS runs and motion is allowed
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('js-reveal');
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="shell nav-in">
+        <a href="/" class="wordmark">PLAY<span>HUNTER</span></a>
+        <div class="nav-links mono">
+          <a href="/c/pay-once-play-forever/">Collections</a>
+          <a href="/about/">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <slot />
+
+    <footer class="foot">
+      <div class="shell">
+        <hr class="rule" />
+        <div class="foot-in">
+          <div>
+            <a href="/" class="wordmark sm">PLAY<span>HUNTER</span></a>
+            <p class="mono foot-note">
+              The case for paying for a game, made properly.<br />
+              Facts pulled from Google Play. Opinions our own.
+            </p>
+          </div>
+          <div class="mono foot-links">
+            <a href="/about/">About</a>
+            <a href="/c/pay-once-play-forever/">Pay once, play forever</a>
+            <a href="/c/best-roguelikes-android/">Best roguelikes</a>
+            <a href="/c/games-for-a-long-flight/">Long-flight games</a>
+          </div>
+        </div>
+        <p class="mono foot-legal">
+          Not affiliated with Google. Google Play and the Google Play logo are trademarks of Google LLC.
+          Game art belongs to its publishers.
+        </p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      // scroll reveal
+      if (document.documentElement.classList.contains('js-reveal')) {
+        const io = new IntersectionObserver(
+          (es) =>
+            es.forEach((e) => {
+              // reveal when entering view — or if already scrolled past
+              if (e.isIntersecting || e.boundingClientRect.top < 0) {
+                e.target.classList.add('is-in');
+                io.unobserve(e.target);
+              }
+            }),
+          { rootMargin: '0px 0px -8% 0px' }
+        );
+        document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+      }
+    </script>
+
+    <style>
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--bg) 82%, transparent);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--hair);
+      }
+      .nav-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3.5rem;
+      }
+      .wordmark {
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 1.05rem;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+      }
+      .wordmark span { color: var(--accent); }
+      .wordmark.sm { font-size: 0.95rem; }
+      .nav-links { display: flex; gap: 1.5rem; }
+      .nav-links a { text-decoration: none; color: var(--fg-dim); }
+      .nav-links a:hover { color: var(--accent); }
+
+      .foot { margin-top: 6rem; padding-bottom: 3rem; }
+      .foot-in {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding-block: 2rem;
+      }
+      .foot-note { margin-top: 0.75rem; color: var(--fg-faint); line-height: 1.7; }
+      .foot-links { display: flex; flex-direction: column; gap: 0.5rem; }
+      .foot-links a { text-decoration: none; color: var(--fg-dim); }
+      .foot-links a:hover { color: var(--accent); }
+      .foot-legal { color: var(--fg-faint); font-size: 0.6875rem; }
+    </style>
+  </body>
+</html>

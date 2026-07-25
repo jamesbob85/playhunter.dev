@@ -1,0 +1,380 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import FactsBar from '../components/FactsBar.astro';
+import Gallery from '../components/Gallery.astro';
+import FAQ from '../components/FAQ.astro';
+import GameCard from '../components/GameCard.astro';
+import { getFacts, playImg, playLink, fmtCount } from '../lib/facts';
+
+export async function getStaticPaths() {
+  const games = await getCollection('games');
+  return games.map((g) => ({ params: { slug: g.id.replace(/\.md$/, '') }, props: { game: g } }));
+}
+
+const { game } = Astro.props;
+const slug = game.id.replace(/\.md$/, '');
+const facts = getFacts(slug);
+const { Content } = await render(game);
+
+const gamesAll = await getCollection('games');
+const editorialBySlug = Object.fromEntries(gamesAll.map((g) => [g.id.replace(/\.md$/, ''), g]));
+const related = game.data.related
+  .filter((s) => editorialBySlug[s])
+  .map((s) => ({ facts: getFacts(s), ed: editorialBySlug[s] }));
+
+const collectionsAll = await getCollection('collections');
+const homeCollection = game.data.collectionSlug
+  ? collectionsAll.find((c) => c.id.replace(/\.md$/, '') === game.data.collectionSlug)
+  : null;
+
+const desc = `What is ${facts.title}? Why it's worth ${facts.priceText} on Android — features, screenshots, FAQ, and a link to it on Google Play.`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'MobileApplication',
+    name: facts.title,
+    operatingSystem: 'Android',
+    applicationCategory: 'GameApplication',
+    author: { '@type': 'Organization', name: facts.developer },
+    image: facts.headerImage ?? facts.icon,
+    offers: { '@type': 'Offer', price: facts.price, priceCurrency: 'USD', url: facts.playUrl },
+    ...(facts.score
+      ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: facts.score, ratingCount: facts.ratings } }
+      : {}),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: game.data.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+---
+
+<Layout
+  title={`${facts.title} on Android — what it is and why it's worth ${facts.priceText}`}
+  description={desc}
+  accent={game.data.accent}
+  ogImage={facts.headerImage ? playImg(facts.headerImage, 1200) : undefined}
+  jsonLd={jsonLd}
+>
+  <!-- 1 · HERO -->
+  <header class="hero">
+    {facts.headerImage && (
+      <img class="hero-art" src={playImg(facts.headerImage, 1920)} alt="" fetchpriority="high" />
+    )}
+    <div class="hero-scrim"></div>
+    <div class="shell hero-in">
+      <p class="eyebrow">{facts.genre} · {facts.developer}</p>
+      <h1>{facts.title}</h1>
+      <p class="hook">{game.data.hook}</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href={playLink(facts)} rel="noopener" target="_blank">
+          {facts.priceText} · Get it on Google Play
+        </a>
+        {facts.video && <a class="btn btn-ghost" href="#trailer">Watch the trailer</a>}
+      </div>
+    </div>
+  </header>
+
+  <!-- 2 · FACTS BAR -->
+  <section class="shell section-tight">
+    <FactsBar facts={facts} />
+  </section>
+
+  <!-- 3 · WHAT IS -->
+  <section class="shell section">
+    <p class="eyebrow reveal">The premise</p>
+    <h2 class="reveal">What is {facts.title}?</h2>
+    <div class="prose measure reveal"><Content /></div>
+  </section>
+
+  <!-- 4 · WHY YOU SHOULD PLAY -->
+  <section class="stance">
+    <div class="shell">
+      <p class="eyebrow reveal">Why you should play</p>
+      <p class="stance-line reveal">{game.data.stance}</p>
+    </div>
+  </section>
+
+  <!-- TRAILER -->
+  {facts.video && (
+    <section class="shell section" id="trailer">
+      <p class="eyebrow reveal">Trailer</p>
+      <button class="video reveal" data-video={facts.video} aria-label={`Play the ${facts.title} trailer`}>
+        <img src={playImg(facts.videoImage ?? facts.headerImage!, 1200)} alt="" loading="lazy" decoding="async" />
+        <span class="play-badge" aria-hidden="true"><i>▶</i></span>
+      </button>
+    </section>
+  )}
+
+  <!-- 5 · KEY FEATURES -->
+  <section class="shell section">
+    <p class="eyebrow reveal">Key features</p>
+    <h2 class="reveal">What you'll actually be doing</h2>
+    <div class="features">
+      {game.data.features.map((f) => (
+        <article class="feature reveal">
+          {facts.screenshots[f.shot] && (
+            <img src={playImg(facts.screenshots[f.shot], 640)} alt="" loading="lazy" decoding="async" />
+          )}
+          <h3>{f.title}</h3>
+          <p class="dim">{f.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- 6 · GALLERY -->
+  {facts.screenshots.length > 0 && (
+    <section class="section-tight gallery-wrap">
+      <div class="shell"><p class="eyebrow reveal">Screenshots</p></div>
+      <div class="shell-bleed">
+        <Gallery shots={facts.screenshots} title={facts.title} />
+      </div>
+    </section>
+  )}
+
+  <!-- 7 · FAQ -->
+  <section class="shell section">
+    <p class="eyebrow reveal">Questions people ask</p>
+    <h2 class="reveal">{facts.title} FAQ</h2>
+    <FAQ faq={game.data.faq} />
+  </section>
+
+  <!-- 8 · COLLECTION BANNER -->
+  {homeCollection && (
+    <section class="shell section-tight">
+      <a class="coll-banner reveal" href={`/c/${game.data.collectionSlug}/`}>
+        <div>
+          <p class="eyebrow">From the collection</p>
+          <h3>{homeCollection.data.title}</h3>
+          <p class="dim">{homeCollection.data.deck}</p>
+        </div>
+        <span class="mono arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+  )}
+
+  <!-- 9 · RELATED -->
+  <section class="section related-wrap">
+    <div class="shell">
+      <p class="eyebrow reveal">If you like this</p>
+      <h2 class="reveal">Play next</h2>
+    </div>
+    <div class="shell-bleed">
+      <div class="rail">
+        {related.map((r) => (
+          <GameCard facts={r.facts} hook={r.ed.data.hook} accent={r.ed.data.accent} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · SPECS -->
+  <section class="shell section-tight">
+    <hr class="rule" />
+    <dl class="specs mono">
+      <div><dt>Developer</dt><dd>{facts.developer}</dd></div>
+      <div><dt>Released</dt><dd>{facts.released ?? '—'}</dd></div>
+      <div><dt>Updated</dt><dd>{facts.updated ?? '—'}</dd></div>
+      <div><dt>Requires</dt><dd>Android {facts.androidVersion ?? '—'}</dd></div>
+      <div><dt>Content rating</dt><dd>{facts.contentRating ?? '—'}</dd></div>
+      <div><dt>Reviews</dt><dd>{fmtCount(facts.reviews)}</dd></div>
+    </dl>
+  </section>
+
+  <!-- floating CTA -->
+  <a class="float-cta btn btn-solid" href={playLink(facts)} rel="noopener" target="_blank" data-float>
+    {facts.priceText} · Play
+  </a>
+
+  <script is:inline>
+    // click-to-load trailer facade
+    const vid = document.querySelector('[data-video]');
+    if (vid) {
+      vid.addEventListener('click', () => {
+        const f = document.createElement('iframe');
+        f.src = vid.dataset.video + '&autoplay=1';
+        f.title = 'Trailer';
+        f.allow = 'autoplay; encrypted-media; picture-in-picture';
+        f.allowFullscreen = true;
+        vid.replaceChildren(f);
+      }, { once: true });
+    }
+
+    const cta = document.querySelector('[data-float]');
+    const hero = document.querySelector('.hero');
+    if (cta && hero && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([e]) => cta.classList.toggle('show', !e.isIntersecting), {
+        threshold: 0.05,
+      }).observe(hero);
+    }
+  </script>
+
+  <style>
+    .hero {
+      position: relative;
+      min-height: min(88vh, 46rem);
+      display: flex;
+      align-items: flex-end;
+      isolation: isolate;
+    }
+    .hero-art {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(to top, var(--bg) 4%, rgba(14, 14, 17, 0.55) 45%, rgba(14, 14, 17, 0.25) 75%),
+        linear-gradient(to right, rgba(14, 14, 17, 0.5), transparent 60%);
+    }
+    .hero-in { padding-block: 4.5rem 3.5rem; width: 100%; }
+    .hero h1 {
+      font-size: clamp(2.75rem, 8vw, 5.5rem);
+      margin-block: 0.5rem 0.75rem;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
+    }
+    .hook {
+      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+      color: var(--fg-dim);
+      max-width: 34rem;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+    }
+    .hero-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; }
+
+    .section { padding-block: 4.5rem 0; }
+    .section-tight { padding-block: 3rem 0; }
+    .section h2 { font-size: clamp(1.75rem, 4.5vw, 2.6rem); margin-block: 0.6rem 1.5rem; }
+
+    .stance { margin-top: 5rem; border-block: 1px solid var(--hair); background: var(--bg-raise); }
+    .stance .shell { padding-block: 3.5rem; }
+    .stance-line {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(1.4rem, 3.6vw, 2.2rem);
+      line-height: 1.25;
+      max-width: 52rem;
+      margin-top: 0.75rem;
+    }
+
+    .video {
+      position: relative;
+      display: block;
+      aspect-ratio: 16/9;
+      width: 100%;
+      max-width: 56rem;
+      margin-top: 1.25rem;
+      padding: 0;
+      border: 1px solid var(--hair);
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--bg-raise);
+    }
+    .video img { width: 100%; height: 100%; object-fit: cover; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .play-badge {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      color: #0a0a0c;
+    }
+    .play-badge::before {
+      content: '';
+      position: absolute;
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
+      transition: transform 150ms ease;
+    }
+    .video:hover .play-badge::before { transform: scale(1.08); }
+    .play-badge i { position: relative; font-style: normal; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .feature img {
+      aspect-ratio: 16/10;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 6px;
+      border: 1px solid var(--hair);
+      margin-bottom: 1rem;
+      background: var(--bg-raise);
+    }
+    .feature h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .feature p { font-size: 0.9375rem; }
+
+    .shell-bleed {
+      max-width: var(--shell);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+      margin-top: 1.25rem;
+    }
+    @media (max-width: 48rem) {
+      .shell-bleed { padding-inline: var(--pad) 0; }
+    }
+
+    .coll-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      text-decoration: none;
+      border: 1px solid var(--hair-strong);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.5rem 1.75rem;
+      background: var(--bg-raise);
+      transition: border-color 150ms ease;
+    }
+    .coll-banner:hover { border-color: var(--accent); }
+    .coll-banner h3 { font-size: 1.3rem; margin-block: 0.4rem; }
+    .coll-banner .dim { font-size: 0.9375rem; max-width: 40rem; }
+    .arrow { font-size: 1.5rem; color: var(--accent); }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      gap: 1.25rem;
+      padding-block: 1.75rem;
+      font-size: 0.8125rem;
+    }
+    .specs dt { color: var(--fg-faint); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 0.3rem; }
+    .specs dd { color: var(--fg-dim); }
+
+    .float-cta {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      translate: 0 0.75rem;
+      transition: opacity 250ms ease, translate 250ms ease;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    .float-cta.show { opacity: 1; pointer-events: auto; translate: 0 0; }
+  </style>
+</Layout>

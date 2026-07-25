@@ -1,0 +1,47 @@
+---
+import type { Facts } from '../lib/facts';
+import { fmtCount } from '../lib/facts';
+
+interface Props { facts: Facts }
+const { facts } = Astro.props;
+
+const cells: [string, string][] = [
+  ['Price', facts.priceText + (facts.offersIAP ? ' + optional IAP' : '')],
+  ['Rating', facts.score ? `${facts.score} ★ · ${fmtCount(facts.ratings)} ratings` : '—'],
+  ['Downloads', facts.installs],
+  ['Rated', facts.contentRating ?? '—'],
+  ['Ads', facts.adSupported ? 'Contains ads' : 'None'],
+  ['Genre', facts.genre ?? '—'],
+];
+---
+
+<div class="facts reveal">
+  <dl class="facts-grid">
+    {cells.map(([k, v]) => (
+      <div class="cell">
+        <dt class="eyebrow">{k}</dt>
+        <dd class="mono val">{v}</dd>
+      </div>
+    ))}
+  </dl>
+  <p class="mono checked">Facts from Google Play · checked {facts.fetchedAt}</p>
+</div>
+
+<style>
+  .facts {
+    border-block: 1px solid var(--hair);
+    padding-block: 1.5rem 1rem;
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: 1.25rem 1.5rem;
+  }
+  .cell dt { margin-bottom: 0.3rem; }
+  .val { color: var(--fg); font-size: 0.875rem; }
+  .checked {
+    margin-top: 1.25rem;
+    color: var(--fg-faint);
+    font-size: 0.6875rem;
+  }
+</style>

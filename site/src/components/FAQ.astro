@@ -1,0 +1,39 @@
+---
+interface Props { faq: { q: string; a: string }[] }
+const { faq } = Astro.props;
+---
+
+<div class="faq">
+  {faq.map((item) => (
+    <details class="reveal">
+      <summary>
+        <span>{item.q}</span>
+        <span class="tick mono" aria-hidden="true">+</span>
+      </summary>
+      <p class="dim">{item.a}</p>
+    </details>
+  ))}
+</div>
+
+<style>
+  details {
+    border-bottom: 1px solid var(--hair);
+  }
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    cursor: pointer;
+    list-style: none;
+    padding-block: 1.1rem;
+    font-family: var(--display);
+    font-weight: 650;
+    font-size: 1.0625rem;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { color: var(--accent); }
+  .tick { color: var(--accent); transition: rotate 200ms ease; font-size: 1rem; }
+  details[open] .tick { rotate: 45deg; }
+  details p { padding-bottom: 1.25rem; max-width: var(--measure); }
+</style>

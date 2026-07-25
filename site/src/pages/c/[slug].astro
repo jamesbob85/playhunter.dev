@@ -1,0 +1,113 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getFacts, playImg, playLink, fmtCount } from '../../lib/facts';
+
+export async function getStaticPaths() {
+  const colls = await getCollection('collections');
+  return colls.map((c) => ({ params: { slug: c.id.replace(/\.md$/, '') }, props: { coll: c } }));
+}
+
+const { coll } = Astro.props;
+const { Content } = await render(coll);
+
+const games = await getCollection('games');
+const bySlug = Object.fromEntries(games.map((g) => [g.id.replace(/\.md$/, ''), g]));
+const items = coll.data.games
+  .filter((s) => bySlug[s])
+  .map((s, i) => ({ n: i + 1, slug: s, facts: getFacts(s), ed: bySlug[s] }));
+
+const totalPrice = items.reduce((sum, it) => sum + it.facts.price, 0);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: coll.data.title,
+    itemListElement: items.map((it) => ({
+      '@type': 'ListItem',
+      position: it.n,
+      name: it.facts.title,
+      url: new URL(`/${it.slug}/`, Astro.site).href,
+    })),
+  },
+];
+---
+
+<Layout
+  title={`${coll.data.title} — PLAYHUNTER`}
+  description={coll.data.deck}
+  accent={coll.data.accent}
+  ogImage={items[0] ? playImg(items[0].facts.headerImage ?? items[0].facts.icon, 1200) : undefined}
+  jsonLd={jsonLd}
+>
+  <header class="shell head">
+    <p class="eyebrow">Collection · {items.length} games · {'$' + totalPrice.toFixed(2)} for the lot</p>
+    <h1>{coll.data.title}</h1>
+    <div class="prose measure lede"><Content /></div>
+  </header>
+
+  <section class="shell">
+    {items.map((it) => (
+      <article class="row reveal" style={`--accent:${it.ed.data.accent}`}>
+        <span class="n mono" aria-hidden="true">{String(it.n).padStart(2, '0')}</span>
+        <a class="row-art" href={`/${it.slug}/`}>
+          <img src={playImg(it.facts.headerImage ?? it.facts.icon, 800)} alt={it.facts.title} loading="lazy" decoding="async" />
+        </a>
+        <div class="row-body">
+          <h2><a href={`/${it.slug}/`}>{it.facts.title}</a></h2>
+          <p class="mono sub">
+            {it.facts.priceText}{it.facts.offersIAP ? ' + optional IAP' : ''} · {it.facts.score} ★ ·
+            {' '}{fmtCount(it.facts.ratings)} ratings · {it.facts.installs}
+          </p>
+          <p class="dim">{it.ed.data.stance}</p>
+          <div class="row-cta">
+            <a class="mono go" href={`/${it.slug}/`}>Read why →</a>
+            <a class="mono go ext" href={playLink(it.facts)} rel="noopener" target="_blank">Google Play ↗</a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <style>
+    .head { padding-block: 4.5rem 1.5rem; }
+    .head h1 { font-size: clamp(2.2rem, 6.5vw, 4rem); margin-block: 0.75rem 1.25rem; }
+    .lede { font-size: 1.0625rem; }
+
+    .row {
+      display: grid;
+      grid-template-columns: 2.5rem minmax(12rem, 22rem) 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      padding-block: 2.5rem;
+      border-bottom: 1px solid var(--hair);
+    }
+    .n { color: var(--accent); font-size: 0.875rem; padding-top: 0.35rem; }
+    .row-art {
+      display: block;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--hair);
+      aspect-ratio: 1.91;
+      background: var(--bg-raise);
+    }
+    .row-art img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms cubic-bezier(0.2,0.6,0.2,1); }
+    .row:hover .row-art img { transform: scale(1.03); }
+    .row-body h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+    .row-body h2 a { text-decoration: none; }
+    .row-body h2 a:hover { color: var(--accent); }
+    .sub { margin-block: 0.4rem 0.75rem; font-size: 0.75rem; }
+    .row-body .dim { max-width: 40rem; font-size: 0.9375rem; }
+    .row-cta { display: flex; gap: 1.5rem; margin-top: 0.9rem; }
+    .go { color: var(--accent); text-decoration: none; }
+    .go:hover { text-decoration: underline; }
+    .go.ext { color: var(--fg-dim); }
+    .go.ext:hover { color: var(--fg); }
+
+    @media (max-width: 48rem) {
+      .row { grid-template-columns: 1fr; gap: 0.9rem; }
+      .n { padding: 0; }
+    }
+  </style>
+</Layout>

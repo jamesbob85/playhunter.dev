@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { allFacts } from '../lib/facts';
+
+const count = Object.keys(allFacts).length;
+const checked = Object.values(allFacts)
+  .map((f) => f.fetchedAt)
+  .sort()
+  .at(-1);
+---
+
+<Layout
+  title="About — PLAYHUNTER"
+  description="Why a discovery site for paid Android games exists, how the facts stay honest, and what we will never do."
+>
+  <article class="shell wrap">
+    <header>
+      <p class="eyebrow">About</p>
+      <h1>The discovery layer Google Play never built</h1>
+    </header>
+
+    <div class="prose measure">
+      <p>
+        Go look at a PlayStation game's page on the open web. You'll find what the game <em>is</em>,
+        why it's worth playing, its key features, a FAQ, real screenshots, a trailer — an actual
+        argument, made with actual craft. Now look up a paid mobile game. You get a store listing:
+        eight screenshots, four thousand characters of developer copy, and a price with no case
+        attached to it.
+      </p>
+      <p>
+        That gap is why people believe there are no good games on phones. There are — some of the
+        best games of the past decade live on Google Play for less than the price of lunch. What
+        they've never had is someone making the argument for them.
+      </p>
+      <p>PLAYHUNTER makes the argument. Every page here answers the questions a listing won't:
+        What is this game? Why is it worth real money upfront? What does it feel like at 1 a.m.?
+        Who should skip it?</p>
+
+      <h2>How the facts stay honest</h2>
+      <p>
+        Every hard number on this site — prices, ratings, download counts, IAP flags, update dates —
+        is pulled programmatically from the game's live Google Play listing, not typed by hand.
+        Currently tracking {count} games; facts last checked {checked}. If a game contains in-app
+        purchases, we say so in the second row of the page, because pretending otherwise is how
+        trust dies.
+      </p>
+
+      <h2>What we will never do</h2>
+      <p>
+        No scores out of ten. No sponsored placements. No affiliate skimming — Google Play doesn't
+        even have an affiliate program, which makes this easy to promise. Every outbound link goes
+        to the game's real Play listing and nowhere else. If a game stops being worth your money,
+        its page changes or disappears.
+      </p>
+
+      <h2>Who's behind this</h2>
+      <p>
+        PLAYHUNTER is an independent games project. We also build our own mobile games — which is
+        exactly why we care that paying for a good one stays a normal thing to do.
+      </p>
+    </div>
+  </article>
+
+  <style>
+    .wrap { padding-block: 4.5rem 2rem; }
+    h1 { font-size: clamp(2rem, 5.5vw, 3.4rem); margin-block: 0.75rem 2rem; max-width: 46rem; }
+    .prose h2 {
+      font-size: 1.4rem;
+      margin-block: 2.25rem 0.75rem;
+      color: var(--fg);
+    }
+  </style>
+</Layout>

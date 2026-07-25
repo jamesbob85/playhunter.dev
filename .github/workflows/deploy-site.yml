@@ -1,0 +1,60 @@
+name: Deploy site
+
+# Builds the Astro site in site/ and deploys it to GitHub Pages as the root
+# of playhunter.dev, with the existing Scout dashboard preserved at /scout.
+# Runs on every push to main — including scout-bot's daily data commits —
+# so Scout stays fresh under the Actions-based Pages deployment.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Build Astro site
+        working-directory: site
+        run: |
+          npm ci
+          npx astro build
+
+      - name: Assemble final site (Astro root + legacy surfaces)
+        run: |
+          cp CNAME site/dist/
+          cp -r scout site/dist/scout
+          cp dashboard.html site/dist/
+          cp -r assets site/dist/assets
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

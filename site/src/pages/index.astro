@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import GameCard from '../components/GameCard.astro';
+import { getFacts, playImg, playLink } from '../lib/facts';
+
+const games = (await getCollection('games')).sort((a, b) => a.data.order - b.data.order);
+const colls = await getCollection('collections');
+const bySlug = Object.fromEntries(games.map((g) => [g.id.replace(/\.md$/, ''), g]));
+
+const featured = games[0];
+const featuredSlug = featured.id.replace(/\.md$/, '');
+const featuredFacts = getFacts(featuredSlug);
+
+const shelves = colls
+  .map((c) => ({
+    slug: c.id.replace(/\.md$/, ''),
+    data: c.data,
+    items: c.data.games
+      .filter((s) => bySlug[s])
+      .map((s) => ({ facts: getFacts(s), ed: bySlug[s] })),
+  }))
+  .sort((a, b) => b.items.length - a.items.length);
+
+const rest = games.slice(1);
+---
+
+<Layout
+  title="PLAYHUNTER — paid Android games, argued for properly"
+  description="The discovery layer Google Play never built: what each great paid game actually is, why it's worth your money, and exactly one link — to its real Play listing."
+>
+  <!-- FEATURED -->
+  <header class="feat" style={`--accent:${featured.data.accent}`}>
+    {featuredFacts.headerImage && <img class="feat-art" src={playImg(featuredFacts.headerImage, 1920)} alt="" fetchpriority="high" />}
+    <div class="feat-scrim"></div>
+    <div class="shell feat-in">
+      <p class="eyebrow">This is the site Google Play forgot to build</p>
+      <h1>
+        Paid games are the best games on your phone.<br />
+        <span class="feat-sub">Somebody should say so.</span>
+      </h1>
+      <p class="feat-lede measure">
+        Every page here answers the questions a store listing won't: what a game actually is, why it's
+        worth real money, and what it feels like at 1 a.m. Facts pulled live from Google Play. Opinions ours.
+      </p>
+      <div class="feat-cta">
+        <a class="btn btn-solid" href={`/${featuredSlug}/`}>Start with {featuredFacts.title} →</a>
+        <a class="btn btn-ghost" href={playLink(featuredFacts)} rel="noopener" target="_blank">
+          {featuredFacts.priceText} on Google Play
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SHELVES -->
+  {shelves.map((shelf) => (
+    <section class="section" style={`--accent:${shelf.data.accent}`}>
+      <div class="shell">
+        <p class="eyebrow reveal">Collection</p>
+        <div class="shelf-head reveal">
+          <h2><a href={`/c/${shelf.slug}/`}>{shelf.data.title}</a></h2>
+          <a class="mono all" href={`/c/${shelf.slug}/`}>Read the case →</a>
+        </div>
+        <p class="dim deck measure reveal">{shelf.data.deck}</p>
+      </div>
+      <div class="shell-bleed">
+        <div class="rail">
+          {shelf.items.map((it) => (
+            <GameCard facts={it.facts} hook={it.ed.data.hook} accent={it.ed.data.accent} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- FULL INDEX -->
+  <section class="section">
+    <div class="shell">
+      <p class="eyebrow reveal">Every game we've covered</p>
+      <h2 class="reveal">The whole shelf</h2>
+      <div class="grid">
+        {games.map((g) => {
+          const s = g.id.replace(/\.md$/, '');
+          return <GameCard facts={getFacts(s)} hook={g.data.hook} accent={g.data.accent} />;
+        })}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .feat {
+      position: relative;
+      min-height: min(92vh, 48rem);
+      display: flex;
+      align-items: flex-end;
+      isolation: isolate;
+    }
+    .feat-art {
+      position: absolute; inset: 0; z-index: -2;
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .feat-scrim {
+      position: absolute; inset: 0; z-index: -1;
+      background:
+        linear-gradient(to top, var(--bg) 8%, rgba(14,14,17,0.72) 50%, rgba(14,14,17,0.45)),
+        linear-gradient(to right, rgba(14,14,17,0.55), transparent 65%);
+    }
+    .feat-in { padding-block: 5rem 4rem; width: 100%; }
+    .feat h1 {
+      font-size: clamp(2rem, 5.4vw, 3.9rem);
+      max-width: 56rem;
+      margin-block: 0.75rem 1rem;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+    }
+    .feat-sub { color: var(--accent); }
+    .feat-lede { color: var(--fg-dim); font-size: 1.0625rem; text-shadow: 0 1px 12px rgba(0,0,0,0.6); }
+    .feat-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; }
+
+    .section { padding-block: 4.5rem 0; }
+    .shelf-head {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+      margin-block: 0.5rem 0.75rem;
+    }
+    .shelf-head h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); }
+    .shelf-head h2 a { text-decoration: none; }
+    .shelf-head h2 a:hover { color: var(--accent); }
+    .all { color: var(--fg-dim); text-decoration: none; white-space: nowrap; }
+    .all:hover { color: var(--accent); }
+    .deck { margin-bottom: 1.5rem; font-size: 0.9375rem; }
+
+    .shell-bleed {
+      max-width: var(--shell);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+    }
+    @media (max-width: 48rem) {
+      .shell-bleed { padding-inline: var(--pad) 0; }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      gap: 2rem 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .grid :global(.card) { width: auto; }
+  </style>
+</Layout>
