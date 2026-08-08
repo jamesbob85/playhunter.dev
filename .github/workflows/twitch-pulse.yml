@@ -1,0 +1,51 @@
+name: Twitch pulse
+
+# Polls the top-100 Twitch categories every 15 min (best-effort cron) and
+# appends per-category viewers/channel counts to the pulse-data branch.
+# Compact panel only (~10 KB/day); distinct-creator sets are collected by
+# the local poller (GamesDiscovery/data/pulse.db). Pushing to pulse-data
+# does NOT trigger the Pages deploy (that runs on main only).
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: twitch-pulse
+  cancel-in-progress: false
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          ref: pulse-data
+          path: pulse-data
+
+      - name: Sweep
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: python3 pulse/pulse.py --once --csv-dir pulse-data/data
+
+      - name: Commit
+        run: |
+          cd pulse-data
+          git config user.name "pulse-bot"
+          git config user.email "pulse-bot@playhunter.dev"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "pulse: $(date -u +%FT%TZ)"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase && sleep $i
+          done
+          exit 1
