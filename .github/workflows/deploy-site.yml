@@ -43,6 +43,7 @@ jobs:
           cp CNAME site/dist/
           cp -r scout site/dist/scout
           cp dashboard.html site/dist/
+          cp games.json site/dist/
           cp -r assets site/dist/assets
 
       - uses: actions/upload-pages-artifact@v3
