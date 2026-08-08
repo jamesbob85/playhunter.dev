@@ -1,9 +1,12 @@
 name: Deploy site
 
-# Builds the Astro site in site/ and deploys it to GitHub Pages as the root
-# of playhunter.dev, with the existing Scout dashboard preserved at /scout.
-# Runs on every push to main — including scout-bot's daily data commits —
-# so Scout stays fresh under the Actions-based Pages deployment.
+# playhunter.dev is now the gamespec dashboard, served at the root.
+# Editorial (Astro) site was retired 2026-08-08 — source remains in site/
+# but is no longer built or deployed. Legacy surfaces preserved:
+#   /scout            — Scout daily brief (refreshed by scout-daily.yml)
+#   /dashboard.html   — alias for the dashboard (old links)
+#   /privacy, /{lang}/privacy — privacy policy (Google Play listing requirement)
+# Runs on every push to main — including scout-bot's daily data commits.
 
 on:
   push:
@@ -22,33 +25,21 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: site/package-lock.json
-
-      - name: Build Astro site
-        working-directory: site
+      - name: Assemble static site
         run: |
-          npm ci
-          npx astro build
-
-      - name: Assemble final site (Astro root + legacy surfaces)
-        run: |
-          cp CNAME site/dist/
-          cp -r scout site/dist/scout
-          cp dashboard.html site/dist/
-          cp games.json site/dist/
-          cp -r assets site/dist/assets
+          mkdir -p dist
+          cp index.html dashboard.html games.json CNAME dist/
+          cp -r assets dist/assets
+          cp -r scout dist/scout
+          cp -r legal/. dist/
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/dist
+          path: dist
 
   deploy:
     needs: build
