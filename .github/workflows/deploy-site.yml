@@ -32,7 +32,7 @@ jobs:
       - name: Assemble static site
         run: |
           mkdir -p dist
-          cp index.html dashboard.html games.json CNAME dist/
+          cp index.html dashboard.html games.json love.json CNAME dist/
           cp -r assets dist/assets
           cp -r scout dist/scout
           cp -r legal/. dist/
