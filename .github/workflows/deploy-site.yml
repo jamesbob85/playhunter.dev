@@ -35,6 +35,7 @@ jobs:
           cp index.html dashboard.html games.json love.json CNAME dist/
           cp -r assets dist/assets
           cp -r scout dist/scout
+          cp -r deck dist/deck
           cp -r legal/. dist/
 
       - uses: actions/upload-pages-artifact@v3

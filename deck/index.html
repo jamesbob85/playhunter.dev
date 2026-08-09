@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Where the Love Is — games diversity × Google Play</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg:#0a0a0d; --bg-1:#111116; --bg-2:#181820; --bg-3:#22222c;
+    --line:#2a2a35; --fg:#e8e8ee; --fg-1:#b6b6c0; --fg-2:#74747f; --fg-3:#4a4a55;
+    --ok:#6cd49a; --warn:#ff7a90; --blue:#88c0ff; --gold:#e0b95c;
+    --serif:"Iowan Old Style",Palatino,Georgia,serif;
+    --sans:"Avenir Next","Segoe UI",system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  * { box-sizing:border-box; margin:0; }
+  html,body { height:100%; }
+  body { background:var(--bg); color:var(--fg); font-family:var(--sans); overflow:hidden; }
+  .slide {
+    position:absolute; inset:0; padding:5vh 7vw; display:none;
+    flex-direction:column; justify-content:center; gap:2.4vh; overflow-y:auto;
+  }
+  .slide.on { display:flex; animation:in .45s cubic-bezier(.2,.8,.2,1); }
+  @keyframes in { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce) { .slide.on { animation:none; } .bar,.dot2,path,rect { transition:none !important; } }
+
+  .eyebrow { font-size:clamp(10px,1.2vw,13px); letter-spacing:.22em; text-transform:uppercase; color:var(--ok); font-weight:600; }
+  h1 { font-family:var(--serif); font-weight:500; font-size:clamp(22px,4.2vw,46px); line-height:1.22; text-wrap:balance; max-width:26ch; }
+  .note { color:var(--fg-2); font-size:clamp(11px,1.3vw,14px); max-width:70ch; }
+  .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+
+  /* chrome */
+  .hud { position:fixed; bottom:18px; left:0; right:0; display:flex; justify-content:center; gap:8px; z-index:9; }
+  .hud a { width:9px; height:9px; border-radius:50%; background:var(--bg-3); display:block; transition:background .2s, transform .2s; }
+  .hud a.on { background:var(--ok); transform:scale(1.25); }
+  .hint { position:fixed; bottom:14px; right:20px; color:var(--fg-3); font-size:11px; z-index:9; }
+  .brand { position:fixed; top:16px; left:20px; color:var(--fg-3); font-size:11px; letter-spacing:.08em; z-index:9; }
+  .brand b { color:var(--fg-2); }
+
+  /* slide 0 */
+  .spine p { font-family:var(--serif); font-size:clamp(18px,3vw,34px); line-height:1.4; margin:1.1vh 0; opacity:.92; }
+  .spine p em { font-style:normal; color:var(--ok); font-weight:700; }
+  .spine p:hover { opacity:1; }
+  .coda { border-left:2px solid var(--ok); padding-left:16px; color:var(--fg-1); font-size:clamp(13px,1.6vw,17px); margin-top:2vh; }
+
+  /* controls */
+  .switch { display:inline-flex; gap:4px; background:var(--bg-2); border:1px solid var(--line); border-radius:8px; padding:4px; width:max-content; }
+  .switch button {
+    font:inherit; font-size:clamp(12px,1.4vw,15px); padding:7px 16px; border:0; cursor:pointer;
+    background:transparent; color:var(--fg-1); border-radius:5px; transition:background .18s,color .18s;
+  }
+  .switch button.on { background:var(--bg-3); color:var(--fg); }
+  .switch button:focus-visible { outline:1px solid var(--blue); }
+  .bignum { font-size:clamp(15px,2vw,21px); color:var(--fg-1); }
+  .bignum b { font-size:clamp(30px,4.6vw,54px); color:var(--ok); font-family:var(--mono); font-weight:700; }
+
+  svg { width:100%; height:auto; display:block; }
+  svg text { font-family:var(--sans); fill:var(--fg); }
+  svg .mono { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+  svg .d2 { fill:var(--fg-2); } svg .d3 { fill:var(--fg-3); }
+
+  .cols { display:grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); gap:3vw; align-items:center; }
+  @media (max-width:840px){ .cols { grid-template-columns:1fr; } }
+  .panel { background:var(--bg-1); border:1px solid var(--line); border-radius:12px; padding:2vh 1.6vw; }
+  .gaplist { list-style:none; font-size:clamp(11px,1.3vw,14px); }
+  .gaplist li { display:flex; justify-content:space-between; gap:12px; padding:.7vh 0; border-bottom:1px dashed var(--line); }
+  .gaplist .v { color:var(--warn); font-family:var(--mono); white-space:nowrap; }
+
+  .ribbon { transition:opacity .2s; }
+  .bar { transition: width .7s cubic-bezier(.2,.8,.2,1), x .7s cubic-bezier(.2,.8,.2,1); }
+  .swos { display:grid; grid-template-columns:1fr 1fr; gap:1.6vh 1.6vw; }
+  @media (max-width:840px){ .swos { grid-template-columns:1fr; } }
+  .quad { background:var(--bg-1); border:1px solid var(--line); border-radius:12px; padding:2vh 1.4vw; }
+  .quad h3 { font-size:clamp(11px,1.3vw,13px); letter-spacing:.14em; text-transform:uppercase; margin-bottom:1.2vh; }
+  .quad.s h3{color:var(--ok)} .quad.w h3{color:var(--warn)} .quad.o h3{color:var(--blue)} .quad.x h3{color:var(--gold)}
+  .quad p { font-size:clamp(12px,1.45vw,15.5px); color:var(--fg-1); margin:.8vh 0; line-height:1.45; }
+  .quad p b { color:var(--fg); font-family:var(--mono); }
+  button.reveal {
+    font:inherit; font-size:clamp(12px,1.4vw,15px); padding:8px 18px; cursor:pointer; width:max-content;
+    background:var(--bg-2); color:var(--fg); border:1px solid var(--line); border-radius:8px; transition:border-color .2s;
+  }
+  button.reveal:hover { border-color:var(--ok); }
+</style>
+</head>
+<body>
+<div class="brand"><b>playhunter.dev</b> · where the love is</div>
+<div class="hint">← → to move · every slide is live</div>
+<nav class="hud" id="hud"></nav>
+
+<!-- ═══════════ SLIDE 0 — THE SPINE ═══════════ -->
+<section class="slide spine" data-i="0">
+  <div class="eyebrow">The diversity of the games industry · Google Play's position</div>
+  <p>Love lives where Play isn't — but <em>61%</em> of it comes from companies Play already knows.</p>
+  <p>The tail of love is enormous, and Play-sized.</p>
+  <p>The money is young but the love is old — and Play's evergreen shelf is thin.</p>
+  <p>The funnel is unmatched, and the bucket leaks.</p>
+  <p>And the biggest pool of money is behind a wall.</p>
+  <p class="coda">Strengths, weaknesses, opportunities, surprises —<br>every beat with an audited number behind it.</p>
+</section>
+
+<!-- ═══════════ SLIDE 1 — LOVE MAP ═══════════ -->
+<section class="slide" data-i="1">
+  <div class="eyebrow">Lens 1 · the love map</div>
+  <h1>Where gaming's love lives — and what Play can reach</h1>
+  <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
+    <div class="switch" id="s1switch"></div>
+    <div class="bignum">Play reaches <b id="s1pct">16.2%</b> <span id="s1unit">of watch hours</span></div>
+    <button class="reveal" id="s1ladder">count relationships instead →</button>
+  </div>
+  <div class="cols">
+    <div id="s1viz"></div>
+    <aside class="panel">
+      <div class="eyebrow" style="color:var(--warn); margin-bottom:1vh;">most loved · not on Play</div>
+      <ul class="gaplist">
+        <li><span>League of Legends</span><span class="v">969M hrs</span></li>
+        <li><span>Counter-Strike</span><span class="v">744M hrs</span></li>
+        <li><span>Grand Theft Auto V</span><span class="v">692M hrs</span></li>
+        <li><span>VALORANT</span><span class="v">515M hrs</span></li>
+        <li><span>Dota 2</span><span class="v">440M hrs</span></li>
+        <li><span>World of Warcraft</span><span class="v">355M hrs</span></li>
+      </ul>
+      <p class="note" style="margin-top:1.2vh">936 games · top-1,000 Twitch categories · trailing 365d.
+      Play flags are store links — a lower bound.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══════════ SLIDE 2 — HEAD & TAIL ═══════════ -->
+<section class="slide" data-i="2">
+  <div class="eyebrow">Lens 2 · head &amp; tail</div>
+  <h1>Viewing concentrates. Creating diversifies.</h1>
+  <div class="bignum">top <b id="s2n" style="color:var(--fg)">10</b>
+    <span style="color:var(--blue)" class="num" id="s2h">43%</span> <span class="note" style="display:inline">of hours</span> ·
+    <span style="color:var(--gold)" class="num" id="s2c">19%</span> <span class="note" style="display:inline">of creators</span></div>
+  <div id="s2viz"></div>
+  <p class="note">129,000 games streamed in a year. 8,251 kept 100+ creators. Half the games live right now
+  have exactly one streamer. <b style="color:var(--fg-1)">Drag the line.</b> Creators love what viewers never see.</p>
+</section>
+
+<!-- ═══════════ SLIDE 3 — SUPPLY VS ATTENTION ═══════════ -->
+<section class="slide" data-i="3">
+  <div class="eyebrow">Lens 3 · supply vs attention</div>
+  <h1>The industry doesn't make what the world watches</h1>
+  <div class="switch" id="s3switch"></div>
+  <div id="s3viz"></div>
+  <p class="note">Blue = share of 310k games made (IGDB). Coral = share of 12.2B watch hours.
+  Play's home genres monetize without watch-time; the watched genres are the ones Play lacks.</p>
+</section>
+
+<!-- ═══════════ SLIDE 4 — FUNNEL VS BUCKET ═══════════ -->
+<section class="slide" data-i="4">
+  <div class="eyebrow">Lens 4 · funnel vs bucket</div>
+  <h1>The world's biggest funnel. The industry's leakiest bucket.</h1>
+  <div class="switch" id="s4switch"></div>
+  <div id="s4viz"></div>
+  <p class="note" id="s4note">Play moves <b class="num" style="color:var(--fg-1)">84%</b> of the world's game downloads.
+  Flip the measure and watch the bar shrink: $0.71 kept per download vs Apple's $6.73.
+  On mobile, 1% of publishers take 92.5% of the money. On Steam, indies take a quarter. One store has a middle class.</p>
+</section>
+
+<!-- ═══════════ SLIDE 5 — MADE WHERE, PLAYED WHERE ═══════════ -->
+<section class="slide" data-i="5">
+  <div class="eyebrow">Lens 5 · made where, played where</div>
+  <h1>Money crosses oceans — and the biggest pool is behind a wall</h1>
+  <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
+    <div class="note">$48B of Steam revenue, studio → player. East Asia sends the West <b class="num" style="color:var(--fg-1)">$8.8B</b>;
+    the West sends back <b class="num" style="color:var(--fg-1)">$4.4B</b>.</div>
+    <button class="reveal" id="s5china">show the missing column →</button>
+  </div>
+  <div id="s5viz"></div>
+</section>
+
+<!-- ═══════════ SLIDE 6 — SUMMARY ═══════════ -->
+<section class="slide" data-i="6">
+  <div class="eyebrow">The position</div>
+  <h1 style="margin-bottom:1vh">Strengths, weaknesses, opportunities, surprises</h1>
+  <div class="swos">
+    <div class="quad s"><h3>Strengths</h3>
+      <p><b>42B</b> downloads a year. Nothing else comes close.</p>
+      <p>Where a mobile SKU exists, Play has it: <b>130 of 137</b>.</p>
+      <p>In emerging markets, Play is often the only store.</p></div>
+    <div class="quad w"><h3>Weaknesses</h3>
+      <p><b>71%</b> of watched hours sit on platforms Play doesn't serve. Valve alone holds 10%.</p>
+      <p><b>86%</b> of Play's watched hours come from 5+ year-old games. A legacy portfolio.</p>
+      <p><b>9.5×</b> less money per download than iOS — and no middle class.</p></div>
+    <div class="quad o"><h3>Opportunities</h3>
+      <p><b>61%</b> of watched love comes from companies already on Play. The SKUs are missing, not the relationships.</p>
+      <p><b>8,251</b> games kept 100+ creators. The tail needs a store, not a spotlight.</p>
+      <p><b>1.65M</b> people streamed console games to two viewers — through a share button phones don't have.</p></div>
+    <div class="quad x"><h3>Surprises</h3>
+      <p>Hours say Play has <b>16%</b> of the love. Creators say <b>26%</b>. The measure changes the story.</p>
+      <p>Half of all watch time goes to games <b>8+ years</b> old. The #1 game is 17.</p>
+      <p>China: <b>20%</b> of world spend, 84% domestic, zero Play.</p></div>
+  </div>
+  <p class="coda">Love is measurable. Play's share of it is a choice.</p>
+</section>
+
+<script>
+/* ---------- data ---------- */
+const CLASSES = [ // hours B (play), creators M (play), titles (play)
+  { n:"PC + Console",        h:5.265, hp:0.009, c:24.628, cp:0.185, t:427, tp:5 },
+  { n:"PC only",             h:3.389, hp:0,     c:5.455,  cp:0,     t:247, tp:0 },
+  { n:"PC+Console+Mobile",   h:1.581, hp:1.251, c:11.114, cp:9.599, t:81,  tp:58 },
+  { n:"Console only",        h:1.056, hp:0.003, c:2.298,  cp:0.008, t:86,  tp:2 },
+  { n:"PC + Mobile",         h:0.556, hp:0.522, c:0.841,  cp:0.717, t:54,  tp:47 },
+  { n:"Mobile only",         h:0.177, hp:0.176, c:1.377,  cp:1.367, t:24,  tp:22 },
+  { n:"Other",               h:0.208, hp:0.024, c:0.299,  cp:0.047, t:17,  tp:3 },
+];
+const MEAS = { hours:{k:"h",pk:"hp",u:"of watch hours",f:v=>v>=1?v.toFixed(2)+"B":Math.round(v*1000)+"M"},
+               creators:{k:"c",pk:"cp",u:"of creators",f:v=>v>=1?v.toFixed(1)+"M":Math.round(v*1000)+"k"},
+               titles:{k:"t",pk:"tp",u:"of titles",f:v=>v} };
+const LADDER = [ ["Play has the game",16], ["…or the franchise (Wild Rift, Hearthstone)",40], ["…or the publisher",61] ];
+const RANKS=[10,50,100,500,1000,5000,10000],
+      HCUM=[43.0,68.5,77.4,91.8,95.1,99.2,100], CCUM=[18.8,38.8,50.2,73.1,82.4,96.6,100];
+const GENRES=[ // [name, made%, watched%]
+  ["Shooter",6.6,45.1],["Role-playing",12.8,24.0],["Strategy",14.0,9.0],["Simulator",15.8,8.7],
+  ["Platformer",6.3,2.3],["Racing",3.9,2.1],["Fighting",1.8,1.9],["Adventure",29.6,1.5],
+  ["Puzzle",10.6,1.2],["Card & Board",2.0,1.0] ];
+const STORE = { downloads:[["Google Play",42.4,"var(--ok)"],["App Store",7.8,"var(--blue)"]],
+                dollars:  [["Google Play",30,"var(--ok)"],["App Store",52.5,"var(--blue)"],["Steam",11.7,"var(--gold)"]] };
+const FLOWS = { rows:["North America","Europe","East Asia"], cols:["NA","EU","E. Asia","RoW"],
+  v:[[5.48,7.56,4.85,3.11],[4.53,7.34,3.90,2.41],[2.07,2.35,3.12,1.02]], devTot:["$21.0B","$18.2B","$8.6B"] };
+
+/* ---------- deck chrome ---------- */
+const slides=[...document.querySelectorAll(".slide")]; let cur=0;
+const hud=document.getElementById("hud");
+slides.forEach((s,i)=>{const a=document.createElement("a");a.href="#"+i;hud.append(a);});
+function go(i){ cur=Math.max(0,Math.min(slides.length-1,i));
+  slides.forEach((s,j)=>s.classList.toggle("on",j===cur));
+  [...hud.children].forEach((d,j)=>d.classList.toggle("on",j===cur));
+  history.replaceState(null,"","#"+cur); }
+addEventListener("keydown",e=>{
+  if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){e.preventDefault();go(cur+1);}
+  if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();go(cur-1);}
+  if(/^[0-6]$/.test(e.key)) go(+e.key); });
+addEventListener("hashchange",()=>go(+location.hash.slice(1)||0));
+
+/* ---------- slide 1: sankey + measure switch + ladder ---------- */
+const s1 = { measure:"hours", ladder:false };
+function sankeySVG(){
+  const m=MEAS[s1.measure], W=760, H=430, TOP=8, LX=196, LW=12, RX=560, RW=12, GAPL=6, GAPR=16;
+  const rows=CLASSES.map(c=>({n:c.n,v:c[m.k],p:c[m.pk]})).filter(r=>r.v>0).sort((a,b)=>b.v-a.v);
+  const total=rows.reduce((s,r)=>s+r.v,0), plotH=H-TOP-30-GAPL*(rows.length-1), k=plotH/total;
+  let y=TOP; rows.forEach(r=>{ r.y=y; r.h=Math.max(r.v*k,2); y+=r.h+GAPL; });
+  let ly=0; rows.forEach(r=>{ r.ly=Math.max(r.y+Math.max(r.h/2,4),ly); ly=r.ly+26; });
+  const pTot=rows.reduce((s,r)=>s+r.p,0), nTot=total-pTot;
+  const right=[{id:"play",l:"On Google Play",v:pTot,y:TOP,h:Math.max(pTot*k,2)},
+               {id:"miss",l:"Not on Google Play",v:nTot,y:0,h:Math.max(nTot*k,2)}];
+  right[1].y=TOP+right[0].h+GAPR;
+  let cp=right[0].y, cm=right[1].y, ribs=[];
+  rows.forEach(r=>{ let sy=r.y;
+    if(r.p>0){const t=Math.max(r.p*k,1.2);ribs.push({o:.55,f:"var(--ok)",sy0:sy,sy1:sy+t,ty0:cp,ty1:cp+t,tip:`${r.n} → On Play: ${m.f(r.p)}`});sy+=t;cp+=t;}
+    const ms=r.v-r.p;
+    if(ms>0){const t=Math.max(ms*k,1.2);ribs.push({o:.26,f:"var(--warn)",sy0:sy,sy1:sy+t,ty0:cm,ty1:cm+t,tip:`${r.n} → Not on Play: ${m.f(ms)}`});cm+=t;} });
+  const cx=(LX+LW+RX)/2;
+  const rib=r=>`M ${LX+LW} ${r.sy0} C ${cx} ${r.sy0}, ${cx} ${r.ty0}, ${RX} ${r.ty0} L ${RX} ${r.ty1} C ${cx} ${r.ty1}, ${cx} ${r.sy1}, ${LX+LW} ${r.sy1} Z`;
+  document.getElementById("s1pct").textContent=(pTot/total*100).toFixed(1)+"%";
+  document.getElementById("s1unit").textContent=m.u;
+  return `<svg viewBox="0 0 ${W} ${H}">
+    ${ribs.map(r=>`<path class="ribbon" d="${rib(r)}" fill="${r.f}" opacity="${r.o}"><title>${r.tip}</title></path>`).join("")}
+    ${rows.map(r=>`<rect x="${LX}" y="${r.y}" width="${LW}" height="${r.h}" rx="2" fill="var(--fg-2)"/>
+      <text x="${LX-8}" y="${r.ly+3}" text-anchor="end" font-size="12.5" font-weight="600">${r.n}</text>
+      <text x="${LX-8}" y="${r.ly+15}" text-anchor="end" font-size="11" class="mono d2">${m.f(r.v)}</text>`).join("")}
+    ${right.map(n=>`<rect x="${RX}" y="${n.y}" width="${RW}" height="${n.h}" rx="2" fill="${n.id==="play"?"var(--ok)":"var(--warn)"}"/>
+      <text x="${RX+RW+9}" y="${n.y+Math.min(Math.max(n.h/2,8),n.h)+3}" font-size="12.5" font-weight="600">${n.l}</text>
+      <text x="${RX+RW+9}" y="${n.y+Math.min(Math.max(n.h/2,8),n.h)+16}" font-size="11" class="mono d2">${m.f(n.v)}</text>`).join("")}
+  </svg>`;
+}
+function ladderSVG(){
+  const W=760,H=430;
+  const bars=LADDER.map((r,i)=>{const y=90+i*84,w=r[1]/70*470;
+    return `<text x="292" y="${y+16}" text-anchor="end" font-size="14" class="d2">${r[0]}</text>
+      <rect class="bar" x="300" y="${y}" width="${w}" height="26" rx="3" fill="var(--ok)" opacity="${1-i*0.24}"/>
+      <text x="${306+w}" y="${y+18}" font-size="17" font-weight="700" class="mono" fill="var(--ok)">${r[1]}%</text>`;}).join("");
+  return `<svg viewBox="0 0 ${W} ${H}">
+    <text x="0" y="40" font-size="17" font-weight="600">Play's reach — three ways of counting the same watch time</text>
+    ${bars}
+    <rect x="300" y="352" width="440" height="52" rx="8" fill="none" stroke="var(--warn)"/>
+    <text x="316" y="374" font-size="13" font-weight="600" fill="var(--warn)">The catch</text>
+    <text x="316" y="392" font-size="12.5" class="d2">Cousin SKUs get 11% of their franchise's watch. CoD Mobile: 0.5% of CoD's.</text>
+  </svg>`;
+}
+function renderS1(){
+  document.getElementById("s1viz").innerHTML = s1.ladder ? ladderSVG() : sankeySVG();
+  document.getElementById("s1ladder").textContent = s1.ladder ? "← back to the map" : "count relationships instead →";
+}
+const s1sw=document.getElementById("s1switch");
+Object.keys(MEAS).forEach((id,i)=>{ const b=document.createElement("button");
+  b.textContent={hours:"Watch hours",creators:"Creators",titles:"Titles"}[id];
+  if(i===0)b.classList.add("on");
+  b.onclick=()=>{ s1.measure=id; s1.ladder=false; [...s1sw.children].forEach(x=>x.classList.toggle("on",x===b)); renderS1(); };
+  s1sw.append(b); });
+document.getElementById("s1ladder").onclick=()=>{ s1.ladder=!s1.ladder; renderS1(); };
+renderS1();
+
+/* ---------- slide 2: concentration scrubber ---------- */
+let s2i=0;
+function renderS2(){
+  const W=760,H=330,X0=56,X1=730,Y0=280,Y1=30, xs=i=>X0+i*(X1-X0)/(RANKS.length-1), ys=v=>Y0-(v/100)*(Y0-Y1);
+  const line=(vals,col)=>`<polyline fill="none" stroke="${col}" stroke-width="2.5" points="${vals.map((v,i)=>xs(i)+","+ys(v)).join(" ")}"/>`;
+  const sx=xs(s2i);
+  document.getElementById("s2n").textContent=RANKS[s2i].toLocaleString();
+  document.getElementById("s2h").textContent=HCUM[s2i].toFixed(0)+"%";
+  document.getElementById("s2c").textContent=CCUM[s2i].toFixed(0)+"%";
+  document.getElementById("s2viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}" id="s2svg" style="cursor:ew-resize">
+    ${[0,25,50,75,100].map(v=>`<line x1="${X0}" y1="${ys(v)}" x2="${X1}" y2="${ys(v)}" stroke="var(--line)"/>
+      <text x="${X0-8}" y="${ys(v)+4}" text-anchor="end" font-size="10.5" class="mono d3">${v}%</text>`).join("")}
+    ${RANKS.map((r,i)=>`<text x="${xs(i)}" y="${Y0+20}" text-anchor="middle" font-size="11" class="mono d2">${r>=1000?r/1000+"k":r}</text>`).join("")}
+    <line x1="${sx}" y1="${Y1-8}" x2="${sx}" y2="${Y0}" stroke="var(--fg-1)" stroke-dasharray="3 3"/>
+    <rect x="${sx-3}" y="${ys(HCUM[s2i])}" width="6" height="${ys(CCUM[s2i])-ys(HCUM[s2i])}" fill="var(--fg-3)" opacity=".55"/>
+    ${line(HCUM,"var(--blue)")}${line(CCUM,"var(--gold)")}
+    <circle cx="${sx}" cy="${ys(HCUM[s2i])}" r="6" fill="var(--blue)"/>
+    <circle cx="${sx}" cy="${ys(CCUM[s2i])}" r="6" fill="var(--gold)"/>
+    <text x="${xs(0)+10}" y="${ys(43)-12}" font-size="13" font-weight="600" fill="var(--blue)">watch hours</text>
+    <text x="${xs(0)+10}" y="${ys(18.8)+22}" font-size="13" font-weight="600" fill="var(--gold)">unique creators</text>
+    <text x="${(X0+X1)/2}" y="${H-4}" text-anchor="middle" font-size="10.5" class="d3">category rank · ranks 1–10,000 of ~129,000 streamed</text>
+  </svg>`;
+  const svg=document.getElementById("s2svg");
+  const pick=e=>{ const r=svg.getBoundingClientRect(); const fx=(e.clientX-r.left)/r.width*W;
+    let best=0,bd=1e9; RANKS.forEach((_,i)=>{const d=Math.abs(xs(i)-fx); if(d<bd){bd=d;best=i;}});
+    if(best!==s2i){s2i=best;renderS2();} };
+  svg.addEventListener("pointermove",e=>{ if(e.buttons||e.pointerType==="touch") pick(e); });
+  svg.addEventListener("pointerdown",pick);
+}
+renderS2();
+
+/* ---------- slide 3: sort toggle dumbbells ---------- */
+let s3sort="watched";
+function renderS3(){
+  const W=760,H=380,X0=200,X1=720, sc=v=>X0+(v/46)*(X1-X0);
+  const rows=[...GENRES].sort((a,b)=> s3sort==="watched" ? b[2]-a[2] : b[1]-a[1]);
+  document.getElementById("s3viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
+    ${rows.map((g,i)=>{ const y=26+i*34, made=sc(g[1]), wat=sc(g[2]);
+      return `<text x="${X0-14}" y="${y+4}" text-anchor="end" font-size="13" font-weight="600">${g[0]}</text>
+      <line x1="${Math.min(made,wat)}" y1="${y}" x2="${Math.max(made,wat)}" y2="${y}" stroke="var(--line)" stroke-width="1.5"/>
+      <circle class="dot2" cx="${made}" cy="${y}" r="6" fill="var(--blue)"><title>${g[0]}: ${g[1]}% of games made</title></circle>
+      <circle class="dot2" cx="${wat}" cy="${y}" r="6" fill="var(--warn)"><title>${g[0]}: ${g[2]}% of hours watched</title></circle>
+      <text x="${Math.max(made,wat)+12}" y="${y+4}" font-size="11.5" class="mono d2">${g[1]}% made · <tspan fill="var(--warn)">${g[2]}% watched</tspan></text>`;}).join("")}
+  </svg>`;
+}
+const s3sw=document.getElementById("s3switch");
+[["watched","Sort by what's watched"],["made","Sort by what's made"]].forEach(([id,l],i)=>{
+  const b=document.createElement("button"); b.textContent=l; if(i===0)b.classList.add("on");
+  b.onclick=()=>{ s3sort=id; [...s3sw.children].forEach(x=>x.classList.toggle("on",x===b)); renderS3(); };
+  s3sw.append(b); });
+renderS3();
+
+/* ---------- slide 4: downloads/dollars morph ---------- */
+let s4m="downloads";
+function renderS4(){
+  const W=760,H=210, rows=STORE[s4m], total=rows.reduce((s,r)=>s+r[1],0);
+  let x=140; const segs=rows.map(r=>{ const w=(r[1]/total)*580; const s={n:r[0],v:r[1],x,w,c:r[2]}; x+=w+3; return s; });
+  const unit=s4m==="downloads"?"B downloads":"B dollars";
+  document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
+    <text x="140" y="52" font-size="14" class="d2">${s4m==="downloads"?"2025 mobile game downloads":"2025 consumer spend (mobile stores + Steam)"}</text>
+    ${segs.map(s=>`<rect class="bar" x="${s.x}" y="66" width="${s.w}" height="44" rx="4" fill="${s.c}"/>
+      <text x="${s.x+10}" y="${s.w>90?93:60}" font-size="${s.w>90?14:12}" font-weight="700" fill="${s.w>90?"#0a0a0d":"var(--fg-1)"}">${s.w>90?s.n+" "+s.v+(s4m==="downloads"?"B":"B$"):s.n}</text>`).join("")}
+    <text x="140" y="152" font-size="15" class="d2">value kept per download:
+      <tspan class="mono" font-weight="700" fill="var(--ok)"> Play $0.71</tspan> ·
+      <tspan class="mono" font-weight="700" fill="var(--blue)"> App Store $6.73</tspan> ·
+      <tspan class="mono" font-weight="700"> a 9.5× gap</tspan></text>
+    <text x="140" y="180" font-size="13" class="d3">${s4m==="downloads"?"Play: 84% of the funnel.":"Play: under a third of the three-store pool."}</text>
+  </svg>`;
+}
+const s4sw=document.getElementById("s4switch");
+[["downloads","Downloads"],["dollars","Dollars"]].forEach(([id,l],i)=>{
+  const b=document.createElement("button"); b.textContent=l; if(i===0)b.classList.add("on");
+  b.onclick=()=>{ s4m=id; [...s4sw.children].forEach(x=>x.classList.toggle("on",x===b)); renderS4(); };
+  s4sw.append(b); });
+renderS4();
+
+/* ---------- slide 5: flow matrix + china reveal ---------- */
+let s5china=false;
+function renderS5(){
+  const W=820,H=350, cw=128,ch=64, X0=210,Y0=52, cols=s5china?[...FLOWS.cols,"China"]:FLOWS.cols;
+  const cells=FLOWS.rows.map((r,ri)=>cols.map((c,ci)=>{
+    const x=X0+ci*(cw+8), y=Y0+ri*(ch+8);
+    if(c==="China") return `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="5" fill="none" stroke="var(--warn)" stroke-dasharray="4 4"/>
+      <text x="${x+cw/2}" y="${y+ch/2+4}" text-anchor="middle" font-size="13" fill="var(--warn)">—</text>`;
+    const v=FLOWS.v[ri][ci];
+    return `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="5" fill="var(--ok)" opacity="${(v/7.56)*0.9+0.08}"/>
+      <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="15" font-weight="700" class="mono">${v.toFixed(2)}</text>`;
+  }).join("")).join("");
+  document.getElementById("s5viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
+    ${cols.map((c,ci)=>`<text x="${X0+ci*(cw+8)+cw/2}" y="${Y0-14}" text-anchor="middle" font-size="12.5" font-weight="600" ${c==="China"?'fill="var(--warn)"':''}>${c} players</text>`).join("")}
+    ${FLOWS.rows.map((r,ri)=>`<text x="${X0-16}" y="${Y0+ri*(ch+8)+ch/2-2}" text-anchor="end" font-size="13" font-weight="600">${r}</text>
+      <text x="${X0-16}" y="${Y0+ri*(ch+8)+ch/2+14}" text-anchor="end" font-size="11" class="mono d2">${FLOWS.devTot[ri]}</text>`).join("")}
+    ${cells}
+    ${s5china?`<text x="${X0}" y="${Y0+3*(ch+8)+26}" font-size="13.5" fill="var(--warn)" font-weight="600">China: ~20% of world player spend · 84% goes to Chinese-made games · Google Play does not operate there.</text>`:""}
+  </svg>`;
+  document.getElementById("s5china").textContent = s5china ? "hide it" : "show the missing column →";
+}
+document.getElementById("s5china").onclick=()=>{ s5china=!s5china; renderS5(); };
+renderS5();
+
+/* ---------- start ---------- */
+go(+location.hash.slice(1)||0);
+</script>
+</body>
+</html>
