@@ -83,10 +83,10 @@
   button.reveal:hover { border-color:var(--ok); }
   button.reveal.hot { border-color:var(--ok); color:var(--ok); font-weight:600; }
   #s2viz { touch-action:none; }
-  :root { --vizcap:50vh; }
+  :root { --vizcap:44vh; }
   #s1viz svg, #s3viz svg, #s4viz svg, #s5viz svg { max-height:var(--vizcap); }
   #s2viz { align-self:center; width:min(100%, calc(var(--vizcap) * 760 / 330)); }
-  @media (max-height:820px) {
+  @media (max-height:945px) {
     :root { --vizcap:40vh; }
     .slide { gap:1.4vh; padding-top:max(4vh,32px); padding-bottom:max(5vh,44px); }
     .quad { padding:1.2vh 1.4vw; }
@@ -152,7 +152,7 @@
   <p class="note"><b>Drag the line — or press ↑↓.</b> 129,000 games streamed in a year; half the games live
   right now have exactly one streamer, at a median of two viewers. The tail — 8,251 games that kept 100+
   creators — is indie-sized, discovery-starved, and Play-sized: it needs a store, not a spotlight.
-  1.65M of those creators went live from consoles.</p>
+  1.65M creators went live from consoles.</p>
   <p class="note" style="font-size:clamp(10px,1.1vw,12px); color:var(--fg-3)">Curves shown to rank 10,000 —
   the other ~119k games hold under 1% of hours. Creators counted per game.</p>
 </section>
@@ -166,8 +166,8 @@
   <p class="note"><span style="color:var(--blue)">●</span> share of watch hours ·
   <span style="color:var(--fg-2)">●</span> share of the 310k games in IGDB ·
   <span style="color:var(--ok)">green names</span> = Play's home genres — they make money without being
-  watched. The watched genres live on PC and console versions Play doesn't carry — Play's shooters exist,
-  but they get ~11% of their franchises' watch hours — for structural reasons: input, sessions, hardware.
+  watched. The watched genres live on PC and console versions Play doesn't carry — Play's cousins of these
+  franchises capture ~11% of their watch hours overall — for structural reasons: input, sessions, hardware.
   Genres overlap — a game can carry more than one tag.</p>
 </section>
 
@@ -195,11 +195,11 @@
 <!-- ═══════════ SLIDE 6 — SUMMARY ═══════════ -->
 <section class="slide" data-i="6">
   <div class="eyebrow">The position</div>
-  <h1 style="margin-bottom:1vh">Strengths, weaknesses, surprises, opportunities</h1>
+  <h1 style="margin-bottom:1vh">Strengths, weaknesses, opportunities, surprises</h1>
   <div class="swos">
     <div class="quad s"><h3>Strengths</h3>
       <p><b>42B</b> downloads a year. Nothing else comes close.</p>
-      <p>Where a mobile SKU exists, Play almost always has it: <b>130 of 162</b> mobile-class titles.</p>
+      <p>Where a mobile SKU exists, Play usually has it: <b>130 of 162</b> mobile-class titles.</p>
       <p>In emerging markets, Play is often the only store.</p></div>
     <div class="quad w"><h3>Weaknesses</h3>
       <p><b>84%</b> of watch hours aren't on Play — <b>71%</b> sit on PC-first titles, another <b>9%</b> console-only. Valve's own two games are 10% by themselves.</p>
@@ -212,7 +212,7 @@
     <div class="quad o"><h3>Opportunities</h3>
       <p><b>61%</b> of watched love comes from companies already on Play. The games are missing, not the relationships.</p>
       <p><b>8,251</b> games kept 100+ creators. The tail needs a store, not a spotlight.</p>
-      <p><b>1.65M</b> people streamed console games to a median of two viewers — through a share button phones don't have.</p></div>
+      <p><b>1.65M</b> people streamed console games — through a share button phones don't have.</p></div>
   </div>
   <p class="coda">Love is measurable. Play's share of it is a choice —<br>Fortnite made that choice in 2026, and the hours came with it.</p>
 </section>
@@ -231,7 +231,7 @@ const CLASSES = [
 const MEAS = { hours:{k:"h",pk:"hp",u:"of watch hours",f:v=>v>=1?v.toFixed(2)+"B":Math.round(v*1000)+"M"},
                creators:{k:"c",pk:"cp",u:"of creators",f:v=>v>=1?v.toFixed(1)+"M":Math.round(v*1000)+"k"},
                titles:{k:"t",pk:"tp",u:"of titles",f:v=>v} };
-const LADDER = [ ["Play has the game",16], ["…or the franchise (LoL → Wild Rift, WoW → Hearthstone)",40], ["…or the publisher",61] ];
+const LADDER = [ ["Play has the game",16], ["…or the franchise (LoL → Wild Rift)",40], ["…or the publisher",61] ];
 const RANKS=[10,50,100,500,1000,5000,10000],
       HCUM=[43.0,68.5,77.4,91.8,95.1,99.2,100], CCUM=[18.8,38.8,50.2,73.1,82.4,96.6,100];
 const GENRES=[ // [name, made%, watched%, playHome]
@@ -320,11 +320,12 @@ function ladderSVG(){
   return `<svg viewBox="0 0 ${W} ${H}">
     <text x="0" y="40" font-size="17" font-weight="600">Play's reach — three ways of counting the same watch hours</text>
     ${bars}
-    <rect x="300" y="340" width="446" height="76" rx="8" fill="none" stroke="var(--warn)"/>
-    <text x="316" y="362" font-size="13" font-weight="600" fill="var(--warn)">The catch</text>
-    <text x="316" y="380" font-size="12.5" class="d2">Mobile spin-offs don't inherit the love: where a franchise runs on both, the</text>
-    <text x="316" y="394" font-size="12.5" class="d2">Play versions get 11% of those franchises' watch hours. CoD Mobile: 0.5% of CoD's.</text>
-    <text x="316" y="410" font-size="12.5" fill="var(--ok)">Full ports are different: when the real game landed (Fortnite, 2026), the hours came with it.</text>
+    <rect x="300" y="332" width="446" height="94" rx="8" fill="none" stroke="var(--warn)"/>
+    <text x="316" y="352" font-size="13" font-weight="600" fill="var(--warn)">The catch</text>
+    <text x="316" y="370" font-size="12.5" class="d2">Mobile spin-offs don't inherit the love: where a franchise runs on</text>
+    <text x="316" y="384" font-size="12.5" class="d2">both, Play versions get 11% of its watch hours (CoD Mobile: 0.5%).</text>
+    <text x="316" y="402" font-size="12.5" fill="var(--ok)">Full ports differ: when the real game landed (Fortnite, 2026),</text>
+    <text x="316" y="416" font-size="12.5" fill="var(--ok)">the hours came with it.</text>
   </svg>`;
 }
 function renderS1(){

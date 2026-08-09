@@ -94,6 +94,7 @@ def full_sweep(tw):
     Returns (ts, rows, creators). ~1000 pages at peak (~2-3 min paced)."""
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     agg = {}   # game_id -> {name, viewers, users:set}
+    langs = {} # (game_id, language) -> [viewers, channels]
     cursor = None
     for _ in range(1500):
         params = {"first": 100, "type": "live"}
@@ -107,6 +108,10 @@ def full_sweep(tw):
             if s["user_id"] not in a["users"]:
                 a["users"].add(s["user_id"])
                 a["viewers"] += s["viewer_count"]
+                key = (gid, s.get("language") or "??")
+                la = langs.setdefault(key, [0, 0])
+                la[0] += s["viewer_count"]
+                la[1] += 1
         cursor = resp.get("pagination", {}).get("cursor")
         if not cursor or not resp["data"]:
             break
@@ -115,18 +120,20 @@ def full_sweep(tw):
             for gid, a in agg.items()]
     rows.sort(key=lambda r: -r["viewers"])
     creators = {gid: a["users"] for gid, a in agg.items()}
-    return ts, rows, creators
+    return ts, rows, creators, langs
 
 
 def sweep(tw):
-    """One full sweep. Returns (ts, rows, creators) where rows are per-category
-    aggregates and creators maps game_id -> set of user_ids seen live."""
+    """One full sweep. Returns (ts, rows, creators, langs) where rows are
+    per-category aggregates, creators maps game_id -> set of user_ids, and
+    langs maps (game_id, language) -> [viewers, channels] — stream language
+    is the standard regional proxy (Twitch exposes no viewer geography)."""
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     top = tw.get("/games/top", {"first": 100})["data"]
-    rows, creators = [], {}
+    rows, creators, langs = [], {}, {}
     for cat in top:
         gid = cat["id"]
-        seen = {}  # user_id -> viewer_count (dedupe across pages)
+        seen = {}   # user_id -> (viewer_count, language)
         cursor = None
         for _ in range(PAGE_CAP):
             params = {"game_id": gid, "first": 100, "type": "live"}
@@ -134,7 +141,7 @@ def sweep(tw):
                 params["after"] = cursor
             resp = tw.get("/streams", params)
             for s in resp["data"]:
-                seen[s["user_id"]] = s["viewer_count"]
+                seen[s["user_id"]] = (s["viewer_count"], s.get("language") or "??")
             cursor = resp.get("pagination", {}).get("cursor")
             if not cursor or not resp["data"]:
                 break
@@ -143,11 +150,16 @@ def sweep(tw):
             "game_id": gid,
             "game_name": cat["name"],
             "igdb_id": cat.get("igdb_id") or "",
-            "viewers": sum(seen.values()),
+            "viewers": sum(v for v, _ in seen.values()),
             "channels": len(seen),
         })
         creators[gid] = set(seen)
-    return ts, rows, creators
+        for v, lang in seen.values():
+            key = (gid, lang)
+            agg = langs.setdefault(key, [0, 0])
+            agg[0] += v
+            agg[1] += 1
+    return ts, rows, creators, langs
 
 
 def append_csv(csv_dir, rows):
@@ -177,11 +189,15 @@ def open_db(path):
             ts TEXT, game_id TEXT, game_name TEXT,
             viewers INTEGER, channels INTEGER);
         CREATE INDEX IF NOT EXISTS full_polls_game ON full_polls(game_id, ts);
+        CREATE TABLE IF NOT EXISTS lang_polls(
+            ts TEXT, game_id TEXT, lang TEXT,
+            viewers INTEGER, channels INTEGER);
+        CREATE INDEX IF NOT EXISTS lang_polls_game ON lang_polls(game_id, lang, ts);
     """)
     return db
 
 
-def record_db(db, ts, rows, creators):
+def record_db(db, ts, rows, creators, langs=None):
     db.executemany(
         "INSERT INTO polls VALUES(:ts,:game_id,:game_name,:igdb_id,:viewers,:channels)", rows)
     for gid, users in creators.items():
@@ -189,6 +205,10 @@ def record_db(db, ts, rows, creators):
             "INSERT INTO creators VALUES(?,?,?,?) ON CONFLICT(game_id,user_id) "
             "DO UPDATE SET last_seen=excluded.last_seen",
             [(gid, u, ts, ts) for u in users])
+    if langs:
+        db.executemany(
+            "INSERT INTO lang_polls VALUES(?,?,?,?,?)",
+            [(ts, gid, lang, v, c) for (gid, lang), (v, c) in langs.items()])
     db.commit()
 
 
@@ -213,18 +233,18 @@ def main():
     while True:
         started = time.monotonic()
         try:
-            ts, rows, creators = sweep(tw)
+            ts, rows, creators, langs = sweep(tw)
             if args.csv_dir:
                 append_csv(args.csv_dir, rows)
             if db is not None:
-                record_db(db, ts, rows, creators)
+                record_db(db, ts, rows, creators, langs)
             total_creators = sum(len(v) for v in creators.values())
             print(f"{ts} sweep ok: {len(rows)} categories, "
                   f"{sum(r['viewers'] for r in rows):,} viewers, "
                   f"{total_creators:,} live channels", flush=True)
             # hourly: the full live tail (every stream on Twitch)
             if db is not None and args.loop and cycle % 4 == 0:
-                fts, frows, fcreators = full_sweep(tw)
+                fts, frows, fcreators, flangs = full_sweep(tw)
                 db.executemany(
                     "INSERT INTO full_polls VALUES(:ts,:game_id,:game_name,:viewers,:channels)",
                     frows)
@@ -233,6 +253,9 @@ def main():
                         "INSERT INTO creators VALUES(?,?,?,?) ON CONFLICT(game_id,user_id) "
                         "DO UPDATE SET last_seen=excluded.last_seen",
                         [(gid, u, fts, fts) for u in users])
+                db.executemany(
+                    "INSERT INTO lang_polls VALUES(?,?,?,?,?)",
+                    [(fts, gid, lang, v, c) for (gid, lang), (v, c) in flangs.items()])
                 db.commit()
                 print(f"{fts} FULL sweep: {len(frows):,} games live, "
                       f"{sum(r['viewers'] for r in frows):,} viewers, "
