@@ -86,7 +86,7 @@
   button.reveal.hot { border-color:var(--ok); color:var(--ok); font-weight:600; }
   #s2viz { touch-action:none; }
   :root { --vizcap:44vh; }
-  #s1viz svg, #s3viz svg, #s4viz svg, #s5viz svg { max-height:var(--vizcap); }
+  #s1viz svg, #s3viz svg, #s4viz svg, #s5viz svg, #s6viz svg { max-height:var(--vizcap); }
   #s2viz { align-self:center; width:min(100%, calc(var(--vizcap) * 760 / 330)); }
   @media (max-height:945px) {
     :root { --vizcap:38vh; }
@@ -96,6 +96,7 @@
     .gaplist li { padding:.4vh 0; }
     .panel { padding:1.3vh 1.4vw; }
     .panel .note { font-size:11px; }
+    .slide[data-i="6"] .note { font-size:11px; }
   }
 </style>
 </head>
@@ -213,20 +214,19 @@
   <h1>On PC, new games power the market. On mobile, they barely dent it.</h1>
   <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
     <div class="switch" id="s6switch"></div>
-    <div class="bignum"><b id="s6steam" style="font-size:clamp(22px,3.2vw,38px)">15</b>
-      <span class="note" style="display:inline">Steam newcomers crossed it</span> ·
-      <b id="s6mob" style="font-size:clamp(22px,3.2vw,38px); color:var(--gold)">10</b>
-      <span class="note" style="display:inline" id="s6mobnote">on mobile</span></div>
+    <div class="bignum"><b id="s6steam" style="font-size:clamp(22px,3.2vw,38px)">72%</b>
+      <span class="note" style="display:inline">of Steam's launched 2025+</span> ·
+      <b id="s6mob" style="font-size:clamp(22px,3.2vw,38px); color:var(--gold)">14%</b>
+      <span class="note" style="display:inline">of Play's</span></div>
   </div>
   <div id="s6viz"></div>
-  <p class="note"><b>The year's money leaderboards:</b> all <b class="num">10 of 10</b> of Steam's top
-  trailing-12-month earners launched in 2025–26. <b class="num">0 of 10</b> of mobile's top grossers launched
-  in 2025 — median age 5.5 years, and Honor of Kings (2015) alone out-grossed all ten of 2025's biggest mobile
-  launches combined. New releases take <b class="num">19%</b> of Steam's market and
-  <b class="num">≈3%</b> of mobile's. A store where new games can't break in can't mint new evergreens —
-  that's the legacy-shelf mechanism from Lens 2, at market scale.
-  <span style="color:var(--fg-3)">Steam = premium revenue (F2P evergreens like CS2 carry $0 here);
-  Steam counts include re-releases (GTA V Enhanced). Mobile $50M/$10M tiers: not published anywhere.</span></p>
+  <p class="note"><b>All 10 of 10</b> of Steam's top earners launched in 2025–26; <b class="num">0 of 10</b>
+  of mobile's annual top grossers did — Honor of Kings (2015) out-grossed all ten of 2025's biggest launches
+  combined. The top-10 newcomers alone take <b class="num">19%</b> of Steam, <b class="num">≈3%</b> of mobile.
+  A store where new games can't climb can't mint evergreens — Lens 2 at market scale.
+  <span style="color:var(--fg-3)">Steam: our Gamalytic panel (premium; CS2's F2P excluded; incl. re-releases).
+  Play: today's US grossing chart, measured by us. $76.7B = AppMagic gross, both stores — China's other
+  Android stores (~$31B) are most of the gap to Lens 4's $113B.</span></p>
 </section>
 
 <!-- ═══════════ SLIDE 7 — SUMMARY ═══════════ -->
@@ -541,37 +541,37 @@ function renderS5(){
 }
 renderS5();
 
-/* ---------- slide 6: new blood — benchmark selector ---------- */
-// 2025-released games crossing revenue benchmarks. Steam: our Gamalytic panel
-// (top-1000 + rank-1001-5000 extension), lifetime-to-date ≈ first-year for
-// 2025 releases. Mobile: AppMagic newcomers list — $100M is the only
-// published tier (the top-10 cutoff sits at exactly ~$100M).
+/* ---------- slide 6: new blood — chart-freshness selector ---------- */
+// Same yardstick, both sides, measured by us: share of the money chart held
+// by games launched 2025+. Steam = our Gamalytic panel ranked by trailing-12m
+// revenue; Play = today's US top-grossing chart (parse-play + release dates,
+// data/play-chart-freshness.json, fetched 2026-08-09).
 const BENCH=[
-  { l:"$100M", steam:15, mob:"10", note:"on mobile — the entire published list" },
-  { l:"$50M",  steam:27, mob:"—",  note:"on mobile: not published" },
-  { l:"$10M",  steam:108, mob:"—", note:"on mobile: not published" },
+  { l:"Top 50",  steam:36, mob:7,  n:50 },
+  { l:"Top 100", steam:58, mob:18, n:100 },
+  { l:"Top 200", steam:82, mob:41, n:200 },
 ];
 let s6i=0;
 function renderS6(){
   const b=BENCH[s6i];
-  document.getElementById("s6steam").textContent=b.steam;
-  document.getElementById("s6mob").textContent=b.mob;
-  document.getElementById("s6mobnote").textContent=b.note;
-  const W=760,H=200, max=110;
-  const bar=(y,label,v,c,txt)=>`
-    <text x="150" y="${y+16}" text-anchor="end" font-size="13" font-weight="600">${label}</text>
-    ${v==null
-      ? `<rect x="160" y="${y}" width="220" height="24" rx="3" fill="none" stroke="var(--fg-3)" stroke-dasharray="4 4"/>
-         <text x="172" y="${y+16}" font-size="12" class="d3">not published</text>`
-      : `<rect x="160" y="${y}" width="${Math.max(v/max*560,6)}" height="24" rx="3" fill="${c}"/>
-         <text x="${168+Math.max(v/max*560,6)}" y="${y+16}" font-size="14" font-weight="700" class="mono" fill="${c}">${txt}</text>`}`;
+  document.getElementById("s6steam").textContent=Math.round(b.steam/b.n*100)+"%";
+  document.getElementById("s6mob").textContent=Math.round(b.mob/b.n*100)+"%";
+  const W=760,H=214;
+  const row=(y,label,v,n,c)=>{
+    const w=Math.max(v/n*560,6);
+    return `<text x="120" y="${y+16}" text-anchor="end" font-size="13" font-weight="600">${label}</text>
+      <rect x="130" y="${y}" width="560" height="24" rx="3" fill="var(--bg-3)"/>
+      <rect x="130" y="${y}" width="${w}" height="24" rx="3" fill="${c}"/>
+      <text x="${138+w}" y="${y+17}" font-size="14" font-weight="700" class="mono" fill="${c}">${v} of ${n}</text>`;
+  };
   document.getElementById("s6viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
-    <text x="160" y="18" font-size="13" class="d2">2025 releases crossing ${b.l} · first-year revenue</text>
-    ${bar(36,"Steam",b.steam,"var(--ok)",b.steam)}
-    ${bar(76,"Mobile",b.mob==="—"?null:+b.mob,"var(--gold)",b.mob)}
-    <text x="160" y="132" font-size="13" class="d2">…from markets of very different size:</text>
-    <text x="160" y="154" font-size="13" class="d2">Steam ≈ <tspan class="mono" font-weight="700">$11.7B</tspan> premium · mobile ≈ <tspan class="mono" font-weight="700">$76.7B</tspan> gross — per market dollar, Steam mints ~<tspan class="mono" font-weight="700" fill="var(--ok)">10×</tspan> more $100M newcomers.</text>
-    <text x="160" y="182" font-size="12.5" class="d3">Top-10 new releases earned ≈$2.2B on BOTH platforms in 2025 — 19% of Steam, ≈3% of mobile.</text>
+    <text x="130" y="18" font-size="13" class="d2">games launched 2025+ in the ${b.l.toLowerCase()} of each money chart</text>
+    ${row(34,"Steam",b.steam,b.n,"var(--ok)")}
+    ${row(74,"Play",b.mob,b.n,"var(--gold)")}
+    <text x="130" y="136" font-size="13" class="d2">and the shapes invert with depth — Steam: <tspan class="mono" font-weight="700">72% → 58% → 41%</tspan> · Play: <tspan class="mono" font-weight="700">14% → 18% → 21%</tspan>:</text>
+    <text x="130" y="156" font-size="13" class="d2">new Steam games own the summit; new mobile games exist, but can't climb past the evergreens.</text>
+    <text x="130" y="186" font-size="12.5" class="d3">2025's newcomers past $100M: Steam 15 · mobile 10 — from markets of $11.7B and $76.7B.</text>
+    <text x="130" y="203" font-size="12.5" class="d3">Per market dollar, Steam mints ~10× more $100M newcomers.</text>
   </svg>`;
 }
 const s6sw=document.getElementById("s6switch");
