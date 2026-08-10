@@ -87,9 +87,10 @@
   #s1viz svg, #s3viz svg, #s4viz svg, #s5viz svg { max-height:var(--vizcap); }
   #s2viz { align-self:center; width:min(100%, calc(var(--vizcap) * 760 / 330)); }
   @media (max-height:945px) {
-    :root { --vizcap:40vh; }
-    .slide { gap:1.4vh; padding-top:max(4vh,32px); padding-bottom:max(5vh,44px); }
-    .quad { padding:1.2vh 1.4vw; }
+    :root { --vizcap:38vh; }
+    .slide { gap:1.2vh; padding-top:max(4vh,32px); padding-bottom:max(5vh,44px); }
+    .quad { padding:1.1vh 1.4vw; }
+    .coda { margin-top:1.2vh; }
   }
 </style>
 </head>
@@ -102,8 +103,10 @@
 <section class="slide spine" data-i="0">
   <div class="eyebrow">The diversity of the games industry · Google Play's position</div>
   <p class="defn">"Love" here is measured: 12.2 billion hours the world chose to watch — the 936 games
-  among Twitch's top 1,000 categories, past 12 months, talk shows and Just Chatting excluded —
-  and the people who stream them.</p>
+  among Twitch's top 1,000 categories, past 12 months — and the people who stream them.
+  Why this proxy: watch time is where gaming's conversation happens, streaming correlates 0.76 with
+  launch performance, and publishers put their money where the attention is — which is how attention
+  ends up shaping the catalog itself.</p>
   <p class="cl">Love lives where Play isn't — but <em>59%</em> of it comes from companies Play already knows.</p>
   <p class="cl">The tail of love is enormous, and Play-sized.</p>
   <p class="cl">The money is young but the love is old — and Play's evergreen shelf is thin.</p>
@@ -133,11 +136,10 @@
         <li><span>Dota 2</span><span class="v">440M hrs</span></li>
         <li><span>World of Warcraft</span><span class="v">355M hrs</span></li>
       </ul>
-      <p class="note" style="margin-top:1.2vh">A game counts as on Play only if we verified its own store
-      listing in one of five countries (US, IN, JP, KR, BR) — cousins and companion apps arbitrated out.
-      Mobile spin-offs (Wild Rift, Warcraft Rumble) count as Play titles, but not as these games — the
-      ladder shows what changes if you count them. And yes, Twitch skews PC: that's part of the finding —
-      wherever streaming is frictionless, Play is absent.</p>
+      <p class="note" style="margin-top:1.2vh">On Play = the game's own listing, verified in five countries;
+      cousins and companion apps arbitrated out. Spin-offs like Wild Rift count as Play titles — not as these
+      games; the ladder shows that cut. And yes, Twitch skews PC — that's part of the finding: wherever
+      streaming is frictionless, Play is absent.</p>
     </aside>
   </div>
 </section>
@@ -150,10 +152,10 @@
     <span style="color:var(--blue)" class="num" id="s2h">43%</span> <span class="note" style="display:inline">of watch hours</span> ·
     <span style="color:var(--gold)" class="num" id="s2c">19%</span> <span class="note" style="display:inline">of creators</span></div>
   <div id="s2viz"></div>
-  <p class="note"><b>Drag the line — or press ↑↓.</b> 129,000 games streamed in a year; half the games live
-  right now have exactly one streamer, at a median of two viewers. The tail — 8,251 games that kept 100+
-  creators — is indie-sized, discovery-starved, and Play-sized: it needs a store, not a spotlight.
-  1.65M creators streamed to under two viewers each — 85% on console titles.</p>
+  <p class="note"><b>Drag the line — or press ↑↓.</b> And here's Play's position on this curve:
+  <b style="color:var(--ok)">on Play: 23% of the top-100 games · 19% of ranks 101–300 · 14% below</b> —
+  Play thins exactly where the catalog's variety lives. The tail is real: 8,251 games kept 100+ creators
+  all year, and it's indie-sized, discovery-starved, and Play-sized.</p>
   <p class="note" style="font-size:clamp(10px,1.1vw,12px); color:var(--fg-3)">Curves shown to rank 10,000 —
   the other ~119k games hold under 1% of hours. Creators counted per game.</p>
 </section>
@@ -164,12 +166,12 @@
   <h1>The industry doesn't make what the world watches</h1>
   <div class="switch" id="s3switch"></div>
   <div id="s3viz"></div>
-  <p class="note"><span style="color:var(--blue)">●</span> share of watch hours ·
-  <span style="color:var(--fg-2)">●</span> share of the 310k games in IGDB ·
-  <span style="color:var(--ok)">green names</span> = Play's home genres — they make money without being
-  watched. The watched genres live on PC and console versions Play doesn't carry — Play's cousins of these
-  franchises capture ~11% of their watch hours overall — for structural reasons: input, sessions, hardware.
-  Genres overlap — a game can carry more than one tag.</p>
+  <p class="note"><b>The point: the genres the world watches are not the genres mobile publishes.</b>
+  <span style="color:var(--blue)">●</span> = share of watch hours · <span style="color:var(--fg-2)">●</span> =
+  share of the 310k games in IGDB. The <span style="color:var(--ok)">green genres</span> are where mobile's
+  catalog and revenue concentrate — puzzle, card, simulation earn billions through play sessions, not
+  spectacle. The watched genres — shooter, RPG — live on PC and console versions Play doesn't carry.
+  Genres overlap; a game can carry more than one tag.</p>
 </section>
 
 <!-- ═══════════ SLIDE 4 — FUNNEL VS BUCKET ═══════════ -->
@@ -215,7 +217,7 @@
       <p><b>8,251</b> games kept 100+ creators. The tail needs a store, not a spotlight.</p>
       <p><b>1.65M</b> people streamed console titles to under two viewers — through a share button phones don't have.</p></div>
   </div>
-  <p class="coda">Love is measurable. Play's share of it is a choice —<br>Fortnite made that choice in 2026, and the hours came with it.</p>
+  <p class="coda">Love is measurable, and Play's share of it is a choice: when Fortnite returned to Play<br>in March 2026, its watch hours became reachable overnight. The gap is a choice, not a law.</p>
 </section>
 
 <script>
