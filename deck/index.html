@@ -157,7 +157,7 @@
     <span style="color:var(--blue)" class="num" id="s2h">43%</span> <span class="note" style="display:inline">of watch hours</span> ·
     <span style="color:var(--gold)" class="num" id="s2c">19%</span> <span class="note" style="display:inline">of creators</span></div>
   <div id="s2viz"></div>
-  <p class="note"><b>Drag the line — or press ↑↓.</b> And here's Play's position on this curve:
+  <p class="note"><b>Drag the line — or press ↑↓.</b> And here's Play's position on this curve —
   <b style="color:var(--ok)">on Play: 23% of the top-100 games · 19% of ranks 101–300 · 14% below</b> —
   Play thins exactly where the catalog's variety lives. The tail is real: 8,251 games kept 100+ creators
   all year, and it's indie-sized, discovery-starved, and Play-sized.</p>
@@ -184,7 +184,7 @@
   <div class="eyebrow">Lens 4 · funnel vs bucket</div>
   <h1>The world's biggest funnel. The industry's leakiest bucket.</h1>
   <div id="s4viz"></div>
-  <p class="note" id="s4note"><b>One report family, both measures at once.</b> Play: 84% of these downloads,
+  <p class="note" id="s4note"><b>One report family, both measures at once.</b> Play: 83% of these downloads,
   $0.71 of spend each. Steam: under 2% of downloads — $13.65 each. On mobile, 1% of publishers take 92.5%
   of the revenue; on Steam, indies take a quarter. One store has a middle class.
   <span style="color:var(--fg-3)">Hover a store to track it across both bars.</span></p>
@@ -203,7 +203,7 @@
   <p class="note"><b>Mobile blows the other way:</b> Chinese publishers took <b class="num">35%</b> of the
   world's top-100 mobile revenue in 2025 · China's mobile exports hit <b class="num">$18.5B</b>, the US the
   #1 destination (32%) · publisher-HQ share shifted <b class="num">+$2.6B</b> to Asia while North America
-  fell <b class="num">−$1.8B</b>. On mobile, the West pays the East.
+  gave up <b class="num">$1.8B</b>. On mobile, the West pays the East.
   <span style="color:var(--fg-3)">Vendor marginals — the mobile studio→player joint matrix is unpublished, so we don't draw one.</span></p>
 </section>
 
@@ -253,8 +253,6 @@ const GENRES=[ // [name, made%, watched%, playHome]
   ["Shooter",6.6,45.1,0],["Role-playing",12.8,24.0,0],["Strategy",14.0,9.0,0],["Simulator",15.8,8.7,1],
   ["Platformer",6.3,2.3,0],["Racing",3.9,2.1,0],["Fighting",1.8,1.9,0],["Adventure",29.6,1.5,0],
   ["Puzzle",10.6,1.2,1],["Card & Board",2.0,1.0,1] ];
-const STORE = { downloads:[["Google Play",42.4,"var(--ok)"],["App Store",7.8,"var(--blue)"]],
-                dollars:  [["Google Play",30,"var(--ok)"],["App Store",52.5,"var(--blue)"],["Steam",11.7,"var(--gold)"]] };
 const FLOWS = { rows:["North America","Europe","East Asia"], cols:["NA","EU","E. Asia","RoW"],
   v:[[5.48,7.56,4.85,3.11],[4.53,7.34,3.90,2.41],[2.07,2.35,3.12,1.02]], devTot:["$21.0B","$18.2B","$8.6B"] };
 
@@ -419,7 +417,7 @@ const s3sw=document.getElementById("s3switch");
 RESET[3]=()=>{ s3sort="watched"; setSwitch(s3sw,0); renderS3(); };
 renderS3();
 
-/* ---------- slide 4: downloads/dollars flip ---------- */
+/* ---------- slide 4: downloads vs dollars ---------- */
 function renderS4(){
   // One report family throughout (Sensor Tower State of Gaming 2026 / VGI):
   // downloads incl. F2P — Play 42.4B, App Store 7.8B, Steam 0.857B;
@@ -428,9 +426,9 @@ function renderS4(){
   const DL=[["Google Play",42.4,"var(--ok)"],["App Store",7.8,"var(--blue)"],["Steam",0.857,"var(--gold)"]];
   const SP=[["Google Play",30,"var(--ok)"],["App Store",52.5,"var(--blue)"],["Steam",11.7,"var(--gold)"]];
   const bar=(rows,y,label,unit)=>{
-    const total=rows.reduce((s,r)=>s+r[1],0); let x=140, below=0;
+    const total=rows.reduce((s,r)=>s+r[1],0); let x=40, below=0;
     const parts=rows.map(r=>{ const w=Math.max((r[1]/total)*580,4); const p={n:r[0],v:r[1],x,w,c:r[2]}; x+=w+3; return p; });
-    return `<text x="140" y="${y-10}" font-size="13" class="d2">${label}</text>`+parts.map(p=>{
+    return `<text x="40" y="${y-10}" font-size="13" class="d2">${label}</text>`+parts.map(p=>{
       const v=(unit==="$"?"$":"")+p.v+"B";
       const row = below++;
       const lx = row === 0 ? 590 : 712;                  // spread small labels apart
@@ -444,12 +442,12 @@ function renderS4(){
   document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
     ${bar(DL,34,"2025 game downloads (incl. F2P) · same vendor family","")}
     ${bar(SP,158,"2025 consumer spend","$")}
-    <text x="140" y="262" font-size="15" class="d2">spend per download:
+    <text x="40" y="262" font-size="15" class="d2">spend per download:
       <tspan class="mono" font-weight="700" fill="var(--ok)"> Play $0.71</tspan> ·
       <tspan class="mono" font-weight="700" fill="var(--blue)"> App Store $6.73</tspan> ·
       <tspan class="mono" font-weight="700" fill="var(--gold)"> Steam $13.65</tspan></text>
-    <text x="140" y="284" font-size="12" class="d3">Whole market: Steam ≈ 40% of the world's $43B PC spend — the rest is mostly off-store F2P.</text>
-    <text x="140" y="302" font-size="12" class="d3">Epic's store: $0.4B third-party. China's Android stores: outside all of this.</text>
+    <text x="40" y="284" font-size="12" class="d3">Whole market: counting in-game spend, Steam ≈ 40% of the world's $43B PC spend — the rest is mostly off-store F2P.</text>
+    <text x="40" y="302" font-size="12" class="d3">Epic's store: $0.4B third-party. China's Android stores: outside all of this.</text>
   </svg>`;
   const viz=document.getElementById("s4viz");
   viz.onmouseover=e=>{ const s=e.target.dataset?.store; if(!s) return;
