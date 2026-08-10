@@ -118,7 +118,7 @@
   <h1>Where gaming's love lives — and what Play can reach</h1>
   <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
     <div class="switch" id="s1switch"></div>
-    <div class="bignum">Play reaches <b id="s1pct">16.2%</b> <span id="s1unit">of watch hours</span></div>
+    <div class="bignum">Play reaches <b id="s1pct">17.7%</b> <span id="s1unit">of watch hours</span></div>
     <button class="reveal hot" id="s1ladder">count relationships and 18% becomes 59% →</button>
   </div>
   <div class="cols">
@@ -332,7 +332,7 @@ function ladderSVG(){
 function renderS1(){
   document.getElementById("s1viz").innerHTML = s1.ladder ? ladderSVG() : sankeySVG();
   document.getElementById("s1ladder").textContent = s1.ladder ? "← back to the map"
-    : (s1.measure==="hours" ? "count relationships and 16% becomes 61% →"
+    : (s1.measure==="hours" ? "count relationships and 18% becomes 59% →"
                             : "count relationships — 18% of hours becomes 59% →");
 }
 const s1sw=document.getElementById("s1switch");
