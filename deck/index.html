@@ -191,7 +191,7 @@
   <b class="num" style="color:var(--blue)">$6.73</b> · Steam <b class="num" style="color:var(--gold)">$13.65</b>.
   On mobile, 1% of publishers take 92.5% of the revenue; on Steam, indies take a quarter. One store has a
   middle class. <span style="color:var(--fg-3)">Counting in-game spend, Steam ≈ 40% of the $43B PC market;
-  Epic $0.4B third-party; China's Android stores are the unlabeled ~$31B of the mobile segment.
+  Epic $0.4B third-party; China's Android stores are most of the ≈$31B "other Android" slice.
   Hover a store to track it.</span></p>
 </section>
 
@@ -203,7 +203,7 @@
   <p class="note"><b>Same story, two instruments.</b> On PC the full flow matrix is public — ours — and the
   East pays the West 2:1. Mobile publishes no matrix, so we show the direction of the money instead:
   Chinese publishers hold <b class="num">35%</b> of the world's top-100 revenue, China-made games earned
-  <b class="num">$18.5B</b> overseas with the US the #1 destination, and HQ share shifted
+  <b class="num">$18.5B</b> overseas with the US the #1 destination, and HQ revenue shifted
   <b class="num">+$2.6B</b> to Asia in one year. Three measurements, one direction.
   <span style="color:var(--fg-3)">PC matrix: hover a row to isolate it. Mobile bars labeled per source
   (Sensor Tower · CGIGC, CY2025).</span></p>
@@ -493,7 +493,7 @@ function renderS4(){
       <line x1="${cx}" y1="${MKY-2}" x2="${lx}" y2="${MKY-9-row*16}" stroke="var(--fg-3)" stroke-width="1"/>`;
   };
   const mob0=mparts[0].x, mob1=mparts[2].x+mparts[2].w, pc0=mparts[4].x, pc1=mparts[5].x+mparts[5].w;
-  document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H+20}">
+  document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H+24}">
     ${bar(DL,34,"2025 game downloads (incl. F2P) · Sensor Tower / VGI","")}
     ${bar(SP,150,"2025 store spend · same family","$")}
     <text x="40" y="220" font-size="13" class="d2">…and the whole $201.6B market (Newzoo) — same stores, same colors, inside their platforms:</text>
@@ -527,13 +527,10 @@ function renderS5(){
   // Mobile side: three fully-real measurements (no empty cells anywhere)
   const LX=176, RX=806, Y0=64;
   const mbar=(y,label,w,valTxt,sub)=>`
-    <text x="${RX}" y="${y-6}" font-size="12" class="d2">${label}</text>
-    <rect x="${RX}" y="${y}" width="418" height="20" rx="3" fill="var(--bg-3)"/>
-    <rect x="${RX}" y="${y}" width="${w}" height="20" rx="3" fill="var(--ok)"><title>${label}: ${valTxt}</title></rect>
-    ${w>360
-      ? `<text x="${RX+w-8}" y="${y+15}" text-anchor="end" font-size="13.5" font-weight="700" class="mono" fill="#0a0a0d">${valTxt}</text>`
-      : `<text x="${RX+w+8}" y="${y+15}" font-size="13.5" font-weight="700" class="mono" fill="var(--ok)">${valTxt}</text>`}
-    ${sub?`<text x="${RX}" y="${y+34}" font-size="11.5" class="d3">${sub}</text>`:""}`;
+    <rect x="${RX}" y="${y-2}" width="7" height="40" rx="2" fill="var(--ok)"/>
+    <text x="${RX+18}" y="${y+13}" font-size="20" font-weight="700" class="mono" fill="var(--ok)">${valTxt}</text>
+    <text x="${RX+18+valTxt.length*12.5+14}" y="${y+13}" font-size="12.5" fill="var(--fg-1)">${label}</text>
+    ${sub?`<text x="${RX+18}" y="${y+32}" font-size="11.5" class="d3">${sub}</text>`:""}`;
   document.getElementById("s5viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
     <text x="${LX}" y="18" font-size="13.5" font-weight="700">PC — real flows <tspan class="d2" font-weight="400">(Steam top-1,000, lifetime $B; ours)</tspan></text>
     <text x="${LX}" y="36" font-size="12" class="d2">rows = where it's made · columns = who pays</text>
