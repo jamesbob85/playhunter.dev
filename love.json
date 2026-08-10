@@ -5,7 +5,7 @@
 "games": 936,
 "hours": 12231831137,
 "creators": 46012243,
-"titles_on_play": 137
+"titles_on_play": 153
 },
 "classes": [
 {
@@ -13,54 +13,54 @@
 "hours": 5264978195,
 "creators": 24627589,
 "titles": 427,
-"play_hours": 8869225,
-"play_creators": 184690,
-"play_titles": 5
+"play_hours": 17742577,
+"play_creators": 251034,
+"play_titles": 11
 },
 {
 "name": "PC only",
 "hours": 3388770298,
 "creators": 5455028,
 "titles": 247,
-"play_hours": 0,
-"play_creators": 0,
-"play_titles": 0
+"play_hours": 145544603,
+"play_creators": 160289,
+"play_titles": 5
 },
 {
 "name": "PC+Console+Mobile",
 "hours": 1581452133,
 "creators": 11114410,
 "titles": 81,
-"play_hours": 1251026432,
-"play_creators": 9599187,
-"play_titles": 58
+"play_hours": 1281272437,
+"play_creators": 9682348,
+"play_titles": 60
 },
 {
 "name": "Console only",
 "hours": 1055522174,
 "creators": 2297718,
 "titles": 86,
-"play_hours": 3009210,
-"play_creators": 8054,
-"play_titles": 2
+"play_hours": 6481535,
+"play_creators": 16529,
+"play_titles": 4
 },
 {
 "name": "PC+Mobile",
 "hours": 555599704,
 "creators": 841139,
 "titles": 54,
-"play_hours": 521739884,
-"play_creators": 716816,
-"play_titles": 47
+"play_hours": 495467933,
+"play_creators": 698767,
+"play_titles": 45
 },
 {
 "name": "Mobile only",
 "hours": 177331022,
 "creators": 1376750,
 "titles": 24,
-"play_hours": 175686674,
-"play_creators": 1366562,
-"play_titles": 22
+"play_hours": 176548618,
+"play_creators": 1370516,
+"play_titles": 23
 },
 {
 "name": "Console+Mobile",
@@ -76,9 +76,9 @@
 "hours": 184542464,
 "creators": 252164,
 "titles": 14,
-"play_hours": 0,
-"play_creators": 0,
-"play_titles": 0
+"play_hours": 23908857,
+"play_creators": 60703,
+"play_titles": 2
 }
 ],
 "gap": [
@@ -167,12 +167,6 @@
 "franchise": "Call of Duty"
 },
 {
-"name": "Rust",
-"hours": 139703614,
-"creators": 141270,
-"franchise": null
-},
-{
 "name": "World of Tanks",
 "hours": 117103914,
 "creators": 46242,
@@ -201,6 +195,12 @@
 "hours": 105489303,
 "creators": 925969,
 "franchise": "Tom Clancy\u2019s"
+},
+{
+"name": "Call of Duty: Black Ops 7",
+"hours": 94448753,
+"creators": 237465,
+"franchise": "Call of Duty"
 }
 ]
 }

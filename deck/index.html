@@ -104,7 +104,7 @@
   <p class="defn">"Love" here is measured: 12.2 billion hours the world chose to watch — the 936 games
   among Twitch's top 1,000 categories, past 12 months, talk shows and Just Chatting excluded —
   and the people who stream them.</p>
-  <p class="cl">Love lives where Play isn't — but <em>61%</em> of it comes from companies Play already knows.</p>
+  <p class="cl">Love lives where Play isn't — but <em>59%</em> of it comes from companies Play already knows.</p>
   <p class="cl">The tail of love is enormous, and Play-sized.</p>
   <p class="cl">The money is young but the love is old — and Play's evergreen shelf is thin.</p>
   <p class="cl">The funnel is unmatched, and the bucket leaks.</p>
@@ -119,7 +119,7 @@
   <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
     <div class="switch" id="s1switch"></div>
     <div class="bignum">Play reaches <b id="s1pct">16.2%</b> <span id="s1unit">of watch hours</span></div>
-    <button class="reveal hot" id="s1ladder">count relationships and 16% becomes 61% →</button>
+    <button class="reveal hot" id="s1ladder">count relationships and 18% becomes 59% →</button>
   </div>
   <div class="cols">
     <div id="s1viz"></div>
@@ -133,10 +133,11 @@
         <li><span>Dota 2</span><span class="v">440M hrs</span></li>
         <li><span>World of Warcraft</span><span class="v">355M hrs</span></li>
       </ul>
-      <p class="note" style="margin-top:1.2vh">A game counts as on Play only if we found its own store
-      listing — a floor, not a ceiling. Mobile spin-offs (Wild Rift, Warcraft Rumble) count as Play titles,
-      but not as these games — the ladder shows what changes if you count them.
-      And yes, Twitch skews PC: that's part of the finding — wherever streaming is frictionless, Play is absent.</p>
+      <p class="note" style="margin-top:1.2vh">A game counts as on Play only if we verified its own store
+      listing in one of five countries (US, IN, JP, KR, BR) — cousins and companion apps arbitrated out.
+      Mobile spin-offs (Wild Rift, Warcraft Rumble) count as Play titles, but not as these games — the
+      ladder shows what changes if you count them. And yes, Twitch skews PC: that's part of the finding —
+      wherever streaming is frictionless, Play is absent.</p>
     </aside>
   </div>
 </section>
@@ -199,18 +200,18 @@
   <div class="swos">
     <div class="quad s"><h3>Strengths</h3>
       <p><b>42B</b> downloads a year. Nothing else comes close.</p>
-      <p>Where a mobile SKU exists, Play usually has it: <b>130 of 162</b> mobile-class titles.</p>
+      <p>Where a mobile SKU exists, Play usually has it: <b>131 of 162</b> mobile-class titles.</p>
       <p>In emerging markets, Play is often the only store.</p></div>
     <div class="quad w"><h3>Weaknesses</h3>
-      <p><b>84%</b> of watch hours aren't on Play — <b>71%</b> sit on PC-first titles, another <b>9%</b> console-only. Valve's own two games are 10% by themselves.</p>
+      <p><b>82%</b> of watch hours aren't on Play — <b>71%</b> sit on PC-first titles, another <b>9%</b> console-only. Valve's own two games are 10% by themselves.</p>
       <p><b>86%</b> of Play's watch hours come from a handful of 5+ year-old titles — a narrow legacy shelf, not an evergreen pipeline.</p>
       <p><b>$0.71</b> per download to the App Store's <b>$6.73</b> — a 9.5× gap, and no middle class.</p></div>
     <div class="quad x"><h3>Surprises</h3>
-      <p>Hours say Play has <b>16%</b> of the love. Creators say <b>26%</b>. The measure changes the story.</p>
+      <p>Hours say Play has <b>18%</b> of the love. Creators say <b>27%</b>. The measure changes the story.</p>
       <p>Half of all watch hours go to games <b>8+ years</b> old. The #1 game is 17.</p>
       <p>China: <b>20%</b> of world spend, five of every six dollars staying home, zero Play.</p></div>
     <div class="quad o"><h3>Opportunities</h3>
-      <p><b>61%</b> of watched love comes from companies already on Play. The games are missing, not the relationships.</p>
+      <p><b>59%</b> of watched love comes from companies already on Play. The games are missing, not the relationships.</p>
       <p><b>8,251</b> games kept 100+ creators. The tail needs a store, not a spotlight.</p>
       <p><b>1.65M</b> people streamed console titles to under two viewers — through a share button phones don't have.</p></div>
   </div>
@@ -219,19 +220,19 @@
 
 <script>
 /* ---------- data ---------- */
-const CLASSES = [
-  { n:"PC + Console",        h:5.265, hp:0.009, c:24.628, cp:0.185, t:427, tp:5 },
-  { n:"PC only",             h:3.389, hp:0,     c:5.455,  cp:0,     t:247, tp:0 },
-  { n:"PC+Console+Mobile",   h:1.581, hp:1.251, c:11.114, cp:9.599, t:81,  tp:58 },
-  { n:"Console only",        h:1.056, hp:0.003, c:2.298,  cp:0.008, t:86,  tp:2 },
-  { n:"PC + Mobile",         h:0.556, hp:0.522, c:0.841,  cp:0.717, t:54,  tp:47 },
-  { n:"Mobile only",         h:0.177, hp:0.176, c:1.377,  cp:1.367, t:24,  tp:22 },
-  { n:"Other",               h:0.208, hp:0.024, c:0.299,  cp:0.047, t:17,  tp:3 },
+const CLASSES = [ // ground-truth verified vs Play store, 5 countries, arbitrated (Aug 10)
+  { n:"PC + Console",        h:5.265, hp:0.018, c:24.628, cp:0.251, t:427, tp:11 },
+  { n:"PC only",             h:3.389, hp:0.146, c:5.455,  cp:0.160, t:247, tp:5 },
+  { n:"PC+Console+Mobile",   h:1.581, hp:1.281, c:11.114, cp:9.682, t:81,  tp:60 },
+  { n:"Console only",        h:1.056, hp:0.006, c:2.298,  cp:0.017, t:86,  tp:4 },
+  { n:"PC + Mobile",         h:0.556, hp:0.495, c:0.841,  cp:0.699, t:54,  tp:45 },
+  { n:"Mobile only",         h:0.177, hp:0.177, c:1.377,  cp:1.371, t:24,  tp:23 },
+  { n:"Other",               h:0.209, hp:0.048, c:0.299,  cp:0.108, t:17,  tp:5 },
 ];
 const MEAS = { hours:{k:"h",pk:"hp",u:"of watch hours",f:v=>v>=1?v.toFixed(2)+"B":Math.round(v*1000)+"M"},
                creators:{k:"c",pk:"cp",u:"of creators",f:v=>v>=1?v.toFixed(1)+"M":Math.round(v*1000)+"k"},
                titles:{k:"t",pk:"tp",u:"of titles",f:v=>v} };
-const LADDER = [ ["Play has the game",16], ["…or the franchise (LoL → Wild Rift)",40], ["…or the publisher",61] ];
+const LADDER = [ ["Play has the game",18], ["…or the franchise (LoL → Wild Rift)",40], ["…or the publisher",59] ];
 const RANKS=[10,50,100,500,1000,5000,10000],
       HCUM=[43.0,68.5,77.4,91.8,95.1,99.2,100], CCUM=[18.8,38.8,50.2,73.1,82.4,96.6,100];
 const GENRES=[ // [name, made%, watched%, playHome]
@@ -311,7 +312,7 @@ function sankeySVG(){
 }
 function ladderSVG(){
   const W=760,H=430;
-  document.getElementById("s1pct").textContent="61%";
+  document.getElementById("s1pct").textContent="59%";
   document.getElementById("s1unit").textContent="counting publisher relationships";
   const bars=LADDER.map((r,i)=>{const y=90+i*84,w=r[1]/70*470;
     return `<text x="292" y="${y+16}" text-anchor="end" font-size="14" class="d2">${r[0]}</text>
@@ -332,7 +333,7 @@ function renderS1(){
   document.getElementById("s1viz").innerHTML = s1.ladder ? ladderSVG() : sankeySVG();
   document.getElementById("s1ladder").textContent = s1.ladder ? "← back to the map"
     : (s1.measure==="hours" ? "count relationships and 16% becomes 61% →"
-                            : "count relationships — 16% of hours becomes 61% →");
+                            : "count relationships — 18% of hours becomes 59% →");
 }
 const s1sw=document.getElementById("s1switch");
 Object.keys(MEAS).forEach((id,i)=>{ const b=document.createElement("button");
