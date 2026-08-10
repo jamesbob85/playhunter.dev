@@ -68,6 +68,8 @@
   .gaplist { list-style:none; font-size:clamp(11px,1.3vw,14px); }
   .gaplist li { display:flex; justify-content:space-between; gap:12px; padding:.7vh 0; border-bottom:1px dashed var(--line); }
   .gaplist .v { color:var(--warn); font-family:var(--mono); white-space:nowrap; }
+  .gaplist .notesm { color:var(--fg-2); font-size:.92em; }
+  .gaplist li:has(.notesm) { border-bottom:none; padding-top:.2vh; }
 
   .swos { display:grid; grid-template-columns:1fr 1fr; gap:1.6vh 1.6vw; }
   @media (max-width:840px){ .swos { grid-template-columns:1fr; } }
@@ -91,6 +93,9 @@
     .slide { gap:1.2vh; padding-top:max(4vh,32px); padding-bottom:max(5vh,44px); }
     .quad { padding:1.1vh 1.4vw; }
     .coda { margin-top:1.2vh; }
+    .gaplist li { padding:.4vh 0; }
+    .panel { padding:1.3vh 1.4vw; }
+    .panel .note { font-size:11px; }
   }
 </style>
 </head>
@@ -127,14 +132,14 @@
   <div class="cols">
     <div id="s1viz"></div>
     <aside class="panel">
-      <div class="eyebrow" style="color:var(--warn); margin-bottom:1vh;">most loved · not on Play</div>
+      <div class="eyebrow" style="color:var(--warn); margin-bottom:1vh;">most loved · not on Play · by tier</div>
       <ul class="gaplist">
-        <li><span>League of Legends</span><span class="v">969M hrs</span></li>
-        <li><span>Counter-Strike</span><span class="v">744M hrs</span></li>
-        <li><span>Grand Theft Auto V</span><span class="v">692M hrs</span></li>
-        <li><span>VALORANT</span><span class="v">515M hrs</span></li>
-        <li><span>Dota 2</span><span class="v">440M hrs</span></li>
-        <li><span>World of Warcraft</span><span class="v">355M hrs</span></li>
+        <li><span><b>AAA</b> — 226 titles</span><span class="v">7.1B hrs · 58% of all watch</span></li>
+        <li style="border-bottom:1px solid var(--line)"><span class="notesm">League of Legends · Counter-Strike · GTA V · VALORANT · Dota 2</span></li>
+        <li><span><b>AA</b> — 156 titles</span><span class="v">1.7B hrs · 14%</span></li>
+        <li style="border-bottom:1px solid var(--line)"><span class="notesm">ARC Raiders · Dead by Daylight · Path of Exile 2 · Silksong</span></li>
+        <li><span><b>Indie</b> — 104 titles</span><span class="v">0.9B hrs · 7%</span></li>
+        <li><span class="notesm">Palworld · Rocket League · PEAK · Marbles on Stream</span></li>
       </ul>
       <p class="note" style="margin-top:1.2vh">On Play = the game's own listing, verified in five countries;
       cousins and companion apps arbitrated out. Spin-offs like Wild Rift count as Play titles — not as these
