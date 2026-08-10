@@ -163,7 +163,7 @@
   games eight-plus years old hold about half the world's watch hours; new releases never crack a quarter —
   that's why publishers keep buying the old and rarely bet on the new. And Play's reachable share is
   creeping up, <b class="num" style="color:var(--ok)">16.8% → 18.7%</b>: full ports move it.
-  Play reaches 23% of evergreen love but only 8% of the newest.</p>
+  In the past 30 days, Play reaches 23% of evergreen love — but only 4% of the newest.</p>
 </section>
 
 <!-- ═══════════ SLIDE 3 — SUPPLY VS ATTENTION ═══════════ -->
@@ -203,7 +203,7 @@
   On mobile, only one row of the matrix is public anywhere — China's — and it flows the other way:
   <b class="num">$18.5B</b> exported, the US the #1 destination, while Chinese publishers take
   <b class="num">35%</b> of the world's top-100 mobile revenue and HQ share shifts
-  <b class="num">+$2.6B</b> to Asia. <span style="color:var(--fg-3)">Hover a row to compare sides.
+  <b class="num">+$2.6B</b> to Asia. <span style="color:var(--fg-3)">Hover a row to isolate it.
   The dark cells aren't missing data on our side — nobody publishes them. The one disclosed row is the story.</span></p>
 </section>
 
@@ -252,7 +252,7 @@ const GENRES=[ // [name, made%, watched%, playHome]
   ["Platformer",6.3,2.3,0],["Racing",3.9,2.1,0],["Fighting",1.8,1.9,0],["Adventure",29.6,1.5,0],
   ["Puzzle",10.6,1.2,1],["Card & Board",2.0,1.0,1] ];
 const FLOWS = { rows:["North America","Europe","East Asia"], cols:["NA","EU","E. Asia","RoW"],
-  v:[[5.48,7.56,4.85,3.11],[4.53,7.34,3.90,2.41],[2.07,2.35,3.12,1.02]], devTot:["$21.0B","$18.2B","$8.6B"] };
+  v:[[5.48,7.56,4.85,3.11],[4.53,7.34,3.90,2.41],[2.07,2.35,3.12,1.02]] };
 
 /* ---------- deck chrome ---------- */
 const slides=[...document.querySelectorAll(".slide")]; let cur=-1;
@@ -366,7 +366,7 @@ const WINDOWS=[
   { l:"past 30 d",  ev:50, mid:28, nw:22, play:18.7 },
 ];
 let s2i=0;
-const S2={W:760,H:330,X0:80,COLW:130,GAP:40,Y0:250,SCALE:1.9};
+const S2={W:760,H:342,X0:80,COLW:130,GAP:40,Y0:250,SCALE:1.9};
 const s2cx=i=>S2.X0+i*(S2.COLW+S2.GAP);
 function renderS2(){
   const {W,H,X0,COLW,Y0}=S2;
@@ -383,16 +383,16 @@ function renderS2(){
       if(k==="ev") out+=`<text x="${x+COLW/2}" y="${y+h/2+5}" text-anchor="middle" font-size="15" font-weight="700" class="mono" fill="#0a0a0d" opacity="${on?1:.5}">${v}%</text>`;
     }
     out+=`<text x="${x+COLW/2}" y="${Y0+22}" text-anchor="middle" font-size="12.5" font-weight="${on?700:400}" ${on?'':'class="d2"'}>${win.l}</text>`;
-    out+=`<circle cx="${x+COLW/2}" cy="${Y0+46-(win.play-15)*6}" r="${on?6:4.5}" fill="var(--ok)" opacity="${on?1:.55}"/>`;
-    out+=`<text x="${x+COLW/2}" y="${Y0+70}" text-anchor="middle" font-size="12" class="mono" fill="var(--ok)" opacity="${on?1:.6}">${win.play.toFixed(1)}%</text>`;
+    out+=`<circle cx="${x+COLW/2}" cy="${Y0+58-(win.play-15)*6}" r="${on?6:4.5}" fill="var(--ok)" opacity="${on?1:.55}"/>`;
+    out+=`<text x="${x+COLW/2}" y="${Y0+82}" text-anchor="middle" font-size="12" class="mono" fill="var(--ok)" opacity="${on?1:.6}">${win.play.toFixed(1)}%</text>`;
     return out;
   };
-  const px=WINDOWS.map((win,i)=>`${s2cx(i)+COLW/2},${S2.Y0+46-(win.play-15)*6}`).join(" ");
+  const px=WINDOWS.map((win,i)=>`${s2cx(i)+COLW/2},${S2.Y0+58-(win.play-15)*6}`).join(" ");
   document.getElementById("s2viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="cursor:pointer">
     <text x="${X0}" y="14" font-size="12.5" class="d2">share of the window's watch hours · <tspan fill="var(--blue)" font-weight="600">evergreen 8y+</tspan> · <tspan class="d2" font-weight="600">2–7y</tspan> · <tspan class="d3" font-weight="600">under 2y</tspan></text>
     ${WINDOWS.map(col).join("")}
     <polyline points="${px}" fill="none" stroke="var(--ok)" stroke-width="1.5" opacity=".6"/>
-    <text x="${X0-8}" y="${S2.Y0+50}" text-anchor="end" font-size="11.5" fill="var(--ok)">on Play</text>
+    <text x="${X0-8}" y="${S2.Y0+62}" text-anchor="end" font-size="11.5" fill="var(--ok)">on Play</text>
   </svg>`;
 }
 {
@@ -460,8 +460,8 @@ function renderS4(){
     ${bar(SP,150,"2025 store spend · same family","$")}
     <text x="40" y="252" font-size="13" class="d2">…and the whole $201.6B market (Newzoo CY2025 final) — Play inside it:</text>
     ${mparts.map(p=>`<rect class="seg" data-store="${p.n}" x="${p.x}" y="${262}" width="${p.w}" height="34" rx="3" fill="${p.c}"><title>${p.n}: $${p.v}B</title></rect>
-      <text x="${p.x+(p.n==="Mobile"?playW+10:9)}" y="284" font-size="12.5" font-weight="700" fill="${p.n==="Console"?"#0a0a0d":"#e8e8ee"}" pointer-events="none">${p.n} $${p.v}B</text>`).join("")}
-    <rect x="40" y="262" width="${playW}" height="34" rx="3" fill="var(--ok)" pointer-events="none"/>
+      <text x="${p.x+(p.n==="Mobile"?playW+10:9)}" y="284" font-size="12.5" font-weight="700" fill="${p.n==="Mobile"?"#e8e8ee":"#0a0a0d"}" pointer-events="none">${p.n} $${p.v}B</text>`).join("")}
+    <rect class="seg" data-store="Google Play" x="40" y="262" width="${playW}" height="34" rx="3" fill="var(--ok)" pointer-events="none"/>
     <text x="49" y="284" font-size="12.5" font-weight="700" fill="#0a0a0d" pointer-events="none">Play $30B</text>
     <line x1="${40+playW}" y1="262" x2="${40+playW}" y2="300" stroke="#0a0a0d" stroke-width="1.5"/>
   </svg>`;
@@ -491,14 +491,14 @@ function renderS5(){
   const mobCell=(ri,ci,x,y)=>{
     if(ri===0){
       if(ci===0) return `<g class="row" data-row="m0"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity=".95"/>
-        <text x="${x+cw/2}" y="${y+ch/2-2}" text-anchor="middle" font-size="10.5" fill="#0a0a0d" font-weight="700">5 of 6 ¥</text>
-        <text x="${x+cw/2}" y="${y+ch/2+12}" text-anchor="middle" font-size="10.5" fill="#0a0a0d">stay home</text></g>`;
+        <text x="${x+cw/2}" y="${y+ch/2-2}" text-anchor="middle" font-size="12.5" fill="#0a0a0d" font-weight="700">5 of 6</text>
+        <text x="${x+cw/2}" y="${y+ch/2+13}" text-anchor="middle" font-size="12" fill="#0a0a0d">stay home</text></g>`;
       const v=MREAL[ci], op=(v/7.78)*0.7+0.25;
       return `<g class="row" data-row="m0"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity="${op}"/>
         <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="14" font-weight="700" class="mono" ${op>0.55?'fill="#0a0a0d"':''}>${v.toFixed(1)}</text></g>`;
     }
     return `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="none" stroke="var(--fg-3)" stroke-dasharray="4 4"/>
-      <text x="${x+cw/2}" y="${y+ch/2+4}" text-anchor="middle" font-size="11" class="d3">undisclosed</text>`;
+      <text x="${x+cw/2}" y="${y+ch/2+4}" text-anchor="middle" font-size="12.5" class="d3">undisclosed</text>`;
   };
   const LX=176, RX=806, Y0=64;
   document.getElementById("s5viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
@@ -509,11 +509,12 @@ function renderS5(){
     <text x="${RX}" y="18" font-size="13.5" font-weight="700">Mobile — one disclosed row <tspan class="d2" font-weight="400">(CGIGC 2025, $B)</tspan></text>
     <text x="${RX}" y="36" font-size="12" class="d2">same chart — this is all anyone publishes</text>
     ${grid(RX,Y0,MCOLS,["China-made","US-made","EU-made"],mobCell,ri=>"m"+ri)}
-    <text x="${RX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">China → West: $18.5B exported, US the #1 destination. The West pays the East.</text>
+    <text x="${RX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">China exports $18.5B — US the #1 destination. The West pays the East.</text>
   </svg>`;
   const viz=document.getElementById("s5viz");
   viz.onmouseover=e=>{ const r=e.target.closest?.("[data-row]")?.dataset.row; if(!r) return;
-    viz.querySelectorAll(".row").forEach(el=>el.style.opacity = el.dataset.row===r?1:.3); };
+    const side=r[0]==="p"?"pc":"m";
+    viz.querySelectorAll(".row").forEach(el=>{ if(el.dataset.row.startsWith(side)) el.style.opacity = el.dataset.row===r?1:.3; }); };
   viz.onmouseout=()=>viz.querySelectorAll(".row").forEach(el=>el.style.opacity=1);
 }
 renderS5();
