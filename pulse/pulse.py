@@ -162,7 +162,7 @@ def sweep(tw):
     return ts, rows, creators, langs
 
 
-def append_csv(csv_dir, rows):
+def append_csv(csv_dir, rows, langs=None):
     os.makedirs(csv_dir, exist_ok=True)
     day = rows[0]["ts"][:10] if rows else datetime.now(timezone.utc).strftime("%Y-%m-%d")
     path = os.path.join(csv_dir, f"{day}.csv")
@@ -172,6 +172,23 @@ def append_csv(csv_dir, rows):
         if new:
             w.writeheader()
         w.writerows(rows)
+    if langs:
+        # packed per game: top-10 languages by viewers as "en:123|es:45" — keeps
+        # the 24/7 Actions panel regional without git churn (~100 rows/sweep)
+        by_game = {}
+        for (gid, lang), (v, c) in langs.items():
+            by_game.setdefault(gid, []).append((v, lang))
+        lpath = os.path.join(csv_dir, f"langs-{day}.csv")
+        lnew = not os.path.exists(lpath)
+        ts = rows[0]["ts"] if rows else ""
+        with open(lpath, "a", newline="") as f:
+            w = csv.writer(f)
+            if lnew:
+                w.writerow(["ts", "game_id", "langs_top10"])
+            for gid, pairs in by_game.items():
+                pairs.sort(reverse=True)
+                packed = "|".join(f"{lang}:{v}" for v, lang in pairs[:10])
+                w.writerow([ts, gid, packed])
     return path
 
 
@@ -235,7 +252,7 @@ def main():
         try:
             ts, rows, creators, langs = sweep(tw)
             if args.csv_dir:
-                append_csv(args.csv_dir, rows)
+                append_csv(args.csv_dir, rows, langs)
             if db is not None:
                 record_db(db, ts, rows, creators, langs)
             total_creators = sum(len(v) for v in creators.values())
