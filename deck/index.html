@@ -200,12 +200,13 @@
   <div class="eyebrow">Lens 5 · made where, played where</div>
   <h1>Money crosses oceans — in opposite directions on PC and mobile</h1>
   <div id="s5viz"></div>
-  <p class="note"><b>Same chart, twice.</b> On PC the flows are public and the East pays the West, 2:1.
-  On mobile, only one row of the matrix is public anywhere — China's — and it flows the other way:
-  <b class="num">$18.5B</b> exported, the US the #1 destination, while Chinese publishers take
-  <b class="num">35%</b> of the world's top-100 mobile revenue and HQ share shifts
-  <b class="num">+$2.6B</b> to Asia. <span style="color:var(--fg-3)">Hover a row to isolate it.
-  The dark cells aren't missing data on our side — nobody publishes them. The one disclosed row is the story.</span></p>
+  <p class="note"><b>Same story, two instruments.</b> On PC the full flow matrix is public — ours — and the
+  East pays the West 2:1. Mobile publishes no matrix, so we show the direction of the money instead:
+  Chinese publishers hold <b class="num">35%</b> of the world's top-100 revenue, China-made games earned
+  <b class="num">$18.5B</b> overseas with the US the #1 destination, and HQ share shifted
+  <b class="num">+$2.6B</b> to Asia in one year. Three measurements, one direction.
+  <span style="color:var(--fg-3)">PC matrix: hover a row to isolate it. Mobile bars labeled per source
+  (Sensor Tower · CGIGC, CY2025).</span></p>
 </section>
 
 <!-- ═══════════ SLIDE 6 — NEW BLOOD ═══════════ -->
@@ -474,19 +475,34 @@ function renderS4(){
       return `<rect class="seg" data-store="${p.n}" x="${p.x}" y="${y}" width="${p.w}" height="34" rx="3" fill="${p.c}"><title>${p.n}: ${v}</title></rect>${lab}`;
     }).join("");
   };
-  // full-market bar: Newzoo CY2025 final ($201.6B content) with Play inset (ST $30B)
-  const MK=[["Mobile",113.3,"#3d6b55"],["Console",44.7,"var(--fg-2)"],["PC",43.6,"var(--gold)"]];
-  let mx=40; const mparts=MK.map(r=>{ const w=(r[1]/201.6)*580; const p={n:r[0],v:r[1],x:mx,w,c:r[2]}; mx+=w+3; return p; });
-  const playW=(30/201.6)*580;
-  document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
+  // full-market bar: Newzoo $201.6B total, with the SAME stores nested inside
+  // their platforms (Play/App Store/other-Android inside Mobile; Steam inside
+  // PC) — store colors identical to the two bars above.
+  const MKY=272, SCALE=580/201.6;
+  const SLICES=[
+    ["Google Play",30,"var(--ok)"],["App Store",52.5,"var(--blue)"],["other Android ≈$31B",30.8,"#3d6b55"],
+    ["Console",44.7,"var(--fg-2)"],["Steam",11.7,"var(--gold)"],["off-store PC ≈$32B",31.9,"#6b5c33"],
+  ];
+  let mx=40; const mparts=SLICES.map(r=>{ const w=r[1]*SCALE; const p={n:r[0],v:r[1],x:mx,w,c:r[2]}; mx+=w+2; return p; });
+  const mlab=(p,i)=>{
+    const short=p.n.replace(" ≈$31B","").replace(" ≈$32B","");
+    const cx=p.x+p.w/2, lx=Math.min(Math.max(cx,80),700);
+    if(p.n==="Console") return `<text x="${p.x+9}" y="${MKY+22}" font-size="12" font-weight="700" fill="#0a0a0d" pointer-events="none">Console $44.7B</text>`;
+    const row=i%2;
+    return `<text x="${lx}" y="${MKY-12-row*16}" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--fg-1)" pointer-events="none">${short} $${p.v}B</text>
+      <line x1="${cx}" y1="${MKY-2}" x2="${lx}" y2="${MKY-9-row*16}" stroke="var(--fg-3)" stroke-width="1"/>`;
+  };
+  const mob0=mparts[0].x, mob1=mparts[2].x+mparts[2].w, pc0=mparts[4].x, pc1=mparts[5].x+mparts[5].w;
+  document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H+20}">
     ${bar(DL,34,"2025 game downloads (incl. F2P) · Sensor Tower / VGI","")}
     ${bar(SP,150,"2025 store spend · same family","$")}
-    <text x="40" y="252" font-size="13" class="d2">…and the whole $201.6B market (Newzoo CY2025 final) — Play inside it:</text>
-    ${mparts.map(p=>`<rect class="seg" data-store="${p.n}" x="${p.x}" y="${262}" width="${p.w}" height="34" rx="3" fill="${p.c}"><title>${p.n}: $${p.v}B</title></rect>
-      <text x="${p.x+(p.n==="Mobile"?playW+10:9)}" y="284" font-size="12.5" font-weight="700" fill="${p.n==="Mobile"?"#e8e8ee":"#0a0a0d"}" pointer-events="none">${p.n} $${p.v}B</text>`).join("")}
-    <rect class="seg" data-store="Google Play" x="40" y="262" width="${playW}" height="34" rx="3" fill="var(--ok)" pointer-events="none"/>
-    <text x="49" y="284" font-size="12.5" font-weight="700" fill="#0a0a0d" pointer-events="none">Play $30B</text>
-    <line x1="${40+playW}" y1="262" x2="${40+playW}" y2="300" stroke="#0a0a0d" stroke-width="1.5"/>
+    <text x="40" y="220" font-size="13" class="d2">…and the whole $201.6B market (Newzoo) — same stores, same colors, inside their platforms:</text>
+    ${mparts.map(p=>`<rect class="seg" data-store="${p.n.split(" ≈")[0]}" x="${p.x}" y="${MKY}" width="${p.w}" height="30" rx="3" fill="${p.c}"><title>${p.n}: $${p.v}B</title></rect>`).join("")}
+    ${mparts.map(mlab).join("")}
+    <path d="M ${mob0} ${MKY+38} v5 H ${mob1} v-5" fill="none" stroke="var(--fg-2)" stroke-width="1.2"/>
+    <text x="${(mob0+mob1)/2}" y="${MKY+58}" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--fg-1)">Mobile $113.3B</text>
+    <path d="M ${pc0} ${MKY+38} v5 H ${pc1} v-5" fill="none" stroke="var(--fg-2)" stroke-width="1.2"/>
+    <text x="${(pc0+pc1)/2}" y="${MKY+58}" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--fg-1)">PC $43.6B</text>
   </svg>`;
   const viz=document.getElementById("s4viz");
   viz.onmouseover=e=>{ const s=e.target.dataset?.store; if(!s) return;
@@ -508,31 +524,27 @@ function renderS5(){
   const pcCell=(ri,ci,x,y)=>{ const v=FLOWS.v[ri][ci], op=(v/7.56)*0.9+0.08;
     return `<g class="row" data-row="pc${ri}"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity="${op}"/>
       <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="14" font-weight="700" class="mono" ${op>0.55?'fill="#0a0a0d"':''}>${v.toFixed(2)}</text></g>`; };
-  // Mobile side: one real row (China-made), two undisclosed rows
-  const MCOLS=["CN players","US","JP+KR","elsewhere"];
-  const MREAL=[null,5.97,4.73,7.78]; // exports $B; CN domestic shown as ratio, not $
-  const mobCell=(ri,ci,x,y)=>{
-    if(ri===0){
-      if(ci===0) return `<g class="row" data-row="m0"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity=".95"/>
-        <text x="${x+cw/2}" y="${y+ch/2-2}" text-anchor="middle" font-size="12.5" fill="#0a0a0d" font-weight="700">5 of 6</text>
-        <text x="${x+cw/2}" y="${y+ch/2+13}" text-anchor="middle" font-size="12" fill="#0a0a0d">stay home</text></g>`;
-      const v=MREAL[ci], op=(v/7.78)*0.7+0.25;
-      return `<g class="row" data-row="m0"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity="${op}"/>
-        <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="14" font-weight="700" class="mono" ${op>0.55?'fill="#0a0a0d"':''}>${v.toFixed(1)}</text></g>`;
-    }
-    return `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="none" stroke="var(--fg-3)" stroke-dasharray="4 4"/>
-      <text x="${x+cw/2}" y="${y+ch/2+4}" text-anchor="middle" font-size="12.5" class="d3">undisclosed</text>`;
-  };
+  // Mobile side: three fully-real measurements (no empty cells anywhere)
   const LX=176, RX=806, Y0=64;
+  const mbar=(y,label,w,valTxt,sub)=>`
+    <text x="${RX}" y="${y-6}" font-size="12" class="d2">${label}</text>
+    <rect x="${RX}" y="${y}" width="418" height="20" rx="3" fill="var(--bg-3)"/>
+    <rect x="${RX}" y="${y}" width="${w}" height="20" rx="3" fill="var(--ok)"><title>${label}: ${valTxt}</title></rect>
+    ${w>360
+      ? `<text x="${RX+w-8}" y="${y+15}" text-anchor="end" font-size="13.5" font-weight="700" class="mono" fill="#0a0a0d">${valTxt}</text>`
+      : `<text x="${RX+w+8}" y="${y+15}" font-size="13.5" font-weight="700" class="mono" fill="var(--ok)">${valTxt}</text>`}
+    ${sub?`<text x="${RX}" y="${y+34}" font-size="11.5" class="d3">${sub}</text>`:""}`;
   document.getElementById("s5viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
     <text x="${LX}" y="18" font-size="13.5" font-weight="700">PC — real flows <tspan class="d2" font-weight="400">(Steam top-1,000, lifetime $B; ours)</tspan></text>
     <text x="${LX}" y="36" font-size="12" class="d2">rows = where it's made · columns = who pays</text>
     ${grid(LX,Y0,FLOWS.cols.map(c=>c+" players"),FLOWS.rows,pcCell,ri=>"pc"+ri)}
     <text x="${LX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">East → West: $8.8B · West → East: $4.4B. The East pays the West.</text>
-    <text x="${RX}" y="18" font-size="13.5" font-weight="700">Mobile — one disclosed row <tspan class="d2" font-weight="400">(CGIGC 2025, $B)</tspan></text>
-    <text x="${RX}" y="36" font-size="12" class="d2">same chart — this is all anyone publishes</text>
-    ${grid(RX,Y0,MCOLS,["China-made","US-made","EU-made"],mobCell,ri=>"m"+ri)}
-    <text x="${RX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">China exports $18.5B — US the #1 destination. The West pays the East.</text>
+    <text x="${RX}" y="18" font-size="13.5" font-weight="700">Mobile — every public number points east <tspan class="d2" font-weight="400">(CY2025)</tspan></text>
+    <text x="${RX}" y="36" font-size="12" class="d2">the direction of the money, three ways</text>
+    ${mbar(Y0,      "Chinese publishers' share of the world top-100's revenue", 146, "35%", "34 of the top-100 mobile publishers are Chinese (Sensor Tower)")}
+    ${mbar(Y0+62,   "China-made games' overseas revenue", 418, "$18.5B", "US the #1 destination, 32% · JP+KR 26% (CGIGC)")}
+    ${mbar(Y0+124,  "Publisher-HQ revenue shift, 2025 vs 2024", 108, "Asia +$2.6B", "while North America gave up $1.8B and Europe gained $0.4B (Sensor Tower)")}
+    <text x="${RX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">Made east, paid west. The West pays the East.</text>
   </svg>`;
   const viz=document.getElementById("s5viz");
   viz.onmouseover=e=>{ const r=e.target.closest?.("[data-row]")?.dataset.row; if(!r) return;
