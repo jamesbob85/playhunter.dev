@@ -183,21 +183,28 @@
 <section class="slide" data-i="4">
   <div class="eyebrow">Lens 4 · funnel vs bucket</div>
   <h1>The world's biggest funnel. The industry's leakiest bucket.</h1>
-  <div class="switch" id="s4switch"></div>
   <div id="s4viz"></div>
-  <p class="note" id="s4note"></p>
+  <p class="note" id="s4note"><b>One report family, both measures at once.</b> Play: 84% of these downloads,
+  $0.71 of spend each. Steam: under 2% of downloads — $13.65 each. On mobile, 1% of publishers take 92.5%
+  of the revenue; on Steam, indies take a quarter. One store has a middle class.
+  <span style="color:var(--fg-3)">Hover a store to track it across both bars.</span></p>
 </section>
 
 <!-- ═══════════ SLIDE 5 — MADE WHERE, PLAYED WHERE ═══════════ -->
 <section class="slide" data-i="5">
   <div class="eyebrow">Lens 5 · made where, played where</div>
-  <h1>Money crosses oceans — and the biggest pool is behind a wall</h1>
+  <h1>Money crosses oceans — in opposite directions on PC and mobile</h1>
   <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
-    <div class="note">$48B of lifetime revenue across Steam's top 1,000 earners. East-Asian players send
-    Western studios <b class="num">$8.8B</b>; Western players send <b class="num">$4.4B</b> back.</div>
+    <div class="note"><b>PC (real flows, $48B across Steam's top 1,000 earners):</b> East-Asian players send
+    Western studios <b class="num">$8.8B</b>; the West sends <b class="num">$4.4B</b> back. The East pays the West.</div>
     <button class="reveal hot" id="s5china">show the missing column →</button>
   </div>
   <div id="s5viz"></div>
+  <p class="note"><b>Mobile blows the other way:</b> Chinese publishers took <b class="num">35%</b> of the
+  world's top-100 mobile revenue in 2025 · China's mobile exports hit <b class="num">$18.5B</b>, the US the
+  #1 destination (32%) · publisher-HQ share shifted <b class="num">+$2.6B</b> to Asia while North America
+  fell <b class="num">−$1.8B</b>. On mobile, the West pays the East.
+  <span style="color:var(--fg-3)">Vendor marginals — the mobile studio→player joint matrix is unpublished, so we don't draw one.</span></p>
 </section>
 
 <!-- ═══════════ SLIDE 6 — SUMMARY ═══════════ -->
@@ -413,35 +420,42 @@ RESET[3]=()=>{ s3sort="watched"; setSwitch(s3sw,0); renderS3(); };
 renderS3();
 
 /* ---------- slide 4: downloads/dollars flip ---------- */
-let s4m="downloads";
 function renderS4(){
-  const W=760,H=210, rows=STORE[s4m], total=rows.reduce((s,r)=>s+r[1],0);
-  let x=140; const segs=rows.map(r=>{ const w=(r[1]/total)*580; const s={n:r[0],v:r[1],x,w,c:r[2]}; x+=w+3; return s; });
-  const val=s=> s4m==="downloads" ? s.v+"B" : "$"+s.v+"B";
+  // One report family throughout (Sensor Tower State of Gaming 2026 / VGI):
+  // downloads incl. F2P — Play 42.4B, App Store 7.8B, Steam 0.857B;
+  // consumer spend — Play $30B, App Store $52.5B, Steam $11.7B premium.
+  const W=760,H=310;
+  const DL=[["Google Play",42.4,"var(--ok)"],["App Store",7.8,"var(--blue)"],["Steam",0.857,"var(--gold)"]];
+  const SP=[["Google Play",30,"var(--ok)"],["App Store",52.5,"var(--blue)"],["Steam",11.7,"var(--gold)"]];
+  const bar=(rows,y,label,unit)=>{
+    const total=rows.reduce((s,r)=>s+r[1],0); let x=140, below=0;
+    const parts=rows.map(r=>{ const w=Math.max((r[1]/total)*580,4); const p={n:r[0],v:r[1],x,w,c:r[2]}; x+=w+3; return p; });
+    return `<text x="140" y="${y-10}" font-size="13" class="d2">${label}</text>`+parts.map(p=>{
+      const v=(unit==="$"?"$":"")+p.v+"B";
+      const row = below++;
+      const lx = row === 0 ? 590 : 712;                  // spread small labels apart
+      const lab = p.w>150
+        ? `<text x="${p.x+9}" y="${y+22}" font-size="13.5" font-weight="700" fill="#0a0a0d" pointer-events="none">${p.n} ${v}</text>`
+        : `<text x="${lx}" y="${y+52+row*17}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--fg-1)" pointer-events="none">${p.n} ${v}</text>
+           <line x1="${p.x+p.w/2}" y1="${y+35}" x2="${lx}" y2="${y+41+row*17}" stroke="var(--fg-3)" stroke-width="1"/>`;
+      return `<rect class="seg" data-store="${p.n}" x="${p.x}" y="${y}" width="${p.w}" height="34" rx="3" fill="${p.c}"><title>${p.n}: ${v}</title></rect>${lab}`;
+    }).join("");
+  };
   document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
-    <text x="140" y="52" font-size="14" class="d2">${s4m==="downloads"?"2025 mobile game downloads":"2025 consumer spend (mobile stores + Steam)"}</text>
-    ${segs.map(s=>`<rect x="${s.x}" y="66" width="${s.w}" height="44" rx="4" fill="${s.c}"/>
-      ${s.w>150
-        ? `<text x="${s.x+10}" y="93" font-size="14" font-weight="700" fill="#0a0a0d">${s.n} ${val(s)}</text>`
-        : `<text x="${s.x+s.w/2}" y="60" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--fg-1)">${s.n} ${val(s)}</text>`}`).join("")}
-    ${s4m==="dollars"?`<text x="140" y="152" font-size="15" class="d2">consumer spend per download:
+    ${bar(DL,34,"2025 game downloads (incl. F2P) · same vendor family","")}
+    ${bar(SP,158,"2025 consumer spend","$")}
+    <text x="140" y="262" font-size="15" class="d2">spend per download:
       <tspan class="mono" font-weight="700" fill="var(--ok)"> Play $0.71</tspan> ·
       <tspan class="mono" font-weight="700" fill="var(--blue)"> App Store $6.73</tspan> ·
-      <tspan class="mono" font-weight="700" fill="var(--fg)"> a 9.5× gap</tspan></text>
-    <text x="140" y="180" font-size="15" class="d2">Play: under a third of the three-store pool.</text>`
-    :`<text x="140" y="152" font-size="15" class="d2">5.4× the App Store's download volume — the biggest funnel in gaming.</text>
-    <text x="140" y="180" font-size="15" class="d2">84% of downloads across the two global stores.</text>`}
+      <tspan class="mono" font-weight="700" fill="var(--gold)"> Steam $13.65</tspan></text>
+    <text x="140" y="284" font-size="12" class="d3">Whole market: Steam ≈ 40% of the world's $43B PC spend — the rest is mostly off-store F2P.</text>
+    <text x="140" y="302" font-size="12" class="d3">Epic's store: $0.4B third-party. China's Android stores: outside all of this.</text>
   </svg>`;
-  document.getElementById("s4note").innerHTML = s4m==="downloads"
-    ? `Play moves <b class="num">84%</b> of mobile game downloads across the two global stores — China's Android stores sit outside both. <b>Flip the measure.</b>`
-    : `Now in dollars — Steam joins the frame. On mobile, <b class="num">1%</b> of publishers take <b class="num">92.5%</b> of the revenue. On Steam, indies take a quarter. One store has a middle class.`;
+  const viz=document.getElementById("s4viz");
+  viz.onmouseover=e=>{ const s=e.target.dataset?.store; if(!s) return;
+    viz.querySelectorAll(".seg").forEach(r=>r.style.opacity = r.dataset.store===s?1:.22); };
+  viz.onmouseout=()=>viz.querySelectorAll(".seg").forEach(r=>r.style.opacity=1);
 }
-const s4sw=document.getElementById("s4switch");
-[["downloads","Downloads"],["dollars","Dollars"]].forEach(([id,l],i)=>{
-  const b=document.createElement("button"); b.textContent=l; if(i===0)b.classList.add("on");
-  b.onclick=()=>{ s4m=id; setSwitch(s4sw,i); renderS4(); b.blur(); };
-  s4sw.append(b); });
-RESET[4]=()=>{ s4m="downloads"; setSwitch(s4sw,0); renderS4(); };
 renderS4();
 
 /* ---------- slide 5: flow matrix + china reveal ---------- */
