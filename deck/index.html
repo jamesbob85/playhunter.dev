@@ -96,39 +96,25 @@
     .gaplist li { padding:.4vh 0; }
     .panel { padding:1.3vh 1.4vw; }
     .panel .note { font-size:11px; }
-    .slide[data-i="6"] .note { font-size:11px; }
+    .slide[data-i="4"] .note { font-size:11px; }
   }
 </style>
 </head>
 <body>
 <div class="brand"><b>playhunter.dev</b> · where the love is</div>
-<div class="hint">← → move · 0–7 jump · F fullscreen · lenses 1–6 are live</div>
+<div class="hint">← → move · 0–4 jump · F fullscreen · every slide is live</div>
 <nav class="hud" id="hud"></nav>
 
-<!-- ═══════════ SLIDE 0 — THE SPINE ═══════════ -->
-<section class="slide spine" data-i="0">
-  <div class="eyebrow">The diversity of the games industry · Google Play's position</div>
-  <p class="defn">"Love" here is measured: 12.2 billion hours the world chose to watch — the 936 games
-  among Twitch's top 1,000 categories, past 12 months — and the people who stream them.
-  Why this proxy: watch time is where gaming's conversation happens, streaming correlates 0.76 with
-  launch performance, and publishers put their money where the attention is — which is how attention
-  ends up shaping the catalog itself.</p>
-  <p class="cl">Love lives where Play isn't — but <em>59%</em> of it comes from companies Play already knows.</p>
-  <p class="cl">The tail of love is enormous, and Play-sized.</p>
-  <p class="cl">The money is young but the love is old — and Play's evergreen shelf is thin.</p>
-  <p class="cl">The funnel is unmatched, and the bucket leaks.</p>
-  <p class="cl">And the biggest pool of money is behind a wall.</p>
-  <p class="coda">Strengths, weaknesses, opportunities, surprises —<br>every beat with a number we can trace.</p>
-</section>
 
-<!-- ═══════════ SLIDE 1 — LOVE MAP ═══════════ -->
-<section class="slide" data-i="1">
+<!-- ═══════════ SLIDE 0 — LOVE MAP ═══════════ -->
+<section class="slide" data-i="0">
   <div class="eyebrow">Lens 1 · the love map</div>
   <h1>Where gaming's love lives — and what Play can reach</h1>
   <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
     <div class="switch" id="s1switch"></div>
     <div class="bignum">Play reaches <b id="s1pct">17.7%</b> <span id="s1unit">of watch hours</span></div>
     <button class="reveal hot" id="s1ladder">count relationships and 18% becomes 59% →</button>
+    <button class="reveal" id="s1genres">the genres of love →</button>
   </div>
   <div class="cols">
     <div id="s1viz"></div>
@@ -151,8 +137,8 @@
   </div>
 </section>
 
-<!-- ═══════════ SLIDE 2 — OLD LOVE ═══════════ -->
-<section class="slide" data-i="2">
+<!-- ═══════════ SLIDE 1 — OLD LOVE ═══════════ -->
+<section class="slide" data-i="1">
   <div class="eyebrow">Lens 2 · old love</div>
   <h1>The money is young. The love is old — and it stays old.</h1>
   <div class="bignum"><span id="s2win" style="color:var(--fg)">2024</span> ·
@@ -167,23 +153,10 @@
   In the past 30 days, Play reaches 23% of evergreen love — but only 4% of the newest.</p>
 </section>
 
-<!-- ═══════════ SLIDE 3 — SUPPLY VS ATTENTION ═══════════ -->
-<section class="slide" data-i="3">
-  <div class="eyebrow">Lens 3 · supply vs attention</div>
-  <h1>The industry doesn't make what the world watches</h1>
-  <div class="switch" id="s3switch"></div>
-  <div id="s3viz"></div>
-  <p class="note"><b>The point: the genres the world watches are not the genres mobile publishes.</b>
-  <span style="color:var(--blue)">●</span> = share of watch hours · <span style="color:var(--fg-2)">●</span> =
-  share of the 310k games in IGDB. The <span style="color:var(--ok)">green genres</span> are where mobile's
-  catalog and revenue concentrate — puzzle, card, simulation earn billions through play sessions, not
-  spectacle. The watched genres — shooter, RPG — live on PC and console versions Play doesn't carry.
-  Genres overlap; a game can carry more than one tag.</p>
-</section>
 
-<!-- ═══════════ SLIDE 4 — FUNNEL VS BUCKET ═══════════ -->
-<section class="slide" data-i="4">
-  <div class="eyebrow">Lens 4 · funnel vs bucket</div>
+<!-- ═══════════ SLIDE 2 — FUNNEL VS BUCKET ═══════════ -->
+<section class="slide" data-i="2">
+  <div class="eyebrow">Lens 3 · funnel vs bucket</div>
   <h1>The world's biggest funnel. The industry's leakiest bucket.</h1>
   <div id="s4viz"></div>
   <p class="note" id="s4note"><b>Play: 83% of store downloads · ≈15% of the world's game spend.</b>
@@ -195,9 +168,9 @@
   Hover a store to track it.</span></p>
 </section>
 
-<!-- ═══════════ SLIDE 5 — MADE WHERE, PLAYED WHERE ═══════════ -->
-<section class="slide" data-i="5">
-  <div class="eyebrow">Lens 5 · made where, played where</div>
+<!-- ═══════════ SLIDE 3 — MADE WHERE, PLAYED WHERE ═══════════ -->
+<section class="slide" data-i="3">
+  <div class="eyebrow">Lens 4 · made where, played where</div>
   <h1>Money crosses oceans — in opposite directions on PC and mobile</h1>
   <div id="s5viz"></div>
   <p class="note"><b>Same story, two instruments.</b> On PC the full flow matrix is public — ours — and the
@@ -209,9 +182,9 @@
   (Sensor Tower · CGIGC, CY2025).</span></p>
 </section>
 
-<!-- ═══════════ SLIDE 6 — NEW BLOOD ═══════════ -->
-<section class="slide" data-i="6">
-  <div class="eyebrow">Lens 6 · new blood</div>
+<!-- ═══════════ SLIDE 4 — NEW BLOOD ═══════════ -->
+<section class="slide" data-i="4">
+  <div class="eyebrow">Lens 5 · new blood</div>
   <h1>On PC, new games power the market. On mobile, they barely dent it.</h1>
   <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
     <div class="switch" id="s6switch"></div>
@@ -228,33 +201,9 @@
   <span style="color:var(--fg-3)">Steam: our Gamalytic panel (premium; CS2's F2P excluded; incl. re-releases).
   Play: today's US grossing chart, measured by us — a recency-leaning chart; if anything it flatters Play
   here. $76.7B = AppMagic gross, both stores — China's other Android stores (~$31B) are most of the gap to
-  Lens 4's $113B.</span></p>
+  Lens 3's $113B.</span></p>
 </section>
 
-<!-- ═══════════ SLIDE 7 — SUMMARY ═══════════ -->
-<section class="slide" data-i="7">
-  <div class="eyebrow">The position</div>
-  <h1 style="margin-bottom:1vh">Strengths, weaknesses, opportunities, surprises</h1>
-  <div class="swos">
-    <div class="quad s"><h3>Strengths</h3>
-      <p><b>42B</b> downloads a year. Nothing else comes close.</p>
-      <p>Where a mobile SKU exists, Play usually has it: <b>131 of 162</b> mobile-class titles.</p>
-      <p>In emerging markets, Play is often the only store.</p></div>
-    <div class="quad w"><h3>Weaknesses</h3>
-      <p><b>82%</b> of watch hours aren't on Play — <b>71%</b> sit on PC-first titles, another <b>9%</b> console-only. Valve's own two games are 10% by themselves.</p>
-      <p><b>86%</b> of Play's watch hours come from a handful of 5+ year-old titles — a narrow legacy shelf, not an evergreen pipeline.</p>
-      <p><b>$0.71</b> per download to the App Store's <b>$6.73</b> — a 9.5× gap, and no middle class.</p></div>
-    <div class="quad x"><h3>Surprises</h3>
-      <p>Hours say Play has <b>18%</b> of the love. Creators say <b>27%</b>. The measure changes the story.</p>
-      <p>Half of all watch hours go to games <b>8+ years</b> old. The #1 game is 17.</p>
-      <p>China: <b>20%</b> of world spend, five of every six dollars staying home, zero Play.</p></div>
-    <div class="quad o"><h3>Opportunities</h3>
-      <p><b>59%</b> of watched love comes from companies already on Play. The games are missing, not the relationships.</p>
-      <p><b>8,251</b> games kept 100+ creators. The tail needs a store, not a spotlight.</p>
-      <p><b>1.65M</b> people streamed console titles to under two viewers — through a share button phones don't have.</p></div>
-  </div>
-  <p class="coda">Love is measurable, and Play's share of it is a choice: when Fortnite returned to Play<br>in March 2026, its watch hours became reachable overnight. The gap is a choice, not a law.</p>
-</section>
 
 <script>
 /* ---------- data ---------- */
@@ -300,10 +249,10 @@ addEventListener("keydown",e=>{
   else if(e.key==="ArrowDown"||e.key==="ArrowUp"){
     e.preventDefault();
     const dir=e.key==="ArrowDown"?1:-1;
-    if(cur===2){ s2i=Math.min(WINDOWS.length-1,Math.max(0,s2i+dir)); renderS2(); }
+    if(cur===1){ s2i=Math.min(WINDOWS.length-1,Math.max(0,s2i+dir)); renderS2(); }
     else slides[cur].scrollBy({top:dir*innerHeight/2, behavior:"smooth"});
   }
-  else if(/^[0-7]$/.test(e.key)) go(+e.key);
+  else if(/^[0-4]$/.test(e.key)) go(+e.key);
   else if((e.key==="f"||e.key==="F") && !e.repeat){
     (document.fullscreenElement ? document.exitFullscreen()
       : document.documentElement.requestFullscreen()).catch(()=>{});
@@ -313,7 +262,7 @@ addEventListener("hashchange",()=>go(+location.hash.slice(1)||0));
 function setSwitch(el,idx){ [...el.children].forEach((b,i)=>b.classList.toggle("on",i===idx)); }
 
 /* ---------- slide 1: sankey + measure switch + ladder ---------- */
-const s1 = { measure:"hours", ladder:false };
+const s1 = { measure:"hours", view:"map" };
 function sankeySVG(){
   const m=MEAS[s1.measure], W=760, H=452, TOP=8, LX=196, LW=12, RX=560, RW=12, GAPL=6, GAPR=16;
   const rows=CLASSES.map(c=>({n:c.n,v:c[m.k],p:c[m.pk]})).filter(r=>r.v>0).sort((a,b)=>b.v-a.v);
@@ -363,21 +312,41 @@ function ladderSVG(){
     <text x="316" y="416" font-size="12.5" fill="var(--ok)">the hours came with it.</text>
   </svg>`;
 }
+function genresSVG(){
+  const W=760,H=372,X0=168,X1=548, sc=v=>X0+(v/46)*(X1-X0);
+  const rows=[...GENRES].sort((a,b)=>b[2]-a[2]);
+  return `<svg viewBox="0 0 ${W} ${H}">
+    <text x="${X0}" y="14" font-size="12.5" class="d2">the genres the world watches are not the genres mobile publishes</text>
+    ${rows.map((g,i)=>{ const y=42+i*31, made=sc(g[1]), wat=sc(g[2]);
+      return `<text x="${X0-14}" y="${y+4}" text-anchor="end" font-size="12.5" font-weight="600" ${g[3]?'fill="var(--ok)"':''}>${g[0]}</text>
+      <line x1="${Math.min(made,wat)}" y1="${y}" x2="${Math.max(made,wat)}" y2="${y}" stroke="var(--line)" stroke-width="1.5"/>
+      <circle cx="${made}" cy="${y}" r="5.5" fill="var(--fg-2)"><title>${g[0]}: ${g[1]}% of games made</title></circle>
+      <circle cx="${wat}" cy="${y}" r="5.5" fill="var(--blue)"><title>${g[0]}: ${g[2]}% of watch hours</title></circle>
+      <text x="${Math.max(made,wat)+10}" y="${y+4}" font-size="11" class="mono d2">${g[1]}% made · <tspan fill="var(--blue)">${g[2]}% watched</tspan></text>`;}).join("")}
+    <text x="${X0}" y="${H-6}" font-size="11.5" class="d3"><tspan fill="var(--blue)">●</tspan> share of 12.2B watch hours · <tspan class="d2">●</tspan> share of 310k IGDB games · <tspan fill="var(--ok)">green</tspan> = where mobile's money lives · genres overlap</text>
+  </svg>`;
+}
 function renderS1(){
-  document.getElementById("s1viz").innerHTML = s1.ladder ? ladderSVG() : sankeySVG();
-  document.getElementById("s1ladder").textContent = s1.ladder ? "← back to the map"
+  document.getElementById("s1viz").innerHTML =
+    s1.view==="ladder" ? ladderSVG() : s1.view==="genres" ? genresSVG() : sankeySVG();
+  if(s1.view==="genres"){ document.getElementById("s1pct").textContent="45%";
+    document.getElementById("s1unit").textContent="of watch hours go to shooters — 6.6% of games made"; }
+  document.getElementById("s1ladder").textContent = s1.view==="ladder" ? "← back to the map"
     : (s1.measure==="hours" ? "count relationships and 18% becomes 59% →"
                             : "count relationships — 18% of hours becomes 59% →");
+  document.getElementById("s1genres").textContent = s1.view==="genres" ? "← back to the map" : "the genres of love →";
 }
 const s1sw=document.getElementById("s1switch");
 Object.keys(MEAS).forEach((id,i)=>{ const b=document.createElement("button");
   b.textContent={hours:"Watch hours",creators:"Creators",titles:"Titles"}[id];
   if(i===0)b.classList.add("on");
-  b.onclick=()=>{ s1.measure=id; s1.ladder=false; setSwitch(s1sw,i); renderS1(); b.blur(); };
+  b.onclick=()=>{ s1.measure=id; s1.view="map"; setSwitch(s1sw,i); renderS1(); b.blur(); };
   s1sw.append(b); });
 const s1lb=document.getElementById("s1ladder");
-s1lb.onclick=()=>{ s1.ladder=!s1.ladder; renderS1(); s1lb.blur(); };
-RESET[1]=()=>{ s1.measure="hours"; s1.ladder=false; setSwitch(s1sw,0); renderS1(); };
+s1lb.onclick=()=>{ s1.view = s1.view==="ladder" ? "map" : "ladder"; renderS1(); s1lb.blur(); };
+const s1gb=document.getElementById("s1genres");
+s1gb.onclick=()=>{ s1.view = s1.view==="genres" ? "map" : "genres"; renderS1(); s1gb.blur(); };
+RESET[0]=()=>{ s1.measure="hours"; s1.view="map"; setSwitch(s1sw,0); renderS1(); };
 renderS1();
 
 /* ---------- slide 2: old love — window stepper ---------- */
@@ -428,30 +397,8 @@ function renderS2(){
     if(best!==s2i){s2i=best;renderS2();}
   });
 }
-RESET[2]=()=>{ s2i=0; renderS2(); };
+RESET[1]=()=>{ s2i=0; renderS2(); };
 renderS2();
-
-/* ---------- slide 3: sort toggle dumbbells ---------- */
-let s3sort="watched";
-function renderS3(){
-  const W=910,H=380,X0=200,X1=700, sc=v=>X0+(v/46)*(X1-X0);
-  const rows=[...GENRES].sort((a,b)=> s3sort==="watched" ? b[2]-a[2] : b[1]-a[1]);
-  document.getElementById("s3viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
-    ${rows.map((g,i)=>{ const y=26+i*34, made=sc(g[1]), wat=sc(g[2]);
-      return `<text x="${X0-14}" y="${y+4}" text-anchor="end" font-size="13.5" font-weight="600" ${g[3]?'fill="var(--ok)"':''}>${g[0]}</text>
-      <line x1="${Math.min(made,wat)}" y1="${y}" x2="${Math.max(made,wat)}" y2="${y}" stroke="var(--line)" stroke-width="1.5"/>
-      <circle cx="${made}" cy="${y}" r="6" fill="var(--fg-2)"><title>${g[0]}: ${g[1]}% of games made</title></circle>
-      <circle cx="${wat}" cy="${y}" r="6" fill="var(--blue)"><title>${g[0]}: ${g[2]}% of watch hours</title></circle>
-      <text x="${Math.max(made,wat)+12}" y="${y+4}" font-size="12" class="mono d2">${g[1]}% made · <tspan fill="var(--blue)">${g[2]}% watched</tspan></text>`;}).join("")}
-  </svg>`;
-}
-const s3sw=document.getElementById("s3switch");
-[["watched","Sort by what's watched"],["made","Sort by what's made"]].forEach(([id,l],i)=>{
-  const b=document.createElement("button"); b.textContent=l; if(i===0)b.classList.add("on");
-  b.onclick=()=>{ s3sort=id; setSwitch(s3sw,i); renderS3(); b.blur(); };
-  s3sw.append(b); });
-RESET[3]=()=>{ s3sort="watched"; setSwitch(s3sw,0); renderS3(); };
-renderS3();
 
 /* ---------- slide 4: downloads vs dollars ---------- */
 function renderS4(){
@@ -461,9 +408,15 @@ function renderS4(){
   const W=760,H=310;
   const DL=[["Google Play",42.4,"var(--ok)"],["App Store",7.8,"var(--blue)"],["Steam",0.857,"var(--gold)"]];
   const SP=[["Google Play",30,"var(--ok)"],["App Store",52.5,"var(--blue)"],["Steam",11.7,"var(--gold)"]];
-  const bar=(rows,y,label,unit)=>{
+  const bar=(rows,y,label,unit,trackW=580,legendRight=false)=>{
     const total=rows.reduce((s,r)=>s+r[1],0); let x=40, below=0;
-    const parts=rows.map(r=>{ const w=Math.max((r[1]/total)*580,4); const p={n:r[0],v:r[1],x,w,c:r[2]}; x+=w+3; return p; });
+    const parts=rows.map(r=>{ const w=Math.max((r[1]/total)*trackW,4); const p={n:r[0],v:r[1],x,w,c:r[2]}; x+=w+3; return p; });
+    if(legendRight){
+      return `<text x="40" y="${y-10}" font-size="13" class="d2">${label}</text>`+
+        parts.map(p=>`<rect class="seg" data-store="${p.n}" x="${p.x}" y="${y}" width="${p.w}" height="34" rx="3" fill="${p.c}"><title>${p.n}: $${p.v}B</title></rect>`).join("")+
+        `<text x="${40+trackW+16}" y="${y+22}" font-size="12.5" font-weight="600">`+
+        parts.map(p=>`<tspan fill="${p.c}">${p.n} $${p.v}B</tspan>`).join('<tspan class="d3">  ·  </tspan>')+`</text>`;
+    }
     return `<text x="40" y="${y-10}" font-size="13" class="d2">${label}</text>`+parts.map(p=>{
       const v=(unit==="$"?"$":"")+p.v+"B";
       const row = below++;
@@ -495,7 +448,7 @@ function renderS4(){
   const mob0=mparts[0].x, mob1=mparts[2].x+mparts[2].w, pc0=mparts[4].x, pc1=mparts[5].x+mparts[5].w;
   document.getElementById("s4viz").innerHTML=`<svg viewBox="0 0 ${W} ${H+24}">
     ${bar(DL,34,"2025 game downloads (incl. F2P) · Sensor Tower / VGI","")}
-    ${bar(SP,150,"2025 store spend · same family","$")}
+    ${bar(SP,150,"2025 store spend · same family — drawn to the same dollar scale as the market bar below","$",271,true)}
     <text x="40" y="220" font-size="13" class="d2">…and the whole $201.6B market (Newzoo) — same stores, same colors, inside their platforms:</text>
     ${mparts.map(p=>`<rect class="seg" data-store="${p.n.split(" ≈")[0]}" x="${p.x}" y="${MKY}" width="${p.w}" height="30" rx="3" fill="${p.c}"><title>${p.n}: $${p.v}B</title></rect>`).join("")}
     ${mparts.map(mlab).join("")}
@@ -589,7 +542,7 @@ BENCH.forEach((b,i)=>{ const btn=document.createElement("button"); btn.textConte
   if(i===0)btn.classList.add("on");
   btn.onclick=()=>{ s6i=i; setSwitch(s6sw,i); renderS6(); btn.blur(); };
   s6sw.append(btn); });
-RESET[6]=()=>{ s6i=0; setSwitch(s6sw,0); renderS6(); };
+RESET[4]=()=>{ s6i=0; setSwitch(s6sw,0); renderS6(); };
 renderS6();
 
 /* ---------- start ---------- */
