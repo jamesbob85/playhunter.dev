@@ -156,13 +156,12 @@
   <div class="eyebrow">Lens 3 · made where, played where</div>
   <h1>Money crosses oceans — in opposite directions on PC and mobile</h1>
   <div id="s5viz"></div>
-  <p class="note"><b>Same story, two instruments.</b> On PC the full flow matrix is public — ours — and the
-  East pays the West 2:1. Mobile publishes no matrix, so we show the direction of the money instead:
-  Chinese publishers hold <b class="num">35%</b> of the world's top-100 revenue, China-made games earned
-  <b class="num">$18.5B</b> overseas with the US the #1 destination, and HQ revenue shifted
-  <b class="num">+$2.6B</b> to Asia in one year. Three measurements, one direction.
-  <span style="color:var(--fg-3)">PC matrix: hover a row to isolate it. Mobile bars labeled per source
-  (Sensor Tower · CGIGC, CY2025).</span></p>
+  <p class="note"><b>Same chart, twice — both real.</b> On PC (ours: Steam top-1,000, lifetime), the East pays
+  the West <b class="num">2:1</b>. On mobile (Sensor Tower: App Store + Google Play, trailing-year gross), it
+  inverts — the West pays the East <b class="num">3:1</b>, and East Asia's $30.1B home cell is the largest single
+  flow in gaming. <span style="color:var(--fg-3)">Hover a row to isolate it. Windows differ (lifetime vs annual);
+  the direction and ratios are robust across both. Mobile total here ($82B, Sensor Tower) vs Lens 4's $76.7B
+  (AppMagic): same market, two vendors — each slide keeps its own.</span></p>
 </section>
 
 <!-- ═══════════ SLIDE 3 — NEW BLOOD ═══════════ -->
@@ -408,24 +407,23 @@ function renderS5(){
   const pcCell=(ri,ci,x,y)=>{ const v=FLOWS.v[ri][ci], op=(v/7.56)*0.9+0.08;
     return `<g class="row" data-row="pc${ri}"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity="${op}"/>
       <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="14" font-weight="700" class="mono" ${op>0.55?'fill="#0a0a0d"':''}>${v.toFixed(2)}</text></g>`; };
-  // Mobile side: three fully-real measurements (no empty cells anywhere)
+  // Mobile side: the REAL joint matrix (Sensor Tower, App Store + Google Play,
+  // trailing-year store gross ~$82B; provided internally 2026-08-10).
+  const MFLOWS={ rows:["North America","Europe","East Asia"], cols:["NA","EU","E. Asia","RoW"],
+    v:[[10.20,3.35,1.85,1.40],[6.10,4.15,3.25,1.90],[10.75,5.25,30.10,3.70]] };
   const LX=176, RX=806, Y0=64;
-  const mbar=(y,label,w,valTxt,sub)=>`
-    <rect x="${RX}" y="${y-2}" width="7" height="40" rx="2" fill="var(--ok)"/>
-    <text x="${RX+18}" y="${y+13}" font-size="20" font-weight="700" class="mono" fill="var(--ok)">${valTxt}</text>
-    <text x="${RX+18+valTxt.length*12.5+14}" y="${y+13}" font-size="12.5" fill="var(--fg-1)">${label}</text>
-    ${sub?`<text x="${RX+18}" y="${y+32}" font-size="11.5" class="d3">${sub}</text>`:""}`;
+  const mobCell=(ri,ci,x,y)=>{ const v=MFLOWS.v[ri][ci], op=Math.min((v/12)*0.9+0.08,0.98);
+    return `<g class="row" data-row="m${ri}"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity="${op}"/>
+      <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="14" font-weight="700" class="mono" ${op>0.55?'fill="#0a0a0d"':''}>${v.toFixed(2)}</text></g>`; };
   document.getElementById("s5viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
     <text x="${LX}" y="18" font-size="13.5" font-weight="700">PC — real flows <tspan class="d2" font-weight="400">(Steam top-1,000, lifetime $B; ours)</tspan></text>
     <text x="${LX}" y="36" font-size="12" class="d2">rows = where it's made · columns = who pays</text>
     ${grid(LX,Y0,FLOWS.cols.map(c=>c+" players"),FLOWS.rows,pcCell,ri=>"pc"+ri)}
     <text x="${LX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">East → West: $8.8B · West → East: $4.4B. The East pays the West.</text>
-    <text x="${RX}" y="18" font-size="13.5" font-weight="700">Mobile — every public number points east <tspan class="d2" font-weight="400">(CY2025)</tspan></text>
-    <text x="${RX}" y="36" font-size="12" class="d2">the direction of the money, three ways</text>
-    ${mbar(Y0,      "Chinese publishers' share of the world top-100's revenue", 146, "35%", "34 of the top-100 mobile publishers are Chinese (Sensor Tower)")}
-    ${mbar(Y0+62,   "China-made games' overseas revenue", 418, "$18.5B", "US the #1 destination, 32% · JP+KR 26% (CGIGC)")}
-    ${mbar(Y0+124,  "Publisher-HQ revenue shift, 2025 vs 2024", 108, "Asia +$2.6B", "while North America gave up $1.8B and Europe gained $0.4B (Sensor Tower)")}
-    <text x="${RX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">Made east, paid west. The West pays the East.</text>
+    <text x="${RX}" y="18" font-size="13.5" font-weight="700">Mobile — real flows <tspan class="d2" font-weight="400">(Sensor Tower, both stores, trailing yr $B)</tspan></text>
+    <text x="${RX}" y="36" font-size="12" class="d2">same chart, same rules — $82B of store gross</text>
+    ${grid(RX,Y0,MFLOWS.cols.map(c=>c+" players"),MFLOWS.rows,mobCell,ri=>"m"+ri)}
+    <text x="${RX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">West → East: $16.0B · East → West: $5.1B. The West pays the East.</text>
   </svg>`;
   const viz=document.getElementById("s5viz");
   viz.onmouseover=e=>{ const r=e.target.closest?.("[data-row]")?.dataset.row; if(!r) return;
