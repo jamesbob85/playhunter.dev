@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Where the Love Is — games diversity × Google Play</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='13' font-size='13'%3E%F0%9F%92%9A%3C/text%3E%3C/svg%3E">
 <meta name="robots" content="noindex">
 <style>
   :root {
@@ -40,10 +41,8 @@
   .brand b { color:var(--fg-2); }
 
   /* slide 0 */
-  .spine p.cl { font-family:var(--serif); font-size:clamp(18px,3vw,34px); line-height:1.4; margin:1.1vh 0; opacity:.92; }
-  .spine p.cl em { font-style:normal; color:var(--ok); font-weight:700; }
-  .spine p.cl:hover { opacity:1; }
-  .defn { color:var(--fg-2); font-size:clamp(11px,1.35vw,14.5px); margin-bottom:1vh; }
+  .defn { color:var(--fg-2); font-size:clamp(11px,1.35vw,14.5px); margin-bottom:1vh; max-width:88ch; }
+  .defn b { color:var(--fg); font-family:var(--mono); }
   .coda { border-left:2px solid var(--ok); padding-left:16px; color:var(--fg-1); font-size:clamp(13px,1.6vw,17px); margin-top:2vh; }
 
   /* controls */
@@ -71,13 +70,6 @@
   .gaplist .notesm { color:var(--fg-2); font-size:.92em; }
   .gaplist li:has(.notesm) { border-bottom:none; padding-top:.2vh; }
 
-  .swos { display:grid; grid-template-columns:1fr 1fr; gap:1.6vh 1.6vw; }
-  @media (max-width:840px){ .swos { grid-template-columns:1fr; } }
-  .quad { background:var(--bg-1); border:1px solid var(--line); border-radius:12px; padding:2vh 1.4vw; }
-  .quad h3 { font-size:clamp(11px,1.3vw,13px); letter-spacing:.14em; text-transform:uppercase; margin-bottom:1.2vh; }
-  .quad.s h3{color:var(--ok)} .quad.w h3{color:var(--warn)} .quad.o h3{color:var(--blue)} .quad.x h3{color:var(--gold)}
-  .quad p { font-size:clamp(12px,1.45vw,15.5px); color:var(--fg-1); margin:.8vh 0; line-height:1.45; }
-  .quad p b { color:var(--fg); font-family:var(--mono); }
   button.reveal {
     font:inherit; font-size:clamp(12px,1.4vw,15px); padding:8px 18px; cursor:pointer; width:max-content;
     background:var(--bg-2); color:var(--fg); border:1px solid var(--line); border-radius:8px; transition:border-color .2s;
@@ -85,12 +77,15 @@
   button.reveal:hover { border-color:var(--ok); }
   button.reveal.hot { border-color:var(--ok); color:var(--ok); font-weight:600; }
   :root { --vizcap:44vh; }
-  #s1viz svg, #s3viz svg, #s4viz svg, #s5viz svg, #s6viz svg { max-height:var(--vizcap); }
+  #s1viz svg, #s4viz svg, #s5viz svg, #s6viz svg { max-height:var(--vizcap); }
+  #s6viz svg { max-height:36vh; }
   @media (max-height:945px) {
     :root { --vizcap:38vh; }
     .slide { gap:1.2vh; padding-top:max(4vh,32px); padding-bottom:max(5vh,44px); }
-    .quad { padding:1.1vh 1.4vw; }
-    .coda { margin-top:1.2vh; }
+    .defn { font-size:11px; margin-bottom:0; }
+    .slide[data-i="0"] h1 { margin-bottom:.2vh; }
+    .coda { margin-top:.8vh; font-size:12px; padding-left:12px; }
+    #s6viz svg { max-height:30vh; }
     .gaplist li { padding:.4vh 0; }
     .panel { padding:1.3vh 1.4vw; }
     .panel .note { font-size:11px; }
@@ -108,9 +103,12 @@
 <section class="slide" data-i="0">
   <div class="eyebrow">Lens 1 · the love map</div>
   <h1>Where gaming's love lives — and what Play can reach</h1>
+  <p class="defn">Love, measured: <b>12.2B hours</b> watched (936 games, Twitch top-1,000, 12 mo) and <b>46M</b>
+  people streaming them — the one measure that treats a mobile title and a PC exclusive identically, and it
+  predicts money: streaming correlates <b>0.76</b> with launch revenue.</p>
   <div style="display:flex; gap:2vw; align-items:center; flex-wrap:wrap;">
     <div class="switch" id="s1switch"></div>
-    <div class="bignum">Play reaches <b id="s1pct">17.7%</b> <span id="s1unit">of watch hours</span></div>
+    <div class="bignum"><span id="s1pre">Play reaches </span><b id="s1pct">17.7%</b> <span id="s1unit">of watch hours</span></div>
     <button class="reveal hot" id="s1ladder">count relationships and 18% becomes 59% →</button>
     <button class="reveal" id="s1genres">the genres of love →</button>
   </div>
@@ -130,7 +128,7 @@
       cousins and companion apps arbitrated out. Spin-offs like Wild Rift count as Play titles — not as these
       games; the ladder shows that cut. Play also thins with depth — on 23% of the top-100 games, 14%
       below rank 300. And yes, Twitch skews PC — that's part of the finding: wherever streaming is
-      frictionless, Play is absent.</p>
+      frictionless, Play is absent. And the measure changes the story: hours <b>17.7%</b>, creators <b>26.7%</b>.</p>
     </aside>
   </div>
 </section>
@@ -142,11 +140,12 @@
   <div class="eyebrow">Lens 2 · funnel vs bucket</div>
   <h1>The world's biggest funnel. The industry's leakiest bucket.</h1>
   <div id="s4viz"></div>
-  <p class="note" id="s4note"><b>Play: 83% of store downloads · ≈15% of the world's game spend.</b>
+  <p class="note" id="s4note">Love predicts money — so count the money.
+  <b>Play: 83% of store downloads · ≈15% of the world's game spend.</b>
   Per download: Play <b class="num" style="color:var(--ok)">$0.71</b> · App Store
   <b class="num" style="color:var(--blue)">$6.73</b> · Steam <b class="num" style="color:var(--gold)">$13.65</b>.
   On mobile, 1% of publishers take 92.5% of the revenue; on Steam, indies take a quarter. One store has a
-  middle class. <span style="color:var(--fg-3)">Counting in-game spend, Steam ≈ 40% of the $43B PC market;
+  middle class. <span style="color:var(--fg-3)">Counting in-game spend, Steam ≈ 40% of the $43.6B PC market;
   Epic $0.4B third-party; China's Android stores are most of the ≈$31B "other Android" slice.
   Hover a store to track it.</span></p>
 </section>
@@ -159,9 +158,11 @@
   <p class="note"><b>Same chart, twice — both real.</b> On PC (ours: Steam top-1,000, lifetime), the East pays
   the West <b class="num">2:1</b>. On mobile (Sensor Tower: App Store + Google Play, trailing-year gross), it
   inverts — the West pays the East <b class="num">3:1</b>, and East Asia's $30.1B home cell is the largest single
-  flow in gaming. <span style="color:var(--fg-3)">Hover a row to isolate it. Windows differ (lifetime vs annual);
-  the direction and ratios are robust across both. Mobile total here ($82B, Sensor Tower) vs Lens 4's $76.7B
-  (AppMagic): same market, two vendors — each slide keeps its own.</span></p>
+  flow in gaming — and roughly a third of this table ($30B of $82B, same vendor) moves through Play's own till.
+  The windows differ (lifetime vs annual); the
+  directions and ratios are robust across both. <span style="color:var(--fg-3)">Hover a row to isolate it.
+  Mobile total here ($82B, Sensor Tower) vs Lens 4's $76.7B (AppMagic): same market, two vendors — each slide
+  keeps its own.</span></p>
 </section>
 
 <!-- ═══════════ SLIDE 3 — NEW BLOOD ═══════════ -->
@@ -172,18 +173,20 @@
     <div class="switch" id="s6switch"></div>
     <div class="bignum"><b id="s6steam" style="font-size:clamp(22px,3.2vw,38px)">72%</b>
       <span class="note" style="display:inline">of Steam's launched 2025+</span> ·
-      <b id="s6mob" style="font-size:clamp(22px,3.2vw,38px); color:var(--gold)">14%</b>
+      <b id="s6mob" style="font-size:clamp(22px,3.2vw,38px); color:var(--gold)">18%</b>
       <span class="note" style="display:inline">of Play's</span></div>
   </div>
   <div id="s6viz"></div>
   <p class="note"><b>All 10 of 10</b> of Steam's top earners launched in 2025–26; <b class="num">0 of 10</b>
   of mobile's annual top grossers did — Honor of Kings (2015) out-grossed all ten of 2025's biggest launches
-  combined. The top-10 newcomers alone take <b class="num">19%</b> of Steam, <b class="num">≈3%</b> of mobile.
+  combined. The top-10 newcomers alone take <b class="num">17%</b> of Steam, <b class="num">≈3%</b> of mobile.
   A store where new games can't climb can't mint evergreens.
   <span style="color:var(--fg-3)">Steam: our Gamalytic panel (premium; CS2's F2P excluded; incl. re-releases).
   Play: today's US grossing chart, measured by us — a recency-leaning chart; if anything it flatters Play
   here. $76.7B = AppMagic gross, both stores — China's other Android stores (~$31B) are most of the gap to
   Lens 2's $113B.</span></p>
+  <p class="coda">The position: the funnel is unmatched — and the love is reachable. <b>59%</b> of it already
+  belongs to publishers Play knows, and when the real game shows up, the hours follow — Fortnite, March 2026.</p>
 </section>
 
 
@@ -256,9 +259,9 @@ function sankeySVG(){
   right[1].y=TOP+right[0].h+GAPR;
   let cp=right[0].y, cm=right[1].y, ribs=[];
   rows.forEach(r=>{ let sy=r.y;
-    if(r.p>0){const t=Math.max(r.p*k,1.2);ribs.push({o:.65,f:"var(--ok)",sy0:sy,sy1:sy+t,ty0:cp,ty1:cp+t,tip:`${r.n} → On Play: ${m.f(r.p)}`});sy+=t;cp+=t;}
+    if(r.p>0){const t=Math.max(r.p*k,1.2);ribs.push({o:.55,f:"var(--ok)",sy0:sy,sy1:sy+t,ty0:cp,ty1:cp+t,tip:`${r.n} → On Play: ${m.f(r.p)}`});sy+=t;cp+=t;}
     const ms=r.v-r.p;
-    if(ms>0){const t=Math.max(ms*k,1.2);ribs.push({o:.40,f:"var(--warn)",sy0:sy,sy1:sy+t,ty0:cm,ty1:cm+t,tip:`${r.n} → Not on Play: ${m.f(ms)}`});cm+=t;} });
+    if(ms>0){const t=Math.max(ms*k,1.2);ribs.push({o:.55,f:"var(--warn)",sy0:sy,sy1:sy+t,ty0:cm,ty1:cm+t,tip:`${r.n} → Not on Play: ${m.f(ms)}`});cm+=t;} });
   const cx=(LX+LW+RX)/2;
   const rib=r=>`M ${LX+LW} ${r.sy0} C ${cx} ${r.sy0}, ${cx} ${r.ty0}, ${RX} ${r.ty0} L ${RX} ${r.ty1} C ${cx} ${r.ty1}, ${cx} ${r.sy1}, ${LX+LW} ${r.sy1} Z`;
   document.getElementById("s1pct").textContent=(pTot/total*100).toFixed(1)+"%";
@@ -280,7 +283,7 @@ function ladderSVG(){
   document.getElementById("s1unit").textContent="counting publisher relationships";
   const bars=LADDER.map((r,i)=>{const y=90+i*84,w=r[1]/70*470;
     return `<text x="292" y="${y+16}" text-anchor="end" font-size="14" class="d2">${r[0]}</text>
-      <rect x="300" y="${y}" width="${w}" height="26" rx="3" fill="var(--ok)" opacity="${1-i*0.24}"/>
+      <rect x="300" y="${y}" width="${w}" height="26" rx="3" fill="var(--ok)"/>
       <text x="${306+w}" y="${y+18}" font-size="17" font-weight="700" class="mono" fill="var(--ok)">${r[1]}%</text>`;}).join("");
   return `<svg viewBox="0 0 ${W} ${H}">
     <text x="0" y="40" font-size="17" font-weight="600">Play's reach — three ways of counting the same watch hours</text>
@@ -304,14 +307,15 @@ function genresSVG(){
       <circle cx="${made}" cy="${y}" r="5.5" fill="var(--fg-2)"><title>${g[0]}: ${g[1]}% of games made</title></circle>
       <circle cx="${wat}" cy="${y}" r="5.5" fill="var(--blue)"><title>${g[0]}: ${g[2]}% of watch hours</title></circle>
       <text x="${Math.max(made,wat)+10}" y="${y+4}" font-size="11" class="mono d2">${g[1]}% made · <tspan fill="var(--blue)">${g[2]}% watched</tspan></text>`;}).join("")}
-    <text x="${X0}" y="${H-6}" font-size="11.5" class="d3"><tspan fill="var(--blue)">●</tspan> share of 12.2B watch hours · <tspan class="d2">●</tspan> share of 310k IGDB games · <tspan fill="var(--ok)">green</tspan> = where mobile's money lives · genres overlap</text>
+    <text x="8" y="${H-6}" font-size="11.5" class="d3"><tspan fill="var(--blue)">●</tspan> share of 12.2B watch hours · <tspan class="d2">●</tspan> share of 310k IGDB games · <tspan fill="var(--ok)">green</tspan> = where mobile's money lives · genres overlap</text>
   </svg>`;
 }
 function renderS1(){
   document.getElementById("s1viz").innerHTML =
     s1.view==="ladder" ? ladderSVG() : s1.view==="genres" ? genresSVG() : sankeySVG();
+  document.getElementById("s1pre").textContent = s1.view==="genres" ? "Shooters take " : "Play reaches ";
   if(s1.view==="genres"){ document.getElementById("s1pct").textContent="45%";
-    document.getElementById("s1unit").textContent="of watch hours go to shooters — 6.6% of games made"; }
+    document.getElementById("s1unit").textContent="of watch hours — from 6.6% of games made"; }
   document.getElementById("s1ladder").textContent = s1.view==="ladder" ? "← back to the map"
     : (s1.measure==="hours" ? "count relationships and 18% becomes 59% →"
                             : "count relationships — 18% of hours becomes 59% →");
@@ -396,32 +400,33 @@ renderS4();
 
 /* ---------- slide 5: twin matrices — PC vs mobile ---------- */
 function renderS5(){
-  // Left: real Steam flows (ours). Right: the ONLY publicly disclosed mobile
-  // row — China-made (CGIGC 2025: $18.48B mobile exports; US 32.3%, JP+KR 25.6%).
+  // Twin flow matrices, identical grammar (rows = maker region, cols = payer
+  // region). Left: ours (Gamalytic, Steam top-1,000 lifetime). Right: Sensor
+  // Tower joint matrix (App Store + Google Play gross, trailing yr, ~$82B).
+  // Cell shade is normalized WITHIN each matrix to its own max cell (PC $7.56B,
+  // mobile $30.10B) — disclosed on-slide; a shared scale would wash out PC.
   const W=1240,H=330, cw=100,ch=56,g=6;
   const grid=(X0,Y0,cols,rows,cell,rowKey)=>
     cols.map((c,ci)=>`<text x="${X0+ci*(cw+g)+cw/2}" y="${Y0-10}" text-anchor="middle" font-size="12" font-weight="600" class="d2">${c}</text>`).join("")+
-    rows.map((r,ri)=>`<text x="${X0-12}" y="${Y0+ri*(ch+g)+ch/2+4}" text-anchor="end" font-size="12.5" font-weight="600" data-rowlab="${rowKey(ri)}">${r}</text>`+
+    rows.map((r,ri)=>`<text x="${X0-12}" y="${Y0+ri*(ch+g)+ch/2+4}" text-anchor="end" font-size="12.5" font-weight="600" class="row" data-row="${rowKey(ri)}">${r}</text>`+
       cols.map((c,ci)=>cell(ri,ci,X0+ci*(cw+g),Y0+ri*(ch+g))).join("")).join("");
   // PC side
   const pcCell=(ri,ci,x,y)=>{ const v=FLOWS.v[ri][ci], op=(v/7.56)*0.9+0.08;
     return `<g class="row" data-row="pc${ri}"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity="${op}"/>
       <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="14" font-weight="700" class="mono" ${op>0.55?'fill="#0a0a0d"':''}>${v.toFixed(2)}</text></g>`; };
-  // Mobile side: the REAL joint matrix (Sensor Tower, App Store + Google Play,
-  // trailing-year store gross ~$82B; provided internally 2026-08-10).
   const MFLOWS={ rows:["North America","Europe","East Asia"], cols:["NA","EU","E. Asia","RoW"],
     v:[[10.20,3.35,1.85,1.40],[6.10,4.15,3.25,1.90],[10.75,5.25,30.10,3.70]] };
   const LX=176, RX=806, Y0=64;
-  const mobCell=(ri,ci,x,y)=>{ const v=MFLOWS.v[ri][ci], op=Math.min((v/12)*0.9+0.08,0.98);
+  const mobCell=(ri,ci,x,y)=>{ const v=MFLOWS.v[ri][ci], op=(v/30.10)*0.9+0.08;
     return `<g class="row" data-row="m${ri}"><rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="4" fill="var(--ok)" opacity="${op}"/>
       <text x="${x+cw/2}" y="${y+ch/2+5}" text-anchor="middle" font-size="14" font-weight="700" class="mono" ${op>0.55?'fill="#0a0a0d"':''}>${v.toFixed(2)}</text></g>`; };
   document.getElementById("s5viz").innerHTML=`<svg viewBox="0 0 ${W} ${H}">
     <text x="${LX}" y="18" font-size="13.5" font-weight="700">PC — real flows <tspan class="d2" font-weight="400">(Steam top-1,000, lifetime $B; ours)</tspan></text>
-    <text x="${LX}" y="36" font-size="12" class="d2">rows = where it's made · columns = who pays</text>
+    <text x="${LX}" y="36" font-size="12" class="d2">rows = where it's made · columns = who pays · shade ∝ $ within each matrix</text>
     ${grid(LX,Y0,FLOWS.cols.map(c=>c+" players"),FLOWS.rows,pcCell,ri=>"pc"+ri)}
     <text x="${LX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">East → West: $8.8B · West → East: $4.4B. The East pays the West.</text>
     <text x="${RX}" y="18" font-size="13.5" font-weight="700">Mobile — real flows <tspan class="d2" font-weight="400">(Sensor Tower, both stores, trailing yr $B)</tspan></text>
-    <text x="${RX}" y="36" font-size="12" class="d2">same chart, same rules — $82B of store gross</text>
+    <text x="${RX}" y="36" font-size="12" class="d2">same grammar, own scale — $82B of store gross</text>
     ${grid(RX,Y0,MFLOWS.cols.map(c=>c+" players"),MFLOWS.rows,mobCell,ri=>"m"+ri)}
     <text x="${RX}" y="${Y0+3*(ch+g)+24}" font-size="13" fill="var(--ok)" font-weight="600">West → East: $16.0B · East → West: $5.1B. The West pays the East.</text>
   </svg>`;
@@ -437,11 +442,11 @@ renderS5();
 // Same yardstick, both sides, measured by us: share of the money chart held
 // by games launched 2025+. Steam = our Gamalytic panel ranked by trailing-12m
 // revenue; Play = today's US top-grossing chart (parse-play + release dates,
-// data/play-chart-freshness.json, fetched 2026-08-09).
+// data/play-chart-freshness.json, fetched 2026-08-14 — presentation morning).
 const BENCH=[
-  { l:"Top 50",  steam:36, mob:7,  n:50 },
+  { l:"Top 50",  steam:36, mob:9,  n:50 },
   { l:"Top 100", steam:58, mob:18, n:100 },
-  { l:"Top 200", steam:82, mob:41, n:200 },
+  { l:"Top 200", steam:82, mob:44, n:200 },
 ];
 let s6i=0;
 function renderS6(){
@@ -460,7 +465,7 @@ function renderS6(){
     <text x="130" y="18" font-size="13" class="d2">games launched 2025+ in the ${b.l.toLowerCase()} of each money chart</text>
     ${row(34,"Steam",b.steam,b.n,"var(--ok)")}
     ${row(74,"Play",b.mob,b.n,"var(--gold)")}
-    <text x="130" y="136" font-size="13" class="d2">and the shapes invert with depth — Steam: <tspan class="mono" font-weight="700">72% → 58% → 41%</tspan> · Play: <tspan class="mono" font-weight="700">14% → 18% → 21%</tspan>:</text>
+    <text x="130" y="136" font-size="13" class="d2">and the shapes invert with depth — Steam: <tspan class="mono" font-weight="700">72% → 58% → 41%</tspan> · Play: <tspan class="mono" font-weight="700">18% → 18% → 22%</tspan>:</text>
     <text x="130" y="156" font-size="13" class="d2">new Steam games own the summit; new mobile games exist, but can't climb past the evergreens.</text>
     <text x="130" y="186" font-size="12.5" class="d3">2025's newcomers past $100M: Steam 15 · mobile 10 — from markets of $11.7B and $76.7B.</text>
     <text x="130" y="203" font-size="12.5" class="d3">Per market dollar, Steam mints ~10× more $100M newcomers.</text>
